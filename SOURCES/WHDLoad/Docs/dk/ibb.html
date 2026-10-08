@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>InstallBB * Installing Bootblocks</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: ibb.html 1.2 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>InstallBB * Installing Bootblocks</h3>
+InstallBB l&aelig;ser eller skriver Bootblocks fra eller til en disk. Bootblocks h&aring;ndteres
+som eksekverbare. Ved skrivning vil den bibeholde disk filsystemtypen ved f&oslash;rst at
+l&aelig;se bootblocken og integrere DosTypen (<tt>DOS0</tt>,
+<tt>DOS1</tt> ...) til den nye. Bootblockens checksum bliver automatisk beregnet.
+<h4>Installation</h4>
+InstallBB er kun indeholdt i <tt>DEV</tt> arkivet, ikke i <TT>USR</tt> arkivet
+<br>Kopier det til C: eller et lignende sted.
+<h4>Indstillinger</h4>
+<table>
+<tr><td colspan=2>
+<tt>PROGRAM/A,UNIT/K/N,WRITE/S</tt>
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>PROGRAM/A</tt>&nbsp;&nbsp;
+</td><td>
+Den eksekverbare fil der vil blive l&aelig;st eller skrevet, skal specificeres.
+</td></tr>
+<tr><td valign=top>
+<tt>UNIT/K/N</tt>
+</td><td>
+Trackdisk nummeret (floppy drive nummer)
+<br>default er 0 (DF0:)
+</td></tr>
+<tr><td valign=top>
+<tt>WRITE/S</tt>
+</td><td>
+skifter, hvis den ikke er specificeret vil bootblocken blive l&aelig;st fra disk
+til en fil, hvis specificeret vil det givne program blive skrevet til disk.
+</td></tr>
+</table>
+</BODY>
+</HTML>

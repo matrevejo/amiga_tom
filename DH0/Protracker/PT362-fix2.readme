@@ -1,0 +1,16 @@
+Short:        ProTracker3.62 year 2000 fix
+Author:       ttlvrt@usa.net
+Uploader:     ttlvrt@usa.net
+Type:         mus/edit
+
+I found that ProTracker 3.62 (PT) crashes when the system date contains
+year 2000. PT shows system date in format DD-MMM-YY and in case of YY
+equals to 00 PT crashes.
+So I fixed this and now PT shows date in format DD-MMM-YYYY. Due to this
+fix I had to do little change of the IFF-MOD structure, where the year was
+stored only in two digits number and now there is stored whole year. I hope
+that this small change has no influence on IFF-MOD compatibility, only the
+creation date of IFF-MOD could be shown incorrectly in some programs.
+
+Jan Poruba
+(TTL)

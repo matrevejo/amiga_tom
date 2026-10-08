@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE>Requirements</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: need.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Krav</h3>
+<h4>... for at k&oslash;re installerede programmer:</h4>
+<ul>
+<li>CPU 68000 (68010+ er anbefalet fordi nogle installs kr&aelig;ver   VBR'en til 'quit by a key'-funtionen)
+<li>Kickstart 2.0 (version 37)
+<li>et minimum p&aring; 1.0 MiB RAM (sommetider mere, det afh&aelig;nger af det installerede program)
+</ul>
+
+<h5>Kickstart-Emulering</h5>
+<p>Nogle installs bruger en s&aring;kaldt <cite>kickemu</cite> for at have et komplet AmigaOS-milj&oslash; til det installerede program.
+Til det <cite>kickemu</cite> brug er et originalt kickstart-image p&aring;kr&aelig;vet. Dette image kan tr&aelig;kkes ud fra en rigtig Amiga med v&aelig;rkt&oslash;jer som <cite>GrabKick</cite> eller lignende, der kan findes p&aring; aminet (s&oslash;rg for at have <a href="bugs.html"> de korrekte indstillinger for dine diske
+(MaxTransfer, Mask)</a>; i modsat fald bliver det oprettede image muligvis fejlbeh&aelig;ftet).
+Den underst&oslash;ttede image-version afh&aelig;nger af det installerede program. Du b&oslash;r finde informationer om, hvilket image der skal benyttes, i den medf&oslash;lgende <i>ReadMe</i> fil.
+Imaget for kickstart-versionerne 1.2 og 1.3 kan kun tr&aelig;kkes ud fra en passende A500,
+for version 3.1 kan den tr&aelig;kkes ud fra en A500/A600/A2000, A1200 eller A4000, der skal v&aelig;re udstyret med en Kick3.1 ROM.
+Hvis imaget ikke kan findes af WHDLoad eller imaget er den forkerte version eller modificeret p&aring; nogen m&aring;de, vil WHDLoad
+afbryde med en passende fejlmeddelelse.
+Endvidere skal en relokeringsfil med tilf&oslash;jelsen <tt>.RTB</tt>, der matcher kickstart-imaget, v&aelig;re tilstede.
+Denne relokeringsfil kan findes p&aring; aminet i arkivet
+<a href="http://aminet.net/package/util/boot/skick346.lha">util/boot/skick346.lha</a>.
+Begge filer, kickstart-imaget og relokeringsfilen skal v&aelig;re placeret i mappen <i>Devs:Kickstarts/</i> og
+skal have det korrekte navn. Fra og med WHDLoad version 17.0 kan filerne ogs&aring; v&aelig;re placeret i mappen <i>WHDCOMMON:</i>.
+Tabellen herunder viser navnene p&aring; filerne, afh&aelig;ngig af kickstart-versionen.</p>
+
+Fra og med WHDLoad version 16.5 kan kickstart-imagene fra  Cloanto Amiga Forever CD'erne ogs&aring; benyttes.
+Imagene skal omd&oslash;bes j&aelig;vnf&oslash;r tabellen herunder.
+Endvidere skal <i>rom.key</i> kopieres til
+<i>Devs:Kickstarts/</i> eller <i>WHDCOMMON:</i>.
+
+Cloanto Plus Edition ROM'erne er ikke l&aelig;ngere kodede og kr&aelig;ver ikke <i>rom.key</i>. For yderligere information, referer venligst til <a
+href="http://amigaforever.com/kb/15-120">Amiga Forever</a>.<p>
+
+<table border=1 cellpadding=3><tr>
+	<th rowspan=2>Version</th>
+	<th rowspan=2>Navn p&aring; Kickstart-Image</th>
+	<th rowspan=2>Navn p&aring; Relokeringsfil</th>
+	<th colspan=4>Cloantos 'Amiga Forever' filnavne</th>
+</tr><tr>
+	<th>release 3.0 (1999)</th>
+	<th>release 6.1 (2005)</th>
+	<th>release 6.7 (2011)</th>
+	<th>release 7.0 (2014)</th>
+</tr><tr>
+	<td align=center>1.2</td>
+	<td>Devs:Kickstarts/kick33180.A500</td>
+	<td>Devs:Kickstarts/kick33180.A500.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-120.rom</td>
+</tr><tr>
+	<td align=center>1.3</td>
+	<td>Devs:Kickstarts/kick34005.A500</td>
+	<td>Devs:Kickstarts/kick34005.A500.RTB</td>
+	<td align=center>kick130.rom</td>
+	<td align=center colspan=3>amiga-os-130.rom</td>
+</tr><tr>
+	<td align=center rowspan=3>3.1</td>
+	<td>Devs:Kickstarts/kick40063.A600</td>
+	<td>Devs:Kickstarts/kick40063.A600.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center>amiga-os-310-a500.rom</td>
+	<td align=center>amiga-os-310-a600.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A1200</td>
+	<td>Devs:Kickstarts/kick40068.A1200.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-310-a1200.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A4000</td>
+	<td>Devs:Kickstarts/kick40068.A4000.RTB</td>
+	<td align=center>kick310.rom</td>
+	<td align=center colspan=2>amiga-os-310.rom</td>
+	<td align=center>amiga-os-310-a4000.rom</td>
+</tr></table>
+
+<h4>valgfri pakker:</h4>
+<ul>
+
+<li>Kickstart 3.1 (version 40), den udbedrer nogle problemer i tidligere udgivelser, den tilbyder ogs&aring; nogle funktioner, der benyttes af WHDLoad n&aring;r tilg&aelig;ngelige, s&aring;som
+MemoryPools, der giver bedre ydelse, hvis mange filer benyttes af det installerede program
+
+<li>for at bruge XPK-komprimerede datafiler skal XPK-bibliotekerne v&aelig;re installerede, disse kan findes p&aring; <a
+href="http://aminet.net/package/util/pack/xpk_User">aminet</a>, alle datafiler
+kan komprimeres vha. XPK, WHDLoad vil s&aring; dekomprimere dem under indl&aelig;sning, XPK dekompression kr&aelig;ver ekstra hukommelse og b&oslash;r derfor benyttes med varsomhed i milj&oslash;er med en lille m&aelig;ngde fri hukommelse, filer skrevet af WHDLoad er altid ukomprimerede.
+
+<li>for det automatiske valg af benyttet sprog i nogle installs benyttes lowlevel.library, dette bibliotek er en del af  Workbench 3.1 men kan ogs&aring; installeres p&aring; tidligere OS-udgivelser som en tilf&oslash;jelse, hvis lowlevel.library er frav&aelig;rende vil de forskellige installs benytte engelsk som standard
+
+<li>hvis den installerede WHDLoad benytter reqtools.library til at vise foresp&oslash;rgere,  kan reqtools konfigureres til for eksemplen at kontrollere, hvor foresp&oslash;rgerne vil optr&aelig;de, det kan downloades fra <a
+href="http://aminet.net/package/util/libs/ReqToolsUsr.lha">aminet</a>
+
+</ul>
+
+<h4>... for at skrive nye Slaver / install-programmer</h4>
+<ul>
+<li>anbefalet ern en 68030+ med MMU for at benytte alle funktioner i WHDLoad (en fed maskine er altid et god valg for udvikling af software ;-))
+<li>viden om maskinkode, assembler, amiga hardware ...
+<li>en assembler (der b&oslash;r v&aelig;re i stand til at optimere)
+<li>nogle andre v&aelig;rkt&oslash;jer vil v&aelig;re nyttige (hexedit, disasm, ...)
+<li>nogle flere MiB's RAM
+<li>adgang til forskellige maskiner af hensyn til tests (68000 - 68060, OCS, AGA,
+GfxCard)
+<li>en hardware eller software freezer s&aring;som AR3, HRTmon, TK
+<li>en NMI-knap til at afbryde et k&oslash;rende program eller til at tilg&aring; en software-monitor/freezer
+</ul>
+</BODY>
+</HTML>

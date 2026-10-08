@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE>DIC * Disk Image Creatie</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: dic.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>DIC * Disk Image Creatie</h3>
+<p>DIC is een programma om een image bestand van een floppydisk te maken. 
+DIC leest de inhoud van een floppydisk via het juiste apparaat (bijv.
+"trackdisk.device" voor DF0:) en schrijft de data naar een gewoon bestand
+in de actuele directory. De naam van de gecreëerde diskimage bestand word
+"Disk.1", waar "1" het nummer is van de disk die gelezen word. De disk nummer word verhoogd
+na elke keer van het lezen van een disk.
+Gebruik de <tt>Name</tt> optie om een andere naam te kiezen voor de te maken image.</p>
+<p>DIC kan ook gelezen worden met apparaten zoals RAD:, PC0: or DS0: en High Density 
+Disks.</p>
+<p>Als 1 track van de floppy disk niet correct gelezen kan worden en DIC
+is gestart vanaf de interactieve terminal (bijv CON:), vraagt het om de
+gefaalde track over te slaan of om het nogmaals proberen te lezen. In 
+niet interactieve terminals worden deze tracks automatisch overgeslagen.<br>
+Voor overgeslagen tracks word het geschikte gebied in de image gevuld met het patroon
+"<tt>TDIC</tt>". Zo is het mogelijk om de leesfout later te identificeren.</p>
+<p>DIC kan ook gedeeltelijk disks lezen met de optie <tt>SIZE/K/N</tt>.
+Wanneer gebruikt kan DIC de data weglaten na de gespecificeerde grootte.
+Dit kan erg handig zijn als de laatste tracks ongebruikt worden.</p>
+<p>Tracks kunnen overgeslagen worden met de optie <tt>SKIPTRACK/K/N</tt>.
+Dit is erg handig om images te creëren van disks die op disk gebaseerde 
+beveiliging bevatten (bijv. RN-Copylocks op track 1).</p>
+<p>Als de optie <tt>PEDANTIC/S</tt> gespecificeerd is zal DIC direct
+stoppen als een track onleesbaar is.</p>
+<p>DIC kan op een elk willekeurig moment onderbroken worden met Ctrl-C.</p>
+<h4>Installatie</h4>
+Kopieer naar C: of een vergelijkbare plaats
+<h4>Gebruik</h4>
+<p>Om DIC interactief te gebruiken:
+<ul>
+<li>open een Shell
+<li>vul de directory in waar de images bewaard moeten worden
+<li>type "DIC" en druk RETURN
+<li>plaats nu de disks en volg de instructies gegeven door DIC
+<li>na de laatste disk, breekt u DIC af met Ctrl-C
+</ul>
+Gebruik de volgende opties Om DIC te gebruiken in een installatie script
+<tt>FD=FIRSTDISK/K/N</tt>, <tt>LD=LASTDISK/K/N</tt> en
+<tt>PEDANTIC/S</tt>. Gebruikt voor disks met een fysieke kopieerbeveiliging
+<tt>SKIPTRACK/K/N</tt>. Wanneer mogelijk is het leuk <tt>SIZE/K</tt> te gebruiken
+om diskruimte overal ter wereld te besparen ;-).
+<h4>Opties</h4>
+<table>
+<tr><td colspan=2>
+<tt>DEVICE,NAME,SKIPTRACK/K,SIZE/K,FD=FIRSTDISK/K/N,LD=LASTDISK/K/N,PEDANTIC/S</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>DEVICE</tt>
+</td><td>
+het apparaat van waaruit DIC de disks leest
+<br>standaard "DF0:"
+<br>voorbeeld "RAD:"
+</td></tr>
+<tr><td valign=top>
+<tt>NAME</tt>
+</td><td>
+Naam van het te creëren image, wanneer aangeduid zal DIC niet de image "Disk.1" noemen
+enz enz, maar een specifieke naam gebruiken. Deze optie wordt ingesteld met <tt>FIRSTDISK/K/N</tt> 
+en <tt>LASTDISK/K/N</tt> naar 1, wat betekend dat maar 1 disk gelezen word
+</td></tr>
+<tr><td valign=top>
+<tt>SKIPTRACK/K/N</tt>
+</td><td>
+De gespecificeerde tracks worden niet gelezen, het geschikte gebied in de te maken
+diskimage word gevuld met dit patroon "<tt>TDIC</tt>", de volgende tabel
+laat een paar voorbeelden zien om de flexibele mogelijkheden te verduidelijken
+van de gespecificeerde tracks
+  <table>
+  <tr><td>lijst</td><td>getroffen tracks</td></tr>
+  <tr><td>1-5</td><td>1,2,3,4,5</td></tr>
+  <tr><td>2,90</td><td>2,90</td></tr>
+  <tr><td>2*2</td><td>2,4,...,156,158</td></tr>
+  <tr><td>10-20*5</td><td>10,15,20</td></tr>
+  <tr><td>1-5,7,99-104*2</td><td>1,2,3,4,5,7,99,101,103</td></tr>
+  </table>
+</td></tr>
+<tr><td valign=top>
+<tt>SIZE/K</tt>
+</td><td>
+De grootte van de te maken image, handig als er een ongebruikt gebied op het
+eind van de disk aanwezig is, als de grootte groter is dan de fysieke image
+grootte wordt het genegeerd
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>FD=FIRSTDISK/K/N</tt>&nbsp;&nbsp;
+</td><td>
+nummer van de eerste disk
+<br>standaard "FD=1"
+<br>voorbeeld "FD=0"
+</td></tr>
+<tr><td valign=top>
+<tt>LD=LASTDISK/K/N</tt>
+</td><td>
+standaard "LD=999999"
+<br>voorbeeld "LD=3"
+</td></tr>
+<tr><td valign=top>
+<tt>PEDANTIC/S</tt>
+</td><td>
+Wanneer aangeduid zal DIC onmiddellijk stoppen als een track niet gelezen kan worden, dient 
+gebruikt te worden in installscripts.
+</td></tr>
+</table>
+<h4>Terugkeer code</h4>
+De Terugkeer code is ingesteld op 0 als alle disks van <tt>FD</tt> to <tt>LD</tt>
+succesvol gelezen worden. Anders word de code 10 teruggekeerd.
+</BODY>
+</HTML>

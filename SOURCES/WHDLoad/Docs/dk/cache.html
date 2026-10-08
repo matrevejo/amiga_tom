@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<TITLE>CPU Cache-H&aring;ndtering</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: cache.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>CPU Cache Oversigt</h3>
+For at forbedre ydelsen, er nogle CPU'er i 68k-familien i stand til at cache hukommelsestilgange.
+<br>Caches bliver altid refereret til vha. logiske adresser, inklusiv tilgangens funktionskode.
+Det betyder, at tilgange i Brugermodus og Supervisormodus vil oprette forskellige Cache-indgange (konsult&#233;r venligst Motorola-dokumentationerne for mere info).
+<p>F&oslash;lgende er et overblik over mulighederne for caching p&aring; 68k-CPU'erne:
+<ul><li>68000
+ingen
+<li>68010<ul>
+<li>Instruktions-Pr&aelig;hentning
+<br>to-ords pr&aelig;hentning, &#233;t-ords dekodningsregister
+<li>Loop-Modus
+<br>tilg&aring;s hvis en &#233;t-ordsinstruktion f&oslash;lges af en DBcc looping til den foreg&aring;ende instruktion, der sker ikke flere instruktionshentninger f&oslash;r loopet slutter
+</ul><li>68020<ul>
+<li>Instruktions-Pr&aelig;hentning
+<br>&#233;t langt ord
+<li>Instruktionscache
+<br>16 linjer &#229; 16 bytes = 256 bytes
+<br>kan aktiveres eller fryses via CACR'en
+</ul><li>68030<ul>
+<li>Instruktions-Pr&aelig;hentning
+<br>&#233;t langt ord
+<li>Instruktionscache
+<br>16 linjer &#229; 16 bytes = 256 bytes
+<br>kan aktiveres eller fryses via CACR'en
+<br>Burst-modus tvinger hele cache-linjer til at blive l&aelig;se p&aring; &#233;n gang hvis hardwaren underst&oslash;tter det
+<li>Datacache
+<br>16 linjer &#229; 16 bytes = 256 bytes
+<br>kan aktiveres eller fryses via CACR'en
+<br>altid WriteThrough
+<br>selekt&#233;rbar Skriveallokererings-modus til at p&aring;tvinge skriveoperationer for at ugyldigg&oslash;re andre bruger-/supervisorindgange
+<br>Burst-modis tvinger hele cache-linjer til at blive l&aelig;st p&aring; &#233;n gang, hvis hardwaren underst&oslash;tter det
+</ul><li>68040<ul>
+<li>Instruktions-Pr&aelig;hentning
+<br>&#233;t langt ord
+<li>Instruktionscache
+<br>256 linjer &#229; 16 bytes = 4096 bytes
+<br>kan aktiveres via CACR'en
+<li>Datacache
+<br>256 linjer &#229; 16 bytes = 4096 bytes
+<br>kan aktiveres via CACR'en
+<br>valgbare moduser CopyBack/WriteThrough via MMU
+</ul><li>68060<ul>
+<li>Instruktions-Pr&aelig;hentning
+<br>&#233;t langt ord
+<li>Instruktionscache
+<br>512 linjer &#229; 16 bytes = 8192 bytes
+<br>kan aktiveres, fryses og reduceres til halv st&oslash;rrelse via CACR'en
+<li>Forgreningscache
+<br>kan aktiveres via CACR'en
+<br>ikke p&aring;virket af MMU-ops&aelig;tningen!
+<li>Superskal&aelig;r Udsendelse
+<br>kan aktiveres via CACR'en
+<li>Datacache
+<br>512 linjer &#229; 16 bytes = 8192 bytes
+<br>kan aktiveres, fryses og reduceret til halv st&oslash;rrelse af CACR'en
+<br>valgbare moduser CopyBack/WriteThrough via MMU
+<li>Skub-buffer
+<br>kan deaktiveres via PCR'en
+<li>Gem-buffer
+<br>kan aktiveres via CACR'en
+<br>Sider m&aring; ikke v&aelig;re Ikke-Cachebar Serialiseret (pr&aelig;cis)
+</ul></ul>
+<h4><a name="cache">Cache-styring i WHDLoad</a></h4>
+Den vigtigste ting at forst&aring; er, at cache'erne p&aring; 68030..68060
+bliver kontrolleret af Cache Kontrol-registrene (CACR) <b>og</b> MMU'en!
+<br>I CACR'en vil cache'erne blive aktiveret eller deaktiveret globalt. Vha. MMU vil enkeltsider (4 KiB med WHDLoad) blive markeret mht. hvordan de kan caches.
+<br>P&aring; 68030'eren kan en hukommelsesside v&aelig;re cachebar eller Ikke-cachebar. P&aring; en
+68040/68060 kan den v&aelig;re cachebar WriteThrough, cachebar CopyBack, Ikke-cachebar
+(Upr&aelig;cis) eller Ikke-cachebar Serialiseret (Pr&aelig;cis).
+<br>Hvis MMU'en ikke bliver brugt af WHDLoad, kontrollere den kun CACR'en.
+
+<h4>Standard Cache Setup</h4>
+Som standard er omr&aring;derne i WHDLoad, Slaven og ExpMem markeret som cachebar CopyBack. BaseMem-omr&aring;det er markeret som Ikke-Cachebar og Data- og Instruktionscache'en er aktiveret i CACR'en. S&aring; programmet placeret i BaseMem-omr&aring;det k&oslash;rer uden caches, men  WHDLoad, Slaven og ExpMem bruger cache'erne for bedst ydelse. Hvis MMU'en ikke er i brug af WHDLoad, vil denne ops&aelig;tning resultere i, at begge caches bliver deaktiverede, fordi uden MMU'en kan en anderledes ops&aelig;tning for forskellige hukommelsesregioner ikke konfigureres, og hvis nogen region er markeret som Ikke-cachebar, er det n&oslash;dvendigt at deaktivere alle caches.
+
+<h4>Programm&oslash;rs Cache-control</h4> Der er to resload-funktioner til at kontrollere cache'erne: <A HREF="../autodoc.html#resload_SetCACR">resload_SetCACR</a> og
+<A HREF="../autodoc.html#resload_SetCPU">resload_SetCPU</a>. The <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> is the historical
+older routine and can be fully replaced by <a
+href="../autodoc.html#resload_SetCPU">resload_SetCPU</a> (WHDLoad internally
+maps the arguments of <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> and calls <a
+href="../autodoc.html#resload_SetCPU">resload_SetCPU</a>). Anyway the usage of
+<a href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> is recommended
+for all people which do not know all about Caches and their behavior in a Amiga
+system. Using <a href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> the
+instruction and data cache can seperately enabled or disabled. <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> does only affect the
+cacheability of the BaseMem area.
+
+<h4>Brugercache Kontrol</h4>
+Hvis programm&oslash;ren har udf&oslash;rt et rent job, er der ikke noget, brugeren skal g&oslash;re mht. cache'erne, fordi al p&aring;kr&aelig;vet ops&aelig;tning allerede er udf&oslash;rt af Slaven.
+<br>Ikke desto mindre kan der v&aelig;re to grunde til at &aelig;ndre cache-ops&aelig;tningen manuelt.
+For det f&oslash;rste for at f&aring; en install til at virke, hvilket ellers har problemer, fordi den k&oslash;rer for hurtigt (f.eks. ved at skabe grafikfejl) og for det andet f&aring; et installeret
+program til at k&oslash;re hurtigere.
+<p>For at f&aring; et crashende program til at virke, kan optionen <a
+href="opt.html#NoCache">NoCache</a> benyttes. Denne option deaktiverer alle caches og markerer al hukommelse som v&aelig;rende Ikke-Cachebar Serialiseret (Pr&aelig;cis). Hvis maskinen har 32-bit Chip-hukommelse vil den stadig v&aelig;re hurtigere end en original A500.
+<p>For at g&oslash;re et installeret program hurtigere, kan nogle  optioner blive sat for at aktivere
+Caches. Dette vil overskrive ops&aelig;tningen af Slaven. P&aring; 68020'eren kan optionen
+<a href="opt.html#Cache">Cache</a> indstilles. P&aring; 68030 kan optionen <a
+href="opt.html#DCache">DCache</a> ogs&aring; benyttes, hvilket inkluderer optionen Cache. P&aring;
+68060'eren er der nogle flere optioner: <a href="opt.html#BranchCache">BranchCache</a>,
+<a href="opt.html#StoreBuffer">StoreBuffer</a> og
+<a href="opt.html#SuperScalar">SuperScalar</a>. Optionen <a
+href="opt.html#ChipNoCache">ChipNoCache/S</a> kan forbedre ydelsen p&aring; 68040 og 68060, se nedenfor.
+<a name="chipmem"></a><h4>Cachebarhed af Chip-hukommelse</h4>
+Cachebarheden kan ikke blot s&aelig;ttes af CPU'en selv (CACR) og MMU-ops&aelig;tningen, men ogs&aring; af ekstern hardware. CPU'en signalerer p&aring; bussen, hvis den pr&oslash;ver at cache en tilgang. Ekstern hardware kan signalere til CPU'en (efter en adresse er blevet sat p&aring; adressebussen under en hukommelsesadgang), at en tilgang ikke m&aring; caches.
+<br>Den mekanisme, at hardware signalerer til CPU'en, at hukommelse ikke er cachebar eller i det hele taget ikke er i brug, benyttes (s&aring; vidt jeg ved) af Amiga'er og CPU-Boards indeholdende CPUs >= 68030, fordi disse har en data-cache. P&aring;virket af dette er hele Chip-hukommelsen og I/O-rummet (CIA/bruger/RTC), hvilket ikke m&aring; caches af data-cachen. Dette er n&oslash;dvendigt for at undg&aring; cache-inkonsistens, fordi DMA-aktivitet eller hardware-registre er flygtige.
+
+<br>CPU'ens reaktion p&aring; en hardware-afvisning af en cachebar tilgang varierer p&aring; de forskellige CPU'er. P&aring; 68030'eren er der ingen p&aring;virkning af ydelsen p&aring; tilgangen; de p&aring;g&aelig;ldende data vil ganske enkelt bare ikke blive cachet. P&aring; 68040'eren vil l&aelig;setilgange blive udf&oslash;rt med fuld hastighed, men skrivetilgange vil blive annulleree og genstartet uden cacebarhed, hvilket resulterer i omkring 5 gange (afh&aelig;nger af hardware og CPU-hastighed) langsomere tilgang, sammenlignet med en ikke-cachebar tilgang. P&aring; 68060'eren vil l&aelig;se- og skrivetilgange blive annulleret og genstartet. L&aelig;setilgange vil v&aelig;re omkring 3 gange langsommere og skrivetilgange omkring 5 gange.
+
+<br>De n&aelig;vnte problemer er relateret til datatilgange. Instruktionstilgange er som regel ikke p&aring;virket og endvidere ogs&aring; cachebare inde i Chip-hukommelsen. Der er nogle
+(m&aring;ske fejlbeh&aelig;ftede) typer hardware, der ikke tillader instruktioner at blive cachet i Chip-hukommelse. P&aring; slige hardware b&oslash;r optionen <a
+href="opt.html#ChipNoCache">ChipNoCache/S</a> bruges for at undg&aring; en kraftig nedgang i eksekveringshastigheden, fordi instruktionstilgange andre steder vil v&aelig;re omkring to gange langsommere.
+
+<br>Denne adf&aelig;rd kan checkes ved at eksekvere <i>Speed.Slave</i> indeholdt i <tt>src/memory-speed</tt>-biblioteket i udvikler-arkivet.
+
+<h4>Burst-Modus</h4> Burst-modus'et p&aring; 68030'eren fort&aelig;ller CPU'en, at den altid skal l&aelig;se en fuld cache-linje (16 bytes) hvis en cache-forbier finder sted i stedet for kun det lange ord, der blev forespurgt om. Burst-moduset skal v&aelig;re underst&oslash;ttet af  hardwaren; hvis det ikke er d&#233;t, vil ingen Burst finde sted uden en tidsstraf. Burst-moduset kan aktiveres s&aelig;rskilt for instruktionen og data-cachen. Fordi en Burst-tilgang tager l&aelig;ngere tid end en enkelt tilgang, giver Burst-moduset kun en ydelsesfordel, hvis st&oslash;rstedelen af indgangen i cache-linjerne ogs&aring; bliver brugt, f&oslash;r cache-linjen bliver t&oslash;mt. For  instruktions-cachen forbedrer Burst-moduset som regel ydelsen. For data-cachen ofte kun i scenarier, hvor efterf&oslash;lgende hukommelsesl&aelig;sninger finder sted. WHDLoad aktiverer instruktions-Burstet sammen med instruktions-cachen fra og med version 18.0. Data-Burstet vil ikke blive aktiveret af WHDLoad.
+
+<h4>Skriveallokering</h4>
+Skriveallokeringen kontrollerer cache-h&aring;ndteringen p&aring; 68030'eren, n&aring;r en cache-forbier optr&aelig;der ved en skriveoperation. Skriveallokering skal v&aelig;re aktiveret n&aring;r dele af det installerede program k&oslash;rer i brugermodus. Hvis det installerede program kun k&oslash;rer i Supervisor-modus kan Skriveallokering deaktiveres, hvilket kan give en begr&aelig;nset ydelsesfordel.
+<h4>Forgreningscache</h4>
+<p>Forgreningscache'en er kun tilg&aelig;ngelig i 68060'eren. Det er en form for instruktionscache for forgreningsinstruktioner. Men i mods&aelig;tning til instruktionscachen er den ikke p&aring;virket af MMU-ops&aelig;tningen! Dette betyder, at selv n&aring;r den p&aring;g&aelig;ldende hukommelsesside er markeret som Ikke-cachebar, vil forgreningsinstruktioner blive cachet, hvis forgreningscachen er aktiveret.</p>
+<hr>L&aelig;s Motorola Microprocessor-Brugermanualerne for yderligere  information.
+Hvis du har rettelser eller tilf&oslash;jelser til denne side,
+<A HREF="mailto:wepl@whdload.de">kontakt</A> mig da venligst.
+</BODY>
+</HTML>

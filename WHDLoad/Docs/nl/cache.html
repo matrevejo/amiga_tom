@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+<TITLE>CPU Cache Afhandeling</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: cache.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>CPU Cache Overzicht</h3>
+Om de prestatie te verbeteren, kunnen sommige CPU's van de 68000 familie
+de geheugen toegangen cachen.
+<br>De Caches worden altijd geschreven met logische adressen, inclusief de functie code
+van de toegang. Dat betekent dat toegangen in UserMode en SupervisorMode
+verschillende Cache notities maken (lees de Motorola documentatie voor meer informatie).
+<p>Hier volgt een overzicht van de mogelijkheden van caches van de 68000 familie processoren:
+<ul><li>68000
+niets
+<li>68010<ul>
+<li>Instructie Prefetch
+<br>2 woorden prefetch, 1 woord decodeer register
+<li>Loop Mode
+<br>is actief wanneer een 1 wordinstructie wordt gevolgd door een DBcc, die een aantal keer in een "loop" blijft,
+meer instructies worden niet gehaald tot de "loop" eindigt.
+</ul><li>68020<ul>
+<li>Instructie Prefetch
+<br>1 longword
+<li>Instructie Cache
+<br>16 regels keer 16 bytes is 256 bytes
+<br>kan aangezet of bevroren worden via de CACR
+</ul><li>68030<ul>
+<li>Instructie Prefetch
+<br>1 longword
+<li>Instructie Cache
+<br>16 regels keer 16 bytes is 256 bytes
+<br>kan aangezet of bevroren worden via de CACR
+<br>Burstmode forceert alle cachelijnen om in 1 keer gelezen te worden tenzij de hardware dit ondersteunt
+<li>Data Cache
+<br>16 regels keer 16 bytes is 256 bytes
+<br>kan aangezet of bevroren worden via de CACR
+<br>altijd WriteThrough
+<br>selecteerbare Schrijfallocatiemode om te forceren op schrijf operaties om andere
+user/supervisor toegangen ongeldig te maken.
+</ul><li>68040<ul>
+<li>Instructie Prefetch
+<br>1 longword
+<li>Instructie Cache
+<br>256 regels keer 16 bytes is 4096 bytes
+<br>kan aangezet of bevroren worden via de CACR
+<li>Data Cache
+<br>256 regels keer 16 bytes is 4096 bytes
+<br>kan aangezet of bevroren worden via de CACR
+<br>selecteerbare modus CopyBack/WriteThrough via MMU
+</ul><li>68060<ul>
+<li>Instructie Prefetch
+<br>1 longword
+<li>Instructie Cache
+<br>512 lijnen keer 16 bytes is 8192 bytes
+<br>kan; ingeschakeld, bevroren en verminderd worden tot half de grote via de CACR
+<li>Branch Cache
+<br>kan aangezet of bevroren worden via de CACR
+<br>niet beïnvloed door de MMU setup
+<li>Superscalar Dispatch
+<br>kan aangezet worden via de CACR
+<li>Data Cache
+<br>512 regels keer 16 bytes is 8192 bytes
+<br>kan; ingeschakeld, bevroren en verminderd worden tot half de grote via de CACR
+<br>selecteerbare modus CopyBack/WriteThrough via MMU
+<li>Push Buffer
+<br>kan uitgezet worden via de PCR
+<li>Store Buffer
+<br>kan aangezet worden via de CACR
+<br>Pages moeten niet NonCachable Serialized (precise) zijn
+</ul></ul>
+<h4><a name="cache">Cache management in WHDLoad</a></h4>
+Het eerste belangrijke ding is om te begrijpen dat de caches op; 68030, 68040 en 68060
+gestuurd worden door de CacheControlregister (CACR) <b>en</b> de MMU!
+<br>In de CACR zullen de caches globaal in en uitgeschakeld zijn.
+Met de MMU worden single pagina`s (4 KByte met WHDLoad) gemarkeerd hoe ze gecached kunnen worden.
+<br>Op de 68030 kan een geheugen pagina wel of Niet te Cache zijn. 
+Op een 68040/68060 kan het cachable WriteThrough, cachable CopyBack, niet mogelijk te Cache
+(Imprecise) of niet mogelijk cache Serialized (Precise) te zijn.
+<p>Als de MMU niet gebruikt wordt door WHDLoad, bestuurd het alleen de CACR.
+<h4>Standaard Cache Setup</h4>
+Standaard zijn de gebieden van WHDLoad, de Slave en ExpMem gemarkeerd als 
+cacheable CopyBack. Het BaseMem gebied is gemarkeerd als niet mogelijk te Cache, en de Data
+en Instructie -Cache zijn ingeschakeld in de CACR. Zodat het programma aanwezig in
+het BaseMem gebied kan werken zonder Caches, maar WHDLoad, de Slave en ExpMem gebruiken Caches om
+de beste prestatie te geven. Als de MMU niet gebruikt word door WHDLoad dan worden beide caches
+uitgezet, omdat zonder de MMU er geen meerdere programma`s in het geheugen met verschillende Cache
+instellingen kunnen werken en daarom moet als het gebied is gemarkeerd als NonCacheable alle caches
+uitgezet worden.
+
+<h4>Programmeurs Cache Regelen</h4>Er zijn twee resload functies om de Caches te besturen:
+<A HREF="../autodoc.html#resload_SetCACR">resload_SetCACR</a> en
+<A HREF="../autodoc.html#resload_SetCPU">resload_SetCPU</a>. De <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> is de
+oudere routine en kan helemaal vervangen worden door <a
+href="../autodoc.html#resload_SetCPU">resload_SetCPU</a> (WHDLoad verwerkt intern
+ de argumenten van <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> en roept op <a
+href="../autodoc.html#resload_SetCPU">resload_SetCPU</a>). Maar hoe dan ook, het gebruik van
+<a href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> is aanbevolen
+voor alle mensen die geen verstand hebben van Caches en hun werking in een Amiga systeem.
+Gebruik <a href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> om
+de data cache apart aan te zetten of uit te zetten. <a
+href="../autodoc.html#resload_SetCACR">resload_SetCACR</a> heeft alleen invloed op de
+cache mogelijkheid van de BaseMem gebied.
+<h4>Gebruikers Cache Regelen</h4>
+Als de programmeur goed werk heeft geleverd dan hoeft de gebruiker niets
+te doen betreffend tot Caches omdat alle benodigde instellingen al gemaakt
+zijn door de Slave.
+<br>Niettemin kunnen er twee redenen zijn om handmatig de Cache instellingen
+te veranderen. ten eerste om een install werkend te krijgen welke problemen
+geeft omdat het te snel draait (bijv. maken van grafische fouten) en ten
+tweede om een geïnstalleerd programma sneller te maken.
+<p>Om een programma dat steeds vastloopt werkend te krijgen kan <a href="opt.html#NoCache">NoCache</a> worden gebruikt. Deze optie 
+schakelt alle caches uit en markeert alle geheugen als niet mogelijk te Cache Serialized (precies). 
+Als de computer 32-bit ChipGeheugen heeft zal het nog steeds sneller zijn dan een originele A500.
+<p>Om een geïnstalleerd programma sneller te maken kunnen sommige opties worden ingesteld welke
+de Cache inschakelt. Dat zal de instellingen overschrijven door de Slave. Op de 68020 kan de optie 
+<a href="opt.html#Cache">Cache</a> ingeschakeld worden. Op de 68030 kan ook de optie <a
+href="opt.html#DCache">DCache</a> gebruikt worden dat de Cache optie bevat.
+Op de 68060 zijn er nog wat meer opties: <a href="opt.html#BranchCache">BranchCache</a>,
+<a href="opt.html#StoreBuffer">StoreBuffer</a> en
+<a href="opt.html#SuperScalar">SuperScalar</a>. De optie <a
+href="opt.html#ChipNoCache">ChipNoCache/S</a> kan de prestaties verbeteren op de
+68040 en 68060, zie hieronder.
+<a name="chipmem"></a><h4>cache mogelijkheid van het ChipGeheugen</h4>
+De cache mogelijkheid en de MMU instellingen kan niet alleen ingesteld worden door de CPU zelf (CACR)
+maar ook via externe hardware. De CPU signaleert op de bus of er poging tot een toegang voor te cachen gedaan word.
+En een externe hardware kan de CPU een sein geven (nadat een adres is ingevoerd in de adresbus tijdens
+een geheugentoegang) dat de toegang niet gecached moet worden.
+<br>Het mechanisme dat hardware signalen geeft aan de CPU dat geheugen niet
+cacheable is of helemaal niet gebruikt word (AFAIK) Amigas en CPU-Kaarten die  
+CPU's >= 68030 bevatten (omdat ze een datacache hebben). 
+Het hele Chipgeheugen en IO-Space (CIA/Custom/RTC) worden beïnvloed en welke niet gecached
+mogen worden door de datacache. 
+Dit is nodig om cache inconsistenties te voorkomen, bijvoorbeeld DMA activiteiten.
+<br>De reactie van de CPU op een hardware afwijzing van een mogelijke cache toegang
+varieert op verschillende processoren. Op de 68030 is er geen impact op de prestatie
+van de toegang, de data wordt simpel niet gecached. Op de 68040 worden leestoegangen
+uitgevoerd in volle snelheid maar schrijftoegangen (CopyBack) worden gestopt
+en herstart zonder cache mogelijkheid, wat resulteert in ongeveer 5 keer (ligt aan
+de hardware en de CPU snelheid) langzamere toegang vergeleken met een niet cacheable
+toegang. Op de 68060 worden lees en schrijf -toegangen gestopt en herstart.
+Leestoegangen worden ongeveer drie keer langzamer en schrijf toegangen tot ongeveer 5 keer.
+<br>De genoemde problemen zijn gerelateerd aan datatoegangen. Instructietoegangen worden
+meestal niet beïnvloed en ook cacheable binnen het ChipGeheugen.
+Er is wat (misschien gebroken) hardware welke niet toestemming geeft om instructies
+te cachen in het ChipGeheugen. Met zulke hardware moet de optie <a
+href="opt.html#ChipNoCache">ChipNoCache/S</a> gebruikt worden om een grote vertraging
+in de uitvoerbare snelheid te voorkomen omdat ergens anders instructie toegangen 2 keer
+langzamer worden.
+
+<br>Dit gedrag kan gecontroleerd worden met het uitvoeren van de <i>Speed.Slave</i> dit bestand
+bevind zich in de <tt>src/memory-speed</tt> directory van het developer-archief.
+
+<h4>Burst Mode</h4> De Burstmode op de 68030 verteld de processor om altijd een
+volle cachelijn (16 bytes) te lezen als een cache mis loopt inplaats van alleen het longword
+welke opgevraagd was. De Burstmode moet ondersteund zijn door de hardware, als er
+geen burst ontstaat zonder tijd verlies. De Burstmode kan
+apart geactiveerd worden voor de instructie en data -cache. Omdat een Burst
+toegang langer nodig heeft dan een enkele toegang, de Burstmode geeft daarom alleen een
+prestatie verbetering als de meeste invoer in de cachelijnen zijn gebruikt
+voordat de cachelijnen overschreven worden. Voor de instructie-cache geeft de Burstmode
+meestal een prestatieverbetering. Voor de datacache  meestal alleen in scenarios
+waar op 1 volgende geheugenplaatsen gelezen worden. WHDLoad activeert de instructieBurst
+samen met de instructiecache beginnend van versie 18.0. De data Burst
+wordt niet geactiveerd door WHDLoad.
+
+<h4>Schrijf Toewijzing</h4>
+De Schrijf Toewijzing bestuurt de cache afhandeling op de 68030 wanneer een cache gemist
+plaatsvindt tijdens het schrijven. Schrijf Allocatie moet ingeschakeld zijn wanneer
+delen van het geïnstalleerde programma draaien in Gebruikers Mode. Als het geïnstalleerde
+programma draait in alleen Supervisor Mode kan Schrijf Allocatie uitgeschakeld zijn, wat 
+een kleine prestatie voordeel geeft.
+<h4>Branch Cache</h4>
+<p>De Branch Cache is alleen beschikbaar in de 68060. Het is een soort van
+instructie cache voor branch instructies. Maar in verschil tot de 
+instructie cache is het niet beïnvloed door de MMU setup! Dat betekend dat 
+zelfs als het geschikte geheugenPagina is gemarkeerd als geen Cache mogelijkheid, worden branch
+instructies gecached als de Branch Cache is ingeschakeld.</p>
+<hr>Lees de Motorola Microprocessors Gebruikers Handleiding voor meer informatie.
+Als u correcties of aanvullende informatie heeft voor deze pagina <A
+HREF="mailto:wepl@whdload.de">Email</A> mij alsublieft.
+</BODY>
+</HTML>

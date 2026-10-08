@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Monitors del Sistema / Congeladors</TITLE>
+<meta name="DC.Language" content="ca">
+<meta http-equiv="content-language" content="ca">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: freezer.html 1.4 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</head>
+<BODY>
+<h3>Monitors del Sistema / Congeladors (<i>freezers</i>)</h3>
+Hi ha gran quantitat de congeladors al mercat que funcionen per programari. L'ús d'aquestes eines pot ser de gran ajuda 
+durant el desenvolupament i depuració dels Esclaus i el programari instal·lat. WHDLoad suporta directament HRTMon i 
+ThrillKill. Si desitja suport directe per a un altre, pot contactar-me i tractaré d'incloure'n el suport. Durant 
+l'arrencada, WHDLoad comprova si algun dels monitors suportats es troba actiu. Si se'n troba algun, WHDLoad realitzarà 
+algunes tasques especials. Si la MMU està éssent utilitzada per WHDLoad, declararà la memòria utilitzada pel monitor com a 
+vàlida i "Cachable WriteThrough". Durant l'execució de la demo/joc es redirigiran totes les excepcions NMI al vector NMI 
+desat des de la taula de vectors del monitor. Addicionalment, si el VBR és desplaçat per 
+WHDLoad (<a href="opt.html#NoVBRMove">NoVBRMove/S</a> no està configurat i la CPU és com a mínim un 68010) aquest compararà la 
+<a href="opt.html#FreezeKey">FreezeKey</a> amb el valor actual del teclat a cada interrupció. Si les tecles es corresponen,
+ WHDLoad reconeixerà el teclat, transformarà el marc de la pila (<i>stackframe</i>) a un un marc de pila NMI i entrarà  
+al monitor via el seu gestor de NMI.
+
+<h4>HRTMon</h4>
+La detecció en memòria hauria d'ésser segura especialment en versions noves del monitor perquè se li ha afegit una nova signatura. 
+Tingui cura si la MMU està éssent utilitzada per WHDLoad: no accedeixi a l'àrea fora de BaseMem/ExpMem des d'HRTMon. Això provocarà una fallada
+ perquè HRTMon no pot tractar l'Excepció de Falla d'Accés (Access Fault Exception) resultant.
+  
+ <p>A les preferències d'HRTMon (HRTMonPrefs), s'ha de seleccionar la casella 'No VBR move', en cas contrari no podrà entrar al 
+monitor mentre WHDLoad s'està executant.
+<p>Després de retornar des de HRTMon al programa que s'està executant sota WHDLoad, pot notar-se una pantalla gràfica incorrecta.
+Això es deu al fet que HRTMon sobreescriu alguns registres Custom; això es pot evitar indicant a l'HRTMon el valor correcte, per ex. empri  
+<tt>'e $100 $5200'</tt> per a una pantalla de 32 colors abans de retornar.
+
+<p>L'HRTmon inclòs a WinUAE només es pot detectar si HRTmon s'ha activat prèviament com a mínim una vegada (s'ha polsat la tecla PgUp). 
+En aquest cas no serà fins la primera activació quan s'establirà el vector NMI, que és emprat per WHDLoad per localitzar el monitor.
+
+<p>Hi ha noves versions d'HRTmon que afegeixen comandes especials quan funcionen 
+sota WHDLoad. En conseqüència pots carregar/desar arxius i emprar les funcions <a 
+href="prot.html">resload_Protect#?</a> dins HRTmon. Aquestes 
+versions es poden descarregar des de <a 
+href="http://www.whdload.de/whdload/Tools/">la plana de WHDLoad</a>.
+
+<h4>ThrillKill</h4>
+No hi ha cap signatura utilitzable al congelador, per tant s'utilitza un sistema a base de comparacions al codi. Això implica que la 
+detecció no funcionarà amb altres versions.
+</BODY>
+</HTML>

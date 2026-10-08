@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>CRC16 * Berekening van de CRC16 Controlesom</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: crc16.html,v 1.1 2011/09/04 23:01:44 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>CRC16 * Berekening van de CRC16 Controlesom </h3>
+Dit programma berekent de CRC-16 van een aangewezen deel van een bestand(of het gehele bestand). 
+Dit idee is om te gebruiken in installatiescripts, welke moeten identificeren wat voor versie van een bestand ze mee werken om 
+verschillende Slaves etc. te installeren.
+De waarde die het terugstuurt is hetzelfde als de CRC-16 berekend door <a href="../autodoc.html#resload_CRC16">resload_CRC16</a>
+wat ook handig kan zijn tijdens Slave ontwikkeling.
+<h4>Installatie</h4>
+Kopiëer naar C: of een vergelijkbare plaats
+<h4>Options</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,OFFSET/K/N,LENGTH/K/N</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>
+bestand om controlesom van te berekenen
+<br>bijvoorbeeld "S:Startup-Sequence"
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>OFFSET/K/N</tt>&nbsp;&nbsp;
+</td><td>
+    beginadres in het bestand
+<br>standaard begin van het bestand
+<br>bijvoorbeeld "OFFSET=11264" om op track 2 te beginnen van de standaard disk image
+</td></tr>
+<tr><td valign=top>
+<tt>LENGTH/K/N</tt>
+</td><td>
+het aantal bytes om de crc op te berekenen
+<br>standaard eind van het bestand
+<br>bijvoorbeeld "LENGTH=1024"
+</td></tr>
+</table>
+<h4>Terugkeercode</h4>
+De CRC16 is teruggekeerd als de exit code van het programma.
+</BODY>
+</HTML>

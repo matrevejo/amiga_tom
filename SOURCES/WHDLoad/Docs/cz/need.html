@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<TITLE>Požadavky</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: WHDLoad/Docs/en/need.html	2007/01/17 18:11:56 -->
+</HEAD>
+<BODY>
+<h3>Požadavky</h3>
+<h4>spustit nainstalované programy:</h4>
+<ul>
+<li>CPU 68000 (68010+ jsou doporučeny, protože některé instalačky požadují VBR
+pro možnost výskoku z programu klavesou)
+<li>Kickstart 2.0 (verze 37)
+<li>a minimalne 1.0 MB RAM (někdy víc, záleží na nainstalovaném programu)
+</ul>
+<h5>Emulace Kickstartu</h5>
+<p>Některé instalačky požadují takzvaný <cite>kickemu</cite> pro vytvoření
+kompletního AmigaOS prostředí pro nainstalovaný program. Pro použití <cite>kickemu</cite>
+je třeba image originálního kickstartu. Tento image může být stažen z opravdové
+Amigy s programy jako <cite>GrabKick</cite> nebo podobných, které jsou k dispozici na Aminetu
+(ujistěte se, že máte <a href="bugs.html">správné nastavení pro vaše disky (MaxTransfer, Mask)</a>
+ jinak bude vytvořené image poškozené).
+Požadovaná verze kickstartu závisí na instalovaném programu. Obvykle stačí jen jeden
+image na instalačku. Informace o požadované verzi image by měla být v <i>ReadMe</i> souboru instalačky.
+Image pro kickstart 1.2 a 1.3 mohou být staženy pouze z příslušné A500, verzi 3.1 je možné stáhnout
+z A500/A600/A2000, A1200 nebo A4000, která je vybavena takovou verzí ROM.
+ Pokud WHDLoad nenajde image nebo image je špatná nebo nějak modifikovaná verze,
+WHDLoad ukončí činnost s adekvátní chybovou hláškou. Dodatečný relokační soubor s koncovkou
+<tt>.RTB</tt> ke kickstart image musí být přítomen. Relokační soubor lze najít na Aminetu
+v archivu <a href="http://aminet.net/package/util/boot/skick346.lha">util/boot/skick346.lha</a>.
+Oba soubory, kickstart image a relokační soubor musí
+být v direktoráři <i>Devs:Kickstarts/</i> a musí být správně pojmenovány. Počátkem WHDLoad verze 17.0
+můžou být soubory uloženy v direktoráři <i>WHDCOMMON:</i>. Následující tabulka informuje o jménech souborů souvisejících s kickstart verzemi:</p>
+
+Od WHDLoad verze 16.5 mohou být použity i image kickstartu z CDček Amiga Forever
+od Cloanto, musí být ale přejmenovány podle tabulky níže. Navíc musí být zkopírován
+soubor <i>rom.key</i> do <i>Devs:Kickstarts/</i> nebo <i>WHDCOMMON:</i>.
+
+Verze ROM z Cloanto Plus Edition už nejsou zakódované a <i>rom.key</i> nevyžadují.
+Pro další informace navštivte <a href="http://amigaforever.com/kb/15-120">Amiga Forever</a>.
+<table border=1 cellpadding=3><tr>
+	<th rowspan=2>Verze</th>
+	<th rowspan=2>Jméno image kickstartu</th>
+	<th rowspan=2>Jméno relokačního souboru</th>
+	<th colspan=4>Jméno Cloanto souborů z "Amiga Forever"</th>
+</tr><tr>
+	<th>release 3.0 (1999)</th>
+	<th>release 6.1 (2005)</th>
+	<th>release 6.7 (2011)</th>
+	<th>release 7.0 (2014)</th>
+</tr><tr>
+	<td align=center>1.2</td>
+	<td>Devs:Kickstarts/kick33180.A500</td>
+	<td>Devs:Kickstarts/kick33180.A500.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-120.rom</td>
+
+</tr><tr>
+	<td align=center>1.3</td>
+	<td>Devs:Kickstarts/kick34005.A500</td>
+	<td>Devs:Kickstarts/kick34005.A500.RTB</td>
+	<td align=center>kick130.rom</td>
+	<td align=center colspan=3>amiga-os-130.rom</td>
+
+
+</tr><tr>
+	<td align=center rowspan=3>3.1</td>
+	<td>Devs:Kickstarts/kick40063.A600</td>
+	<td>Devs:Kickstarts/kick40063.A600.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center>amiga-os-310-a500.rom</td>
+	<td align=center>amiga-os-310-a600.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A1200</td>
+	<td>Devs:Kickstarts/kick40068.A1200.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-310-a1200.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A4000</td>
+	<td>Devs:Kickstarts/kick40068.A4000.RTB</td>
+	<td align=center>kick310.rom</td>
+	<td align=center colspan=2>amiga-os-310.rom</td>
+	<td align=center>amiga-os-310-a4000.rom</td>
+</tr></table>
+
+<h4>volitelná balení:</h4>
+<ul>
+
+<li>Kickstart 3.1 (verze 40), opravuje některé problémy dřívějších verzí,
+také nabízí nějaké nové prvky, které WHDLoad využije, pokud jsou k dispozici
+jako lepší výkon pro MemoryPools, pokud nainstalovaný program používá spoustu souborů
+
+<li>pro používání komprimovaných dat v XPK musí být nainstalovány XPK knihovny,
+najdete je na <a href="http://aminet.net/package/util/pack/xpk_User">aminetu</a>,
+všechny datové soubory můžete zkomprimovat v XPK, WHDLoad je rozbalí při nahrávání.
+XPK dekomprese vyžaduje další pamě , takže je třeba opatrnosti při používání
+na systémech s menší pamětí. Soubory zapsané WHDLoadem jsou vždy bez komprese.
+
+<li>pro automatický výběr jazyků použitý v některých instalačkách se používá
+lowlevel.library, tato knihovna je součástí Workbench 3.1, ale může být
+doinstalovaná pro předchozí verze OS jako extenze. Pokud chybí, instalačky
+budou automaticky používat angličtinu
+
+<li>nainstalovaný WHDLoad používá k zobrazení kterýchkoliv requesterů reqtools.library,
+takže si reqtools můžete nakonfigurovat např. pro kontrolu, kde se requestery budou
+zobrazovat. Dá se to stáhnout z <a href="http://aminet.net/package/util/libs/ReqToolsUsr.lha">aminetu</a>
+</ul>
+
+<h4>K tvoření nových slave / instalaček:</h4>
+<ul>
+<li>doporučená je 68030+ s MMU k využití všech možností WHDLoad (namakaná
+mašina je vždycky dobrý výběr pro výrobu software ;-))
+<li>znalost strojového kódu, assembleru, hardware Amigy...
+<li>assembler (optimalizovatelný)
+<li>nějaké další programy se taky hodí (hexaeditor, disassembler - treba Resource, ...)
+<li>trochu víc MB RAM
+<li>přístup k různým konfiguracím pro testovací účely (68000 - 68060, OCS, AGA, GfxCard)
+<li>hardwarový nebo softwarový freezer - třeba AR3, HRTMon, TK
+<li>NMI tlačítko pro přerušení běžícího programu nebo ke vstupu do softwarového monitoru/freezeru
+</ul>
+</BODY>
+</HTML>

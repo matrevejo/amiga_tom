@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>SP * Save Picture</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: sp.html 1.2 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>SP * Save Picture</h3>
+Et v&aelig;rkt&oslash;j til at udpakke et billede fra en <a href="dump.html">dump-fil</a> oprettet
+af WHDload.
+<h4>Installation</h4>
+SP er kun indeholdt i <tt>DEV</tt> arkivet, ikke i <TT>USR</tt>
+arkivet
+<br>Kopier det til C: eller et lignende sted
+<h4>Brug</h4>
+F&oslash;rst m&aring; en dump-fil oprettes. Start det installerede program fra hvilket billedet
+skal tr&aelig;kkes ud. Det skal k&oslash;res med optionen <a
+href="opt.html#Snoop">Snoop/S</a> aktiveret. Endvidere skal <a
+href="opt.html#Expert">Expert/S</a> og <a
+href="opt.html#DebugKey">DebugKey/K/N</a> v&aelig;re sat. Hvis billedet der skal tr&aelig;kkes ud bliver vist,
+trykkes p&aring; DebugKey. WHDLoad skriver nu dump-filen. G&aring; ind i mappen, hvor dump-filen er placeret, ved hj&aelig;lp af Shell/CLI.
+Aktiver nu <tt>SP</tt> med
+filnavnet for at gemme som argument. <tt>SP</tt> vil loade  dumpfilen og pr&oslash;ve
+at gemme billedet.
+Hvis du har sat <a href="opt.html#CoreDumpPath">CoreDumpPath</a> optionen beh&oslash;ver du
+ikke at indtaste dumpfilens bibliotek fordi SP l&aelig;ser den globale
+WHDLoad konfigurationsfil for at finde det.
+<h4>Optioner</h4>
+<table>
+<tr>
+  <td colspan=2><tt>OutputFile/A,Cop/K,CS=CopStop/K,Width/K,Height/K,con0/K,mod1/K,mod2/K,pt1/K,pt2/K,pt3/K,pt4/K,NoCopLst/S</tt></td>
+</tr>
+<tr>
+  <td valign=top><tt>OutputFile/A</tt></td>
+  <td>filnavnet p&aring; billedet der skal gemmes</td>
+</tr>
+<tr>
+  <td valign=top><tt>Cop/K</tt></td>
+  <td>s&aelig;tter startadressen p&aring; den f&oslash;rste kobberliste til  fortolkning, hvis du vil
+  overskrive adressen indeholdt i dumpfilen</td>
+</tr>
+<tr>
+  <td valign=top><tt>CS=CopStop/K</tt></td>
+  <td>denne option specificerer adressen hvor fortolkning af
+  kobberlisten skal stoppe. Den skal bruges hvis sk&aelig;rmen er bygget op af mere end ét billede</td>
+</tr>
+<tr>
+  <td valign=top><tt>Width/K</tt></td>
+  <td>specificerer bredden p&aring; billedet der skal gemmes, det  vil ikke p&aring;virke modulo-v&aelig;rdierne!</td>
+</tr>
+<tr>
+  <td valign=top><tt>Height/K</tt></td>
+  <td>specificerer h&oslash;jden p&aring; billedet der skal gemmes</td>
+</tr>
+<tr>
+  <td valign=top><tt>con0/K</tt></td>
+  <td>overskriver <tt>bplcon0</tt> registeret indeholdt i
+dump-filen</td>
+</tr>
+<tr>
+  <td valign=top><tt>mod1/K,mod2/K</tt></td>
+  <td>overskriver <tt>bplmod1</tt>/<tt>bplmod2</tt> registeret indeholdt i dump-filen</td>
+</tr>
+<tr>
+  <td valign=top nowrap><tt>pt1/K,pt2/K,pt3/K,pt4/K</tt>&nbsp;&nbsp;</td>
+  <td>overskriver <tt>bplpt1,2,3,4</tt> registeret indeholdt i   dump-filen</td>
+</tr>
+<tr>
+  <td valign=top><tt>NoCopLst/S</tt></td>
+  <td>deaktiverer dump af kobberlisten</td>
+</tr>
+</table>
+</BODY>
+</HTML>

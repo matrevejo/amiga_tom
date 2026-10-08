@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>Výpisy pamäte a záznamy</TITLE>
+<meta name="DC.Language" content="sk">
+<meta http-equiv="content-language" content="sk">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: dump.html 1.2 2009/02/05 20:38:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Výpisy pamäte a záznamy</h3>
+WHDLoad vie ukladať pamäť a produkovať rôzne
+záznamy, čo je určené prevažne na odlaďovacie účely.
+<a name="memory"><h4>Výpis pamäte (memory dump)</h4></a>
+Memory dump je celá pamäť používaná
+nainštalovaným programom a zapísaná v daný okamih do súboru. Veľkosť súboru
+záleží na nainštalovanom programe (je rovnaká ako veľkosť <a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a> v
+štruktúre slave). Memory dump sa vytvorí, ak je stlačený <a
+href="opt.html#DebugKey">DebugKey</a> alebo ak pri chybovom hlásení stlačíte CoreDump
+tlačidlo. Meno dump súboru bude &quot;.whdl_memory&quot;. Štandartne sa ukladá
+do &quot;PROGDIR:&quot;, ale to môže byť zmenené pomocou voľby <a
+href="opt.html#CoreDumpPath">CoreDumpPath</a>. Existujúci súbor s rovnakým
+menom bude vždy prepísaný bez varovania. Ak nainštalovaný program používa
+dodatočnú Fast RAM, bude táto pamäť uložená v súbore &quot;.whdl_expmem&quot;.
+<a name="register"><h4>Výpis registra (register dump)</h4></a>
+Výpis registra obsahuje kompletný stav CPU,
+vrátane MMU, CIA a custom chipu. Niektoré CIA a custom register nie sú čítateľné,
+takže sú obsiahnuté vo výpise len ak bol aktívny <a href="opt.html#Snoop">Snoop</a>
+mód. Informácie budú zapísané do ASCII súboru a budú zvýraznené pomocou
+escape sekvencií (použitím CSI - Control Sequence Introducer, decimal 155). Na
+prehliadanie sú doporučené programy, ktoré escape sekvencie podporujú (napr.
+More, MuchMore, Multiview, ...). Meno dump súboru bude
+&quot;.whdl_register&quot;. Štandartne sa ukladá do &quot;PROGDIR:&quot;, ale
+to môže byť zmenené pomocou voľby <a href="opt.html#CoreDumpPath">CoreDumpPath</a>.
+Ak už súbor existuje, bude nový výpis pripojený k predchádzajúcemu.
+<a name="FileLog"><h4>Záznam prístupov k súborom (Filelog)</h4></a>
+Všetky prístupy na disk budú zaznamenávané, ak
+je aktivovaná voľba <a href="opt.html#FileLog">FileLog</a>. Táto voľba môže byť
+užitočná na analýzu diskových operácií nainštalovaného programu, ďalej na
+odlaďovacie a optimalizačné účely. Nasledujúce resload funkcie budú tvoriť
+položky tohto záznamu:
+<ul>
+<li><a href="../autodoc.html#resload_DeleteFile">resload_DeleteFile</a>
+<li><a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a>
+<li><a href="../autodoc.html#resload_Examine">resload_Examine</a>
+<li><a href="../autodoc.html#resload_ExNext">resload_ExNext</a>
+<li><a href="../autodoc.html#resload_GetFileSize">resload_GetFileSize</a>
+<li><a href="../autodoc.html#resload_GetFileSizeDec">resload_GetFileSizeDec</a>
+<li><a href="../autodoc.html#resload_ListFiles">resload_ListFiles</a>
+<li><a href="../autodoc.html#resload_LoadFile">resload_LoadFile</a>
+<li><a href="../autodoc.html#resload_LoadFileDecrunch">resload_LoadFileDecrunch</a>
+<li><a href="../autodoc.html#resload_LoadFileOffset">resload_LoadFileOffset</a>
+<li><a href="../autodoc.html#resload_SaveFile">resload_SaveFile</a>
+<li><a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a>
+</ul>
+Každý prístup k súboru cez funkcie, ktoré sú
+vyššie uvedené, vytvorí jeden riadok v logu. Riadok identifikuje volanú
+funkciu, parametre a výsledok. WHDLoad tieto položky zhromažďuje v internom
+zásobníku. Tento zásobník bude vyčistený pri ukončení programu alebo počas
+prístupov, ak sa preplní. Informácie sa zapíšu do ASCII súboru, meno záznamu
+bude &quot;.whdl_filelog&quot;, štandartne sa ukladá do &quot;PROGDIR:&quot;,
+dá sa to ale zmeniť pomocou voľby <a href="opt.html#CoreDumppath">CoreDumpPath</a>.
+</BODY>
+</HTML>

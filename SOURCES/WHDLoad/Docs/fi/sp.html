@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>SP * Kuvan tallennus</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: sp.html 1.3 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>SP * Kuvan tallennus</h3>Ty&ouml;kalu kuvan irrotukseen WHDLoadin <a href="dump.html">dumppitiedostosta</a>.<h4>Asennus</h4>SP on vain <tt>DEV</tt> -paketissa, ei <TT>USR</tt>-paketissa. <br>kopioi tiedosto hakemistoon C: tai vastaavaan paikkaan<h4>K&auml;ytt&ouml;</h4>Ensin on luotava dumppitiedosto. K&auml;ynnist&auml; asennettu ohjelma, josta kuva on tarkoitus tallentaa. Se on ajettava valinnalla <a
+href="opt.html#Snoop">Snoop/S</a>. My&ouml;s <a
+href="opt.html#Expert">Expert/S</a> ja <a
+href="opt.html#DebugKey">DebugKey/K/N</a> tulee asettaa. Jos haluamasi kuva n&auml;kyy, paina DebugKey-n&auml;pp&auml;int&auml;. WHDLoad kirjoittaa dumppitiedoston. Siirry Shell/CLI:ll&auml; hakemistoon, jossa dumppitiedosto sijaitsee. K&auml;ynnist&auml; <tt>SP</tt> ja anna tallennettava tiedoston nimi m&auml;&auml;reeksi. <tt>SP</tt> lataa dumpin ja yritt&auml;&auml; tallentaa kuvan. Jos olet asettanut valinnan <a href="opt.html#CoreDumpPath">CoreDumpPath</a>, dumppitiedoston hakemistoa ei tarvitse antaa, koska SP lukee sen WHDLoadin yleisest&auml; asetustiedostosta.<h4>Valinnat</h4>
+<table>
+<tr>
+  <td colspan=2><tt>OutputFile/A,Cop/K,CS=CopStop/K,Width/K,Height/K,con0/K,mod1/K,mod2/K,pt1/K,pt2/K,pt3/K,pt4/K,NoCopLst/S</tt></td>
+</tr>
+<tr>
+  <td valign=top><tt>OutputFile/A</tt></td>
+  <td>tallennettavan kuvan tiedostonimi</td>
+</tr>
+<tr>
+  <td valign=top><tt>Cop/K</tt></td>
+  <td>asettaa ensimm&auml;isen tulkittavan copperlistan alkuosoitteen, jos haluat ylikirjoittaa dumppitiedostossa olevan osoitteen</td>
+</tr>
+<tr>
+  <td valign=top><tt>CS=CopStop/K</tt></td>
+  <td>t&auml;m&auml; valinta m&auml;&auml;ritt&auml;&auml;, miss&auml; osoitteessa copperlistan tulkinta lopetetaan. Sit&auml; tulee k&auml;ytt&auml;&auml;, jos ruutu koostuu useammasta kuvasta</td>
+</tr>
+<tr>
+  <td valign=top><tt>Width/K</tt></td>
+  <td>m&auml;&auml;ritt&auml;&auml; tallennettavan kuvan leveyden, ei vaikuta moduloarvoihin!</td>
+</tr>
+<tr>
+  <td valign=top><tt>Height/K</tt></td>
+  <td>m&auml;&auml;ritt&auml;&auml; tallennettavan kuvan korkeuden</td>
+</tr>
+<tr>
+  <td valign=top><tt>con0/K</tt></td>
+  <td>ylikirjoittaa <tt>bplcon0-</tt> rekisterin, joka on dumppitiedostossa</td>
+</tr>
+<tr>
+  <td valign=top><tt>mod1/K,mod2/K</tt></td>
+  <td>ylikirjoittaa <tt>bplmod1-</tt>/<tt>bplmod2-</tt> rekisterin, joka on dumppitiedostossa</td>
+</tr>
+<tr>
+  <td valign=top nowrap><tt>pt1/K,pt2/K,pt3/K,pt4/K</tt>&nbsp;&nbsp;</td>
+  <td>ylikirjoittaa <tt>bplpt1,2,3,4-</tt> rekisterin, joka on dumppitiedostossa</td>
+</tr>
+<tr>
+  <td valign=top><tt>NoCopLst/S</tt></td>
+  <td>kytkee copperlistan dumppauksen pois</td>
+</tr>
+</table>
+</BODY>
+</HTML>

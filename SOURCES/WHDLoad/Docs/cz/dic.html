@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>The Disk-Image-Creator</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: dic.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>DIC * The Disk-Image-Creator</h3>
+<p>DIC je utilita pro vytvoření souborového obrazu - disk image - z disku.
+DIC čte obsah diskety přes zadané zařízení (např."trackdisk.device" pro DF0:)
+a zapisuje načtená data do souboru v aktuálním adresáři. Jméno disk image
+bude "DIsk.1",  kde "1" je pořadí načteného disku. Číslo se zvyšuje po každém
+dalším načteném disku. Použitím <tt>Name</tt> volby je možné určit jiné jméno.</p>
+<p>DIC také umí číst jiná zařízení jako RAD:, PC0: nebo DS0: a HD diskety.</p>
+<p>Pokud nějaká ze stop nemůže být načtena, DIC zobrazí hlášku, kde je možné
+poškozenou stopu přeskočit nebo pokusti se znovu o její načtení.<br>
+Přeskočená stopa bude v image identifikována patternem "<tt>TDIC</tt>". Tak
+je možné zjistit chybu v načtení později.</p>
+<p>DIC umí číst diskety jen částečně, pomocí volby <tt>SIZE/K/N</tt>. DIC při této
+volbě vytvoří jen zadanou velikost dat. To se může hodit, pokud poslední stopy
+na disketě nejsou použity.</p>
+<p>Stopy mohou být přeskočeny automaticky pomocí <tt>SKIPTRACK/K/N</tt>.
+To se hodí pro instalování her, které mají ochranu na jedné stopě (např. RN-Copylocks na stopě 1).</p>
+<p>Pokud volba <tt>PEDANTIC/S</tt> byla zvolena, DIC skončí ihned, jak narazí na vadnou stopu.</p>
+<p>DIC může být kdykoliv přerušeno stiskem Ctrl-C.</p>
+<h4>Instalace</h4>
+<br>zkopírujte do C: nebo podobného místa
+<h4>Volby</h4>
+<p>Primtivní použití DIC:
+<ul>
+<li>otevřete Shell
+<li>vlezte do adresáře, kam chcete uložit image
+<li>napište "DIC" a odešlete RETURN
+<li>teď vkládejte disky a následujte instrukce DIC
+<li>po posledním disku, co byl třeba načíst přerušte DIC pomocí Ctrl-C
+</ul>
+<h4>Volby</h4>
+<table width="100%">
+<tr><td colspan=2>
+<tt>DEVICE,NAME,SKIPTRACK/K,SIZE/K,FD=FIRSTDISK/K/N,LD=LASTDISK/K/N,PEDANTIC/S</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>DEVICE</tt>
+</td><td width="100%">
+odkud se budou číst image
+<br>standartně "DF0:"
+<br>např. "RAD:"
+</td></tr>
+<tr><td valign=top>
+<tt>NAME</tt>
+</td><td>
+Jméno pro image. Standartne je zvoleno "Disk.X", kde X je standartně 1.
+</td></tr>
+<tr><td valign=top>
+<tt>SKIPTRACK/K/N</tt>
+</td><td>
+specifcká stopa nebude načtena.
+</td></tr>
+<tr><td valign=top>
+<tt>SIZE/K</tt>
+</td><td>
+velikost image, použitelné, pokud program používá jen část disku.
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>FD=FIRSTDISK/K/N</tt>&nbsp;&nbsp;
+</td><td>
+číslo prvního disku
+<br>default "FD=1"
+<br>example "FD=0"
+</td></tr>
+<tr><td valign=top>
+<tt>LD=LASTDISK/K/N</tt>
+</td><td>
+default "LD=999999"
+<br>example "LD=3"
+</td></tr>
+<tr><td valign=top>
+<tt>PEDANTIC/S</tt>
+</td><td>
+DIC quitne, pokud stopa nemůže být načtena
+</td></tr>
+</table>
+<h4>Návratový kód</h4>
+je 0 pokud byly všechny požadované disky, od <tt>FD</tt> do <tt>LD</tt>
+načteny. Jinak 10.
+</BODY>
+</HTML>

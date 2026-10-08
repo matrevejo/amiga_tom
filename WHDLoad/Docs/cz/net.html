@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>Network functions</TITLE>
+<meta name="DC.Language" content="cz">
+<meta http-equiv="content-language" content="cz">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: net.html 1.1 2015/04/19 21:04:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+
+<h3>Prístup k síti</h3>
+
+WHDLoad je schopen pres internetové pripojení overit, jestli existuje
+nová verze WHDLoad a slave k pouzívané instalaci. Veskerá sítová aktivita
+se provádí pres HTTP protokol. Muze být pouzita globální volba <a href="opt.html#Proxy">Proxy/S</a>
+k presmerování prístupu pres proxy. Prístup k proxy vcetne hesla a loginu
+lze specifikovat pomocí <a href="opt.html#Proxy">Proxy/S</a> volby. WHDLoad podporuje jen základní overení hesla.
+
+<br>Pokud si prístup WHDLoad k internetu neprejete, stací pouzít globální volbu <a href="opt.html#NoNetwork">NoNetwork/S</a>.
+
+<h3>Overení verze WHDLoad a slave</h3>
+
+WHDload pres WHDLoad website overí, jestli existuje novejsí verze slave nebo WHDLoad.
+
+<br>Overení je provedeno jen pokud se otevre <a href="opt.html#SplashDelay">informacní okno</a>, protoze výsledek je zobrazen tam.
+
+<p>Pro overení verze WHDLoad bude pouzito císlo verze ze spusteného WHDLoadu.
+Jestli existuje novejsí verze, informacní okno ukáze císlo verze a datum
+vydání nejaktuálnejsí WHDLoad verze a v okne se objeví nové tlacítko "Updatovat WHDLoad."
+Pokud máte nainstalovanou <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>, stisk
+tlacítka otevre vás webový prohlízec a odkáze vás na WHDLoad stránku. Pokud není k dispozici openurl.library,
+requester vám zobrazí WHDLoad stránku. Jestlize je pouzita volba <a href="opt.html#Expert">Expert/S</a>,
+budou se vám nabízet i nejnovejsí beta verze WHDLoadu.
+
+<p>Pro overení verze slave WHDLoad vypocítá hodnotu SHA-256 ze slave, která je odeslána
+na WHDLoad server. Tam je databáze vsech slave souboru. Pokud existuje novejsí verze
+instalace/slave, informacní okno ukáze datum vydání nejaktuálnejsí verze a objeví se
+nové tlacítko "Updatovat slave". Pokud je nainstalovaná <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>,
+stisk tlacítka otevre vás webový prohlízec odkazující na WHDLoad stránku konkrétní instalace.
+Pokud knihovna openurl.library není k dispozici, objeví se requester s adresou WHDLoad stránek instalace.
+
+<p>Pokud se existují novejsí verze WHDLoad nebo slave, objeví se dalsí tlacítko "Start" v informacním okne
+a okno se automaticky nezavre. Okno muze být uzavreno pomocí mysí nebo kláves Space, Return nebo Esc.
+
+<p>Pokud <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>
+je nainstalovaná a stisknete tlacítko 'Update', WHDLoad vykoná príkaz <a
+href="opt.html#ExecuteCleanup">ExecuteCleanup/K</a> k odblokování prípadne
+zablokovanému IP stacku. To se nemusí povést, pokud není dost volné pameti
+pri startu webového prohlízece, protoze operace <a href="opt.html#Preload">Preload/S</a> zabrala
+vetsinu pameti. Takze s malou pametí muze být tlacítko 'Update' nepouzitelné.
+
+</BODY>
+</HTML>

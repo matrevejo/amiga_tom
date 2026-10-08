@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<TITLE>Veel gestelde vragen (FAQ)</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: faq.html,v 1.3 2015/12/23 22:35:27 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Veel gestelde vragen (FAQ)</h3>
+<table>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Oke, ik heb de installer en er zijn problemen met een install of 
+het starten. Ik ben er zeker van dat ik tot zover alles goed gedaan heb. Wat nu?
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Zulke problemen kunnen komen door verschillende redenen:
+<ul>
+<li>missende/verkeerde Tooltypes<br> Sommige Fixes draaien niet correct (of helemaal niet)
+wanneer u niet de juiste tooltypes heb ingesteld voor uw systeem. Lees de documentatie om uit te vinden
+welke tooltypes ondersteund worden. Voorbeeld Tooltypes die kunnen helpen zijn
+NoCache, NoVBRMove, NoAutoVec, PAL/NTSC, NoMMU.
+<li>het readme bestand dat met een install komt<br>
+Dit legt vaak specifieke problemen uit, toetsen of tooltypes die ingezet dienen te worden.
+<li>verkeerde WHDLoad versie<br> De Meeste Installs hebben de laatste versie van WHDLoad nodig
+en draaien niet op een oudere. De gouden regel is om altijd de laatste versie geïnstalleerd
+te hebben.
+<li>uw machine is incompatibel<br> Zeker een 68040/060 processor, sommige turbokaarten of andere hardware
+kunnen problemen geven. Probeer om alle extra's uit te schakelen en de install opnieuw te starten.
+<li>niet ondersteunde versie<br> Veel commerciële spellen zijn verkocht in meerdere versies
+(volle prijs uitgave/budget, heruitgave/coverdisk uitgave, PAL/NTSC versie,...).
+Natuurlijk kan alleen een install werken als het speciaal geschreven is voor een speciale
+versie van een spel. Als u een verkeerde versie heeft van een spel, zal het niet werken.
+In dit geval, is de enige manier om de install te kunnen gebruiken om contact op te zoeken
+met de auteur van de install en te vragen om ondersteuning van uw versie te verschaffen.
+In de meeste gevallen zal de auteur u helpen en uw versie van het spel patchen, binnen
+een paar dagen.
+<li>oude versie van de install<br> Zodra een bug is ontdekt en verwijderd, word de nieuwe
+versie van de fix beschikbaar gesteld op de WHDLoad website. Neem altijd de laatste versie
+van een install. Let op dat de laatste versie niet altijd op Aminet staat. Sommige patches op
+Aminet zijn helemaal niet uitgegeven, en veel uitgaven hebben een vertraging van enkele weken!
+<li>u heeft een bug ontdekt<br> Alhoewel fixes worden getest voor een uitgave, kan een bug
+aan onze aandacht zijn ontsnapt. Als u denkt een bug gevonden te hebben, schrijf dan een
+uitgebreid rapport van u probleem naar de auteur van de patch. Hiervoor is er een
+meld een bug formulier aanwezig. Probeer uw probleem indien mogelijk, zo precies mogelijk uit te leggen.
+Als we niet worden geïnformeerd kunnen we ze ook niet verhelpen.
+Let op: De enige correcte plek om fouten "bugs" te melden is de meld een bug formulier
+en niet comp.sys.amiga.games of welke andere forum, omdat niet iedere ontwikkelaar de meldingen daar leest.
+</ul>
+</td></tr>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Ik kan geen install vinden van een bepaald spel.
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Maak een lijst van uw wensen. U kunt ook spellen toevoegen die al installeerbaar zijn op hardeschijf
+(kopieerbare bestanden en/of een installer meegeleverd met het spel zelf) welke 
+problemen hebben (ook met simpele problemen of het niet kunnen verlaten van) 
+Let op! een persoon kan ongeveer maar 25 spellen per jaar patchen. Markeer met een prioriteit welke 
+uw favorieten zijn (bijv met ! en +) en welke u niet leuk vind (-), en controleer zelf welke spellen 
+al hardeschijfinstalls hebben.
+</td></tr>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Is het mogelijk om WHDLoad te gebruiken om een demo/spel te installeren
+welke gebruik maakt van het besturingssystem?
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Algemeen is het niet mogelijk om een demo/spel dat draait in WHDLoad om toegang
+te krijgen tot het besturingssysteem of dingen buiten de directory van waaruit WHDLoad is gestart.
+U als schrijver van de benodigde Slave programma, moet alle toegang tot de besturingssysteempatchen.
+Anders weigert u zulk toegang of u moet ze passend emuleren.
+Voor de emulatie bestaat de zogenoemde Kickemu pakket. Deze is verkrijgbaar voor verschillende
+Kickstart versies (bijv. 'Sources/whdload/kick13.s'). Door een image te gebruiken van een echte kickstart,
+kunnen ze een volle besturingssysteemomgeving creëren in het WHDLoad geheugen. 
+Er is een extra readme bestand wat daar over gaat: 'Sources/whdload/kick.readme'.
+</td></tr>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Als WHDLoad de MMU gebruikt is de optie <a href="opt.html#NoMMU">NoMMU/S</a> niet ingeschakeld
+en op een 68030 is de optie <a href="opt.html#MMU">MMU/S</a> ingeschakeld dan zijn er
+korte fouten in het beeld/of in de muziek (bijv. Beast2). Een bug ?
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Dit ontstaat tijden het laden. De reden is dat WHDLoad de onderbrekingen moet uitschakelen
+voor een korte tijd als de MMU gebruikt word. Dit gedrag kan niet worden veranderd.
+</td></tr>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Wanneer ik de NTSC tooltype probeer laat WHDLoad een Guru zien.
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Er is een bug in MCP 1.30 in de Screenmanager wat er voor zorgt dat de 
+WHDLoad OpenScreenTags aanroep crasht. Schakel de ScreenManager in MCP uit om dit te verhelpen.
+</td></tr>
+<tr><td valign=top><i>
+Vraag:
+</i></td><td><b>
+Tijdens het spelen van spelletjes draaien ze sneller dan normaal (Music klinkt vreemd)
+en de onderkant van het beeld ontbreekt. Ik heb zowel PAL als NTSC tooltypes gebruikt maar niets helpt.
+</b></td></tr><tr><td valign=top><i>
+Antwoord:
+</i></td><td>
+Als u een Voodoomonitordriver gebruikt, zet dan de "FakeNativeModes" uit in de tooltypes
+van de monitor drive.
+</td></tr>
+</table>
+</BODY>
+</HTML>

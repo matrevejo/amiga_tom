@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<TITLE>Követelmények</TITLE>
+<meta name="DC.Language" content="hu">
+<meta http-equiv="content-language" content="hu">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+<!-- $Id: need.html 1.5 2011/09/04 23:01:44 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Követelmények</h3>
+<h4>... az installált programokhoz</h4>
+<ul>
+<li>CPU 68000 (68010+ ajánlott, mivel néhány installálóhoz szükséges a VBR a
+'kilépés billentyűre' opcióhoz)
+<li>Kickstart 2.0 (verzió 37+)
+<li>legalább 1.0 MB RAM (néha több, az installált programtól függ)
+</ul>
+<h5>Kickstart emuláció</h5>
+<p>Néhány installáló a <cite>kickemu</cite> lehetőséget haszn&aacute;lja a
+teljes AmigaOS környezet emulálásához az installált program számára. Emiatt a
+<cite>kickemu</cite> számára egy eredeti kickstart képf&aacute;jl szükséges. Ezt a
+képf&aacute;jlt egy valódi Amigából lehet kiszedni olyan segédprogramokkal, mint pl.
+a <cite>GrabKick</cite> vagy hasonlók, melyek az Amineten megtalálhatóak.
+A támogatott képf&aacute;jl verzió függ az installált programtól. Az installáló
+általában csak egy képf&aacute;jlt támogat. Erről az információt megtalálod a mellékelt
+<i>ReadMe</i> fájlban. A támogatott képf&aacute;jl függ az installált programtól.
+Az 1.2-es és 1.3-as csak egy megfelelő A500-ból lehet
+kiszedni, a 3.1-est pedig egy A500/A600/A2000,A1200-ból vagy egy A4000-ből lehet. Ha a WHDLoad nem találja a képf&aacute;jlt,
+az rossz verzió vagy valami megváltoztatta, a WHDLoad ki fog lépni a
+megfelelő hibaüzenettel. Emellett a relokációs fájl <tt>.RTB</tt>
+kiterjesztéssel, a Kickstart képf&aacute;jlhoz megfelelően jelen kell lennie.
+Ez a relokációs fájl megtalálható az Amineten: <a href="http://www.aminet.net/util/boot/skick346.lha">util/boot/skick346.lha</a>.
+Mindkét fájlt, a képf&aacute;jlt és a relokációs fájlt is, a <i>Devs:Kickstarts/</i>
+könyvtárba kell elhelyezni és a nevüknek megfelelőnek kell lenni. A WHDLoad 17.0 verzi&oacute;j&aacute;t&oacute;l kezdve a f&aacute;jlok a <i>WHDCOMMON:</i> k&ouml;nyvt&aacute;rban is elhelyezhetőek.</p>
+A következő
+táblázat mutatja Kickstart verzióktól függően a fájlok neveit:</p>
+<p>WHDLoad 16.5-&ouml;s verzi&oacute;j&aacute;t&oacute;l a Kickstart k&eacute;pf&aacute;jlok a Cloanto &eacute;s Amiga Forever CD-ről is  haszn&aacute;lhat&oacute;ak. A k&eacute;pf&aacute;jlokat a t&aacute;bl&aacute;zatnak megfelelően &aacute;t kell nevezni. Ezen t&uacute;l a <cite>rom.key</cite> f&aacute;jlt <em>Devs:Kickstarts/ </em> vagy  <i>WHDCOMMON:</i> k&ouml;nyvt&aacute;rba kell m&aacute;solni. Bizonyos r&eacute;gi install&aacute;l&oacute;k eset&eacute;ben sz&uuml;ks&eacute;ges lehet a kick40068.A1200 k&eacute;pf&aacute;jl, a  Cloanto ROM-okkal nem műk&ouml;dnek. Az Amiga Forever 2008 m&aacute;r tartalmazza a kick40068.A1200 k&eacute;pf&aacute;jlokat. <br> 
+Az Amiga Forever 2011 is tartalmazza a kick33180.A500 &eacute;s a kick40063.A600 romokat. Ezeket a romokat a WHDLoad a 17.0 verzi&oacute;t&oacute;l t&aacute;mogatja.
+<p></p>
+
+ <table border=1 cellpadding=3><tr>
+	<th rowspan=2>Verzi&oacute;</th>
+	<th rowspan=2>Kickstart k&eacute;pf&aacute;jl neve</th>
+	<th rowspan=2>Relok&aacute;ci&oacute;s f&aacute;jl nevee</th>
+	<th colspan=3>Cloanto 'Amiga Forever' f&aacute;jlnevek</th>
+ </tr><tr>
+	<th>3.0 verzi&oacute;</th>
+	<th> 2005-&ouml;s verzi&oacute;</th>
+	<th> 2011-es verzi&oacute;</th>
+ </tr><tr>
+ 	<td align=center>1.2</td>
+ 	<td>Devs:Kickstarts/kick33180.A500</td>
+ 	<td>Devs:Kickstarts/kick33180.A500.RTB</td>
+	<td></td>
+	<td></td>
+	<td>amiga-os-120.rom</td>
+ </tr><tr>
+ 	<td align=center>1.3</td>
+ 	<td>Devs:Kickstarts/kick34005.A500</td>
+ 	<td>Devs:Kickstarts/kick34005.A500.RTB</td>
+	<td>kick130.rom</td>
+	<td>amiga-os-130.rom</td>
+	<td>amiga-os-130.rom</td>
+ </tr><tr>
+ 	<td align=center rowspan=3>3.1</td>
+ 	<td>Devs:Kickstarts/kick40063.A600</td>
+ 	<td>Devs:Kickstarts/kick40063.A600.RTB</td>
+	<td></td>
+	<td></td>
+	<td>amiga-os-310-a500.rom</td>
+ </tr><tr>
+ 	<td>Devs:Kickstarts/kick40068.A1200</td>
+ 	<td>Devs:Kickstarts/kick40068.A1200.RTB</td>
+	<td></td>
+	<td></td>
+	<td>amiga-os-310-a1200.rom</td>
+ </tr><tr>
+ 	<td>Devs:Kickstarts/kick40068.A4000</td>
+ 	<td>Devs:Kickstarts/kick40068.A4000.RTB</td>
+	<td>kick310.rom</td>
+	<td>amiga-os-310.rom</td>
+	<td>amiga-os-310.rom</td>
+ </tr></table>
+
+<h4>... új Slave írasához / programok installálásához</h4>
+<ul>
+<li>javasolt egy 68030+ MMU-val a WHDLoad lehetőségeinek kihasználásához (egy
+gyors gép mindig jó döntés szoftverfejlesztéshez ;-))
+<li>gépi kód, assembler, Amiga hardver ismerete
+<li>egy assembler (tudjon optimalizálni)
+<li>egyéb hasznos programok (hexedit, disasm, ...)
+<li>néhány MB plusz RAM
+<li>hozzáférés különböző gépekhez tesztelési célból (68000 - 68060, OCS, AGA, grafikus kártya)
+<li>hardver vagy szoftver leállító (pl. AR3, HRTMon, TK)
+<li>egy NMI gomb a futó program megszakításához vagy a
+rendszerfigyelőbe/leállítóba való belépéshez
+</ul>
+</BODY>
+</HTML>

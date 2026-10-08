@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>InstallBB * Installeren van Bootblocks</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: ibb.html,v 1.1 2011/09/04 23:01:44 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>InstallBB * Installeren van Bootblocks</h3>
+InstallBB leest of schrijft van of naar een disk. De bootblocks
+worden behandeld als uitvoerbare bestanden. Tijdens het schrijven zal
+het de disk bestandssysteem type beschermen door eerst de bootblock te lezen
+en het samenvoegen van de DosType (<tt>DOS0</tt>,
+<tt>DOS1</tt> ...) naar de nieuwe. De bootblock checksum is automatisch
+berekend.
+<h4>Installatie</h4>
+InstallBB is alleen bewaard in het <tt>DEV</tt> archief, niet in het
+<TT>USR</tt> archief.
+<br>Kopieer het naar C: of een vergelijkbare plaats.
+<h4>Opties</h4>
+<table>
+<tr><td colspan=2>
+<tt>PROGRAM/A,UNIT/K/N,WRITE/S</tt>
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>PROGRAM/A</tt>&nbsp;&nbsp;
+</td><td>
+het uitvoerbare bestand welke gelezen of beschreven word, moet bepaald worden
+</td></tr>
+<tr><td valign=top>
+<tt>UNIT/K/N</tt>
+</td><td>
+de trackdisk unit nummer (floppy drive nummer)
+<br>standaard is 0 (DF0:)
+</td></tr>
+<tr><td valign=top>
+<tt>WRITE/S</tt>
+</td><td>
+schakelaar, wanneer niet bepaald word de bootblock gelezen vanaf disk naar een bestand,
+wanneer bepaald word het gegeven programma geschreven naar disk
+</td></tr>
+</table>
+</BODY>
+</HTML>

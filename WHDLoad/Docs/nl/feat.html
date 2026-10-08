@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Eigenschappen</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: feat.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Eigenschappen van WHDLoad</h3>
+<ul>
+<li>Kan via CLI of Workbench gestart worden
+<li><a href="mmu.html">geheugen bescherming</a> wanneer MMU gebruikt word (indien beschikbaar)
+<li>WHDload kan geëindigd worden en dan terugkeren naar de Workbench (hangt af van de Slave)
+<li>Mogelijkheid om diskimages te gebruiken en/of gebruikelijke bestanden
+
+<li>Mogelijk om de <a href="opt.html#SavePath">redirecting</a> naar een andere bestandslocatie te schrijven om het wegzetten apart te houden.
+
+<li>Variabele grote van chipgeheugen voor het geïnstalleerde programma van $2000 tot maximaal $200000
+<li>Ongelimiteerde grote van fastgeheugen voor het geïnstalleerde programma
+<li>Intelligente toewijzing van chipgeheugen, gedeeltelijk absoluut en gedeeltelijk onafhankelijk
+<li>Tijdelijke opslag van bestanden en diskimages tijdens <a href="opt.html#Preload">het starten van een programma</a>
+en dynamisch tijdens runtime (LRU)
+<li>Automatisch uitpakken van bestanden en diskimages welke XPK gebruiken
+<li>Automatisch uitpakken van bestanden mits de Slave het ondersteund (RNC/IMP/TPWM/CRM)
+<li>Emulatie van MOVE SR, oa van User-Mode op 68010+
+<li>Emulatie van niet ondersteunde integer-instructies op 68060
+
+<li>Geavanceerde debug ondersteuning (<a href="dump.html#memory">memory dump</a>, <a
+href="dump.html#register">register dump</a>, <a href="dump.html#filelog">loggen van bestand
+benaderingen</a>, <a href="snoop.html">detecteren van customregistertoegangen</a>)
+
+<li>Bewijs van Enforcer/Cyberguard en VMM zolang de optie <a
+href="opt.html#NoVBRMove">NoVBRMove/S</a> niet gebruikt is
+
+</ul>
+</BODY>
+</HTML>

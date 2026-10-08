@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>SP * Αποθήκευση Εικόνας</TITLE>
+<meta name="DC.Language" content="el">
+<meta http-equiv="content-language" content="el">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-7">
+<!-- $Id: sp.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>SP * Αποθήκευση Εικόνας</h3>
+Ένα εργαλείο για την εξαγωγή μιας εικόνας από ένα <a href="dump.html">αρχείο ένδειξης</a> που
+δημιουργήθηκε από το WHDload.
+<h4>Εγκατάσταση</h4>
+Το SP περιέχεται μόνο στο πακέτο <tt>DEV</tt>, όχι στο πακέτο <tt>USR</tt>.
+<br>Αντιγράψτε το στο C: ή κάπου αντίστοιχα.
+<h4>Χρήση</h4>
+Πρώτα πρέπει να δημιουργηθεί ένα αρχείο ένδειξης. Ξεκινήστε το εγκατεστημένο πρόγραμμα από το οποίο θέλετε να εξάγετε
+την εικόνα. Πρέπει να τρέξει με την επιλογή <a href="opt.html#Snoop">Snoop/S</a>
+ενεργοποιημένη. Επίσης οι <a href="opt.html#Expert">Expert/S</a> και
+<a href="opt.html#DebugKey">DebugKey/K/N</a> πρέπει να έχουν οριστεί. Αν
+η εικόνα που θέλετε να εξάγετε εμφανιστεί πατήστε το DebugKey. Το WHDLoad θα γράψει τώρα
+το αρχείο ένδειξης. Μπείτε στο κατάλογο που βρίσκεται το αρχείο ένδειξης χρησιμοποιώντας ένα CLI/Shell.
+Τώρα καλέστε το <tt>SP</tt> με το όνομα αρχείου ως παράμετρο.
+Το <tt>SP</tt> θα φορτώσει το αρχείο ένδειξης και θα προσπαθήσει να αποθηκεύσει την εικόνα.
+Αν έχετε ορίσει την επιλογή <a href="opt.html#CoreDumpPath">CoreDumpPath</a>, δεν χρειάζεται να εισάγετε
+τον κατάλογο του αρχείου ένδειξης, διότι η SP διαβάζει το γενικό αρχείο ρυθμίσεων του WHDLoad για να το βρεί.
+<h4>Επιλογές</h4>
+<table>
+<tr>
+  <td colspan=2><tt>OutputFile/A,Cop/K,CS=CopStop/K,Width/K,Height/K,con0/K,mod1/K,mod2/K,pt1/K,pt2/K,pt3/K,pt4/K,NoCopLst/S</tt></td>
+</tr>
+<tr>
+  <td valign=top><tt>OutputFile/A</tt></td>
+  <td>το όνομα του αρχείου στο οποίο θα αποθηκευτεί η εικόνα</td>
+</tr>
+<tr>
+  <td valign=top><tt>Cop/K</tt></td>
+  <td>ορίζει την αρχική διεύθυνση της πρώτης copperlist που θα μεταγλωτιστεί, αν
+  θέλετε να επανεγγράψετε την διεύθυνση που περιέχεται στο αρχείο ένδειξης</td>
+</tr>
+<tr>
+  <td valign=top><tt>CS=CopStop/K</tt></td>
+  <td>αυτή η επιλογή ορίζει την διεύθυνση που θα σταματήσει η μεταγλώττιση της
+  copperlist. Πρέπει να χρησιμοποιηθεί αν η οθόνη αποτελείται από παραπάνω από
+  μια εικόνα</td>
+</tr>
+<tr>
+  <td valign=top><tt>Width/K</tt></td>
+  <td>ορίζει το πλάτος της εικόνας που θα αποθηκευθεί, δεν θα επηρεάσει τις τιμές modulo!</td>
+</tr>
+<tr>
+  <td valign=top><tt>Height/K</tt></td>
+  <td>ορίζει το ύψος της εικόνας που θα αποθηκευθεί</td>
+</tr>
+<tr>
+  <td valign=top><tt>con0/K</tt></td>
+  <td>επανεγγράφει τον καταχωρητή <tt>BPLCON0</tt> που περιέχεται στο αρχείο ένδειξης</td>
+</tr>
+<tr>
+  <td valign=top><tt>mod1/K,mod2/K</tt></td>
+  <td>επανεγγράφει τον καταχωρητή <tt>BPLMOD1</tt>/<tt>BPLMOD2</tt> που περιέχεται στο αρχείο ένδειξης</td>
+</tr>
+<tr>
+  <td valign=top nowrap><tt>pt1/K,pt2/K,pt3/K,pt4/K</tt>&nbsp;&nbsp;</td>
+  <td>επανεγγράφει τον καταχωρητή <tt>BPLPT1,2,3,4</tt> που βρίσκεται στο αρχείο ένδειξης</td>
+</tr>
+<tr>
+  <td valign=top><tt>NoCopLst/S</tt></td>
+  <td>απενεργοποιεί την διαδικασία ένδειξης της copperlist</td>
+</tr>
+</table>
+</BODY>
+</HTML>

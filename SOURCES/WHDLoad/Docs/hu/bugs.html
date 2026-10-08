@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Ismert hibák</TITLE>
+<meta name="DC.Language" content="hu">
+<meta http-equiv="content-language" content="hu">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+<!-- $Id: bugs.html 1.7 2019/02/21 00:41:00 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Ismert hibák</h3>
+<h4>Általános problémák</h4>
+<ul>
+<li>Az Amigához kötött minden olyan extra hardverrel probléma van, amely
+véletlenszerűen vagy rendszeresen megszakításokat generál. Például ilyen az én hálózati
+kártyám (Hydra) is. Ha fut a TCP/IP stack-em, egy idő után majdnem minden játék lefagy,
+mivel a kártya PORTS megszakítást generál (ugyanilyet csinál a billentyűzet is), és ezt az
+installáló nem tudja rendesen kezelni. Azért nem, mivel amikor egy RTE kérés érkezik, egy
+következő megszakítás jön. A probléma elkerüléséhez a TCP/IP stack-et le kell állítani a
+WHDLoad <a href="opt.html#ExecuteStartup">indítása előtt</a>.<br>
+Hasonló kategóriába tartoznak az USB-stack-ek (használd az "AddUSBHardware
+  REMOVE ALL" parancsot Poseidon esetén) és a Mediator Voodoo megszakítás-vezérlője
+  (be kell állítanod következő opciót: "VoodooInt = No"). WHDLoad 16.8-as verzi&oacute;ja &oacute;ta m&aacute;r be van &eacute;p&iacute;tve egy megold&aacute;s a Mediator megszakítások kezel&eacute;s&eacute;re, emiatt speciális
+beállítások m&aacute;r nem sz&uuml;ks&eacute;gesek.
+<li>Ha haszn&aacute;lod a Picasso96  	szoftvert, be kell &aacute;ll&iacute;tanod a FakeNativeModes = No opci&oacute;t (ezt a monitor meghajt&oacute; ikonj&aacute;nak param&eacute;terei k&ouml;z&ouml;tt tal&aacute;lod). ha ezt nem &aacute;ll&iacute;tod be, grafikus hib&aacute;k &eacute;s program-le&aacute;ll&aacute;sok fordulhatnak elő.
+<li>Vannak olyan hardver konfigurációk melyek nem támogatják a WHDLoad MMU-alapú
+funkcióit. Ezek a 68030 alapú rendszerek. Az <a href="opt.html#MMU">MMU/S</a> opció
+nem használható ezeken a rendszereken! Ha az opció be van állítva, a WHDLoad leállítja
+az egész gépet. Jelenleg a következő hardverek okoznak problémát: az "Apollo
+A630", az "Apollo 1230", az "Elbox 1230" és a "Magnum MK2" turbókártyák.
+<li>Ha olvas&aacute;si/&iacute;r&aacute;si hib&aacute;kat tapasztalsz, ellenőrizd a merevlemezeid be&aacute;ll&iacute;t&aacute;sait. A WHDLoad nagym&eacute;retű adatokkal dolgozik (&gt;1MB), amelyek nem j&oacute;l be&aacute;ll&iacute;tott konfigur&aacute;ci&oacute;k eset&eacute;ben hib&aacute;kat okozhatnak. Ez azt jelenti, hogy ellenőrizd a HDToolBox seg&iacute;ts&eacute;g&eacute;vel a MaxTransfer &eacute;s a Mask &eacute;rt&eacute;keket. A biztons&aacute;gos &eacute;rt&eacute;kek a k&ouml;vetkezőek (nem t&ouml;k&eacute;letes hardverekhez): MaxTransfer = 0x7FEC &eacute;s Mask = 0x7FFFFC. Ezen k&uuml;l&ouml;n&ouml;sen igaz a PCMCIA portban l&eacute;vő eszk&ouml;z&ouml;kre &eacute;s a CF-IDE adapterekre.<br>
+  A probl&eacute;m&aacute;k m&aacute;sik oka a mem&oacute;ria-lefoglal&aacute;s lehet. L&eacute;teznek olyan konfigur&aacute;ci&oacute;k, ahol gondot okoz a ford&iacute;tott sorrendben t&ouml;rt&eacute;nő mem&oacute;ria-lefoglal&aacute;s. Ebben az esetben a WHDLoad utas&iacute;that&oacute; arra, hogy ne haszn&aacute;ljon ilyen lefoglal&aacute;sokat a k&ouml;vetkező param&eacute;ter megad&aacute;s&aacute;val: <a href="opt.html#NoMemReverse">NoMemReverse</a>
+</ul>
+<h4>Fejlesztőkhöz kötődő</h4>
+<ul>
+<li>Az operációs rendszer és az installált program közötti váltás nem teljesen
+megbízható. A probléma az, hogy az egyéni és a CIA regiszterek nem olvashatóak, és emiatt
+nem is menthetőek el és nem is állíthatóak vissza. A WHDLoad maga nem változtatja meg
+ezeket a regisztereket, de amikor váltás történik az installáló és a rendszer között
+(pl. amikor egy fájlt tölt be a lemezről), a rendszer megváltoztathatja ezen
+regisztereket. Ha az installált program függ ezektők a regiszterektől, akkor problémák
+adódhatnak. Az biztos, hogy a rendszer minimum megváltoztatja a cop2lc, a bltafwm és a
+bltalwm regisztereket, esetleg még másokat is. A probléma egyik megoldása lehet a
+regiszterek visszaállítása a váltás alatt. A részletekért lásd:
+<A HREF="../autodoc.html#WHDLTAG_CBSWITCH_SET">WHDLTAG_CBSWITCH_SET</A>.
+</ul>
+</BODY>
+</HTML>

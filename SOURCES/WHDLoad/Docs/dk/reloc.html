@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>Reloc * Relocating Executables</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: reloc.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Reloc * Omplacering af Eksekverbare filer</h3>
+Et lille v&aelig;rkt&oslash;j til at omplacere en standard AmigaDOS Eksekverbar fil til en absolut adresse
+og genne denne som en simpel datafil. Dette vra p&aring;kr&aelig;vet for tidligere WHDLoad
+versioner for at h&aring;ndtere AmigaDOS eksekverbare. Startende med WHDLoad version 8.0,
+kan funktionen <a href="../autodoc.html#resload_Relocate">resload_Relocate</a> bruges i stedet.
+<h4>Installation</h4>
+Reloc er kun indeholdt i <tt>DEV</tt> arkivet, ikke i <TT>USR</tt>
+arkivet
+<br>kopier det til C: eller et lignende sted
+<h4>Optioner</h4>
+<table>
+<tr>
+<td colspan=2><tt>INPUTFILE/A,OUTPUTFILE,ADR/K,QUIET/S</tt></td></tr>
+<tr>
+<td valign=top nowrap><tt>INPUTFILE/A</tt>&nbsp;&nbsp;</td>
+<td>Eksekverbar-filen der skal omplaceres, skal specificeres</td>
+</tr>
+<tr>
+<td valign=top><tt>OUTPUTFILE</tt></td>
+<td>Navnet p&aring; filen der skal skrives, hvis ikke specificert vil kildefilen blive overskrevet</td>
+</tr>
+<tr>
+<td valign=top><tt>ADR/K</tt></td>
+<td>Start-adressen for den omplacerede fil, hvis ikke  specificret bliver $400,
+du kan bruge simple udtryk som "$5000" = "20480" = " -$Ff +-33+
+19512+$4e8" (prefix "$" for hexadecimal-numre, underst&oslash;ttede  operatorer er "+"
+and "-", unary and binary)</td>
+</tr>
+<tr>
+<td valign=top><tt>QUIET/S</tt></td>
+<td>deaktiverer alle output, bortset fra fejlmeddelelser, aktiver dette for at bruge det i forbindelse med
+Installer-scripts</td>
+</tr>
+</table>
+<h4>Return code</h4>
+Retur-koden er sat til 0 hvis alt forl&oslash;b OK, ellers til 10.
+<h4>Background</h4>
+HUNKs'ene fra den eksekverbare fil bliver kopieret i samme orden til den absolutte fil.
+BSS-HUNKs bliver pustet op til deres reelle st&oslash;rrelser. Ikke underst&oslash;ttet er HUNKs
+introduceret med AmigaDOS 2.0 (e.g. RELOC32_SHORT).
+</BODY>
+</HTML>

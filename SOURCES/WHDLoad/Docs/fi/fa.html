@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>FindAccess * Lukukohtien etsint&auml;</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: fa.html 1.4 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>FindAccess * L&ouml;yt&auml;&auml; lukukohdat muistisijaintiin</h3>Ty&ouml;kalu lataa m&auml;&auml;ritetyn tiedoston ja etsii siit&auml; lukukertoja tiettyyn osoitteeseen. Se l&ouml;yt&auml;&auml; kaikki absoluuttiset ja suhteelliset 8-, 16- ja 32-bittiset viittaukset. Se on kirjoitettu coredump-tiedostojen analysointia varten. Se vastaa FA:n Freezer-k&auml;sky&auml;, mutta se ei pura lukuk&auml;sky&auml; vaan n&auml;ytt&auml;&auml; sen heksadumppina.<h4>Asennus</h4>FindAccess on vain <tt>DEV</tt> -paketissa, ei<TT>USR</tt> -paketissa. <br>kopioi tiedosto hakemistoon C: tai vastaavaan paikkaan<h4>K&auml;ytt&ouml;</h4>Haen viimeisest&auml; WHDLoadin kirjoittamasta muistidumpista seuraavan aliaksen avulla (lis&auml;ttyn&auml; tiedoston S:Shell-Startup):<p><tt>alias fa FindAccess C:.whdl_memory</tt></p>n&auml;in voin avata Shellin ja kirjoittaa esim.:<p><tt>fa $15000</tt></p>ja tuloksena on:<p><tt>FindAccess 1.2 (17-Jan-99 14:45:18) by Bert Jahn <br>loading file <B>Workbench:CE/.whdl_memory</B> <br>scanning accesses to $15000 (86016) file: $0-$80000 <br>Relative Word at $ 14240 -&gt; 06C00000 07C00000 <B>0DC0</B> 00000CC0 000004C0</tt></p>
+<h4>Valinnat</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,ADDRESS/A,ORG</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>etsitt&auml;v&auml;n tiedoston nimi</td></tr>
+<tr><td valign=top nowrap>
+<tt>ADDRESS/A</tt>&nbsp;&nbsp;
+</td><td>luettava osoite, jota etsit&auml;&auml;n. Voit k&auml;ytt&auml;&auml; yksinkertaisia lausekkeita kuten &quot;$5000&quot; = &quot;20480&quot; = &quot; -$Ff +-33+ 19512+$4e8&quot; (etuliite &quot;$&quot; heksanumeroille, tuetut operaattorit ovat &quot;+&quot; ja &quot;-&quot;, unaari ja bin&auml;&auml;ri)</td></tr>
+<tr><td valign=top>
+<tt>ORG</tt>
+</td><td>tiedoston looginen aloitusosoite, $0:aa k&auml;ytet&auml;&auml;n ellei muuta m&auml;&auml;ritet&auml;, k&auml;yt&ouml;ss&auml; samat yksinkertaiset lausekkeet kuin valinnalle ADDRESS/A</td></tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,496 @@
+<HTML>
+<HEAD>
+<TITLE>Použití a volby</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: WHDLoad/Docs/en/opt.html	2007/06/26 16:41:20 -->
+</HEAD>
+<BODY>
+<h3>Použití</h3>
+WHDLoad může být spuštěn z příkazové řádky (CLI/Shell) nebo z Workbenche.
+<br>Pokud se spustí z Workbenche přes ikonu, WHDLoad se pokusí updatovat
+ikonu v oblasti voleb <a href="#PreloadSize">PreloadSize</a>, <a
+href="#Config">Config</a> a možných voleb, které se změní ve startovacím oknu.
+Pokud je taková operace liba i při startování z příkazové řádky pomocí utilit
+jako WBRun (součást OS3.5/3.9), musí tyto utility umět simulovat start z Workbenche.
+
+Volby můžou být zadávány v globálním konfiguračním souboru nebo jako tooltypes
+nebo argumenty v příkazové řádce. Volba <a href="#Slave">Slave</a> je vyžadovaná.
+Ostatní volby nemusí být nutné, záleží na vašem hardware a programu který spouštíte
+přes WHDLoad. Když je WHDLoad spuštěn z příkazové řádky, WHDLoad se ukončuje s následujícími
+návratovými kódy:
+<ul>
+<li>0 - úspěšný provoz
+<li>5 - proces Preload byl přerušen klávesou Esc ve startovacím okně
+<li>10 - chyba, Slave nemohl být ukončen kvůli problémům, je zobrazena chybová hláška
+<li>20 - fatální chyba, není dost paměti pro provoz.
+<li>&gt; 100 - Slave byl spuštěn, byl ukončen z důvodů (číslo je součet 100 + TDREASON)
+</ul>
+<h3>Volby a globální konfigurace</h3>
+Existují lokální a globální volby. Lokální volby jsou specifikované jako
+argumenty přes příkazovou řádku nebo tooltypy při startu z Workbenche.
+Globální konfigurační soubor je "<code>S:WHDLoad.prefs</code>". Je to obvyklý ASCII
+soubor a obsahuje jednu volbu na řádek. Prázdné řádky a komentáře jsou ignorovány.
+Komentář k řádkám začíná znakem "<code>;</code>" a sahá až ke konci řádky.
+<br>Ukázkový konfigurační soubor je k dispozici ve WHDLoad archivu ("<code><a
+href="../../S/WHDLoad.prefs">S/WHDLoad.prefs</a></code>").
+<h3>Přehled</h3>
+<h4>Seznam možných voleb</h4>
+<p>Jsou tři druhy voleb:
+
+<p>Sloupec "Lokální" ukazuje, jestli může být volba použita v CLI nebo jako tooltype v ikoně.
+Sloupec "Globální" informuje, že volba je k dispozici jen přes konfigurační soubor.
+
+<p>Spoustu voleb nelze použít v <a href="cd32.html">WHDLoadCD32</a>. Tento sloupec ukazuje,
+jestli je volba v CD32 verzi WHDload použitelná.
+
+<table border=1 cellpadding=3>
+<tr><th>Name of option</th><th>Typ</th><th>Lokální</th><th>Globální</th><th>CD&sup3;&sup2;</th><th>Standartní nastavení</th></tr>
+<tr><td><a href="#BranchCache">BranchCache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ButtonWait">ButtonWait</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#Cache">Cache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#Chk">Chk</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkAudPt">ChkAudPt</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltHog">ChkBltHog</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltSize">ChkBltSize</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltWait">ChkBltWait</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkColBst">ChkColBst</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkCopCon">ChkCopCon</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkInts">ChkInts</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChipNoCache">ChipNoCache</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#Config">Config</a></td><td>řetězec</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>""</td></tr>
+<tr><td><a href="#ConfigDelay">ConfigDelay</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>400</td></tr>
+<tr><td><a href="#CoreDump">CoreDump</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#CoreDumpPath">CoreDumpPath</a></td><td>řetězec</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>PROGDIR:</td></tr>
+<tr><td><a href="#Custom">Custom</a></td><td>řetězec</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>""</td></tr>
+<tr><td><a href="#Custom">Custom1</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom2</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom3</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom4</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom5</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#D">D</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Data">Data</a></td><td>řetězec</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>-</td></tr>
+<tr><td><a href="#DebugKey">DebugKey</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#DCache">DCache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ExecuteCleanup">ExecuteCleanup</a></td><td>řetězec</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecutePreDisk">ExecutePreDisk</a></td><td>řetězec</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecutePostDisk">ExecutePostDisk</a></td><td>řetězec</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecuteStartup">ExecuteStartup</a></td><td>řetězec</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#Expert">Expert</a></td><td>spínač</td><td align=center>-</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">ExpChip</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">ExpLocal</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">Exp24Bit</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#FileLog">FileLog</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#FreezeKey">FreezeKey</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#FullChip">FullChip</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#LogBuffer">LogBuffer</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>4096</td></tr>
+<tr><td><a href="#MMU">MMU</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoAutoVec">NoAutoVec</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoCache">NoCache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoFileCache">NoFileCache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoFilter">NoFilter</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoMemReverse">NoMemReverse</a></td><td>spínač</td><td align=center>-</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoFlushMem">NoFlushMem</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoMMU">NoMMU</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoNetwork">NoNetwork</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoResInt">NoResInt</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoReq">NoReq</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoVBRMove">NoVBRMove</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoWriteCache">NoWriteCache</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoWriteInfo">NoWriteInfo</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NTSC">NTSC</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#PAL">PAL</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#Preload">Preload</a></td><td>spínač</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#PreloadSize">PreloadSize</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Proxy">Proxy</a></td><td>řetězec</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#QuitKey">QuitKey</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>$59 (F10)</td></tr>
+<tr><td><a href="#ReadDelay">ReadDelay</a></td><td>číselná</td><td align=center>-</td><td align=center>x</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#RestartKey">RestartKey</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#SaveDir">SaveDir</a></td><td>řetězec</td><td align=center>x</td><td align=center>-</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#SavePath">SavePath</a></td><td>řetězec</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ShowRegs">ShowRegs</a></td><td>řetězec</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>SYS:Utilities/MultiView</td></tr>
+<tr><td><a href="#Slave">Slave</a></td><td>řetězec</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>WHDLoad.Slave</td></tr>
+<tr><td><a href="#Snoop">Snoop</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopAGA</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopECS</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopOCS</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#SplashDelay">SplashDelay</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>200</td></tr>
+<tr><td><a href="#StoreBuffer">StoreBuffer</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#SuperScalar">SuperScalar</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#TimeOut">TimeOut</a></td><td>číselná</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#WriteCache">WriteCache</a></td><td>spínač</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#WriteDelay">WriteDelay</a></td><td>číselná</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>150</td></tr>
+</table>
+<h4>Types of options</h4>
+<table cellpadding=3>
+  <tr>
+    <td valign=top>číselná:</td>
+    <td>parametrem volby je číslice, na příkazové řádce musíte použít desítkovou soustavu,
+       v tooltypu je možné použít hexa hodnotu (se symbolem "<code>$</code>").
+    </td>
+  </tr>
+  <tr>
+    <td>text:</td>
+    <td>za volbou následuje ASCII řetězec</td>
+  </tr>
+  <tr>
+    <td>spínač:</td>
+    <td>volba bude zapnuta jen použitím tohoto slova</td>
+  </tr>
+</table>
+<h4>Příklady použití</h4>
+<table cellpadding=3>
+  <tr>
+    <td valign=top><a name="optwb">Workbench:</a></td>
+    <td><img src="../pic/wbopt.gif" alt="Workbench Options"></td>
+  </tr>
+  <tr>
+    <td valign=top><a name="optcli">CLI nebo Shell:</a></td>
+    <td><tt>1&gt; WHDLoad SuperGame.Slave Preload NTSC QuitKey=69 Custom1=1</tt></td>
+  </tr>
+</table>
+<h3>Popis každé volby</h3>
+<a name="ButtonWait"></a><h4>ButtonWait/S</h4> Tato volba neovlivňuje WHDload,
+ale je použitelná se slave.<BR>
+Význam této volby je, že pokud je zvolena, zapíná čekání na stisk joysticku
+nebo myši ve slavem určených místech, takže si uživatel může např. prohlédnout obrázke
+nebo slyšet hudbu, která by jinak díky rychlému nahrávání jen problikla.
+<a name="BranchCache"></a><h4>BranchCache/S</h4> Tato volba zapíná
+branch cache na 68060. Na jiných CPU nic nedělá. <br>Volba také nic nezmůže,
+pokud je spolu s ní nastavená <a href="#NoCache">NoCache/S</a>.
+<a name="Cache"></a><h4>Cache/S</h4> Tato volba zapne instrukční cache a
+vypne data cache pro nainstalovaný program. Na 68030 bude zapnuta
+také instrukční burst cache. Pokud WHDLoad používá MMU,
+označí Chip RAM jako Cacheable Writethrough (imprecise).<br>Volba
+nic nedělá, pokud je spolu s ní nastavená<a href="#NoCache">NoCache/S</a>.
+<a name="Chk"></a><h4>Chk/S</h4> Tato  volba je zkratka pro aktivaci všech
+těchto voleb: <a href="#ChkBltSize">ChkBltSize/S</a>, <a href="#ChkBltWait">ChkBltWait/S</a> a <a href="#ChkColBst">ChkColBst/S</a>.
+<a name="ChkAudPt"></a><h4>ChkAudPt/S</h4> Tato volba ověřuje, jestli ukazatele zapsané na custom audio adresy jsou vhodné adresy v ChipRAM.
+Ukazetele nesmí být nulové a uvnitř oblasti BaseMem. Tato funkce funguje jen ve spojitosti
+s jednou ze <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+Tato volba pomáhá diagnostikovat problém s rutinami přehrávajícími zvuk.
+<a name="ChkBltHog"></a><h4>ChkBltHog/S</h4> Tato volba testuje celou dobu,
+jestli není aktivován <code>blthog</code> (<code>bltpri</code>) bit in v custom.dmacon registeru. Tato volba
+funguje jen v souvislosti s některou z <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+Zapnutí <code>blthog</code> předá blitteru prioritu nad CPU, co se týče
+přístupu k paměti, což může způsobit problémy na některých konfiguracích hardware.
+Někde může to být víc výkonnější řešení, aby procesor získal pár sběrnicových cyklů navíc.
+<a name="ChkBltSize"></a><h4>ChkBltSize/S</h4> Tato volba testuje, jestli
+nainstalovaný program používá blitter korektně, aby mohly být blitter operacemi
+použity jen opravdu existující oblasti paměti. Tato volba
+funguje jen v souvislosti s některou z <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+Všechny operace blitteru jsou kontrolovány - kromě řádkového módu.
+<a name="ChkBltWait"></a><h4>ChkBltWait/S</h4> Tato volba zkouší, jestli nainstalovaný
+program správně čeká na dokončení současné operace blitteru před započetím další. Tato volba
+funguje jen v souvislosti s některou z <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+<a name="ChkColBst"></a><h4>ChkColBst/S</h4> Tato volba zkouší, jestli je <code>color</code> bit
+v the <code>custom.bplcon0</code> registru celou dobu nastaven. Tato volba
+funguje jen v souvislosti s některou z <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+Některý hardware, obzvláště flickerfixer požaduje, aby byl tento bit zapnut
+pro správný výstup video signálu. Pro nejlepší kompatibilitu by tento bit
+měl být vždy nastaven na 1. Prověřovány jsou přímé zápisy do <code>custom.bplcon0</code>
+a všech copperlistů.
+<a name="ChkCopCon"></a><h4>ChkCopCon/S</h4> Tato volba zkouší, jestli nainstalovaný program nepovoluje přístup k DMA registrům
+pre copper pomocí <code>custom.copcon</code>. Volba funguje jen v souvislosti s některou z <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> voleb.
+Může být někdy užitečné detekovat, zda programy používají Copper pro ovládání
+DMA aktivit.
+<a name="ChkInts"></a><h4>ChkInts/S</h4> Tato volba zkouší každou událost přerušení,
+jestli je v <code>intreq</code> a <code>intena</code> zapsáno totožné nastavení pro toto přerušení.
+Tato volba umožňuje snadnou detekci problémů aktivace přerušení na rychlejších strojích nebo
+špatném hardware, které způsobují nechtěná přerušení. Kvůli tomuto jevu může nastat také situace,
+že pokud jsou přerušení zablokována nastavením <code>intena</code> ve stejný čas, kdy se přerušení
+uskuteční. Počínaje verzí WHDLoad 17.1 tato volba zapne také všechny bezpečnostní a klávesová
+ověřování pro úrovně přerušení na úrovni 4-6, která se provádí obvykle jen na úrovni 1-3.
+<a name="ChipNoCache"></a><h4>ChipNoCache/S</h4> Tato volba vypíná cachovatelnost
+Chip RAM (BaseMem). Měla by být použita na hardware, který neumožňuje cachovatelnost
+Chip RAM (například desky Blizzard PPC) pro vyvarování se zpomalení rychlosti nainstalovaného
+programu.
+<a name="Config"></a><h4>Config/K</h4> Tato volba nastavuje, co se zobrazí ve startovním WHDLoad okně.
+Tato hodnota přepíše <a href="../autodoc.html#ws_config">ws_config</a> specifikovanou ve Slave. Pro
+podrobnější popis syntaxu si přečtěte o <a href="../autodoc.html#ws_config">ws_config</a> v autodocs.<br>
+Pokud není nastavena <a href="../autodoc.html#ws_config">ws_config</a> ve slave ani volbou Config/K
+a Slave ověřuje volby <a +href="#custom">Custom1-5/K/N</a>/<a href="#buttonwait">ButtonWait/S</a> spínače
+přes funkci <A HREF="../autodoc.html#resload_Control">resload_Control</a>, WHDLoad přidá volbu Config/K
+do ikony, pokud byl spuštěn z Workbenche. Typ voleb bude odvozen ze skutečných hodnot toolypů
+<a +href="#custom">Custom1-5/K/N</a> (0-1 boolean, 2-63 list, >63 binární).
+<a name="ConfigDelay"></a><h4>ConfigDelay/K/N</h4> Tato volba specifikuje dobu v 1/50 sekundy,
+kterou bude WHDLoad zobrazovat startovní okno na začátku, pokud jsou na voleny nějaká tlačítka (viz <a href="#Config">Config/K</a> a <a
+href="#Expert">Expert/S</a>). Pokud je ConfigDelay/K/N nižší než <a href="#ReadDelay">ReadDelay/K/N</a> nebo <a
+href="#SplashDelay">SplashDelay/K/N</a>, je ignorována. Okno je zobrazeno dokud není dokončena činnost <a href="#Preload">Preload/S</a>.
+Pokud zvolíte konfigurační tlačítko, časovač pro ConfigDelay se restartuje.<br> Pokud je volba nastavena
+na -1, je do okna přidáno tlačítko Start a zůstává tam, dokud není zvoleno. Startovací okno může být zavřeno
+i stiskem Space, Return, Enter nebo tlačítkem střelby na joysticku v portu #1. Pokud zmáčknete Esc, WHDLoad ukončí <a href="#Preload">Preload/S</a> a okamžitě skončí.
+<a name="CoreDump"></a><h4>CoreDump/S</h4> Pokud je nastavena, zpusobí při každém
+exitu z nainstalovaneho programu zapsání <a href="dump.html">výpis paměti a registru</a>.
+To se může hodit pro odlaďování programu nebo i pro ripování hudebního modulu z paměti.
+<a name="CoreDumpPath"></a><h4>CoreDumpPath</h4> Cílový adresář pro zapisování
+všechny <a href="dump.html">výpisy</a> WHDLoadu.
+<a name="Custom"></a><h4>Custom/K, Custom1/K/N, Custom2/K/N, Custom3/K/N,
+Custom4/K/N, Custom5/K/N</h4> Tyto volby nejsou využívány WHDLoad, ale můžou
+být testovány ve slave k ovládání různých věcí (např. zapínání traineru). Custom/K může obsahovat text
+a Custom1-5/K můžou nést pouze číselnou hodnotu. Specifické využití těchto voleb
+hledejte v readme souborech u každé instalace.
+<a name="D"></a><h4>D/S</h4>Tato volba je užitečná pro ladění. Pokud je zapnuta a v paměti je
+detekován podporovaný softwarový freezer (HRTmon nebo Thrill Kill), WHDLoad simuluje
+NMI tlačítko před vykonání první CPU instrukce obsazené ve slavu.
+<a name="Data"></a><h4>Data/K</h4>Touto volbou může být určen základní direktorář
+pro souborové operace nainstalovaného programu. Lze zadat i víc direktorářů použitím
+úvozovek (to znamená, že jméno direktoráře nesmí uvozovky obsahovat!). Pokud je použito
+víc cest, snaží se WHDLoad nahrát soubory ze všech určených direktorářů. Ukládání souborů
+funguje jen do prvního datového direktoráře. Tato volba ruší hodnotu <a href="../autodoc.html#ws_CurrentDir">ws_CurrentDir</a> ve slave.
+<a name="DCache"></a><h4>DCache/S</h4> Tato volba zapíná instrukční a datovou cache
+pro nainstalovaný program. Pokud WHDload používá MMU, označí Chip RAM jako Cacheable
+Writethrough (imprecise). Na 68030 bude zapnuta i instrukční
+burst cache.<br>Volba nic nedělá, pokud je spolu s ni nastavená<a href="#NoCache">NoCache/S</a>.
+<a name="DebugKey"></a><h4>DebugKey/K/N</h4> Nastavuje <A HREF="rawkey.html">
+rawkey </A> hodnotu k zapsání <a href="dump.html">coredump výpisu</a> a koncem
+programu). Tohle funguje jen, pokud je aktivní <a href="#Expert">expert mod</a>, jestli je VBR
+přesunuto WHDLoadem (to znamená, že není zapnuto <a href="#NoVBRMove">NoVBRMove/S</a> a CPU je aspoň
+68010) nebo pokud to podporuje sám slave.
+<a name="Expert"></a><h4>Expert/S</h4> Tato volba zapíná expert mod WHDLoadu. Ovlivní <a href="#DebugKey">DebugKey/S</a> volbu
+a varování během přepnutí mezi nainstalovaným programem a OS (copperlistový barevný cyklus). Pokud není aktivní
+expert mód, <a href="#DebugKey">DebugKey/S</a> není k dispozici. V expert módu se objevuje v chybových hlášeních WHDLoad další
+tlačítko s názvem <a href="#ShowRegs"><i>Show Regs</i></a> - to dovoluje zobrazit informace o stavu a registrech tak, jak
+se to i zapíše do  <a href="dump.html#register">výpisu registrů</a>. Navíc jsou do <a href="#ConfigDelay">startovního okna</a> přidána
+další tlačítka na změny voleb, které se týkají odlaďování programu. Změněné volby jsouuloženy do ikony, pokud byl WHDLoad spuštěn
+z Workbenche.
+<a name="ExecuteCleanup"></a><h4>ExecuteCleanup</h4> S touto volbou lze
+zadat příkaz, který bude vykonán WHDloadem po exitu z programu.
+Použitím systémového příkazu Execute můžete spustit i skript.
+<br>Ukázkový skript najdete v WHDLoad archívu ("<code><a href="../../S/WHDLoad-Cleanup">S/WHDLoad-Cleanup</a></code>").
+<a name="ExecutePreDisk"></a><h4>ExecutePreDisk</h4> S touto volbou lze zadat příkaz, který WHDLoad spustí předtím,
+než provede jakýkoliv přístup k disku, aby nahrál/uložil data. Když dojde k přepnutí do operačního systému,
+příkaz je vykonán před přístupem k disku. Je také vykonán při ukončení WHDLoadu.
+<a name="ExecutePostDisk"></a><h4>ExecutePostDisk</h4> S touto volbou může být zadán příkaz,
+který bude vykonán WHDLoadem poté, co provede jakýkoliv přístup k disku za účelem nahrání/uložení dat.
+Pokud dojde k přepnutí do operačního systému, příkaz je proveden po přístupu k disku.
+Také je vykonán při spuštění WHDLoad.
+<a name="ExecuteStartup"></a><h4>ExecuteStartup</h4> S touto volbou můžete
+určit příkaz, který bude vykonán WHDLoadem před spuštěním programu.
+Použitím systémového příkazu Execute můžete spustit i skript.
+Dá se to použít např. pro vypnutí hardware, který způsobuje problémy v souvislosti s WHDLoad,
+jako např IP nebo USB stack. Další informace v kapitole <a href="bugs.html">Problémy</a>.
+<br>Ukázkový skript najdete v WHDLoad archívu ("<code><a href="../../S/WHDLoad-Cleanup">S/WHDLoad-Cleanup</a></code>").
+<a name="Exp"></a><h4>ExpChip/S, ExpLocal/S, Exp24Bit/S</h4>Pokud nainstalovaný program používá expansion memory (přes
+<a href="../autodoc.html#ws_ExpMem">ws_ExpMem</a> hodnotu slavu), dají se tyto volby použít k donucení WHDLoadu nastavit požadovanou oblast paměti výhradně v CHIP RAM,
+lokální paměti nebo 24BitDma paměti. To může mít jako výsledek snížení výkonu, protože přístup ke spedifikované paměti
+může být pomalejší než k Fast RAM. Můžete použít některé utility (např. SysInfo, GVPInfo,...) na test možností vaší paměti.
+<br>Tyto volby jsou pro zlepšení kompatibility nainstalovaných programů na rychlých strojích tím, že zpomalí chod programu použitím pomalé paměti.
+<a name="FileLog"></a><h4>FileLog/S</h4> Tato volba je jen pro developerské
+účely. V kapitole <a href="dump.html#FileLog">Výpisy (dumpy) a logy</a> najdete
+víc informací.
+<a name="FreezeKey"></a><h4>FreezeKey/K/N</h4> Pokud používáte jeden z podporovaných
+softwarových freezerů (HRTMon or Thrillkill), můžete použít tuto volbu pro nastavení <A HREF="rawkey.html">rawkey</A> kódu klávesy,
+kterou lze vstupovat přes WHDLoad do freezeru. Aby to fungovalo, VBR musí být
+přesunuto WHDLoadem (to znamená, že není zapnuto <a href="#NoVBRMove">NoVBRMove/S</a> a CPU je aspoň
+68010) a freezer musí být spuštěn.
+<a name="FullChip"></a><h4>FullChip/S</h4> Užití této volby způsobuje, že WHDLoad
+zálohuje/vrátí nejen oblast ChipRAM požadovanou hodnotou <a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a> ve slave,
+ale celou ChipRAM (execbase.MaxLocMem). Když WHDLoad používá MMU, aby chránil
+paměť, detekuje pouze ilegální přístupy k paměti způsobené procesorem. Neumí ale
+detekovat přímé přístupy k paměti způsobené koprocesory jako blitter nebo DMA disku.
+DMA akce jsou schopny znečistit ChipRAM, aniž by je zachytila ochrana paměti WHDLoadu.
+S touhle volbou nemůžou takové chyby poškodit operační systém, protože ChipRAM je zálohována/vrácena
+kompletně.<br> Nejdřív je nainstalovaný program spuštěn a dodatečná zálohovaná ChipRAM (zbytek mezi
+BaseMemSize a MaxLocMem) je vyplněná speciálním vzorkem. Po ukončení a návratu nainstalovaného
+programu WHDLoad ověřuje onu programem nepoužívanou paměť, jestli byla nějakou instrukcí změněna.
+Pokud ano, WHDLoad zobrazí klasickou zprávu o chybě. Jen v tomhle případě bude kompletní ChipRAM
+obsažená v souboru s <a href="dump.html#memory">výpisem paměti</a> (ne v kompletní výpisu), což
+umožní další vyšetřování příčiny.<br> Tato volba může být užitečná pro tvorbu/odlaďování, aby nebyla
+zasažena paměť operačního systému a také pomáhá odladit zatím chybné instalace, kde se doposud
+nepodařilo odstranit všechny problémy nainstalovaného programu.
+<br>FullChip/S nemůže být zapnut spolu s volbou <a
+href="#Exp">ExpChip/S</a>. Pokud jsou použity obě, FullChip/S bude ignorován.
+<a name="LogBuffer"></a><h4>LogBuffer/K/N</h4> Použitím této volby je použitý
+vnitřní buffer WHDloadu pro ukládání logu z <a href="#FileLog">FileLog/S</a>
+aktivity a může být specifikovaná funkce <A HREF="../autodoc.html#resload_Log">resload_Log</a>.
+Standartní velikost bufferu je 4096 bajtů. Tento buffer je alokován pouze pokud je zapnutá
+volba <a href="#FileLog">FileLog/S</a>. Pokud je buffer plný,
+WHDLoad přeruší nainstalovaný program a přepne do operačního systému, aby vyprázdnil
+buffer a zapsal obsah do logu. Pro vyvarování se takového přepnutí by měla být vybrána
+větší velikost bufferu, aby unesla co nejvíc zápisů. 
+<a name="MMU"></a><h4>MMU/S</h4> Tohle musí být zapnuto na strojích s 68030
+k zapnutí funkcí souvisejících s MMU (<a href="mmu.html#mem">ochrana paměti</a>, vylepšený <a href="mmu.html#cache">management cache</a>, <a
+href="snoop.html">Snoop mód</a>, <A HREF="../autodoc.html">resload_ProtectRead</a> funkce). Na 68040/060
+tato volba nemá účinek, protože MMU je zapnuto standartně. Doporučuji dát tuto funkci
+do globální konfigurace na všech systémech s 68030 a MMU (to znamená ne 680EC30),
+protože to rapidně zbýší stabilitu a bezpečnost. Pokud je současně nastavena volba <a href="#NoMMU">NoMMU/S</a>,
+nemá MMU účinek.
+<a name="NoAutoVec"></a><h4>NoAutoVec/S</h4> Tato volba zpusobí, že WHDLoad nevyskočí
+s hláškou, týkající se nečekaného přerušení autovektorem nebo NMI (vektory #25-31 / $64-$7c).
+Volba by měla být zapnuta na systémech/hardware, které náhodně taková přerušení vytvářejí,
+aby se WHDLoad zbytečně neukončoval s chybou. Tato volba nevyléčí špatně fungující hardware,
+který taková přerušení vytváří. Některé nainstalované programy i s touto volbou stále nemusí
+na nefunkčním hardware fungovat. Takže lepší by bylo odstranit nebo opravit takto problematický
+hardware.
+<a name="NoCache"></a><h4>NoCache/S</h4> Volba vypne všechny cache. Tato volba má
+větší priority, než <a href="#BranchCache">BranchCache/S</a>, <a href="#Cache">Cache/S</a>,
+ <a href="#DCache">DCache/S</a>, <a href="#StoreBuffer">StoreBuffer/S</a> a <a href="#SuperScalar">SuperScalar/S</a>.
+<a name="NoFileCache"></a><h4>NoFileCache/S</h4> Vypíná cachování souboru WHDLoadem
+a způsobuje, že pro každou diskovou operaci se WHDLoad přepne do OS. Tato volba
+ruší <a href="#Preload">Preload/S</a>.
+<a name="NoFilter"></a><h4>NoFilter/S</h4> Vypíná audio filtr. Tato volba
+ale funguje jen při startu, pokud nainstalovaný program změní stav audio filtru,
+postrádá tato volba účinek.
+<a name="NoFlushMem"></a><h4>NoFlushMem/S</h4> Normálně WHDLoad "splachuje"
+paměť při startu, aby získal co nejvíc volné paměti pro <a href="#Preload">Preload/S</a> operaci.
+To odstraní všecnhy nepoužívané zdroje jako knihovny a fonty z paměti. Použitím
+této volby WHDLoad nic z paměti nespláchne. Může být využitelná na systémech se spoustou
+volné paměti pro zlepšení výkonu systému (nebudou nahrávány residentní zdroje a tím se
+výkon zlepší).
+<a name="NoMemReverse"></a><h4>NoMemReverse/S</h4> Pokud je aktivní tato volba,
+WHDLoad nebude alokovat pamět přes flag MEM_REVERSE. Bylo hlášeno, že používání
+tohoto flagu způsobuje problémy na některých konfiguracích (sestavy používající
+paměť v PCMCIA slotu Amigy 600/1200 jako FastRAM, sestavy s M-Tec 1230/8 MiB OS3.0).
+Důvod tohoto problému není známý. Tato volba může pomoci i pokud je část z vyšší RAM vadná,
+protože WHDload pak použije nejdřív paměť na nižších adresách. Jestli máte podivná
+chybová hlášení, můžete zkusit tuhle volbu.<br>
+Tato volba je u Kickstartu 2.0 (V37) vždy aktivní kvůli chybě v této verzi Kickstartu,
+u které je možné zamrzání chodu během exec.AllocMem.
+<a name="NoMMU"></a><h4>NoMMU/S</h4> Pokud je tato volba nastavena, WHDLoad nepoužije MMU.
+Je to kritická a nwbezpečná volba, doporučená pouze pro testování nebo odlaďovací účely
+a ne pro normální použití. Více informací v kapitole <a href="mmu.html#usercontrol">MMU</a>.
+Volba má prioritu nad volbou <a href="#MMU">MMU/S</a>.
+<a name="NoNetwork"></a><h4>NoNetwork/S</h4> Pokud je tato volba nastavena, WHDLoad se
+nebude pokoušet připojit k internetu, aby <a href="net.html">ověřil</a> aktuální verzi slave a WHDLoad.
+<a name="NoReq"></a><h4>NoReq/S</h4> Tato volba může být použitá jen když byl WHDLoad spuštěn
+z příkazové řádky (CLI/Shell). Při spuštění z Workbenche nemá žádné účinky. Volba zabrání WHDLoadu
+zobrazovat requestery v novém, zvlášť otevřeném okně - výstupní zprávy budou vypisovány do příkazového okna,
+odkud byl WHDLoad spuštěn.
+<a name="NoResInt"></a><h4>NoResInt/S</h4> Tato volba zablokuje přerušení
+během vykonání resload funkcí (normálně jsou přerušení povolena) Přerušení
+můžou přehrávat zvuk, updatovat obraz nebo dělat jinou důležitou práci. Zablokování
+může způsobit rozhození zvuku/obrazu a jiné disfunkce. Ale nesprávně fungující
+přerušení můžou zničit interní oblasti WHDLoad dat, což obvykle vede k zhroucení
+operačního systému. Tato volba může problém vyřešit - pokud pomůže, instalačku je třeba
+upravit (kontaktujte autora).<br>
+Od verze WHDLoad 17.0 bude před vykonáním resload funkce ověřen blitter, zda není aktivní.
+Pokud ano, WHDLoad se ukončí a oznámí vám to.
+<a name="NoVBRMove"></a><h4>NoVBRMove/S</h4>Standartně WHDLoad přesunuje tabulku
+vektorů použitím VBR (Vector base Register) na odlišnou oblast paměti z $0. Výhodou
+toho je, že instalovaný program nemůže změnit sám tabulku vektorů, což zvyšuje
+stabilitu a bezpečnost WHDLoad. Některé nainstalované programy/slavy nebudou fungovat
+s přesunutou tabulkou vektorů. Důvodem může být, že instalovaný program používá vyjímky
+procesoru nebo se chová zvláštně. V takovém případě se musí tato volba použít,
+aby zabránila WHDLoadu stěhovat tabulku vektorů.
+Další výhoda přesouvání VBR je kontrola klávesnice WHDLoadem pokaždém když se stane
+přerušení Autovectoru. S touto kontrolou je WHDLoad schopný ukončit nainstalovaný program nezávisle
+na běhu nainstalovaného programu, pokud je stisknut <a href="#QuitKey">QuitKey/S</a> nebo <a
+href="#DebugKey">DebugKey/S</a> nebo <a href="#FreezeKey">FreezeKey/S</a> pro vstup do monitoru.
+Přesun VBR požaduje alespoň procesor 68010. Na 68000 tato volba nemá žádný účinek, protože tam VBR není, tabulka vektorů
+vždycky začíná na adrese $0 a nemůže být přesunuta. Na 68000 WHDLoad podporuje
+určitý speciální hardware (ACA500, Zeus), který umožňuje umístit vektory
+přerušení od Autovectoru na odlišnou oblast paměti, aby byl schopen vždy podporovat
+možnost <a href="#QuitKey">QuitKey/S</a>. Tyto funkce pro speciální hardware
+nejsou použity při zapnutí této volby.
+<a name="NoWriteCache"></a><h4>NoWriteCache/S</h4> Tato volba vypíná schopnost
+WHDLoadu cachovat zapisované soubory. Bez této volby se WHDload pokusí cachovat
+všechny zápisy na disk v paměti a pozdržet skuteční zápis, dokud program není
+ukončen, aby se vyvaroval zbytečných přepínání do operačního systému.
+<a name="NoWriteInfo"></a><h4>NoWriteInfo/S</h4> V případě přítomnosti této volby
+WHDLoad neprovede změny do .info souboru při spuštění z Workbenche. Normálně WHDLoad
+updatuje tooltype PreloadSize, pokud je změněn nebo v ikoně chybí a updatuje volby
+jako <a href="#custom">Custom1-5/K/N</a> a <a href="#buttonwait">ButtonWait/S</a>,
+pokud změníte nastavení ve startovacím okně.
+<a name="NTSC"></a><h4>NTSC/S</h4> V případě této volby WHDLoad použije pro nainstalovaný program
+NTSC displej (60Hz). Na PAL Amize je třeba nainstalovat driver pro NTSC monitor do "<code>DEVS:Monitors/</code>".
+<a name="PAL"></a><h4>PAL/S</h4> V případě této volby WHDLoad použije pro nainstalovaný
+program PAL displej (50Hz). Na NTSC Amize je třeba nainstalovat driver pro PAL monitor do "<code>DEVS:Monitors/</code>".
+<a name="Preload"></a><h4>Preload/S</h4> Pokud je zapnuta tato volba, WHDLoad
+si při startu nahraje co nejvíc souborů nebo disk images do paměti. Pokud při startu
+není dostatek paměti, přednahrávání souborů se ukončí. Přednahrávání
+zlepší výkon, když nainstalovaný program běží, protože není nutné přepínat do OS
+pro nahrání dat přímo z harddisku. Tato volba by měla být zapnuta vždycky.
+<a name="PreloadSize"></a><h4>PreloadSize/N</h4> Tato volba říká WHDLoad, kolik dat
+je třeba <a href="#Preload">preloadnout</a>. Používá se jen na vypočítání stupnice,
+která na začátku ukazuje procenta při nahrávání. Pokud je nainstalovaný program spuštěn z Workbenche,
+WHDLoad sám zapíše/updatuje součet dat do tooltypu v ikoně po návratu do systému
+(kromě případu, kdy si to nepřejete a je přítomna volba <a +href="#NoWriteInfo">NoWriteInfo</a>).
+Číslo u Preload není jen součet velikosti všech souborů, ale můžete můžete přibližně spočítat hodnotu sám.
+<br>Jsou tu dvě možné fáze procestu Preload, které jsou zobrazovány odlišnými barvami stupnice nahrávání pro Preload.
+Pokud obsahuje Slave flag <a href="../autodoc.html#WHDL_Examine">WHDLF_Examine</a>, WHDLoad shromáždí meta data
+souborového systému pro soubory k Preloadu. Barva této první fáze je standardně černá.
+Druhá fáze, která probíhá vždy, kdy je volba <a href="#Preload">Preload</a> přítomna, má modrou barvu.
+<a name="Proxy"></a><h4>Proxy/K</h4> Použitím této volby může být specifikovaná HTTP proxy.
+Má smysl jen, když není k dispozici přímé <a href="net.html">připojení</a> WHDLoad k internetu,
+protože WHDLoad zkouší jen jeden jednoduchý požadavek na HTTP akci. Syntax pro specifikaci
+proxy je [user:password@]hostname[:port]. Hostname proxy je nutné. Port pro proxy je volitelný
+a standartně nastaven na hodnotu 80. Pokud vyžaduje proxy hesla, musí být uveden login i heslo.
+WHDLoad podporuje jen základní ověření údajů.
+<a name="QuitKey"></a><h4>QuitKey/K/N</h4> Nastavuje <A HREF="rawkey.html">
+rawkey </A> kód klávesy určené pro konec programu. Funguje jen, pokud je VBR
+přesunuta WHDLoadem a (<a href="#NoVBRMove">NoVBRMove/S</a> nesmí být zapnuta
+a CPU musí být aspoň 68010) nebo pokud to slave podporuje.
+<a name="ShowRegs"></a><h4>ShowRegs/K/N</h4> Tato volba je použitelná jen v souvislosti
+s volbou <a href="#Expert">Expert/S</a>. S touto volbou můžete určit program k zobrazení
+výpisu registrů, který WHDLoad použije, pokud stisknete tlačítko <i>Show Regs</i>. WHDLoad za
+zadaný příkaz pro příkazovou řádku přidá jménou souboru dočasně zapsaného výpisu (v současnosti
+je to <tt>T:.whdl_register</tt>).
+<a name="Slave"></a><h4>Slave</h4> Jméno slavu, který by měl WHDLoad nahrát a použít.
+Slave obsahuje kód, důležitý pro spuštění nainstalovaného programu a použití WHDload funkcí.
+<a name="Snoop"></a><h4>Snoop/S, SnoopAGA/S, SnoopECS/S, SnoopOCS/S</h4>
+Tyto volby zapnou <a href="snoop.html">Cia/Custom registr snoop</a> schopnosti WHDLoadu.
+<a name="ReadDelay"></a><h4>ReadDelay/K/N</h4> Tato volba specifikuje dobu
+v 1/50 vteřiny, kterou bude WHDLoad čekat poté, co nahraje data z disku a také
+počká tuto dobu po dokončení <a href="#Preload">Preload/S</a> operace. To řeší problémy s připojenými drivy
+(napr. CD mechaniky), které chtějí něco udělat po načtení, např. vypnout motor.
+<a name="RestartKey"></a><h4>RestartKey/K/N</h4> Použitím této volby můžete nastavit <A HREF="rawkey.html">rawkey</A> kód klávesy,
+kterou může WHDLoad zrestartovat nainstalovaný program.
+<a name="SaveDir"></a><h4>SaveDir/K</h4> Tato volba zadává poddirektorář pro save funkce
+nainstalovaného programu v souvislosti s volbou <a href="#SavePath">SavePath/K</a>.
+Dělá to tak místo určení cesty samotným WHDLoad, pokud máte nainstalováno
+víc verzí hry, která používá stejný slave, ale má nekompatibilní formát save pozic.
+Může se také hodit, pokud slave neobsahuje jméno hry a název slave souboru není takový,
+jaký by se vám líbíl pro název direktoráře pro save funkce hry.
+<a name="SavePath"></a><h4>SavePath/K</h4> Tato volba přinutí WHDLoad,
+aby přesměroval všechny zapisovací operace nainstalovaného programu na jiné
+místo na disku. Tato volba určuje základní direktorář pro všechny nainstalované
+programy, každý nainstalovaný program tu bude mít svůj vlastní poddirektorář.
+Poddirektorář vytvoří (během první save operace) sám WHDLoad, pokud už neexistuje.
+Jméno poddirektoráře může být upřesněno volbou <a href="#SaveDir">SaveDir/K</a> nebo
+bude samo určeno WHDLoadem z informací uvnitř slave (<a href="../autodoc.html#ws_name">ws_name</a> nebo název slave souboru).
+Interně bude tato cesta pro ukládání vedena jako dodatečný <a href="#Data">Data</a> direktorář.
+<a name="SplashDelay"></a><h4>SplashDelay/K/N</h4> Tato volba speficikuje dobu
+v 1/50 vteřiny, po kterou WHDLoad ukazuje informační okno při startu. Pokud je
+SplashDelay/K/N menší než <a href="#ReadDelay">ReadDelay/K/N</a>, je hodnota
+ignorována a okno bude zobrazeno po dobu určenou v <a href="#ReadDelay">ReadDelay/K/N</a>.
+Okno je zobrazeno aspoň tak dlouho, dokud se nenahrají všechny soubory do paměti
+při operaci <a href="#Preload">Preload/S</a>. Pokud SplashDelay=0, nebude zobrazeno
+žádné okno. Jestliže je volba nastavena na 0, nebude zobrazeno žádné okno. Pokud
+je volba nastavena na -1, na startovní okno je přidáno tlačítko Start a okno
+nezmizí, dokud nekliknete na tlačítko nebo nestisknete Space, Return, Enter
+nebo tlačítko střelby na joysticku v portu #1. Pokud je stlačeno Esc,
+WHDLoad okamžitě zastaví operaci <a href="#Preload">Preload/S</a> a ukončí se. Viz <a
+href="#ConfigDelay">ConfigDelay/K/N</a>.
+<a name="StoreBuffer"></a><h4>StoreBuffer/S</h4> Tato volba zapíná
+Store Buffer na 68060. Na jiných CPU nemá účinek. Účinek nemá ani v případě,
+že je zapnuta volba <a href="#NoCache">NoCache/S</a>.
+<a name="SuperScalar"></a><h4>SuperScalar/S</h4> Tato volba zapne v 68060 schopnost
+vykonávat multi instrikcu za jeden strojový cyklus. Na jiných CPU nemá účinek. Účinek nemá ani v případě,
+že je zapnuta volba <a href="#NoCache">NoCache/S</a>.
+<a name="TimeOut"></a><h4>TimeOut/K/N</h4> V případě nastavení WHDLoad ukončí
+nainstalovaný program po specifikované době. Požaduje, aby nebyla nastavena volba
+<a href="#NoVBRMove">NoVBRMove/S</a> a aby nainstalovaný program nemodifikoval
+ciaa.ciatod timer. Doba musí být v 1/50 vteřiny, Pro zjištění potřebného času
+zapnete volbu <a href="#Expert">Expert/S</a> a nastavte <a href="#DebugKey">DebugKey/K/N</a>,
+když dosáhnete momentu, kdy má program skončit, zmáčknete debug klávesu. Teď
+prohlédněte vytvořený <a href="dump.html">.whdl_register</a> soubor a hledejte
+hodnotu ciaa-event. Jestliže frekvence vašeho zdroje je 50 Hz, pak nalezenou hodnotu
+můžete rovnou použít, pokud je frekvence 60 Hz, musíte násobit hodnotu krát 5/6.
+<a name="WriteCache"></a><h4>WriteCache/S</h4> Tato volba zapíná schopnost WHDLoadu
+používat cache pro zápisy na disk. WHDLoad se standardně chová, jakoby volba
+byla vždy zapnuta a jediný smysl jejího použití je tedy na přepsání případné
+globálně aktivní volby <a href="#NoWriteCache">NoWriteCache/S</a> - takže jen
+pokud chcete mít volbu vypnutou a standardně mít povolenou jen pro pár instalací.
+<a name="WriteDelay"></a><h4>WriteDelay/K/N</h4> Tato volba specifikuje dobu
+v 1/50 vteřiny, kterou bude WHDLoad čekat po zapsání čehokoliv fyzicky na disk.
+Platí pro všechny <A HREF="../autodoc.html">resload_Save#?</a>
+funkce a <a href="#FileLog">FileLog/S</a> volbu. Tohle má význam, protože filesystémy
+většinou nezapisují data okamžitě na disk. Trvá nějakou dobu (1..3 sec) updatovat
+všechny struktury filesystému. Standartní hodnota WriteDelay je 150, což způsobí,
+že WHDLoad počká 3 vteřiny po každém zápisu na harddisk. Můžete tuto hodnotu
+nastavit na nulu, ale pak byste neměli nikdy ukončovat program resetem, protože
+zapsaná data nemusí být zapsána na disk kompletně.
+</BODY>
+</HTML>

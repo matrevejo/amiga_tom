@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>Bugit</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: bugs.html 1.8 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Tuntemattomat bugit</h3>
+Jos havaitset uusia bugeja tai haluat raportoida muista ongelmista, käytä bugityökalua osoitteessa <a href="http://mantis.whdload.de/search.php?project_id=4&amp;hide_status_id=-2">http://mantis.whdload.de</a>.
+<h3>Tunnetut bugit</h3>
+<h4>Yleiset ongelmat</h4>
+<ul>
+<li>Yleinen ongelma liittyy Amigaan kytkettyyn laitteistoon, joka synnyttää keskeytyksiä satunnaisesti tai säännöllisesti. Esimerkki tästä on verkkokorttini (Hydra). Jos TCP/IP-pino on käynnissä, lähes jokainen ohjelma hyytyy hetken kuluttua, koska kortti luo PORTS-keskeytyksiä (samanlaisia kuin näppäimistö), joihin asennettu ohjelma ei osaa vastata oikein. Tämä johtuu siitä, että heti kun pyyntö on kuitattu rte:llä, tulee seuraava keskeytys. Ongelman välttämiseksi on TCP/IP-pino pysäytettävä <a href="opt.html#ExecuteStartup">ennen</a> WHDLoadin käynnistystä.<br/>Sama koskee USB-pinoja (käytä Poseidonille käskyä "AddUSBHardware REMOVE ALL") sekä Mediator-korttien Voodoo-keskeytystä (aseta "VoodooInt = No"). WHDLoad-versiosta 16.8 alkaen Mediator-korttien tekemille keskeytyksille on sisäänrakennettu kiertotie, joten erityisasetuksia ei tarvita.
+
+<li>Jos saat virheitä koskien tiedostojen lukua tai kirjoitusta, tarkista että kiintolevysi on määritetty oikein. WHDLoad lukee dataa suurissa lohkoissa (&gt;1 Mt), mikä tuo helposti esiin kokoonpanon ongelmat, vaikka muut sovellukset vaikuttaisivat toimivan. Varmista siis, että asetusten MaxTransfer ja Mask arvot HDToolBoxissa on asetettu oikein kaikille osioille. Turvallinen arvo (heikosti toimivalle laitteistolle) on MaxTransfer = 0x07FEC ja Mask = 0x07FFFFC. Tämä koskee erityisesti PCMCIA-korttipaikkaan liitettyjä laitteita ja IDE-CF-korttisovittimia.<br/> Toinen ongelmien syy voivat olla muistivaraukset. Tietyillä kokoonpanoilla on ongelmia käänteisten muistivarausten kanssa. Tässä tapauksessa WHDLoad voidaan pakottaa olemaan käyttämättä Reverse-tilaa asettamalla valinta <a href="opt.html#NoMemReverse">NoMemReverse/S</a>.
+
+<li>Jos käytät Picasso96-ohjelmistoa, varmista, että FakeNativeModes-valinta on arvossa NO (näytön ajurin tooltype). Muuten tuloksena on grafiikkavirheitä ja mahdollisia kaatumisia.
+<li>Jotkin harvinaiset laitteistokokoonpanot eivät tue WHDLoadin MMU-ominaisuuksia. Tämä vaikuttaa ainoastaan 68030-pohjaisiin järjestelmiin. Valintaa <a href="opt.html#MMU">MMU/S</a> ei tule käyttää näissä järjestelmissä! Jos valinta on käytössä, WHDLoad pysäyttää koko koneen. Tällä hetkellä tiedetään, että ongelmia aiheuttavat seuraavat laitteet: kiihdytinkortit "Apollo A630", "Apollo 1230", "Elbox 1230" ja "Magnum MK2".
+<li>A1200:n PCMCIA-portin RAM-laajennusten kanssa vaikuttaa olevan ongelmia. WHDLoad saattaa antaa virheitä kuten <tt>Dos error #235 (executable not valid) on loading "xxx.slave"</tt>. Syynä vaikuttaa olevan, että muisti on sidottu väärin järjestelmän muistiluetteloihin, koska WHDLoad yrittää varata muistia MEMF_REVERSE -lipulla ja saa väärän paluuarvon (osoitin olemattomaan muistiin). Ei ole tiedossa, tapahtuuko tätä vain tiettyjen korttien tai laitteistokokoonpanojen kanssa.
+</ul>
+<h4>Kehitykseen liittyvää</h4>
+<ul>
+<li>Käyttöjärjestelmän ja asennetun ohjelman välillä vaihtaminen ei ole täysin luotettavaa. Ongelmana on, että useimpia Custom-rekistereitä ja joitakin CIA-rekistereitä ei voi lukea, eikä niitä siten voi tallentaa ja palauttaa. WHDLoad ei itse muuta näitä rekistereitä, mutta kun se vaihtaa asennetusta ohjelmasta käyttöjärjestelmään (esim. ladatakseen tiedoston levyltä), käyttöjärjestelmä voi vaihtaa jotakin näistä rekistereistä, joita ei voi palauttaa. Jos asennettu ohjelma vaatii, että kaikki rekisterit säilyvät muuttamattomina, tästä seuraa ongelmia. Tiedetään, että käyttöjärjestelmä muuttaa ainakin rekistereitä cop2lc, bltafwm ja bltalwm sekä kenties muita. Ongelman voi kiertää mahdollisuudella palauttaa muutetut rekisterit vaihdon aikana. Lisätietoja on kohdassa <a HREF="../autodoc.html#WHDLTAG_CBSWITCH_SET">WHDLTAG_CBSWITCH_SET</a>.
+</ul>
+</BODY>
+</HTML>

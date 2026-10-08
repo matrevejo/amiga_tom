@@ -1,0 +1,281 @@
+;
+; Installer script to install WHDLoad and supplement
+; $Id: Install 1.6 2015/12/23 22:43:47 wepl Exp wepl $
+;
+
+; english strings
+	(set #str_abortver (
+		"The installation has determinated that the already installed program %s%s%s%s"
+		"\"%s\" has a newer version than the program to install. "
+		"The current WHDLoad package seems to be outdated. Therefore the "
+		"installation will be canceled. Please try to get and use a newer version of "
+		"the WHDLoad package."
+	))
+	(set #str_iprompt1	"\nNow installing the program\n\n\"%s\" with version %ld.%ld\n\n")
+	(set #str_iprompt2	"%sby overwriting\n\n\"%s\" with version %ld.%ld")
+	(set #str_iprompt3	"%sinto the directory\n\n\"%s\"")
+	(set #str_install	"Install")
+	(set #str_skip		"Skip")
+	(set #str_welcomeusr	"Welcome to the WHDLoad installation.")
+	(set #str_welcomedev (
+		"%s%s%s%s%s" #str_welcomeusr
+		"\nThis script will copy all files which need a special location to their recommend places.\n"
+		"Other files like the manual, source examples and the Install Templates will not be copied. "
+		"Therefore it is recommend to move this install drawer afterwards yourself to your prefered location.\n"
+		"If you don't want to install all provided programs, please select the expert mode where you can skip these."
+	))
+	(set #str_askdest (
+		"Where should WHDLoad and the other tools installed?\n%s"
+		"The location must be reachable via the path!\nRecommend is \"C:\"."
+	))
+	(set #str_prefs (
+		"\nThere is already a WHDLoad preferences files installed. Therefore the new %s%s"
+		"one has been installed as \"%s\". You may check if there are "
+		"useful new options for you and adapt your existing preferences file if desired."
+	))
+	(set #str_askdestinc	"Where should the include files installed?")
+	(set #str_askdestauto	"Where should the autodoc file installed ?")
+	(set #str_completedev (
+		"\nInstallation is complete.\n\n%s%s%s%s"
+		"All files which need a special location are copied.\n"
+		"Please move all other files yourself to your prefered place.\n\n"
+		"Hope WHDLoad and the tools will be useful for you.\n\n"
+		"Bye Bert."
+	))
+        (set #str_destdocs	"Where should the documentation for WHDLoad installed?\nA drawer WHDLoad will be created there.")
+	(set #str_completeusr (
+		"\nInstallation is now complete.\n%s"
+		"Please read the documentation carefully on how to use and configure WHDLoad for your needs."
+	))
+
+; german strings
+(if (= @language "deutsch") (
+	(set #str_abortver (
+		"Die Installation hat festgestellt, dass das bereits installierte Programm %s%s%s%s"
+		"\"%s\" eine höhere Versionsnummer hat als jenes was installiert werden soll. "
+		"Das WHDLoad-Installationspaket scheint veraltet zu sein. Aus diesem Grund "
+		"wird die Installation nun abgebrochen. Bitte versuchen sie eine neuere Version "
+		"des Installationspaketes zu erhalten und zu verwenden."
+	))
+	(set #str_iprompt1	"\nInstalliere jetzt das Programm\n\n\"%s\" mit der Version %ld.%ld\n\n")
+	(set #str_iprompt2	"%sund überschreibe\n\n\"%s\" mit der Version %ld.%ld")
+	(set #str_iprompt3	"%sin das Verzeichnis\n\n\"%s\"")
+	(set #str_install	"Installieren")
+	(set #str_skip		"Überspringen")
+	(set #str_welcomeusr	"Willkommen zur Installation von WHDLoad.")
+	(set #str_welcomedev (
+		"%s%s%s%s%s" #str_welcomeusr
+		"\nDiese Installationskript kopiert alle notwendigen Dateien an ihren empfohlenen Platz.\n"
+		"Andere Dateien wie Die Anleitung, die Quelltextbeispiele und die Installationsschablonen werden nicht kopiert. "
+		"Aus diesem Grund wird empfohlen diesen Installationsordner im Anschluß selbst an den gewünschten Ort zu verschieben.\n"
+		"Falls nicht alle beigelegten Programme installiert werden sollen kann die Installtion im Expertenmodus gestartet werden, "
+		"dann kann die Installation einzelner übersprungen werden."
+	))
+	(set #str_askdest (
+		"Wohin sollen WHDLoad und die anderen Hilfsprogramme installiert werden?\n%s"
+		"Der Ort muss über den Suchpfad erreichbar sein!\nEmpfohlen wird \"C:\"."
+	))
+	(set #str_prefs (
+		"\nEs ist bereits eine WHDLoad Voreinstellungsdatei installiert. Deshalb wurde die %s%s"
+		"neue Datei als \"%s\" abgelegt. Es ist sinnvoll zu überprüfen, ob neue Optionen "
+		"hinzugekommen sind, die gegebenfalls verwendet werden können."
+	))
+	(set #str_askdestinc	"Wohin sollen die Include-Dateien kopiert werden?")
+	(set #str_askdestauto	"Wohin soll die Autodoc-Datei kopiert werden?")
+	(set #str_completedev (
+		"\nDie Installation ist abgeschlossen.\n\n%s%s%s%s"
+		"Alle Dateien die an einem bestimmten Ort liegen müssen wurden kopiert.\n"
+		"Bitte verschieben sie die sonstigen Dateien selbst an eine bevorzugte Stelle.\n\n"
+		"Ich hoffe, dass WHDLoad und die Hilfsprogramme hilfreich sein werden.\n\n"
+		"Beste Grüße, Bert Jahn."
+	))
+	(set #str_destdocs	"Wohin soll das Handbuch von WHDLoad installiert werden?\nEine Schublade WHDLoad wird dort angelegt.")
+	(set #str_completeusr (
+		"\nDie Installation ist abgeschlossen.\n%s"
+		"Bitte lesen Sie die Dokumentation um zu erfahren, wie WHDLoad für ihre Anforderungen zu konfigurieren ist."
+	))
+))
+
+;----------------------------
+; Check version and install if newer
+; IN:	#source-file
+;	#dest-file
+
+(procedure P_install
+  (set #sver (getversion #source-file))
+  (if
+    (exists #dest-file)
+    (set #dver (getversion #dest-file))
+    (set #dver 0)
+  )
+  (if
+    (< #sver #dver)
+    (abort (#str_abortver #dest-file))
+  )
+  (set #prompt
+    (#str_iprompt1 (fileonly #source-file) (/ #sver 65536) (BITAND #sver 65535))
+  )
+  (if
+    (> #dver 0)
+    (set #prompt
+      (#str_iprompt2 #prompt #dest-file (/ #dver 65536) (BITAND #dver 65535))
+    )
+    (set #prompt (#str_iprompt3 #prompt (pathonly #dest-file)))
+  )
+  (if
+    (= @user-level 2)
+    (set #choice
+      (askbool
+        (prompt #prompt)
+        (default 1)
+        (choices #str_install #str_skip)
+        (help @askbool-help)
+      )
+    )
+    (set #choice 1)
+  )
+  (if
+    (= #choice 1)
+    (copyfiles
+      (help @copyfiles-help)
+      (source #source-file)
+      (dest (pathonly #dest-file))
+      (newname (fileonly #dest-file))
+    )
+  )
+)
+
+;----------------------------
+
+; check if installing user or developer archive
+(if
+  (exists "C/InstallBB")
+  (set #mode "dev")
+  (set #mode "usr")
+)
+
+(if
+  (= #mode "dev")
+  (welcome #str_welcomedev)
+  (welcome #str_welcomeusr)
+)
+
+(set @default-dest
+  (askdir
+    (prompt #str_askdest)
+    (help @askdir-help)
+    (default "C:")
+    (disk)
+  )
+)
+
+; install all commands in C
+(set #path "C")
+(foreach #path "#?"
+  (
+    (set #source-file (tackon #path @each-name))
+    (set #dest-file   (tackon @default-dest @each-name))
+    (P_install)
+  )
+)
+
+;----------------------------
+; Check if file exists and is equal, install with '.default' postfix if unequal
+; IN:	#prefs
+(procedure P_InstallPrefs
+  (set #IP_src (tackon "S" #prefs))
+  (set #IP_dst (tackon "S:" #prefs))
+  (if
+    (exists #IP_dst)
+    (
+      (set #IP_srcsum (getsum #IP_src))
+      (if
+	(<> #IP_srcsum (getsum #IP_dst))
+	(
+	  (set #IP_newname ("%s.default" #prefs))
+	  (set #IP_dst ("S:%s" #IP_newname))
+	  (if
+	    (exists #IP_dst)
+	    (if
+	      (= #IP_srcsum (getsum #IP_dst))
+	      (set #IP_copy 0)
+	      (set #IP_copy 1)
+	    )
+	    (set #IP_copy 1)
+	  )
+	  (if
+	    (= #IP_copy 1)
+	    (
+	      (copyfiles
+		(help @copyfiles-help)
+		(source #IP_src)
+		(dest "S:")
+		(newname #IP_newname)
+	      )
+	      (message (#str_prefs #IP_dst))
+	    )
+	  )
+	)
+      )
+    )
+    (copyfiles
+      (help @copyfiles-help)
+      (source #IP_src)
+      (dest "S:")
+    )
+  )
+)
+(set #prefs "WHDLoad.prefs") (P_InstallPrefs)
+(set #prefs "WHDLoad-Startup") (P_InstallPrefs)
+(set #prefs "WHDLoad-Cleanup") (P_InstallPrefs)
+
+(if
+  (= #mode "dev")
+  (
+    (set #dest
+      (askdir
+        (prompt #str_askdestinc)
+        (help @askdir-help)
+        (default "Includes:")
+      )
+    )
+    (set #path "include")
+    (foreach #path "#?"
+      (copyfiles
+        (help @copyfiles-help)
+        (source (tackon #path @each-name))
+        (dest #dest)
+      )
+    )
+    (set #dest
+      (askdir
+        (prompt #str_askdestauto)
+        (help @askdir-help)
+        (default "Autodocs:")
+      )
+    )
+    (copyfiles
+      (help @copyfiles-help)
+      (source "autodoc/whdload.doc")
+      (dest #dest)
+    )
+    (exit #str_completedev (quiet))
+  )
+  (
+    (set #dest
+      (askdir
+        (prompt #str_destdocs)
+        (help @askdir-help)
+        (default "Help:")
+      )
+    )
+    (copyfiles
+      (help @copyfiles-help)
+      (source "Docs")
+      (dest (tackon #dest "WHDLoad"))
+      (all)
+      (infos)
+    )
+    (exit #str_completeusr (quiet))
+  )
+)

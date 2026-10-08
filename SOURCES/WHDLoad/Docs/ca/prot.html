@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Utilitzant resload_Protect#?</TITLE>
+<meta name="DC.Language" content="ca">
+<meta http-equiv="content-language" content="ca">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: prot.html 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</head>
+<BODY>
+<h3>Utilitzant resload_Protect#?</h3>
+<h4>Teoria</h4>
+Hi ha diverses situacions en les que pot ser d'utilitat ésser informat quan el programa instal·lat realitza accessos a certes ubicacions específiques en memòria. Amb les funcions 
+<a href="../autodoc.html">resload_Protect#?</a> és possible protegir certes ubicacions de memòria contra lectura i/o escriptura pel processador. Aquesta protecció implica 
+que cada accés a una d'aquestes àrees protegides, cas de realitzar-se, generarà una excepció de Falla d'Accés i provocarà l'aparició del quadre de diàleg apropiat per part de WHDLoad. 
+Si vostè declara com a protegida un àrea de memòria usant una funció <a href="../autodoc.html">resload_Protect#?</a>, WHDLoad modificarà els descriptors de la pàgina afectada 
+en l'arbre de traducció de la MMU. Després, a cada accés a la pàgina protegida, la CPU generarà una excepció de Falla d'Accés. El gestor d'excepcions dintre de WHDLoad verificarà el
+motiu de l'excepció. Si el motiu ha estat un accés a una <a href="mmu.html">pàgina</a> protegida però l'accés no correspon a l'àrea protegida, els accessos seran emulats, i el programa 
+continuarà executant-se normalment. D'altra banda WHDLoad sortirà de l'execució amb el quadre de diàleg apropiat. Si l'accés es realitza dintre del flux d'instruccions (és a dir, 
+la CPU ha intentat carregar codi) sempre serà emulat, o en altres paraules, les funcions <a href="../autodoc.html">resload_Protect#?</a>
+només afectaran a la lectura i escriptura de dades. El fet que cada accés a una pàgina protegida (la grandària de pàgina és actualment de 4096 bytes) generi una falla d'accés, encara que l'àrea 
+protegida tingui una longitud de només 1 byte, provoca un gran alentiment de la velocitat d'execució del programa, especialment si parts del codi estan situades en la mateixa pàgina. 
+Si el programa depèn de la velocitat d'execució, existiran diferències quant a l'execució del mateix. Per tant és possible que alguns programes no funcionin amb la característica 
+resload_Protect.
+<h4>Exemple: sumes de control per codi</h4>
+Si s'instal·la un joc emprant WHDLoad, vostè haurà d'aplicar un <i>patch</i> a les rutines de càrrega en el carregador original del joc de tal forma que utilitzin WHDLoad per a carregar 
+les dades del joc. Alguns jocs realitzen sumes de control sobre certes àrees de codi per a detectar si el codi original ha estat modificat. Aquestes rutines de detecció poden ser -en 
+determinades ocasions- bastant difícils de trobar. Però emprant la funcionalitat <a href="../autodoc.html">resload_Protect#?</a> de WHDLoad serà fàcil.
+Tot el que s'ha de fer és protegir contra lectura els bytes que han canviat en el codi del joc. Ara cada rutina que intenta realitzar una suma de control i llegir el codi "parxat" provocarà
+ una falla d'accés i vostè coneixerà on es troba situada la rutina. 
+
+<h4>Limitacions</h4>
+No s'ha de protegir la pàgina de memòria on apunta el SSP. Si ho fa i ocorre una excepció, resultarà en una Falla de Doble Bus atès que la CPU no serà capaç d'escriure l'entorn de 
+pila de l'excepció (stackframe). Després d'una Falla de Doble Bus només és possible realitzar un reset per a continuar amb l'execució. WHDLoad verificarà si hi ha un conflicte de l'àrea protegida 
+amb l'SSP i acabarà en cas que es compleixi la condició, però això no servirà si l'SSP canvia posteriorment. 
+<p>Per a més limitacions i informació, si us plau comprovi les entrades Autodoc de les diferents funcions resload_Protect:
+<ul>
+	<li><a href="../autodoc.html#resload_ProtectRead">resload_ProtectRead</a>
+	<li><a href="../autodoc.html#resload_ProtectReadWrite">resload_ProtectReadWrite</a>
+	<li><a href="../autodoc.html#resload_ProtectRemove">resload_ProtectRemove</a>
+	<li><a href="../autodoc.html#resload_ProtectSMC">resload_ProtectSMC</a>
+	<li><a href="../autodoc.html#resload_ProtectWrite">resload_ProtectWrite</a>
+</ul>
+</BODY>
+</HTML>

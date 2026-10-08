@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>Schopnosti</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: feat.html 1.7 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Schopnosti WHDLoad</h3>
+<ul>
+<li>spustitelné z CLI nebo Workbenche
+<li><a href="mmu.html">ochrana paměti</a> použitím MMU (pokud je k dispozici)
+<li>absolutně čistý návrat do OS (záleží na Slave)
+<li>možnost použít "disk image" a/nebo obvyklé soubory
+<li>možnost <a href="opt.html#SavePath">přesměrování</a> zapisovaných souborů na odlišné místo, např. pro jiné úložiště na ukládání pozicí hry
+<li>volitelná velikost Chip-Mem pro nainstalovaný program od $2000 do $200000
+<li>neomezená velikost Fast-Mem pro nainstalovany program
+<li>inteligentní alokace Chip-Mem, částečně absolutní a částečně nezávislá
+<li>cachovani souboru a disk images při <a href="opt.html#Preload">startu</a> a dynamicky při běhu
+<li>automatické depakování souborů a image disku používající XPK
+<li>automatic depakování souborů, pokud to podporuje Slave (RNC/IMP/TPWM/CRM)
+<li>emulace MOVE SR,ea z uživatelského módu na 68010+
+<li>emulace nepodporovaných integer instrukci na 68060
+<li>pohodlná podpora odlaďování (<a href="dump.html#memory">výpisu paměti</a>,
+<a href="dump.html#register">registru,</a>, <a href="dump.html#filelog">logování přístupu k souborům</a>,
+<a href="snoop.html">detekce přístupu k custom registrům</a>)
+<li>Enforcer/Cyberguard a VMM jako volba <a href="opt.html#NoVBRMove">NoVBRMove/S</a> není k dispozici.
+</ul>
+</BODY>
+</HTML>

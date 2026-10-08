@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>Snooping</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: snoop.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Snooping</h3>
+
+<h4>Hvad er det?</h4> Snooping er en funktion i WHDLoad, der udf&oslash;rer validering og logging af tilgange til de brugerdefinerede og CIA-registrene. Hvis <a
+href="opt.html#Snoop">Snoop</a> er aktiveret, vil alle ugyldige tilgange skabe en AdgangsFejl og det installerede program vil blive afsluttet. WHDLoad vil vise en foresp&oslash;rger, der forklarer &aring;rsagen til fejlen.
+
+<h4>Brugerdefinerede registre</h4>Al l&aelig;se- og skrivetilgang til de brugerdefinerede registre bliver verificeret. Ugyldige adgange er:
+<ul>
+<li>tilgange til ikke-eksisterende registre
+<li>l&aelig;setilgange til kun skrivbare registre
+<li>skrivetilgange til kun l&aelig;sbare registre
+<li>tilgange til Tidlig L&aelig;snings-registre
+<li>byteskrivnings-tilgange (bortset fra <tt>bltcon0l</tt> og
+<tt>aud*vol+1</tt>)
+</ul>
+Strobe-registre kan l&aelig;ses og skrives. S&aelig;ttet af gyldige brugerdefinerede registre varierer mellem OCS (Old ChipSet - A500, A1000, old A2000), ECS (Enhanced ChipSet
+- A600, new A2000, A3000) and AGA (Advanced Graphics - A1200, A4000). Dette er is&aelig;r brugbart til at lokalisere fejl i gamle programmer, for&aring;rsaget af udefinerede adgange til nye AGA-registre.
+
+<p>Brug af funktionen <a
+href="../autodoc.html#resload_Control">resload_Control</a> og  tags'ene <a
+href="../autodoc.html#WHDLTAG_CUST">WHDLTAG_CUST_DISABLE/READ/STROBE/WRITE</a>
+s&aelig;tter i den interne konfiguration af WHDLoad, hvilke registre der er  l&aelig;sbare/skrivbare og kan modificeres.
+Med denne kan ugyldige tilgange ignoreres eller gyldige adgange detekteres. Dette b&oslash;r kun bruges i udviklingsprocessen og ikke i offentligt publicerede Slaver.
+
+<h4>CIA-registre</h4>Med CIA-registrene verificeres kun skrivetilgange.
+Det betyder at l&aelig;setilgange til ikke-eksisternde registre i hukommelsesomr&aring;det $bfd000...$bfefff ikke vil blive detekteret.
+For alle skrivetilgange vil den skrevne v&aelig;rdi blive gemt internt af WHDLoad. For nogle CIA-registre er der specielle checks afh&aelig;ngig af den skrevne v&aelig;rdi:
+
+<p><table border=1 summary="tabel over CIA-registre">
+<tr>
+	<th>adresse</th>
+	<th>register</th>
+	<th>check</th>
+</tr><tr>
+	<td>$bfe001</td>
+	<td>ciaa.ciapra</td>
+	<td>s&aelig;tning af Overlay bit'en #0 er forbudt</td>
+</tr><tr>
+	<td>$bfe201</td>
+	<td>ciaa.ciaddra</td>
+	<td>bits #6-7 kan have en hvilken som helst v&aelig;rdi (brugt til joypad), lavere bits skal v&aelig;re
+	%000011</td>
+</tr><tr>
+	<td>$bfe801</td>
+	<td>ciaa.ciatodlow</td>
+	<td rowspan=3>l&aelig;s-modific&#233;r-skrive tilgange (f.eks. bchg) er ikke tilladte
+	hvis ALARM-bit er sat i ciaa.ciacrb (kun checket p&aring; 68060)</td>
+</tr><tr>
+	<td>$bfe901</td>
+	<td>ciaa.ciatodmid</td>
+</tr><tr>
+	<td>$bfea01</td>
+	<td>ciaa.ciatodhi</td>
+</tr><tr>
+	<td>$bfed01</td>
+	<td>ciaa.ciaicr</td>
+	<td>l&aelig;s-modific&#233;r-skrivetilgange (f.eks. bchg) er ikke tilladt (kun checket p&aring; 68060)</td>
+</tr><tr>
+	<td>$bfd100</td>
+	<td>ciab.ciaprb</td>
+	<td>bits'ene til MOTOR #7, SELECT #3-6 og STEP #0 m&aring; ikke cleares, andre bits kan &aelig;ndres; med dette vil alle tilgange til floppydrevene blive detekteret</td>
+</tr><tr>
+	<td>$bfd200</td>
+	<td>ciab.ciaddra</td>
+	<td>den skrevne v&aelig;rdi skal v&aelig;re %11000000</td>
+</tr><tr>
+	<td>$bfd300</td>
+	<td>ciab.ciaddrb</td>
+	<td>den skrevne v&aelig;rdi skal v&aelig;re %11111111</td>
+</tr><tr>
+	<td>$bfd800</td>
+	<td>ciab.ciatodlow</td>
+	<td rowspan=3>l&aelig;s-modifi&#233;r-skrive tilgange (f.eks. bchg) er ikke tilladt
+	hvis ALARM-bit'en er sat i ciab.ciacrb (kun checket p&aring; 68060)</td>
+</tr><tr>
+	<td>$bfd900</td>
+	<td>ciab.ciatodmid</td>
+</tr><tr>
+	<td>$bfda00</td>
+	<td>ciab.ciatodhi</td>
+</tr><tr>
+	<td>$bfdd00</td>
+	<td>ciab.ciaicr</td>
+	<td>l&aelig;s-modific&#233;r-skrivetilgange (f.eks. bchg) er ikke tilladt (kun checket p&aring; 68060)</td>
+</tr></table>
+
+<h4>Hvordan det virker</h4>
+Hvis Snoop er aktiveret, markerer WHDLoad adresserne p&aring; de brugerdefinerede registre og CIA-registrene som v&aelig;rende
+ugyldige/skrivebeskyttede i MMU-overs&aelig;ttelsestr&aelig;et. P&aring; grund af dette vil hver tilgang til et brugerdefineret eller CIA-register resultere i en AdgangsFejl-undtagelse. Undtagelsesh&aring;ndtereren i
+WHDLoad h&aring;ndterer denne undtagelse. F&oslash;rst checker den, om tilgangen er gyldig. Hvis tilgangen er ugyldig, vil programmet blive termineret. Hvis tilgangen er gyldig og er en l&aelig;seoperation, vil den blive  emuleret og program-eksekveringen forts&aelig;tter. Hvis det er en skrive-operation, gemmer WHDLoad ydermere den skrevne v&aelig;rdi til et internt lager.
+<br>Fordi undtagelsens og emulerings-sekvensens overhead vil
+program-eksekveringen g&aring; ned i hastighed. Hvor meget afh&aelig;nger af   CPU-typen, Chiphukommelsestypen (16/32-bit) og Stackpointer  justering hvis Chiphukommelsen er 32-bit (LangtOrd justeret eller ej). Forskelle g&oslash;r sig ogs&aring; g&aelig;ldende for tilgangstypen
+(Byte/Ord/LangtOrd, L&aelig;s/Skriv). P&aring; 68030'eren er skrivninger hurtigere end l&aelig;sninger (fordi ved l&aelig;sninger er stackrammen 92 bytes og p&aring; skrivninger 32 bytes), p&aring;
+68060'eren er l&aelig;sninger hurtigere pga. emuleringen til skrivninger er mere kompleks.
+
+<h4>Hurtigt Snoop-Modus</h4>
+Optionen <a href="opt.html#Snoop">Snoop/S</a> aktiverer den hurtige snooping. L&aelig;setilgange vil ikke blive checket. Ingen  specielle checks udf&oslash;res. Dette modus kan v&aelig;re brugbart til kun at f&aring; indhold fra de brugerdefinerede registre, f.eks. for at gemme et billede vha.
+<a href="sp.html">SP</a>.
+
+<h4>Kobber Liste Scanner</h4>
+Siden version 13 af WHDLoad vil ogs&aring; kobberlister i sig selv blive checket. Scanneren blive aktiveret ved skrivninger til    <tt>coplc</tt>-registrene, hvis kobber-DMA er aktiveret, eller n&aring;r det installerede program aktiverer kobber-DMA'en ved
+skrivning til <tt>dmacon</tt>-registret. Scanneren f&oslash;lger  kobberlisterne og validerer alle Move-instruktioner ved at s&aelig;tte begr&aelig;nsningerne for&aring;rsaget af Snoop-optionen (OCS/ECS/AGA). Skip og Wait (bortset frat CEND)-instruktioner vil blive ignoreret. N&aring;r den finder ugyldige indgange vil det installerede program blive terminateret. Scanneren f&oslash;lger grene (<tt>copjmp</tt>), detekcterer loops og checker op til 16 underlister.
+Moves'ene i kobberlister vil blive gemt i det interne brugerdefinerede register-lager, hvilke dumpes ved afslutning af
+WHDLoad. Scanneren er ikke aktiv i Fast Snoop-Modus.
+
+<h4>Audio Pointer Check</h4>
+N&aring;r optionen <a href="opt.html#ChkAudPt">ChkAudPt/S</a> er aktiveret, vil WHDLoad checke, at det installerede program kun skriver gyldige adresser til de brugerdefinerede audio DMA pointere. Gyldig betyder, at pointeren skal v&aelig;re indeni BaseMem
+og forskellig fra 0. Kun lange skriveoperationer checkes. Ord-skrivninger bliver ikke checket. Dette kan v&aelig;re nyttigt til at lokalisere problemer i audio-afspilningsrutiner.
+
+<h4>Blitter Prioritets Check</h4>
+N&aring;r optionen <a href="opt.html#ChkBltHog">ChkBltHog/S</a> er aktiveret, vil WHDLoad checke, at det installerede
+program ikke aktiverer <tt>BltHog</tt> bit'en ved en skrivning til <tt>dmacon</tt>-registret.
+Blitter-Prioriteten kan for&aring;rsage problemer i nogle hardware- konfigurationer i forbindelse med store blitter-operationer (alle kanaler i brug).
+
+<h4>Blitter Size Check</h4>
+N&aring;r optionen <a href="opt.html#ChkBltSize">ChkBltSize/S</a> er aktiveret vil WHDLoad checke, at blitter-jobs ikke tilg&aring;r noget hukommelse udenfor BaseMem-omr&aring;det. Ved skrivetilgange til
+<tt>bltsize</tt> eller <tt>bltsizh</tt> checker den om linje-modus'et er aktiveret i <tt>bltcon1</tt>.
+Hvis linje-modus'et er aktivt, vil den afbryde st&oslash;rrelses-checket.
+I modsat fald vil WHDLoad beregne det f&oslash;rste og det sidste ord, der skal tilg&aring;s for hver aktiveret DMA-kanal. Hvis &#233;n adresse er udenfor BaseMem-omr&aring;det, vil program blive termineret med en foresp&oslash;rger. Beregningen er designet til at fungere med alle moduser (stigende/faldende, positiv/negativ modulos, ulige
+modulos/pointere).
+<br>V&aelig;r opm&aelig;rkstom p&aring;, at linjetegnings-moduset ikke vil blive verificeret, og at alle blitter-registre ogs&aring; kan skrevet af kobberet, hvis <tt>copcon</tt> er sat.
+
+<h4>Blitter-Vent Check</h4>
+N&aring;r optionen <a href="opt.html#ChkBltWait">ChkBltWait/S</a> er aktiveret, vil WHDLoad bruge et instruktionsspor
+til at verificere, at det installerede program venter korrekt p&aring;, at blitteren g&oslash;r sit job f&aelig;rdigt, f&oslash;r den starter et nyt
+blitter-job. Den bruger en intern variabel, som repr&aelig;senterer blitterens arbejdsstade. Variablen bliver sat, n&aring;r en skrivetilgang til <tt>bltsize</tt>'en eller <tt>bltsizh</tt>'en finder sted og bliver clearet, n&aring;r l&aelig;setilgang til
+<tt>dmaconr</tt>-registret er udf&oslash;rt. Ved hver skrivning til et blitter-register bliver den interne variabels v&aelig;rdi checket;
+hvis den angiver et k&oslash;rende blitter-job vil det installerede program blive termineret og WHDLoad vil rapportere PC'en for det sidst startede blitter-job, sammen med den aktuelle tilgang.
+<br>Der er to st&oslash;rre flaskehalse ved denne funktion. For det f&oslash;rstet bliver blitter-brug via kobberet ikke checket og for det andet vil brugen af blitter-afbrydelser for&aring;rsage, at check-rutinen rapporterer fejl, uden at dette er n&oslash;dvendigt.
+
+<h4>Farve-Burst Check</h4>
+N&aring;r optionen <a href="opt.html#ChkColBst">ChkColBst/S</a> er aktiveret, checker WHDLoad - ved hver skrivning til
+<code>custom.bplcon0</code>-registret - at
+<code>color</code> bit'en er sat. Nogle typer hardware, is&aelig;r  flickerfixer, kr&aelig;ver, at denne bit er sat for at udsende et korrekt videosignal. For bedst kompatibilitet
+b&oslash;r denne bit altid v&aelig;re sat. Direkte skrivninger til
+<code>custom.bplcon0</code> bliver checket; ligeledes g&oslash;r skrivninger, via kobberlister.
+
+<h4>Cobber Kontrol Check</h4>
+
+N&aring;r optionen <a href="opt.html#ChkCopCon">ChkCopCon/S</a> er aktiveret, checker WHDLoad ved hver skrivning til <code>custom.copcon</code>-registret, at bit #1 ikke er sat.
+Denne bit aktiverer Kobberets mulighed for at skrive til Blitter-
+registrene. Det kan sommetider v&aelig;re nyttigt at detektere, om programmer bruger Kobberet til at kontrollere DMA-aktiviteter.
+
+<h4>Fremtid</h4>
+Det er planlagt at implementere funktioner s&aring;som Freezing og Ikonificering.
+For disse er Snoop et krav. Derfor anbefales det for install-udgivere at checke sine installs med Snoop for at sikre fremtidig kompatibilitet.
+<h4>Krav</h4>
+En MMU er kr&aelig;vet til Snoop-funktionen. WHDLoad skal ogs&aring; <a
+href="mmu.html#usercontrol">bruge</a> MMU'en, derfor skal en  <a
+href="opt.html#MMU">MMU/S</a> v&aelig;re aktiveret p&aring; 68030- maskiner.
+<h4>Begr&aelig;nsninger</h4>
+<ul>
+<li>68020 + 68851
+<ul>
+<li>Denne hardware er pt. ikke underst&oslash;ttet
+</ul>
+<li>68030
+<ul>
+<li>l&aelig;s-modific&#233;ry-skrivetilgange til CIA-registre bliver ikke detekteret
+</ul>
+<li>68040
+<ul>
+<li>l&aelig;s-modific&#233;ry-skrivetilgange til CIA-registre bliver ikke detekteret
+<li><tt>movem</tt> hukommelses-l&aelig;seinstruktioner kan muligvis tilg&aring; ugyldige brugerdefinerede registre uden at skabe en Tilgangsfejls-undtagelse, dette er muligt, fordi kun den f&oslash;rste tilgang vil blive verificeret for at matche et gyldigt register
+<li>instruktioner m&aring; ikke tilg&aring; mere end &#233;t snooped  register ad gangen; det betyder, at kode som f.eks. <tt>move.b ($dff006),($bfd800)</tt> ikke kan h&aring;ndteres; hvis en s&aring;dan kode optr&aelig;der, vil WHDLoad vise en Tilgangsfejl-foresp&oslash;rger.
+</ul>
+<li>68060
+<ul>
+<li><tt>movem</tt> instruktionen kan tilg&aring; et ugyldigt register uden at skabe en Tilgangsfejl-undtagelse; dette er muligt, fori kun den f&oslash;rste tilgang vil blive verificeret for at matche et gyldigt register.
+<li><tt>move &lt;CIA/Custom register&gt;,sr</tt> vil blive eksekveret fejlagtigt, hvis det gerne vil &aelig;ndre supervisor-delen af statusregistret, supervisor-delen vil forblive u&aelig;ndret.
+<li>any <tt>(ssp)+</tt> or <tt>-(ssp)</tt> i forbindelse med en skrivetilgang til et CIA- eller brugerdefineret register kan ikke h&aring;ndteres som f&oslash;lge af stackramme-problemer; WHDLoad vil detekterer slige tilgange og terminere med en passende foresp&oslash;rger.
+<li>instruktioner m&aring; ikke tilg&aring; mere end &#233;t snoopet register ad gangen; det betyder, at kode som f.eks. <tt>move.b ($dff006),($bfd800)</tt> ikke kan h&aring;ndteres; hvis en s&aring;dan kode optr&aelig;der, vil WHDLoad vise en Tilgangsfejl-foresp&oslash;rger.
+</ul>
+</ul>
+</BODY>
+</HTML>

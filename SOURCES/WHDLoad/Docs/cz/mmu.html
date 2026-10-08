@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>WHDLoad a MMU</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: mmu.html 1.7 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>WHDLoad a Memory Management Unit (MMU)</h3>
+MMU je v následujících procesorech 68000 rodiny: MC68030,
+MC68040, MC68060. Existují také takzvané EC verze procesoru, které mají
+nefunkční MMU. Např. všechny standartní A4000/030 mají MC68EC030 CPU.
+Na turbokartách se to liší (informujte se v jejich dokumentaci). Pokud vím,
+všechny existující 68040/68060 jsou plnohodnotná CPU s funkčním MMU,
+protože Zorro III požaduje mapování MMU celého IO prostoru. Rozdíl mezi plnou
+verzí a EC verzí CPU je, že MMU nemůže být nahrazeno softwarem. Uživatel tedy
+musí <a href="#usercontrol">uživatelskou kontrolu</a> MMU pro WHDLoad nastavit ručně.
+<br>Pro MC68020 je externí MMU MC68851, ale WHDLoad ho v současnosti nepodporuje.
+<h4>Schopnosti MMU a použití ve WHDLoad</h4>
+Hlavní účel MMU je přeložit logické adresy na fyzické. Je to třeba pro virtuální
+paměť a oddělené adresové prostory. Další schopnost je zadat zvláštní vlastnosti
+jako supervisor Only, Write Protected a Caching mod pro každou fyzickou adresu/místo,
+nakonfigurovat na bázi stránkování, kde stránka používaná WHDLoadem má velikost 4096 bajtů.
+ WHDLoad nepoužívá překlad logická->fyzická adresa. Ale
+používá MMU pro <a href="#mem">ochranu paměti</a>, <a href="cache.html">cache management</a>
+a speciální schopnost (<a href="snoop.html">Snooping</a>, <A HREF="../autodoc.html">resload_Protect#?</a>).
+<h4><a name="mem">Ochrana paměti ve WHDLoad</a></h4>
+Na začátku WHDLoad scanuje list paměti a vytvoří translation tree, který obsahuje
+univerzálně přístupnou paměť. Označí následující adresový prostor jako legální
+a přístupný: $0...BaseMem (velikost určena ve slave), $dff000...$dff200 (Custom registry),
+$bfd000...$bff000 (Cia registry) a paměť použitá slavem a WHDLoad. Pokud je v paměti
+nalezen freezer, paměť, kterou používá, bude také legální. Všecnha ostatní paměť
+je nelegální a každý přístup do ní vytvoří vyjímku Access Fault, která skončí
+příslušným chybovým hlášením WHDLoadu.
+<h4><a name="usercontrol">Uživatelova kontrola MMU ve WHDLoad</a></h4>
+Jsou tři odlišné módy, jak WHDLoad ovlivňuje existující MMU.
+<ol>
+<li><b>ignorovat MMU</b>:<br>
+V tomto módu WHDLoad nevytvoří žádný MMU registr, to se hodí pro programy,
+které nemají opravené chyby a MMU jim nedovoluje pokračovat v běhu. Patří mezi
+ně i freezer TK.
+<br>
+Varování: protože WHDLoad neovládá MMU sám, mohou se vyskytnout problémy - sekání,
+nefunkčnost... tady je seznam problemů, o kterých víme:
+<ul>
+<li>běžící Enforcer/CyberGuard nebo podobná utilita sekne stroj, protože WHDLoad
+vytvoří řadu chyb, když přepíná do OS a zpět. Tyto chyby ale nejsou nedostatky
+WHDLoad, ale část normální operace.
+<li>novější verze 68060.library (od v41.1) remapují paměť $0-$1000 (první stránka)
+do fast RAM lokace pomocí MMU, v "ignorovacím módu" tento překlad adres zůstane
+nedotčený. Pokud tuto oblast používá nainstalovaný program pro DMA akce - copperlist, atd.
+výsledky jsou nevypočitatelné, protože CPU zapisuje do Fast RAM, ale data obsahuje
+Chip RAM.
+<li>jestli běžící MMU používá nějakou paměť (handler vyjímek, translation tree)
+uvnitř BaseMem nainstalovaného programu, může se seknout, protože BaseMem bude přepsána
+v běhu instalovaného programu.
+<li>v podstatě každý program, který mění základní funkce systému pomocí MMU,
+může s WHDLoad vejít do konfliktu.
+</ul>
+<li><b>vypnout MMU</b>:<br>
+Tento mód je možný jen na 68030. WHDLoad MMU vypne a žádná z jeho MMU možností
+nebude k dispozici.
+<li><b>použít MMU</b>:<br>
+V tomto modu WHDLoad přebírá kontrolu nad MMU a umožňuje ochranu paměti a
+cache management jak jsem vysvětlil níže.
+</ol>
+Na 68030 je standartně <i>MMU vypnuto</i>. Na 68040/68060 je zapnuto. Změnit se to
+dá pomocí <a href="opt.html#MMU">MMU/S</a> (aktivuje MMU, na 68030 musí být zapnuta)
+<a href="opt.html#NoMMU">NoMMU/S</a> MMU vypne.
+</BODY>
+</HTML>

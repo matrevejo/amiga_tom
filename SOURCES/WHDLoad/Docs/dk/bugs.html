@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>Bugs</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: bugs.html 1.6 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Ukendte fejl</h3>
+Hvis du opdager nogle nye fejl eller har andre problemer, s&aring; rapporter dem venligst via bugtrackeren p&aring; <a
+href="http://mantis.whdload.de/search.php?project_id=4&hide_status_id=-2">
+http://mantis.whdload.de</a>.
+<h3>Kendte fejl</h3>
+<h4>Generelle problemer</h4>
+<ul>
+<li>Der er et generelt problem med al ekstra hardware forbundet til Amiga'en, der genererer interrupts p&aring; tilf&oelig;ldige eller specifikke tidspunkter. Et eksempel er mit netv&oelig;rkskort (Hydra).
+Hvis jeg har min TCP/IP-stack k&oslash;rende, vil n&oelig;sten samtlige installerede programmer fryse efter et kort stykke tid, fordi kortet skaber PORTS interrupts (samme type interrupts skabt af tastaturet), hvilket ikke kan svares korrekt til af det installerede program. Dette er fordi s&aring; snart foresp&oslash;rgslen er blevet anerkendt med en rte, finder det n&oelig;ste interrupt sted.
+For at undg&aring; dette problem, m&aring; TCP/IP-stack'en stoppes <a
+href="opt.html#ExecuteStartup">f&oslash;r opstart af </a> WHDLoad.<br>
+Ind under samme kategori falder USB-stacks (use "AddUSBHardware REMOVE ALL"
+for Poseidon) og Voodoo interruptet fra Mediator boards (du er n&oslash;dt til at s&oelig;tte "VoodooInt = No").
+Ved start af WHDLoad version 16.8 er der en indbygget omg&aring;else
+for de interrupts, der skabes af Mediator boards; i dette tilf&oelig;lde er der derfor ikke behov for s&oelig;rlige indstillinger.
+
+<li>Hvis du f&aring;r fejl for s&aring; vidt ang&aring;r l&oelig;sning/skrivning af filer, s&aring; check, sy dine harddiske er konfigureret korrekt. WHDLoad l&oelig;ser store dataklumper (>1 MiB), hvilket nemt kan belyse fejlagtige konfigurationer, selv om andre applikationer tilsyneladende virker fint. Det betyder, at du skal sikre dig, at indstillingerne for MaxTransfer og Mask i
+HDToolBox er korrekt sat p&aring; alle partitioner. En sikker v&oelig;rdi (til akavet hardware) er MaxTransfer = 0x07FEC og Mask = 0x07FFFFC.
+Dette g&oslash;r sig is&oelig;r g&oelig;ldende til kort i PCMCIA slottet og til  IDE-CF-card adaptere.<br>
+
+En anden grund til problemer kan v&oelig;re hukommelsesallokationer. Der er konfigurationer, der har problemer med Reverse hukommelsesallokationer. I et s&aring;dant tilf&oelig;lde can WHDLoad blive tvunget til, ikke at bruge Reverse-modusen ved at s&oelig;tte <a
+href="opt.html#NoMemReverse">NoMemReverse/S</a> optionen.
+
+<li>Hvis du bruger Picasso96 softwaren skal du sikre dig, at optionen FakeNativeModes er sat til NO (tooltype p&aring; monitor- driveren).
+Ellers vil der opst&aring; grafikfejl og m&aring;ske crashes.
+<li>Der er nogle sj&oelig;ldne hardware-konfigurationer, der ikke underst&oslash;tter de MMU-relaterede funktioner i WHDLoad. De eneste  systemer p&aring;virket er de 68030-baserede.
+Optionen <a href="opt.html#MMU">MMU/S</a> m&aring; ikke v&oelig;re aktiveret p&aring; disse systemer! Hvis
+optionen er sat, vil WHDLoad fryse hele maskinen.
+Pt. er f&oslash;lgende hardware kendt for at volde problemer: accelerator-boards "Apollo
+A630", "Apollo 1230", "Elbox 1230" and "Magnum MK2".
+<li>Der er tilsyneladende problemer med RAM-udvidelser via  PCMCIA p&aring; A1200.
+WHDLoad kan vise fejlforesp&oslash;rgere som like <tt>Dos error #235 (executable not valid)
+on loading "xxx.slave"</tt>. &aring;rsagerne synes at v&oelig;re, at hukommelse er fejlagtigt indsat i systemhukommelses-listerne, fordi WHDLoad fors&oslash;ger at allokere hukommelse vha. flaget  MEMF_REVERSE og f&aring;r en ugyldig returv&oelig;rdi (pointer to non
+existent memory). Det er ikke kendt, om dette kun sker med specific cards eller ved specifikke konfigurationer.
+</ul>
+<h4>Udvikler-relateret</h4>
+<ul>
+<li>Operation mellem at skifte mellem operativsystemet (OS) og  det installerede program er ikke fuldst&oelig;ndig stabilt. Problem er, at de fleste brugerdefinerede registre og nogle CIA registre ikke kan l&oelig;ses og derfor ikke kan gemmes og gendannes.
+WHDLoad selv &oelig;ndrer ikke disse, men n&aring;r den skifter fra det installerede program til OS'et (f.eks. for at loade en fil fra disk)
+kan OS'et &oelig;ndre nogle af disse ikke gendanbare registre registers. Hvis det installerede program afh&oelig;nger af, at alle registre forbliver u&oelig;ndrede, vil dette skabe problemer.
+Det er kendt, at OS'et &oelig;ndre i hvert fald cop2lc, bltafwm og
+bltalwm, og m&aring;ske flere. For at omg&aring; dette problem er der en mulighed for at gendanne de &oelig;ndrede registre under skift-sekvensen. Se
+<A HREF="../autodoc.html#WHDLTAG_CBSWITCH_SET">WHDLTAG_CBSWITCH_SET</A> for mere info.
+</ul>
+</BODY>
+</HTML>

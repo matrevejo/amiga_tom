@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>ITD * Image To Disk (Image Naar Disk)</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: itd.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>ITD * Image Naar Disk</h3>
+Programma om diskimages terug te schrijven naar een diskette.
+<h4>Installatie</h4>
+ITD is beschikbaar in het <tt>DEV</tt> archief, niet in het <TT>USR</tt>
+archief. <br>Kopieer het naar de C directory of een vergelijkbare plaats.
+<h4>Opties</h4>
+<table>
+<tr><td colspan=2>
+<tt>File/A,Device,Format/S,BS=BlockSize/N,ASync/S,ForceOverwriteLargeDevice/S<tt>
+</td></tr><tr><td valign=top>
+<tt>File/A</tt>
+</td><td>
+Naam van het bestand dat het diskimage bevat om te schrijven naar de device
+</td></tr><tr><td valign=top>
+<tt>Device</tt>
+</td><td>
+Het device waarheen ITD de image schrijft
+<br>standaard "DF0:"
+<br>voorbeeld "RAD:"
+</td></tr><tr><td valign=top nowrap>
+<tt>Format/S</tt>
+</td><td>
+De mogelijkheid om een diskette te formatteren terwijl er opgeslagen word. Voor de meeste apparaten maakt dit niet uit.
+</td></tr><tr><td valign=top>
+<tt>BlockSize/N</tt>
+</td><td>
+De hoeveelheid data dat gelezen en weggeschreven word gedurende elke cyclus, standaard is de grote van een track
+(BlocksPerTrack*SizeBlock)<br>
+bij het aanspreken van apparaten met een grotere opslag mogelijkheid, kan vaak een grotere bloksize de prestatie
+verbeteren, maar let op, want sommige apparaten werken niet correct met een blocksize groter dan 130,560 ($1fe00) of
+zelfs 65,024 ($fe00)
+</td></tr><tr><td valign=top>
+<tt>ASync/S</tt>
+</td><td>
+Als ITD aangezet is, word er asynchroon naar het bestemde apparaat geschreven<br>
+Dit niet gebruiken als het bronbestand gekopieerd word naar het zelfde fysieke apparaat, want dit zal de boel vertragen.
+Als er tenminste één bron of bestemings -bestand DMA ondersteunen, zal dit significant de snelheid verbeteren van de kopieer opdracht.
+</td></tr><tr><td valign=top>
+<tt>ForceOverwriteLargeDevice/S</tt>
+</td><td>
+Normaal gesproken zal ITD niet bestanden lezen of schrijven van een apparaat die een grotere opslag hebben dan
+2,000,000 bytes. Met deze optie kan er gewerkt worden met bestanden en apparaat opslag met elke grote.
+</td></tr>
+</table>
+<h4>Terugkeercode</h4>
+Gezet op 0 bij succes, anders op 20.
+<h4>Achtergrond</h4>
+ITD kan schrijven naar een op elk trackdisk gebaseerd apparaat. Om problemen te verkomen(corrupt maken van je harddisk software)
+moet het schrijven naar apparaten niet groter zijn dan 2,000,000 bytes, behalve als de optie ForcewriteLargeDevice/S wordt gebruikt.
+Als de schrijf operatie buiten de 4gigabyte zone gaat, word er TrackDisk64 gebruikt.<br>
+Er wordt geen verificatie gedaan van het schrijven.<br>
+Als de image kleiner is dan de opslag van het apparaat ontstaat er een foutmelding. ITD zal in dit geval de overblijvende tracks omhoog afronden
+naar een volle block en deze opvullen met lege informatie. Is de image groter, dan ontstaat er ook een foutmelding en ITD zal dan
+zoveel mogelijk informatie weg zetten op het apparaat.
+</BODY>
+</HTML>

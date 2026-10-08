@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>FindAccess * Vind toegangen</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: fa.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>FindAccess * Vind toegang tot een geheugen locatie</h3>
+Dit programma zal het gekozen bestand laden en zoekt voor toegangen
+aan een aangewezen adres.
+Het zal alle absolute en relatieve 8-bit, 16-bit and 32-bit referenties vinden.
+Het is geschreven om de coredump bestanden te analyseren. Het is ongeveer hetzelfde
+als het Freezer commando Fa maar zal niet de toegang uit elkaar halen maar laat
+het zien als een pure hex dump.
+
+<h4>Installatie</h4>
+FindAccess is alleen beschikbaar in het <tt>DEV</tt> archief, niet in het 
+<TT>USR</tt> archief. <br>Kopieer het naar de C directory of een vergelijkbare plek.
+<h4>Gebruik</h4>
+Ik gebruik de volgende alias (toegevoegd aan mijn S:Shell-Startup) om te zoeken in 
+de laatste geheugen dump geschreven met whdload:
+<p><tt>alias fa FindAccess C:.whdl_memory</tt></p>
+Dus ik kan een Shell openen en bijvoorbeeld typen:
+<p><tt>fa $15000</tt></p>
+Dan krijg ik de volgende output:
+<p><tt>FindAccess 1.2 (17-Jan-99 14:45:18) by Bert Jahn
+<br>loading file <B>Workbench:CE/.whdl_memory</B>
+<br>scanning accesses to $15000 (86016)  file: $0-$80000
+<br>Relative  Word at $ 14240 -> 06C00000 07C00000 <B>0DC0</B> 00000CC0 000004C0
+</tt></p>
+<h4>Opties</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,ADDRESS/A,ORG</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>
+de naam van het te scannen bestand
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>ADDRESS/A</tt>&nbsp;&nbsp;
+</td><td>
+Het toegangs adres waarnaar je op zoek bent, je kan simpele expressies gebruiken zoals "$5000"
+= "20480" = " -$Ff +-33+ 19512+$4e8" (voorvoegsel "$" voor hexadecimale nummers,
+ondersteunde operatoren zijn "+" en "-", unair en binair)
+</td></tr>
+<tr><td valign=top>
+<tt>ORG</tt>
+</td><td>
+Het logisch start adres van het bestand, wanneer niet bepaald is dat $0 
+gebruikt is, dan kan je simpele expressies gebruiken met ADDRESS/A
+</td></tr>
+</table>
+</BODY>
+</HTML>

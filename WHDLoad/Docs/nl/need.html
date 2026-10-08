@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>Benodigdheden</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: need.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Benodigdheden</h3>
+<h4>Minimale systeemeisen om installs te draaien:</h4>
+<ul>
+<li>CPU 68000 (68010+ is aanbevolen omdat sommige installs de VBR nodig
+heeft voor de 'stop via een toets' kenmerk)
+<li>Kickstart 2.0 (versie 37)
+<li>Minimum van 1MB aan geheugen (soms meer, het ligt aan het geïnstalleerde programma)
+</ul>
+<h5>Kickstart Emulatie</h5>
+<p>Sommige installaties gebruiken een zogeheten <cite>kickemu</cite> om een complete
+AmigaOS omgeving te creëren voor het geïnstalleerde programma. Voor deze <cite>kickemu</cite> is
+een originele kickstart image nodig. Deze image kan gehaald worden uit een echte Amiga,
+met programma's zoals <cite>GrabKick</cite> of iets vergelijkbaars welke gevonden
+kan worden op aminet (weet zeker dat er een <a href="bugs.html"> correcte setup voor de diskettes zijn).
+(MaxTransfer, Mask)</a> of anders kan het gebeuren dat het gemaakte image bestand corrupt is. De ondersteunde
+image versie hangt af van een install.
+U kunt de informatie vinden welke image gebruikt moet worden in het <i>ReadMe</i> bestand. 
+De image van kickstart versies 1.2 en 1.3 kan alleen gehaald worden vanuit een geschikte A500,
+voor versie 3.1 kan het gehaald worden vanuit een A500/A600/A2000, A1200 of A4000 welke uitgerust
+is met een Kick3.1 ROM.
+Als de image niet gevonden kan worden door WHDLoad of als de image de verkeerde versie heeft of
+veranderd is, zal WHDLoad stoppen met een geschikte foutmelding. Tevens moet er een relocatiebestand 
+met de extensie <tt>.RTB</tt> aanwezig zijn die gelijk is aan de kickstart image.
+Dit relocatiebestand kan gevonden worden op aminet in het archief
+<a href="http://aminet.net/package/util/boot/skick346.lha">util/boot/skick346.lha</a>.
+Beide bestanden, de kickstart image en de relocatiebestand moeten in de directory
+<i>Devs:Kickstarts/</i> staan en de juiste naam hebben.
+Bij het opstarten van WHDLoad met de versie 17.0 kunnen de bestanden ook in de directory <i>WHDCOMMON:</i> gezet worden.
+De tabellen hier beneden bevatten de namen van de bestanden met de bijbehorende kickstart versies.
+
+Vanaf WHDLoad versie 16.5 kunnen ook de kickstart images van de Cloanto
+Amiga Forever CD's gebruikt worden. De images moeten hernoemt worden volgens het tabel onderaan.
+Tevens zal de <i>rom.key</i> gekopieerd moeten worden naar <i>Devs:Kickstarts/</i> of <i>WHDCOMMON:</i>.
+Sommige oudere installaties hebben de kick40068.A1200 image nodig, deze installaties
+werken niet met de Cloantos ROMs.<br>
+Amiga Forever 2008 bevat ook de kick40068.A1200 en de images worden automatisch gekopieerd
+naar de juiste plek.<br> Amiga Forever 2011 bevat ook kick33180.A500 en kick40063A600 rom bestand.  Deze rom bestanden hebben WHDLoad versie 17.0 nodig.<p>
+
+
+<table border=1 cellpadding=3><tr>
+	<th rowspan=2>Versie</th>
+	<th rowspan=2>Naam Kickstart Image</th>
+	<th rowspan=2>Naam relocatiebestand</th>
+	<th colspan=4>Cloantos 'Amiga Forever' bestands namen</th>
+</tr><tr>
+	<th>uitgave 3.0 (1999)</th>
+	<th>uitgave 6.1 (2005)</th>
+	<th>uitgave 6.7 (2011)</th>
+	<th>uitgave 7.0 (2014)</th>
+</tr><tr>
+	<td align=center>1.2</td>
+	<td>Devs:Kickstarts/kick33180.A500</td>
+	<td>Devs:Kickstarts/kick33180.A500.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-120.rom</td>
+</tr><tr>
+	<td align=center>1.3</td>
+	<td>Devs:Kickstarts/kick34005.A500</td>
+	<td>Devs:Kickstarts/kick34005.A500.RTB</td>
+	<td align=center>kick130.rom</td>
+	<td align=center colspan=3>amiga-os-130.rom</td>
+</tr><tr>
+	<td align=center rowspan=3>3.1</td>
+	<td>Devs:Kickstarts/kick40063.A600</td>
+	<td>Devs:Kickstarts/kick40063.A600.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center>amiga-os-310-a500.rom</td>
+	<td align=center>amiga-os-310-a600.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A1200</td>
+	<td>Devs:Kickstarts/kick40068.A1200.RTB</td>
+	<td></td>
+	<td></td>
+	<td align=center colspan=2>amiga-os-310-a1200.rom</td>
+</tr><tr>
+	<td>Devs:Kickstarts/kick40068.A4000</td>
+	<td>Devs:Kickstarts/kick40068.A4000.RTB</td>
+	<td align=center>kick310.rom</td>
+	<td align=center colspan=2>amiga-os-310.rom</td>
+	<td align=center>amiga-os-310-a4000.rom</td>
+</tr></table>
+
+<h4>optie pakketten:</h4>
+<ul>
+
+<li>Kickstart 3.1 (versie 40), deze versie verhelpt een aantal problemen van eerdere uitgaves, het
+heeft ook een aantal nieuwe functies, welke gebruikt worden door WHDLoad wanneer beschikbaar, zoals
+MemoryPools. Deze zorgt voor betere prestaties wanneer veel bestanden gebruikt worden door een
+install.
+
+<li>om XPK-compressie data bestanden te kunnen gebruiken, moet de XPK-libraries geïnstalleerd zijn. Deze
+kunnen gevonden worden op <a
+href="http://aminet.net/package/util/pack/xpk_User">aminet</a>, alle data bestanden
+kunnen gecomprimeerd worden met het gebruik van XPK, WHDLoad zal deze decomprimeren tijdens het laden, XPK
+decompressie heeft extra geheugen nodig en er moet hiermee rekening gehouden worden voor
+systemen met weinig geheugen, bestanden geschreven door WHDLoad zijn altijd
+ongecomprimeerd.
+
+<li>voor automatische taal selectie in sommige installs, word de
+lowlevel.library gebruikt, deze library in onderdeel van Workbench 3.1 maar kan ook
+geinstalleerd worden bij vorige uitgaves van besturingssystemen als een uitbreiding. Als de lowlevel.library
+niet aanwezig is dan zal standaard voor een install de taal Engels zijn.
+
+<li>als geïnstalleerd, zal WHDLoad de reqtools.library gebruiken om elke requestervensters te kunnen openen,
+reqtools kunnen geconfigureerd worden, bijvoorbeeld waar de requester zal
+verschijnen, het kan gedownload worden van
+href="http://aminet.net/package/util/libs/ReqToolsUsr.lha">aminet</a>
+
+</ul>
+
+<h4>Systeem aanbevelingen om nieuwe Slaves te schrijven of programma's te installeren</h4>
+<ul>
+<li>Aanbevolen is een 68030+ met MMU om alle kenmerken van WHDLoad te gebruiken (een 
+krachtige machine is altijd goed om software te ontwikkelen ;-))
+<li>Machinecode, assembler, Amiga hardware kennen ...
+<li>Een assembler (moet kunnen optimaliseren)
+<li>Een paar andere programma's zijn handig (hexedit, disasm, ...)
+<li>Een aantal megabytes aan geheugen
+<li>Toegang tot verschillende machines om te kunnen testen (68000 - 68060, OCS, AGA,
+GfxCard)
+<li>Een hardware of software freezer zoals AR3, HRTmon, TK
+<li>Een NMI knop om een lopend programma te pauzeren of om een 
+software-monitor/freezer te betreden
+</ul>
+</BODY>
+</HTML>

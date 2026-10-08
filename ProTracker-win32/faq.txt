@@ -1,0 +1,59 @@
+ == Frequently Asked Questions (FAQ) ==
+ 
+ * Do I run the OpenGL version or the normal version?
+ - The OpenGL version is more CPU heavy but is much smoother and stable in the
+   framerate (unless something else is hogging the GPU), and it supports the
+   fullscreen mode (F11). Use this if you don't mind heavier CPU usage.
+   Use the normal version if the OpenGL version fails, or if you want less
+   CPU and power usage, but at the cost of more choppy framerates.
+
+   In case you're wondering why the OpenGL version is more CPU heavy, it could
+   be because a 512x256 32-bit texture is being uploaded 60 times a second to
+   the GPU memory, or it could be the nature of using vblank with this rather
+   unusual OpenGL pixel buffer technique. I'm not sure.
+
+ * Is there a way to make the window bigger?
+ - Set SCALE3X to TRUE in protracker.ini (SCALE3X=TRUE).
+
+ * Is there a way to run the program in fullscreen mode?
+ - Press F11, but this only works in the OpenGL version and is known to be
+   slow on some older systems (if the OpenGL version works at all).
+
+ * How do I change the stereo separation (panning)?
+ - Adjust the STEREOSEPARATION setting in protracker.ini. It's a percentage
+   value ranging from 0 to 100. 0 being mono and 100 being 100% separated like
+   the audio output from an Amiga.
+   Pressing SHIFT+F12 will toggle between STEREOSEPARATION and 100% (hard pan).
+
+ * Can this ProTracker clone load PT.Config files?
+ - Yes. Put one in the same directory as the executable program, and it will
+   load the first one it can find (PT.Config-00..99).
+   It will override some of the settings from protracker.ini.
+
+ * Will there ever be MIDI support?
+ - No, sorry. Try a modern module tracker instead, or ProTracker on the Amiga.
+
+ * Will there ever be external audio sampling support?
+ - Very unlikely, but maybe if I find a portable way between different OSes.
+ 
+ * Is there a quick way to clear an editable text string in the GUI?
+ - Right click while in text edit mode.
+ 
+ * Is there a quick way to save my module?
+ - Press CTRL+S. This hotkey is "split mode" in Amiga ProTracker, which is not
+   included in this PT clone.
+   
+ * Can I revert a sample after I edited it?
+ - Press CTRL+Z while the sampler screen is open.
+ 
+ * Can I quick-jump to an entry in the Disk Op. directory lister?
+ - Press SHIFT+character while Disk Op. is open.
+
+ * Will you ever make a ProTracker 3.x clone? ProTracker 3.x rulez!
+ - Forget it. I'm not a fan of PT3.x, and here are some of the reasons:
+   1) It doesn't play PT1.x/2.x MODs correctly (f.ex: sample swap is removed)
+   2) The GUI looks and acts as if it's unfinished (unused buttons and so on)
+   3) The design is messy and not intuitive (PT2.x is also bad, but way better)
+
+ * [insert random question]
+ - Try to send an email to olav.sorensen@live.no or visit #protracker at IRCnet.

@@ -1,0 +1,247 @@
+<HTML>
+<HEAD>
+<TITLE>Programmeren van WHDLoad</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: howto.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Schematisch uitvoeren doorloop </h3>
+<p>Het volgende tabel laat het programma doorloop zien wanneer een WHDLoad geïnstalleerd
+programma wordt uitgevoerd. Ik hoop dat dit helpt te begrijpen hoe WHDLoad werkt en
+hoe WHDLoad, de Slave en de geïnstalleerde programma's doet samenwerken.
+</p>
+<table cellpadding=3>
+  <tr>
+    <td valign=top>De GEBRUIKER</td>
+    <td>
+      <ul>
+        <li>start demo of het spel door het klikken van het Icoon
+				    of door het starten van WHDLoad via de commandolijn
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Het Besturingssysteem</td>
+    <td valign=top>
+      <ul>
+        <li>laad en start het WHDLoad uitvoerbare bestand
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>WHDLoad</td>
+    <td>
+      <ul>
+        <li>controleert de Software en Hardware omgeving
+        <li>laadt en controleert de Slave
+        <li>toewijzen van benodigde geheugen voor het geïnstalleerde programma
+        <li>als <a href="opt.html#Preload">Preload/S</a> is geactiveerd laad het
+				 diskimages en bestanden in het RAM (zolang vrij geheugen beschikbaar is)
+        <li>schakelt het besturingsysteem uit (schakelt multitasking en interrupts uit, verlaagt grafische hardware naar OCS,
+				 initieert alle hardware met gedefineerde waarden)
+        <li>springt in Slave
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Slave</td>
+    <td>
+      <ul>
+        <li>laad het hoofd uitvoerbare bestand van het geïnstalleerde programma door het aanroepen van
+            een WHDLoad functie (bijv. <a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a> of <a
+            href="../autodoc.html#resload_LoadFile"> resload_LoadFile</a>)
+        <li>patcht het hoofd uitvoerbare bestand (dat het programma zijn data laad via de Slave
+            om compatibiliteits problemen te repareren, om een uitgang te creëren van het programma)
+        <li>roept het hoofd uitvoerbare bestand aan
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Geïnstalleerd programma</td>
+    <td>
+      <ul>
+        <li>Doet zijn ding 
+        <li>tijdens het laden van data vanaf disk zal het de Slave aanroepen (omdat 
+				    de Slave de vorige keer dit gepatcht heeft), en de Slave
+						zal de WHDLoad aanroepen, en WHDLoad zal gedeeltelijk het besturingssyteem activeren
+						om data te laden (alleen als de data niet <a
+            href="opt.html#Preload">Voorgeladen</a> is), keert dan terug 
+						en het geïnstalleerde programma wordt hervat
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>De GEBRUIKER</td>
+    <td>
+      <ul>
+        <li>verlaat het programma door het drukken van de <a
+            href="opt.html#QuitKey">QuitKey</a>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Slave</td>
+    <td>
+      <ul>
+        <li>terugkeer naar WHDLoad door het aanroepen van <a
+            href="../autodoc.html#resload_Abort">resload_Abort</a>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>WHDLoad</td>
+    <td>
+      <ul>
+        <li>schakelt het besturingssysteem opnieuw in (hersteld hardwareregisters, beeldscherm en geheugen)
+        <li>maakt alle toegewezen bronnen vrij
+        <li>keert terug naar het besturingssysteem
+      </ul>
+    </td>
+  </tr>
+</table>
+<h3>Hoe installeert men een simpele één disk tracklader</h3>
+Dit is een kleine en korte stap voor stap handleiding hoe een install wordt
+gemaakt voor een niet-DOS demo/game met WHDLoad. De handleiding reflecteert een simpel voorbeeld. In de 
+echte wereld zal dit voorbeeld waarschijnlijk nooit voorkomen. Voor speciale
+voorbeelden en problemen, lees de volgende hoofdstukken die volgen.
+<ol>
+  <li>Voorbereiding
+    <ul>
+      <li>Maak een lade welke alle bestanden bevat.
+      <li>Creëer een diskimage met <A HREF="dic.html"> DIC</A> in deze lade.
+      <li>Creëer een <a href="opt.html#optwb">#?.info</a> bestand met "WHDLoad"
+          als &lt;Standaard Programma&gt; en een Tooltype "SLAVE=#?" die de naam van de
+					slave bevat. (of kopieer simpelweg het icoon van een voorbeeld Install en schakel
+					alle tooltypes uit behalve "SLAVE=").
+    </ul>
+  <li>De Slave<br>
+    Om de slave te schrijven hebben we de volgende informatie:
+    <ol>
+      <li>Waar op de disk bevind zich het hoofd uitvoerbare bestand?
+      <li>Waar bevind in het hoofd uitvoerbare bestand de disklader? 
+    </ol>
+    Om deze informatie te verkrijgen moeten we eerst de bootblock analyseren. Meestal
+		word vanaf hier via exec.DoIO() het hoofd uitvoerbare bestand geladen. Soms is er een speciale
+		trackloader in de bootblock. Nu schrijven we een Slave welke de bootblok zal simuleren
+		en het hoofd uitvoerbare bestand zal laden van de diskimage. Nu rippen we het hoofd uitvoerbare bestand
+		van de image of een <a href="dump.html#memory">geheugen dump</a>. Hierna moeten we de lader in 
+		de hoofd exe bestand zoeken. 
+		Een snelle manier is om te zoeken naar het patroon <tt>$AAAAAAAA</tt> (gebruikt bij het MFM decoderen)
+		met een hex-editor. Snijd dan het gevonden gebied, demonteer het, en zoek naar het begin van de routine. 
+		Begrijp de parameterlijst. Nu creëren we een code voor de Slave welke de lader routine patcht op een
+		manier zoals alle aanroepen naar de lader doorgestuurd worden naar de Slave. De Slave zal dan de parameters
+		instellen en de WHDLoad functie <a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a> aanroepen.
+  <li>In de ideale situatie is de install nu compleet.<br>
+Een ding wat nog gedaan moet worden is het maken van een mooie Icoon. Rip twee plaatjes met de 
+<a href="snoop.html">snoop functie</a> van WHDLoad en <a href="sp.html">SP</a>
+of gebruik een freezer of één of andere van U.A.E. om plaatjes uit te pakken en maak het icoon. De
+16 kleuren <a href="http://aminet.net/package/pix/mwb/RomIcons10.lha">RomIcon</a>
+palet is aanbevolen.
+
+</ol>
+<h3>Mogelijke problemen en speciale gevallen</h3>
+<h4>Niet standaard tracklader</h4>
+Sommige programma's gebruiken hun eigen disk formaat. Dit betekend dat <a
+href="dic.html">DIC</a> geen diskimages kan maken. Om bestanden
+of images te maken van zulke disks is het gebruik van <a href="rawdic.html">RawDIC</a> aan te bevelen. 
+Zie de documentatie van RawDIC voor meer informatie.
+<h4>Meerdere disks</h4>
+Als het programma meer dan één disk gebruikt moet de slave de disk toegangen
+doorsturen naar het juiste image bestand. Soms is dit niet gemakkelijk. Sommige
+programma's ondersteunen meer dan één drive, zodat u de drive nummer kan gebruiken
+om de disk te selecteren. De meeste programma's gebruiken een ID op elke disk om ze
+te onderscheiden.
+In dit geval, gebruik een variabele welke de disk nummer bevat, en op elke toegang naar de 
+disk ID (bepaal zo'n toegang door het analyseren van de parameters voor de disklader)
+verhoog de variabele (verlaag het wanneer de laatste disk is bereikt).
+Zodat hopelijk de lader de ID weer leest, telkens weer tot de juiste disk is geplaatst.
+Misschien is er een verzoek van het programma dat de gebruiker de juiste disk moet invoeren, schakel dat uit.
+<h4>Bewaren van Highscore </h4>
+Er valt weinig over te zeggen. Gebruik <a
+href="../autodoc.html#resload_SaveFile">resload_SaveFile</a> om het geschikte geheugen gebied
+te schrijven naar de disk. Als u wilt, encodeer het dan zodat idioten het niet gemakkelijk kunnen patchen.
+Het is niet aanbevolen om direct in diskimages te schrijven (gebruikmakend van
+<a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a>), omdat als er iets fout
+gaat (bijv. een crash) is het mogelijk dat de images beschadigd zullen raken.
+<h4>Savegames</h4>
+Het handelen van een Savegame is hetzelfde als met highscores.
+<h4>Toegang tot het besturingssysteem</h4>
+Op het moment dat de slave en het geïnstalleerde programma is opgestart, bestaat er absoluut
+geen besturingssysteem noch is het toegankelijk noch heeft het nut om toegang te zoeken! Daarom moeten alle 
+geprobeerde toegangen door het geïnstalleerde programma uitgeschakeld zijn. Als er niet veel van zijn
+en ze geen nut hebben in een WHDLoad omgeving (zoals exec.Disable() of exec.SuperState())
+simpelweg NOP (<tt>$4e71</tt>) ze dan. Als de toegangen een belangrijke functie hebben (zoals exec.DoIO()), 
+stuur ze dan door naar de Slave en emuleer ze.
+Als er veel van zijn, creëer dan een simpele exec.library in een ongebruikt geheugen gebied.
+(initialiseer de longword op adres <tt>$4</tt>). U kunt de bron controleren voor de Oscar.slave, welke
+exec.AllocMem() emuleert. Om toegangen te detecteren naar het besturingssysteem, is de initiële execbase ingesteld op
+<tt>$f0000001</tt> met de intentie dat alle routines welke de execbase willen gebruiken, een "Adres Fout"
+uitzondering aanmaakt.<br>
+Als er een hevig gebruik van de besturingssysteem-functies is, gebruik dan één van de kickemu pakketten
+welke gevonden kunnen worden in het whdload-dev pakket. Er is één pakket voor Kick 1.3
+('src/sources/whdload/kick13.s') en één voor Kick 3.1 ('src/sources/whdload/kick31.s').
+Deze pakketten hebben een originele kickstartimage nodig en creëert een complete besturingssysteem omgeving
+in de WHDLoad ruimte. Raadpleeg de juiste readme meegeleverd voor verdere informatie
+<h3>Algemene compatibiliteits problemen</h3>
+<h4>Gelimiteerde adres ruimte op 68000/68010/68ec020</h4>
+Op deze processors is de adres ruimte gelimiteerd tot 16 MB (<tt>$000000...$ffffff</tt>) omdat deze processors
+maar 24 adres regels bevatten. Daarom als gevolg zullen alle toegangen tot hogere adressen worden uitgevoerd
+naar de lagere 16 MB door het negeren van de meest significante 8 bits.
+Sommige programma's gebruiken deze bits om data te bewaren, of simpelweg vergeten ze te legen. Op een
+processor met een volle 4gb adres ruimte zoals 68020/680ec30/68030/68040/68060 zal dit niet werken, omdat
+de volle 32-bit adressen van de toegangen worden verschaft.<br>
+Om dit probleem te verhelpen zult u deze toegangen moeten patchen en doorsturen naar de geschikte adressen.<br>
+Soms is de reden voor de toegang naar vreemde adressen een niet geïnitieerde pointer. 
+In dit geval kan het helpen door het verwijderen van 
+<tt>$400</tt> - <a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a>.
+<h4>Verschillende stackframes op elke processor</h4>
+De stackframes gecreëerd door de processor bij onderbrekingen en uitzonderingen zijn verschillend
+voor de leden van de 68k familie. Op de 68000 is een stackframe 6 bytes, behalve voor Bus en
+Adres Foutmeldingen. De stackframe bevat de weggeschreven SR bij (a7) en de weggeschreven PC bij (2,a7).
+Op alle processors (68010+) is de minimale stackframe 8 bytes en tevens bevat het de vector bummer als
+een word bij (6,a7) Deze 4-word stackframe formaat <tt>$0</tt> is gecreëerd voor "Trap #xx"
+en onderbrekingen op 68010-68060. De stackframes bij andere uitzonderingen zijn verschillend op elke processor. 
+De RTE instructie werkt verschillend op de 68000 vergeleken met de 68010+. Op een 68000 hersteld het simpelweg de SR
+en de PC en hervat de programma uitvoer bij het onderbroken adres. Op de 68010+ zal het tevens de stackframe
+vrij maken, liggend aan het stackframe formaat.<br>Sommige programma's duwen een adres (PC) en een SR en dan een
+RTE instructie uitvoeren. Dit werkt alleen op een 68000, op een 68010+ leid dit tot onverwachte resultaten.
+<br>Als een programma dit doet, dient u dit te repareren. Soms is het genoeg door de RTE om te ruilen met een RTR.
+<h4>MOVEM.x RL,-(An) op 68000/010 en 68020-68060</h4>
+Er is een verschil als het register gebruikt is in predecrement mode (RL) en ook bevat is in de registerlijst.
+voor de 68020-68060 is de geschreven waarde naar het geheugen het initiële register waarde 
+verlaagt door de grootte van de operatie. De 68000 en 68010 schrijven hun initiële register waarde 
+(niet verlaagd).<br>
+Omdat zo'n dergelijke constructie niet erg handig is. Geen huidige software is bekend problemen te hebben
+hierdoor.
+
+<h3>Algemene richtlijnen voor het schrijven van installs</h3>
+<ul>
+<li>Wijzig niet CPU registers aanwezig in hogere processors zoals VBR of CACR. De VBR is altijd 0
+vanuit het zicht van de Slave programmeur, ook wanneer het verschoven is omdat Auto Vectors (en Traps 
+wanneer de Flag <a href="../autodoc.html#WHDL_EmulTrap">WHDL_EmulTrap</a> is ingeschakeld) zijn geëmuleerd.
+De bits in de CACR zijn verschillend voor elke processor. Er is maar één geldige manier om de 
+<a href="cache.html">caches</a> te wijzigen, gebruik <a href="../autodoc.html">resload_SetCACR/SetCPU</a> 
+en de bitdef's van 'exec/execbase.i' en 'whdload.i'. Ook alle dingen aanwezig in het te installeren programma
+die botsen met deze registers moeten uitgeschakeld of overgeslagen worden, Anders kan WHDLoad niet correct werken!
+<li>Wijzig nooit diskimages. Dat heeft het voordeel dat als iemand wenst een programma te starten van
+een floppy, dan hoeft diegene alleen maar de images terugschrijven naar een disk (aangenomen dat het programma
+draait zonder verschillende fixes, wat niet vaak gebeurd).
+<li>Gebruik nooit originele dingen van het programma direct in de slave (kopieerrechten probleem).
+<li>Schakel de Caches alleen in als u zeker bent dat het draait op alle processors.
+<li>Gebruik zo weinig mogelijk geheugen als mogelijk voor 
+<a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a>. 
+Sommige mensen hebben ingesloten tags op het eind van het chipgeheugen, dus helpt het om alleen 
+<tt>$1f0000</tt> in plaats van<tt> $200000</tt> te gebruiken en WHDLoad absolute toegewezen geheugen te gebruiken.
+</ul>
+<h3>Tips &amp; Trucs</h3>
+<h4>Wat is beter, diskimages of bestanden?</h4>
+Soms heeft u de keuze om diskimages te gebruiken of echte bestanden. Beide hebben
+hun voordelen. Het gebruik van diskimages is meestal makkelijker en sneller om een 
+Slave te creëren. Maar echte bestanden zijn makkelijker te cachen (als er heel weinig
+geheugen is of als het geheugen gefragmenteerd is). De benodigde ruimte op een harde schijf
+is ook smaller met echte bestanden dan met diskimages. U zou eigenlijk alleen diskimages
+moeten gebruiken als er veel bestanden (meer dan 30) zijn.
+</BODY>
+</HTML>

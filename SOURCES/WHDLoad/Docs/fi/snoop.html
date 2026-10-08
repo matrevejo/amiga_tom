@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>Nuuskinta</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: snoop.html 1.4 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>Nuuskinta</h3>
+
+<h4>Mit&auml; se on</h4> Nuuskinta on WHDLoadin toiminto, joka vahvistaa ja kirjaa Custom- ja CIA-rekistereiden k&auml;ytt&ouml;&auml;. Jos <a
+href="opt.html#Snoop">Snoop</a> on aktivoituna, kaikki v&auml;&auml;r&auml;t k&auml;yt&ouml;t luovat Access Faultin ja asennettu ohjelma pys&auml;ytet&auml;&auml;n. WHDLoad n&auml;ytt&auml;&auml; requester-ikkunan, joka selitt&auml;&auml; virheen syyn.<h4>Custom-rekisterit</h4>Kaikki custom-rekisterien luku- ja kirjoituskutsut varmistetaan. Virheellisi&auml; kutsuja ovat:<ul>
+<li>olemattomien rekisterien kutsut<li>vain kirjoitus -rekisterien lukukutsut<li>vain luku -rekisterien kirjoituskutsut<li>Early Read -rekisterien kutsut<li>tavujen kirjoituskutsut (paitsi <tt>bltcon0l</tt> ja <tt>aud*vol+1</tt>)</ul>Strobe-rekistereit&auml; voidaan lukea tai kirjoittaa. Kelvollisten Custom-rekisterien joukko eroaa sen mukaan, onko k&auml;yt&ouml;ss&auml; OCS (Old ChipSet - A500, A1000, vanha A2000), ECS (Enhanced ChipSet - A600, uusi A2000, A3000) vai AGA (Advanced Graphics - A1200, A4000). T&auml;m&auml; on hy&ouml;dyllist&auml; erityisesti etsitt&auml;ess&auml; vanhoista ohjelmista bugeja, jotka johtuvat m&auml;&auml;rittelem&auml;tt&ouml;mist&auml; uusien AGA-rekisterien k&auml;yt&ouml;ist&auml;.<p>Funktiolla <a
+href="../autodoc.html#resload_Control">resload_Control</a> ja tunnisteilla <a
+href="../autodoc.html#WHDLTAG_CUST">WHDLTAG_CUST_DISABLE/READ/STROBE/WRITE</a> voidaan muokata WHDLoadin sis&auml;ist&auml; kokoonpanoa sen suhteen, mit&auml; rekistereit&auml; voidaan lukea/kirjoittaa. T&auml;m&auml;n avulla voidaan ohittaa virheelliset kutsut tai tunnistaa oikeat kutsut. T&auml;t&auml; pit&auml;&auml; k&auml;ytt&auml;&auml; vain kehityksen aikana, ei julkaistuissa Slaveissa.<h4>CIA-rekisterit</h4>CIA-rekisterien osalta varmistetaan vain kirjoituskutsut. T&auml;m&auml; tarkoittaa, ett&auml; lukukutsuja olemattomiin rekistereihin muistialueella $bfd000...$bfefff ei havaita. WHDLoad tallentaa sis&auml;isesti kaikkien kirjoituskutsujen kirjoitusarvon. Joillakin CIA-rekistereill&auml; on erityisi&auml; tarkistuksia riippuen kirjoitetusta arvosta:<p><table border=1 summary="table of CIA registers">
+<tr>
+	<th>osoite</th>
+	<th>rekisteri</th>
+	<th>tarkistus</th>
+</tr><tr>
+	<td>$bfe001</td>
+	<td>ciaa.ciapra</td>
+	<td>Overlay-bitin #0 asetus on kielletty</td>
+</tr><tr>
+	<td>$bfe201</td>
+	<td>ciaa.ciaddra</td>
+	<td>biteill&auml; #6-7 voi olla mik&auml; tahansa arvo (k&auml;ytet&auml;&auml;n joypad-ohjaimelle), alempien bittien tulee olla %000011</td>
+</tr><tr>
+	<td>$bfe801</td>
+	<td>ciaa.ciatodlow</td>
+	<td rowspan=3>lue-muokkaa-kirjoita-kutsuja (esim. bchg) ei sallita, jos ALARM-bitti on asetettu ciaa.ciacrb:ss&auml; (tarkistetaan vain 68060:lla)</td>
+</tr><tr>
+	<td>$bfe901</td>
+	<td>ciaa.ciatodmid</td>
+</tr><tr>
+	<td>$bfea01</td>
+	<td>ciaa.ciatodhi</td>
+</tr><tr>
+	<td>$bfed01</td>
+	<td>ciaa.ciaicr</td>
+	<td>lue-muokkaa-kirjoita-kutsuja (esim. bchg) ei sallita (tarkistetaan vain 68060:lla)</td>
+</tr><tr>
+	<td>$bfd100</td>
+	<td>ciab.ciaprb</td>
+	<td>bittej&auml; MOTOR #7, SELECT #3-6 ja STEP #0 ei saa tyhjent&auml;&auml;, muita bittej&auml; voidaan muuttaa; t&auml;ll&auml; havaitaan levyasemien k&auml;ytt&ouml;</td>
+</tr><tr>
+	<td>$bfd200</td>
+	<td>ciab.ciaddra</td>
+	<td>kirjoitetun arvon tulee olla %11000000</td>
+</tr><tr>
+	<td>$bfd300</td>
+	<td>ciab.ciaddrb</td>
+	<td>kirjoitetun arvon tulee olla %11111111</td>
+</tr><tr>
+	<td>$bfd800</td>
+	<td>ciab.ciatodlow</td>
+	<td rowspan=3>lue-muokkaa-kirjoita-kutsuja (esim. bchg) ei sallita, jos ALARM-bitti on asetettu ciab.ciacrb:ss&auml; (tarkistetaan vain 68060:lla)</td>
+</tr><tr>
+	<td>$bfd900</td>
+	<td>ciab.ciatodmid</td>
+</tr><tr>
+	<td>$bfda00</td>
+	<td>ciab.ciatodhi</td>
+</tr><tr>
+	<td>$bfdd00</td>
+	<td>ciab.ciaicr</td>
+	<td>lue-muokkaa-kirjoita-kutsuja (esim. bchg) ei sallita (tarkistetaan vain 68060:lla)</td>
+</tr></table>
+
+<h4>Miten se toimii</h4>Jos Snoop on k&auml;yt&ouml;ss&auml;, WHDLoad merkitsee Custom- ja CIA-rekisterien osoitteet ep&auml;kelvoiksi/kirjoitussuojatuiksi MMU:n k&auml;&auml;nn&ouml;spuuhun. T&auml;m&auml;n vuoksi kukin Custom- tai CIA-rekisterin k&auml;ytt&ouml; aiheuttaa Access Fault -poikkeuksen. WHDLoadin poikkeusk&auml;sittelij&auml; k&auml;sittelee poikkeuksen. Ensin se tarkistaa, onko k&auml;ytt&ouml; kelvollinen. Jos k&auml;ytt&ouml; ei ole kelvollinen, ohjelma pys&auml;ytet&auml;&auml;n. Jos k&auml;ytt&ouml; on kelvollinen ja lukuoperaatio, se emuloidaan ja ohjelman suoritus jatkuu. Jos se on kirjoitusoperaatio, WHDLoad tallentaa lis&auml;ksi kirjoitetun arvon sis&auml;iseen taltioon. <br>Poikkeuksen ja emulointijakson tehonkulutuksen vuoksi ohjelman suoritus hidastuu. Hidastuminen riippuu suorittimen tyypist&auml;, Chip-muistin tyypist&auml; (16/32-bittinen) ja Stackpointerin kohdistuksesta 32-bittisess&auml; Chip-muistissa (LongWord-kohdistettu vai ei). Se riippuu my&ouml;s k&auml;yt&ouml;n tilasta (Byte/Word/LongWord, Luku/Kirjoitus). 68030:ll&auml; kirjoitus on nopeampaa kuin luku (koska luettaessa pinokehys on 92 tavua, kirjoitettaessa 32 tavua), 68060:ll&auml; luku on nopeampaa, koska kirjoituksen emulointi on mutkikkaampaa.<h4>Fast Snoop -tila</h4>Valinta <a href="opt.html#Snoop">Snoop/S</a> ottaa nopean nuuskinnan k&auml;ytt&ouml;&ouml;n. Lukuk&auml;ytt&ouml;j&auml; ei tarkasteta. Erikoistarkastuksia ei tehd&auml;. T&auml;m&auml; tila voi olla hy&ouml;dyksi, jos halutaan custom-rekisterien sis&auml;lt&ouml;, esim. kuvan tallentamiseen <a
+href="sp.html">SP</a>:ll&auml;.<h4>Copper List -skanneri</h4>WHDLoadin versiosta 13 alkaen my&ouml;s copperlistat tarkistetaan. Skanneri k&auml;ynnistyy, jos <tt>coplc</tt> -rekistereihin kirjoitetaan Copper DMA:n ollessa k&auml;yt&ouml;ss&auml;, tai jos asennettu ohjelma ottaa Copper DMA:n k&auml;ytt&ouml;&ouml;n kirjoittamalla <tt>dmacon</tt> -rekisteriin. Skanneri seuraa copperlistoja ja tarkistaa kaikki Move-k&auml;skyt ottamalla huomioon Snoop-valinnan rajoitukset (OCS/ECS/AGA). Skip- ja Wait (paitsi CEND) -k&auml;skyt j&auml;tet&auml;&auml;n huomiotta. Kun se l&ouml;yt&auml;&auml; ep&auml;kelpoja kirjauksia, asennettu ohjelma pys&auml;ytet&auml;&auml;n. Skanneri seuraa haaroja (<tt>copjmp</tt>), tunnistaa silmukat ja tarkistaa jopa 16 alilistaa. Copperlistien Move-k&auml;skyt tallennetaan sis&auml;iseen Custom-rekisteritaltioon, joka dumpataan WHDLoadista poistuttaessa. Skanneri ei ole toiminnassa Fast Snoop -tilassa.<h4>&Auml;&auml;niosoitinten tarkistus</h4>Kun valinta <a href="opt.html#ChkAudPt">ChkAudPt/S</a> on k&auml;yt&ouml;ss&auml;, WHDLoad tarkistaa, ett&auml; asennettu ohjelma kirjoittaa &auml;&auml;nen Custom DMA-osoittimiin vain kelvollisia arvoja. Kelvollinen tarkoittaa, ett&auml; osoitin on BaseMemin sis&auml;ll&auml; eik&auml; 0. Vain long-kirjoitusoperaatiot tarkistetaan. Word-kirjoituksia ei tarkisteta. T&auml;m&auml; tarkistus voi olla hy&ouml;dyllinen etsitt&auml;ess&auml; ongelmia &auml;&auml;nen toistorutiineista.<h4>Blitterin prioriteettitarkastus</h4>Kun valinta <a href="opt.html#ChkBltHog">ChkBltHog/S</a> on k&auml;yt&ouml;ss&auml;, WHDLoad takristaa, ett&auml; asennettu ohjelma ei ota <tt>BltHog</tt> -bitti&auml; k&auml;ytt&ouml;&ouml;n kirjoittamalla <tt>dmacon</tt> -rekisteriin. Blitterin prioriteetti voi aiheuttaa ongelmia tietyill&auml; laitteistokokoonpanoilla suurten blitteritoimintojen yhteydess&auml; (kaikki kanavat k&auml;yt&ouml;ss&auml;).<h4>Blitterin kokotarkistus</h4>Kun valinta <a href="opt.html#ChkBltSize">ChkBltSize/S</a> on k&auml;yt&ouml;ss&auml;, WHDLoad tarkistaa etteiv&auml;t blitterin k&auml;skyt k&auml;yt&auml; muistia BaseMemin ulkopuolella. Kirjoitettaessa<tt>bltsize-</tt> tai <tt>bltsizh-</tt> rekistereihin, se tarkistaa, onko viivatila k&auml;yt&ouml;ss&auml; <tt>bltcon1:ss&auml;</tt>. Jos viivatila on k&auml;yt&ouml;ss&auml;, kokotarkistus peruutetaan. Muuten WHDLoad laskee kunkin aktivoidun DMA-kanavan ensimm&auml;isen ja viimeisen sanan. Jos osoite on BaseMemin ulkopuolella, ohjelma pys&auml;ytet&auml;&auml;n ja saadaan ilmoitus. Laskutoimitus on suunniteltu toimimaan kaikissa tiloissa (nouseva/laskeva, positiivinen/negatiivinen modulo, parittomat modulot/osoittimet). <br>Muista, ett&auml; viivanpiirtotilaa ei tarkisteta ja my&ouml;s copper voi kirjoittaa kaikkiin blitterin rekistereihin, jos <tt>copcon</tt> on asetettu.<h4>Blitterin odotustarkistus</h4>Kun valinta <a href="opt.html#ChkBltWait">ChkBltWait/S</a> on k&auml;yt&ouml;ss&auml;, WHDLoad k&auml;ytt&auml;&auml; k&auml;skynseurantaa vahvistamaan, ett&auml; asennettu ohjelma odottaa blitterin olevan valmis ennen uuden blitteritoiminnon aloittamista. Se k&auml;ytt&auml;&auml; sis&auml;ist&auml; muuttujaa, joka edustaa blitterin ty&ouml;skentelytilaa. Muuttuja asetetaan, kun <tt>bltsize-</tt> tai <tt>bltsizh-</tt> rekisteriin kirjoitetaan ja tyhjennet&auml;&auml;n, kun <tt>dmaconr-</tt> rekisteri luetaan. Kullakin blitterirekisterin lukukerralla tarkastetaan sis&auml;isen muuttujan arvo. Jos se ilmaisee k&auml;ynniss&auml; olevaa blitterioperaatiota, asennettu ohjelma pys&auml;ytet&auml;&auml;n ja WHDLoad ilmoittaa viimeisen k&auml;ynnistetyn blitterioperaation PC:n itse toiminnon kanssa. <br>T&auml;ss&auml; ominaisuudessa on kaksi merkitt&auml;v&auml;&auml; pullonkaulaa. Ensinn&auml;kin copperin kautta tapahtuvaa blitterin k&auml;ytt&ouml;&auml; ei tarkisteta ja toisekseen blitterin keskeytysten k&auml;ytt&ouml; aiheuttaa tarpeettomia virheilmoituksia.<h4>V&auml;ripurkaustarkistus</h4>Kun valinta <a href="opt.html#ChkColBst">ChkColBst/S</a> on aktivoituna, WHDLoad tarkistaa, ett&auml; <code>color</code>-bitti on asetettuna kirjoitettaessa <code>custom.bplcon0</code>-rekisteriin. Jotkin laitteet, erityisesti flickerfixerit, vaativat t&auml;m&auml;n bitin asettamista, jotta videosignaali n&auml;kyy oikein. T&auml;m&auml; bitti pit&auml;isi aina asettaa, ett&auml; saavutetaan paras yhteensopivuus. Suorat kirjoitukset rekisteriin <code>custom.bplcon0</code> sek&auml; copperlistojen kautta tehdyt kirjoitukset tarkistetaan.<h4>Copperin ohjauksen tarkistus</h4>Kun valinta <a href="opt.html#ChkCopCon">ChkCopCon/S</a> on aktivoituna, WHDLoad tarkistaa, ett&auml; bitti #1 ei ole asetettuna kirjoitettaessa <code>custom.copcon</code>-rekisteriin. T&auml;m&auml; bitti ottaa k&auml;ytt&ouml;&ouml;n toiminnon, jolla Copper voi kirjoittaa Blitterin rekistereihin. Ajoittain voi olla tarpeen tunnistaa, k&auml;ytt&auml;v&auml;tk&ouml; ohjelmat Copperia ohjaamaan DMA-toimintaa.<h4>Tulevaisuus</h4>Suunnitelmissa on toteuttaa ominaisuuksia kuten pys&auml;ytys ja kuvakkeeksi pienennys. N&auml;ihin Snoop on t&auml;rke&auml; vaatimus. Siksi suositellaan, ett&auml; asennusohjelmien tekij&auml;t tarkistavat asennusohjelmansa Snoopilla, jotta yhteensopivuus varmistuu my&ouml;s tulevaisuudessa.<h4>Vaatimukset</h4>Snoop-toiminto vaatii MMU:n. WHDLoadin on my&ouml;s <a
+href="mmu.html#usercontrol">k&auml;ytett&auml;v&auml;</a> MMU:ta, joten <a
+href="opt.html#MMU">MMU/S</a>:n on oltava k&auml;yt&ouml;ss&auml; 68030-koneilla.<h4>Rajoitukset</h4>
+<ul>
+<li>68020 + 68851<ul>
+<li>t&auml;t&auml; laitteistoa ei t&auml;ll&auml; hetkell&auml; tueta</ul>
+<li>68030<ul>
+<li>luku-muokkaus-kirjoitus-tyyppisi&auml; CIA-rekisterien k&auml;ytt&ouml;j&auml; ei havaita</ul>
+<li>68040<ul>
+<li>luku-muokkaus-kirjoitus-tyyppisi&auml; CIA-rekisterien k&auml;ytt&ouml;j&auml; ei havaita<li><tt>movem</tt> -muistinlukuk&auml;skyt voivat k&auml;ytt&auml;&auml; virheellist&auml; rekisteri&auml; ilman Access Fault -poikkeusta. T&auml;m&auml; on mahdollista, koska vain ensimm&auml;inen k&auml;ytt&ouml;kerta tarkistetaan kelvollisen rekisterin varalta<li>k&auml;skyt eiv&auml;t voi k&auml;sitell&auml; kuin yht&auml; nuuskittavaa rekisteri&auml; kerrallaan, joten koodia kuten <tt>move.b ($dff006),($bfd800)</tt>  ei voida k&auml;sitell&auml;; sen esiintyess&auml; WHDLoad antaa Access Fault -kehotteen</ul>
+<li>68060<ul>
+<li><tt>movem</tt> -k&auml;sky voi k&auml;ytt&auml;&auml; virheellist&auml; rekisteri&auml; ilman Access Fault -poikkeusta. T&auml;m&auml; on mahdollista, koska vain ensimm&auml;inen k&auml;ytt&ouml;kerta tarkistetaan kelvollisen rekisterin varalta<li><tt>move &lt;CIA/Custom register&gt;,sr</tt> suoritetaan v&auml;&auml;rin, jos se haluaa muuttaa tilarekisterin supervisor-osaa, supervisor-osa ei muutu<li>mit&auml;&auml;n <tt>(ssp)+:aa</tt> tai <tt>-(ssp):t&auml;</tt> yhdess&auml; CIA- tai Custom-rekisterin kirjoituksen kanssa ei voida k&auml;sitell&auml; pinokehysongelmien vuoksi. WHDLoad tunnistaa n&auml;m&auml; k&auml;yt&ouml;t ja lopettaa ohjelman sopivalla ilmoituksella<li>k&auml;skyt eiv&auml;t voi k&auml;sitell&auml; kuin yht&auml; nuuskittavaa rekisteri&auml; kerrallaan, joten koodia kuten <tt>move.b ($dff006),($bfd800)</tt> ei voida k&auml;sitell&auml;; sen esiintyess&auml; WHDLoad antaa Access Fault -kehotteen</ul>
+</ul>
+</BODY>
+</HTML>

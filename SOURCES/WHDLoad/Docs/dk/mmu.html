@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>WHDLoad and the MMU</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: mmu.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>WHDLoad og Memory Management Unit'en (MMU)</h3>
+En MMU er indeholdt i de f&oslash;lgende processorer i 68000-familien: 68030,
+68040, 68060. Der er ogs&aring; s&aring;kaldte EC-versioner af disse processorer, der har en fejlbeh&aelig;ftet MMU, der er ude af funktion. For eksempel har alle standard A4000/030
+kun en 68EC030 CPU.
+P&aring; tredjeparts-acceleratorboards varierer dette; se i den p&aring;g&aelig;ldende dokumentation for at l&aelig;re mere om dette.
+S&aring; vidt vides, er alle 68040/68060'ere, der er bygget ind i en Amiga, fulde CPU'er, der indeholder en funktionel MMU. Dette skyldes, at Zorro III kr&aelig;ver MMU-mapping af I/O-rum.
+Skelnen mellem en fuld CPU og en EC-version kan ikke foretages af
+software.
+Derfor m&aring; brugeren g&oslash;re ette ved at s&aelig;tte de <a href="#usercontrol">rigtige optioner</a> for WHDLoad.
+<br>For 68020'eren er der en ekstern MMU kaldet 68851, men denne er pt. ikke underst&oslash;ttet af WHDLoad.
+<h4>Funktioner for en MMU og brug i WHDLoad</h4>
+Hovedform&aring;let for MMU'en er at overs&aelig;tte logiske til fysiske adresser. Dette er p&aring;kr&aelig;vet for virtuel hukommelse og separerede adresserum.
+En anden funktion er at specificere specielle egenskaber s&aring; som
+Kun Supervisor, Skrivebeskyttet og Caching-modus for hvert fysiske adresserum, konfigureret p&aring; en sidebasis, hvor en side i  WHDLoad har en st&oslash;rrelse p&aring; 4096 bytes. WHDLoad bruger ikke logisk-til-fysisk overs&aelig;ttelse Men den bruger MMU'en til <a href="#mem">memory protection</a>, <a
+href="cache.html">cache management</a> og nogle specielle funktioner s&aring; som <a
+href="snoop.html">Snooping</a> og <A
+HREF="../autodoc.html">resload_Protect#?</a>.
+<h4><a name="mem">Hukommelsesbeskyttelse i WHDLoad</a></h4>
+Ved opstart scanner WHDLoad den tilg&aelig;ngelige hukommelsesliste og bygger et overs&aelig;ttelses-tr&aelig;, der inkluderer al tilg&aelig;ngelig hukommelse. Den markerer de f&oslash;lgende adresserum som
+gyldige og tilg&aelig;ngelige: $0...BaseMem (vha. informationen fra  Slaven),
+$dff000...$dff200 (Brugerdefinerede registre), $bfd000...$bff000 (CIA registre) og hukommelse brugt af Slaven og WHDLoad.
+Hvis en Freezer bliver fundet i hukommelsen, vil hukommelsen brugt af Freezeren ogs&aring; blive markeret som gyldig. Al anden hukommelse er markeret som gyldig, og derfor vil hver adgang til et s&aring;dant omr&aring;de (L&aelig;sning eller Skrivning) skabe en Adgangsfejls-undtagelse, hvilket vil ende op i en passende fejlforesp&oslash;rger, oprettet af WHDLoad.
+<h4><a name="usercontrol">Brugerkontrol af MMU-h&aring;ndteringen i WHDLoad</a></h4>
+Der er 3 forskellige moduser, med hvilke WHDLoad p&aring;virker en tilstedev&aelig;rende MMU.
+<ol>
+<li><b>ignorer MMU</b>:<br>
+I denne modus &aelig;ndrer WHDLoad ikke nogen MMU-relaterede registre.
+Dette kan v&aelig;re nyttigt, hvis du har k&oslash;rende programmer, der belaster MMU'en og du vil have funktionaliteten i disse programmer bevaret (for eksempel en software freezer s&aring; som TK).
+<br>
+Advarsel: Fordi WHDLoad ikke selv kontrollerer MMU'en, kan en masse fejl v&aelig;re mulige. Disse problemer kan for&aring;rsage crashes, fejl i funktioner eller anden uforudsigelig, fejlagtig adf&aelig;rd.
+Her er en liste over eksisterende ricisi:
+<ul>
+<li>ved at k&oslash;re Enforcer/CyberGuard eller et tilsvarende v&aelig;rkt&oslash;j; dette vil l&aring;se/crachse maskinen, fordi WHDLoad vil skabe en masse Tr&aelig;fninger, hver gang den skifter OS'et fra og til.
+Disse Tr&aelig;fninger er ikke fejl i WHDLoad, men en del af den normale operation.
+<li>nyere versioner af 68060.library (startende med v41.1) vil remappe hukommelsen
+$0-$1000 (den f&oslash;rste side) til en Fast memory lokation vha. MMU'en, i "ignore
+MMU" modus vil denne adresseovers&aelig;ttelse forblive intakt, hvis det installerede program pr&oslash;ver at bruge dette omr&aring;de for DMA- aktioner (f.eks. en kobberliste i dette omr&aring;de); resultaterne vil v&aelig;re uforudsigelige, fordi CPU'en vil l&aelig;se/skrive Fast memory-lokationen, mens DMA'erne g&oslash;r det samme i den rigtige Chip-hukommelse, der indeholder vilk&aring;rlige data.
+<li>hvis det k&oslash;rende MMU-stof bruger nogen hukommelse (undtagelsesh&aring;ndterer, overs&aelig;ttelsestr&aelig;, ...) inde i BaseMem'en i det installerede program, kan det crashe, fordi BaseMem'en vil blive overskrevet under eksekvering af det installerede program
+<li>generelt hvert program der &aelig;ndrer basale funktioner i systemet (vha. MMU'en) kan konflikte med WHDLoad ...
+</ul>
+<li><b>deaktiver MMU</b>:<br>
+I denne modus, hvilket kun er muligt p&aring; 68030,
+vil MMU'en blive sl&aring;et fra af WHDLoad; ingen MMU-relaterede funktioner er tilg&aelig;ngelige.
+<li><b>brug MMU</b>:<br>
+I denne modus taker WHDLoad fuld kontrol over MMU'en og realiserer hukommelsesbeskyttelse og cache-styring som forklaret ovenfor.
+</ol>
+P&aring; 68030'eren er standard modus <i>deaktiver MMU</i>.
+P&aring; 68040/68060 er standard <i>brug MMU</i>.
+Der er to optioner til at kontrollere denne adf&aelig;rd.
+<a href="opt.html#MMU">MMU/S</a> tvinger WHDLoad til at <i>bruge MMU'en</i> og er n&oslash;dvendig p&aring; 68030-systemer for at f&aring; adgang til  MMU-funktionerne. <a href="opt.html#NoMMU">NoMMU/S</a> deaktiverer WHDLoad's MMU-brug (<i>ignorer MMU</i>).
+<center><p><cite>Et Enforcer-hit er et Enforcer-hit, punktum.</cite> (Michael Sinz)</p></center>
+</BODY>
+</HTML>

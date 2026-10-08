@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<TITLE>DIC * Disk Image Creator</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: dic.html 1.2 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>DIC * Disk Image Creator</h3>
+<p>DIC er et v&oelig;rkt&oslash;j til at oprette et filimage af en floppydisk. DIC l&oelig;ser indholdet af floppydisken via den p&aring;g&oelig;ldende enhed
+(f.eks. "trackdisk.device" for DF0:) og skriver dens data til en simpel fil i den aktuelle mappe.
+Navnet p&aring; diskimage-filen, der bliver oprettet, vil v&oelig;re  "Disk.1",
+hvor "1" er nummeret p&aring; den disk, der er blevet l&oelig;st. Disknummeret inkrementeres efter hver diskl&oelig;sning.
+Ved at bruge <tt>Name</tt> optionen kan et andet navn p&aring; imaget angives.</p>
+<p>DIC kan ogs&aring; l&oelig;se andre enheder s&aring;som RAD:, PC0: eller DS0: og h&oslash;jkapacitets-diske.</p>
+<p>Hvis et spor p&aring; floppydisken ikke kan l&oelig;ses korrekt og DIC er blevet startet via en interaktiv (f.eks. CON:), vil den sp&oslash;rge om enter at skippe de fejlede spor eller pr&oslash;ve at l&oelig;se det igen.
+P&aring; ikke-interaktive terminaler vil disse spor som standard blive skippet. <br>
+For skippede spor vil det p&aring;g&oelig;ldende omr&aring;de i imaget blive fyldt p&aring; med m&oslash;nsteret "<tt>TDIC</tt>". S&aring; det er muligt at identificere l&oelig;sefejlen senere.</p>
+<p>DIC kan ogs&aring; l&oelig;se diske delvist ved at bruge optionen <tt>SIZE/K/N</tt>.
+Hvis brugt, vil DIC udelade de data, der f&oslash;lger efter den specificerede st&oslash;rrelse. Dette kan v&oelig;re brugbart hvis de sidste spor er ubrugte.</p>
+<p>Spor kan skippes ved at bruge optionen <tt>SKIPTRACK/K/N</tt>.
+Dette er meget brugbart til at oprette images af diske indeholdende en diskbaseret beskyttelse (f.eks. RN-Copylocks p&aring; track 1).</p>
+<p>Hvis optionen <tt>PEDANTIC/S</tt> er blevet specificeret vil DIC afbryde omg&aring;ende hvis et spor er ul&oelig;seligt.</p>
+<p>DIC kan til hver en tid afbrydes ved at taste Ctrl-C.</p>
+<h4>Installation</h4>
+kopier det C: eller et lignende sted
+<h4>Brug</h4>
+<p>For at bruge DIC interaktivt:
+<ul>
+<li>&aring;bn Shell
+<li>Indtast bibliotek hvor de oprettede images skal gemmes
+<li>tast "DIC" og tryk RETUR
+<li>inds&oelig;t nu diskene og f&oslash;lg instruktionerne givet af DIC
+<li>efter at den sidste disk er blevet l&oelig;st, afbrydes DIC ved at taste Ctrl-C
+</ul>
+For at bruge DIC i et installations-script, brug da optionerne
+<tt>FD=FIRSTDISK/K/N</tt>, <tt>LD=LASTDISK/K/N</tt> og
+<tt>PEDANTIC/S</tt>. For diske med fysisk kopibeskyttelse, brug
+<tt>SKIPTRACK/K/N</tt>. Hvis muligt er det rigtig rart at bruge <tt>SIZE/K</tt>
+for at spare diskplads verden over ;-).
+<h4>Optioner</h4>
+<table>
+<tr><td colspan=2>
+<tt>DEVICE,NAME,SKIPTRACK/K,SIZE/K,FD=FIRSTDISK/K/N,LD=LASTDISK/K/N,PEDANTIC/S</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>DEVICE</tt>
+</td><td>
+enheden fra hvilken DIC vil l&oelig;se diskene
+<br>standard "DF0:"
+<br>eksempel "RAD:"
+</td></tr>
+<tr><td valign=top>
+<tt>NAVN</tt>
+</td><td>
+navn p&aring; det image, der skal oprettes; hvis specificeret vil DIC ikke navngive imaget "Disk.1" og s&aring; videre, men bruger i stedet det specificerede navn. Denne option s&oelig;tter <tt>FIRSTDISK/K/N</tt> og
+<tt>LASTDISK/K/N</tt> til 1, hvilket betyder, at kun &#233;n disk vil blive l&oelig;st
+</td></tr>
+<tr><td valign=top>
+<tt>SKIPTRACK/K/N</tt>
+</td><td>
+de specificerede spor vil ikke blive l&oelig;st, det p&aring;g&oelig;ldende omr&aring;de i diskimaget bliver fyldt op med m&oslash;nsteret "<tt>TDIC</tt>", den f&oslash;lgende tabel viser nogle eksempler for at illustrere de fleksible muligheder for at specificere spor
+  <table>
+  <tr><td>list</td><td>affected tracks</td></tr>
+  <tr><td>1-5</td><td>1,2,3,4,5</td></tr>
+  <tr><td>2,90</td><td>2,90</td></tr>
+  <tr><td>2*2</td><td>2,4,...,156,158</td></tr>
+  <tr><td>10-20*5</td><td>10,15,20</td></tr>
+  <tr><td>1-5,7,99-104*2</td><td>1,2,3,4,5,7,99,101,103</td></tr>
+  </table>
+</td></tr>
+<tr><td valign=top>
+<tt>SIZE/K</tt>
+</td><td>
+st&oslash;rrelsen p&aring; det image der skal oprettes, brugbrat hvis der er et ubrugt omr&aring;de i slutningen af disken, hvis st&oslash;rrelsen sat er st&oslash;rre end den fysiske image-st&oslash;rrelse, bliver den ignoreret.
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>FD=FIRSTDISK/K/N</tt>&nbsp;&nbsp;
+</td><td>
+nummeret p&aring; den f&oslash;rste disk
+<br>standard "FD=1"
+<br>eksempel "FD=0"
+</td></tr>
+<tr><td valign=top>
+<tt>LD=LASTDISK/K/N</tt>
+</td><td>
+standard "LD=999999"
+<br>eksempel "LD=3"
+</td></tr>
+<tr><td valign=top>
+<tt>PEDANTIC/S</tt>
+</td><td>
+hvis specificeret vil DIC omg&aring;ende afbryde hvis et spor ikke kan l&oelig;ses, b&oslash;r bruges i install-scripts
+</td></tr>
+</table>
+<h4>Returkode</h4>
+Returkoden er sat til 0 hvis alle diske fra <tt>FD</tt> op til <tt>LD</tt>
+er blevet l&oelig;st fejlfrit. Ellers returneres 10.
+</BODY>
+</HTML>

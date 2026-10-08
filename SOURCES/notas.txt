@@ -1,0 +1,32 @@
+
+
+Manuales:
+http://amiga-manuals.xiik.net/amiga.php
+
+pagina importates:
+
+http://www.commodorespain.es/
+
+http://malban.de/
+
+http://coppershade.org/
+
+http://scoopex1988.org
+
+http://www.pouet.net/prod.php?which=65625
+
+
+ADF information
+http://lclevy.free.fr/adflib/adf_info.html#p41
+
+
+install df0:
+makedir df0:s
+makedir df0:c
+copy loadwb to df0:c/
+create a s:startup-sequence file and put
+
+Loadwb
+endcli
+
+http://wiki.pegasos.hu/index.php/Amiga_Machine_Language_(Chapter_5)

@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Χαρακτηριστικά</TITLE>
+<meta name="DC.Language" content="el">
+<meta http-equiv="content-language" content="el">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-7">
+<!-- $Id: feat.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Χαρακτηριστικά του WHDLoad</h3>
+<ul>
+<li>εκκινήσιμο από CLI ή Workbench
+<li><a href="mmu.html">προστασία μνήμης</a> με χρήση της MMU (αν υπάρχει)
+<li>εντελώς καθαρή επιστροφή στο λειτουργικό σύστημα (εξαρτάται από το Slave)
+<li>δυνατότητα χρήσης "εικονικών δίσκων" και/ή κοινών αρχείων
+<li>δυνατότητα <a href="opt.html#SavePath">ανακατεύθυνσης</a> εγγράψιμων αρχείων σε ένα ξεχωριστό αρχείο τοποθεσίας του συστήματος, για την διατήρηση αποθηκεύσεων χωριστά
+<li>μεταβλητή Chip-MemSize για το εγκατεστημένο πρόγραμμα από $2000 μέχρι $200000
+<li>απεριόριστη Fast-MemSize για το εγκατεστημένο πρόγραμμα
+<li>έξυπνη διαχείριση της Chip-Memory, μερικώς απόλυτη και μερικώς ανεξάρτητη
+<li>προσωρινή αποθήκευση (caching) αρχείων και "εικονικών δίσκων" στην <a href="opt.html#Preload">εκκίνηση</a> και δυναμικά στην εκτέλεση (LRU)
+<li>αυτόματη αποσυμπίεση αρχείων και "εικονικών δίσκων" χρησιμοποιώντας XPK
+<li>αυτόματη αποσυμπίεση αρχείων αν το υποστηρίζει το Slave (RNC/IMP/TPWM/CRM)
+<li>εξομοίωση της MOVE SR,ea από User-Mode σε 68010+
+<li>εξομοίωση μη υποστηριζόμενων εντολών-ακεραίων σε 68060
+<li>προηγμένη υποστήριξη αποσφαλμάτωσης (<a href="dump.html#memory">ένδειξη μνήμης</a>, <a href="dump.html#register">ένδειξη καταχωρητών</a>, <a href="dump.html#filelog">πρόσβαση αρχείων καταγραφής</a>, <a href="snoop.html">ανίχνευση προσβάσεων των Custom καταχωρητών</a>)
+<li>Enforcer/Cyberguard και VMM proof όσο δεν χρησιμοποιείται η επιλογή <a href="opt.html#NoVBRMove">NoVBRMove/S</a> 
+</ul>
+</BODY>
+</HTML>

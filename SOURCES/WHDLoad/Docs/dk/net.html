@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Netv&aelig;rksfunktioner</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: net.html 1.1 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+
+<h3>Overblik over netv&aelig;rksadgang</h3>
+
+WHDLoad er i stand til at bruge en netv&aelig;rksadgang til at checke om der findes en nyere version af
+WHDLoad og den specificerede Slave-fil. Alle netv&aelig;rksaktiviteter bliver foretaget vha. HTTP-protokollen. Den globale option <a href="opt.html#Proxy">Proxy/S</a>
+kan bruges til at dirigere al netv&aelig;rkstrafik gennem en proxyserver. For at tilg&aring; en proxy der kr&aelig;ver autentifikation, kan brugernavn og adgangskode specificeres ved at bruge <a
+href="opt.html#Proxy">Proxy/S</a> optionen. WHDLoad underst&oslash;tter kun den basale autentifikationstype.
+
+<br>Hvis netv&aelig;rksadgang fra WHDLoad &oslash;nskes, kan al netv&aelig;rksaktivitet deaktiveres ved at bruge <a href="opt.html#NoNetwork">NoNetwork/S</a> global option.
+
+<h3>WHDLoad og Slave opdateringscheck</h3>
+
+Ved at bruge en foresp&oslash;rgsel til WHDLoad websitet vil det blive checket om en nyere version
+af WHDLoad eller det installerede program (Slave) allerede er blevet frigivet.
+
+<br>Checket udf&oslash;res kun, hvis <a href="opt.html#SplashDelay">splash-vinduet</a> er &aring;bnet fordi resultat-informationen  vises d&#233;r.
+
+<p>For WHDLoad opdateringscheck vil versionsnummeret fra den benyttede WHDLoad blive sendt. Hvis en nyere WHDLoad-udgave eksisterer, vil splash-vinduet vise versionsnummeret og udgivelsesdatoen for den mest aktuelle WHDLoad udgave.
+Ydermere bliver en 'Update WHDLoad'-knap f&oslash;jet til splash-vinduet. Hvis du har installeret <a
+href="http://sourceforge.net/projects/openurllib/">openurl.library</a> vil et tryk p&aring; knappen &aring;bne din konfigurerede web-browser, der peger p&aring; WHDLoad hjemmesiden. Hvis ingen  openurl.library er tilg&aelig;ngelig, bliver en foresp&oslash;rger vist med  URL'en p&aring; WHDLoad hjemmesiden. Hvis optionen <a href="opt.html#Expert">Expert/S</a> er sat, vil opdateringschecket ogs&aring; informere om nye beta-udgivelser af WHDLoad.
+
+<p>For at udf&oslash;re Slave-opdateringschecket beregner WHDLoad SHA-256 digest'en af Slave-filen, hvilket sendes til WHDLoad websitet. Der findes en database over alle udgivede Slave-filer. Hvis en nyere Install/Slave findes, vil splash-vinduet vise udgivelsesdatoen for den mest aktuelle Install-udgave. Ydermere bliver en 'Update Slave'-knap tilf&oslash;jet til splash-vinduet. Hvis du har installeret
+<a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>
+vil klik p&aring; knappen &aring;bne din konfigurerede web-browser, der peger p&aring; WHDLoad-siden for den p&aring;g&aelig;ldende install. Hvis ingen openurl.library er tilg&aelig;ngelig, vil en foresp&oslash;rger blive vist med URL'en for WHDLoad-installationssiden.
+
+<p>Hvis en nyere WHDLoad eller Slave findes, bliver en ekstra 'Start'-knap tilf&oslash;jet til splash-vinduet, og vinduet vil ikke lukke, for at placere fokus p&aring; opdateringsmuligheden. Vinduet kan lukkes som s&aelig;dvanlig ved at bruge musen, Space, Return eller Esc.
+
+<p>Hvis <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>
+bliver brugt og der trykkes p&aring; 'Update'-knappen, vil WHDLoad pr&oslash;ve at genaktivere IP-stakken ved at udf&oslash;re <a
+href="opt.html#ExecuteCleanup">ExecuteCleanup/K</a>-kommandoen, fordi IP-stakken som regel blev deaktiveret tidligere af <a
+href="opt.html#ExecuteStartup">ExecuteStartup/K</a>-kommandoen. Dette kan fejle, hvis der ikke er nok fri hukommelse, eftersom start af webbrowser <a
+href="opt.html#Preload">Preload/S</a> har opbrugt det meste af hukommelsen. S&aring; i lavhukommelses-situationer kan 'Update'-knappen muligvis ikke benyttes.
+
+</BODY>
+</HTML>

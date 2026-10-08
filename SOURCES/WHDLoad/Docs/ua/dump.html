@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<title>Dumping</title>
+<meta name="DC.Language" content="uk">
+<meta http-equiv="content-language" content="uk">
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<!-і $Id: dump.html 1.5 2021/12/21 21:58:14 wepl Exp wepl $ -і>
+</head>
+
+<body>
+
+<h3>Дампи пам'яті й файли журналів реєстрації,
+створювані WHDLOAD</h3>
+
+<p>Головним чином це потрібно для відладочних цілей.
+WHDLoad може створювати різні дампи й файли
+журналів реєстрації (логи).</p>
+
+<h4><a name="memory">Дамп пам'яті</a></h4>
+
+<p>Дамп пам'яті - знімок всієї пам'яті, що використовується встановленою програмою.
+  Розмір дампа залежить від установленої програми (воно дорівнює значенню <strong><a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a></strong>
+  у структурі Slave). Дамп пам'яті буде створений, якщо була натиснута <a
+href="opt.html#DebugKey">DebugKey</a> або якщо після помилки буде натиснуто кнопку
+  CoreDump. Ім'я створеного файлу дампа пам'яті - &quot;.whdl_memory&quot;. Задане
+  за замовчуванням місце розташування - &quot;PROGDIR: &quot;, але воно може бути
+  змінено опцією <a href="opt.html#CoreDumpPath">CoreDumpPath</a>. Існуючий файл
+  із тим же самим ім'ям буде завжди перезаписуватися. Якщо встановлена програма
+  використовує Fast пам'ять, дамп зберігається у файлі під ім'ям &quot;.whdl_expmem&quot;.</p>
+
+<h4><a name="register">Дамп регістрів</a></h4>
+
+<p>Дамп регістрів містить інформацію про останній стан центрального процесора
+  (включаючи MMU), Cia й Custom Chips. Деякі Cia й Custom регістри не можуть бути
+  прочитані й вони включаються у файл дампа тільки якщо був активізований режим
+  <a href="opt.html#Snoop">Snoop</a>. Інформація буде збережена у файл формату
+  ASCII з підсвічуванням, використовуючи ESC-послідовності (використовується CSI
+  - Послідовність Керуючих Команд, десяткове число 155). Для перегляду такого
+  файлу, потрібна програма, яка б підтримувала ESC-послідовності, (наприклад,
+  More, MuchMore, Multiview...). Ім'я файлу дампа регістрів - &quot;.whdl_register&quot;,
+  задане за замовчуванням місце розташування - &quot;PROGDIR: &quot; але воно
+  може бути змінено опцією <a href="opt.html#CoreDumppath">CoreDumpPath</a>. Якщо
+  файл із тією же самою назвою вже існує, то дамп буде добавлено у кінець старого
+  дампа - інакше буде створений новий файл.</p>
+
+<h4><a name="FileLog">Журнал реєстрації доступу до файлів</a></h4>
+
+<p>Всі дискові операції будуть записуватися в журнал реєстрації (лог-файл), якщо
+  була активізована опція <a href="opt.html#FileLog">FileLog</a>. Ця функція буде
+  дуже корисна для аналізу дискових операцій, які виробляються установленої програмою,
+  з метою налагодження й оптимізації. Записи у лог-файл заносять наступні функції:
+<ul>
+  <li><a href="../autodoc.html#resload_DeleteFile">resload_DeleteFile</a> </li>
+  <li><a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a> </li>
+  <li><a href="../autodoc.html#resload_Examine">resload_Examine</a> </li>
+  <li><a href="../autodoc.html#resload_ExNext">resload_ExNext</a> </li>
+  <li><a href="../autodoc.html#resload_GetFileSize">resload_GetFileSize</a> </li>
+  <li><a href="../autodoc.html#resload_GetFileSizeDec">resload_GetFileSizeDec</a> </li>
+  <li><a href="../autodoc.html#resload_ListFiles">resload_ListFiles</a> </li>
+  <li><a href="../autodoc.html#resload_LoadFile">resload_LoadFile</a> </li>
+  <li><a href="../autodoc.html#resload_LoadFileDecrunch">resload_LoadFileDecrunch</a> </li>
+  <li><a href="../autodoc.html#resload_LoadFileOffset">resload_LoadFileOffset</a> </li>
+  <li><a href="../autodoc.html#resload_SaveFile">resload_SaveFile</a> </li>
+  <li><a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a> </li>
+</ul>
+
+<p>Вищезгадані функції при кожному доступі до файлу,&nbsp;створюють один запис
+  у журналі, у рядку записується ім'я викликаної функції, параметри й результат.
+  WHDLoad заносить всі входження в лог у внутрішній буфер. Буфер зберігається
+  при виході із програми, або якщо буфер повний - у момент доступу. Інформація
+  буде записана в ASCII файл, ім'я файлу дампа - &quot;.whdl_filelog&quot;, задане
+  за замовчуванням місце розташування - &quot;PROGDIR: &quot; але воно може бути
+  змінено опцією <a href="opt.html#CoreDumppath">CoreDumpPath</a>.</p>
+</body>
+</html>

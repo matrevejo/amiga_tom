@@ -1,0 +1,16 @@
+.key File/A
+.bra {
+.ket }
+
+failat 21
+set echo on
+pp p d -m1 .rn1 {File}
+pp p d -m2 .rn2 {File}
+fimp {File} {File}.im -M9
+crmdata -1 {File} {File}.crm1
+crmdata -1s {File} {File}.crm1s
+crmdata -2 {File} {File}.crm2
+crmdata -2s {File} {File}.crm2s
+tpacker {File} {File}.tpwm
+set echo off
+

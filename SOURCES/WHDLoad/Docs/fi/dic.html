@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>DIC * Levynkuvan luonti</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: dic.html 1.3 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>DIC * Levynkuvan luonti</h3>
+<p>DIC on ty&ouml;kalu, joka luo tiedostokuvan levykkeest&auml;. DIC lukee levykkeen sis&auml;ll&ouml;n sopivalla laiteohjaimella (esim. &quot;trackdisk.device&quot; DF0:lle) ja kirjoittaa tiedot nykyisess&auml; hakemistossa olevaan tiedostoon. Levynkuvatiedoston nimeksi tulee &quot;Disk.1&quot;, miss&auml; &quot;1&quot; on luetun levyn numero. Levyn numeroa kasvatetaan kunkin luetun levyn j&auml;lkeen. Valinnalla <tt>Name</tt> voidaan antaa luotavalle levynkuvalle eri nimi.</p>
+<p>DIC voi lukea my&ouml;s muita laitteita, kuten RAD:, PC0: tai DS0:, sek&auml; korkeatiheyksisi&auml; levykkeit&auml;.</p>
+<p>Jos levyn jotakin uraa ei voida lukea oikein ja DIC on k&auml;ynnistetty vuorovaikutteisesta terminaalista (esim. CON:), se kysyy ohitetaanko ep&auml;onnistunut ura vai yritet&auml;&auml;nk&ouml; sen lukemista uudelleen. Jos terminaali ei ole vuorovaikutteinen, urat ohitetaan oletuksena.<br>Ohitettujen urien kohdalle levynkuvaan tulee merkkijonoa &quot;<tt>TDIC</tt>&quot;. N&auml;in lukuvirhe voidaan tunnistaa my&ouml;hemmin.</p>
+<p>DIC osaa my&ouml;s lukea levyt osittain, kun k&auml;ytet&auml;&auml;n valintaa <tt>SIZE/K/N</tt>. T&auml;ll&ouml;in DIC ohittaa tiedot m&auml;&auml;ritetyn koon j&auml;lkeen. T&auml;st&auml; voi olla hy&ouml;ty&auml;, jos viimeiset urat ovat k&auml;ytt&auml;m&auml;tt&ouml;mi&auml;.</p>
+<p>Uria voidaan ohittaa valinnalla <tt>SKIPTRACK/K/N</tt>. T&auml;m&auml; on hy&ouml;dyllist&auml; luotaessa kuvia levyist&auml;, joilla on levypohjainen suojaus (esim. RN-Copylocks uralla 1).</p>
+<p>Mik&auml;li valinta <tt>PEDANTIC/S</tt> on k&auml;yt&ouml;ss&auml;, DIC lopettaa v&auml;litt&ouml;m&auml;sti ellei uraa voida lukea.</p>
+<p>DIC voidaan keskeytt&auml;&auml; milloin tahansa painamalla Ctrl-C.</p>
+<h4>Asennus</h4>kopioi tiedosto hakemistoon C: tai vastaavaan paikkaan<h4>K&auml;ytt&ouml;</h4>
+<p>DIC:n vuorovaikutteinen k&auml;ytt&ouml;:<ul>
+<li>avaa Shell<li>siirry hakemistoon, jonne levynkuvat tulee tallentaa<li>kirjoita &quot;DIC&quot; ja paina RETURN<li>aseta levyt asemaan ja seuraa DIC:n antamia ohjeita<li>kun viimeinen levy on luettu, keskeyt&auml; DIC painamalla Ctrl-C</ul>DICi&auml; voi k&auml;ytt&auml;&auml; asennuskomentosarjassa valinnoilla<tt>FD=FIRSTDISK/K/N</tt>, <tt>LD=LASTDISK/K/N</tt> ja<tt>PEDANTIC/S</tt>. Jos levyill&auml; on fyysinen kopiosuojaus, k&auml;yt&auml; valintaa<tt>SKIPTRACK/K/N</tt>. Jos mahdollista, k&auml;yt&auml; valintaa <tt>SIZE/K</tt>jolloin levytilaa s&auml;&auml;styy kaikkialla maailmassa ;-).<h4>Valinnat</h4>
+<table>
+<tr><td colspan=2>
+<tt>DEVICE,NAME,SKIPTRACK/K,SIZE/K,FD=FIRSTDISK/K/N,LD=LASTDISK/K/N,PEDANTIC/S</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>DEVICE</tt>
+</td><td>laite, jolta DIC lukee levyt <br>oletus &quot;DF0:&quot; <br>esimerkiksi &quot;RAD:&quot;</td></tr>
+<tr><td valign=top>
+<tt>NAME</tt>
+</td><td>nimi luotavalle levynkuvalle. Jos nimi annetaan, DIC ei anna levynkuvalle nime&auml; &quot;Disk.1&quot; jne. vaan k&auml;ytt&auml;&auml; annettua nime&auml;. T&auml;m&auml; valinta asettaa valinnat <tt>FIRSTDISK/K/N</tt> ja<tt>LASTDISK/K/N</tt> arvoon 1, jolloin luetaan vain yksi levy</td></tr>
+<tr><td valign=top>
+<tt>SKIPTRACK/K/N</tt>
+</td><td>m&auml;&auml;ritettyj&auml; uria ei lueta, levynkuvassa vastaavat alueet t&auml;ytet&auml;&auml;n merkkijonolla &quot;<tt>TDIC</tt>&quot;. Seuraavassa taulukossa esitet&auml;&auml;n joitakin esimerkkej&auml; urien m&auml;&auml;rittelyn joustavuudesta<table>
+  <tr><td>luettelo</td><td>urat, joihin vaikuttaa</td></tr>
+  <tr><td>1-5</td><td>1,2,3,4,5</td></tr>
+  <tr><td>2,90</td><td>2,90</td></tr>
+  <tr><td>2*2</td><td>2,4,...,156,158</td></tr>
+  <tr><td>10-20*5</td><td>10,15,20</td></tr>
+  <tr><td>1-5,7,99-104*2</td><td>1,2,3,4,5,7,99,101,103</td></tr>
+  </table>
+</td></tr>
+<tr><td valign=top>
+<tt>SIZE/K</tt>
+</td><td>luotavan levynkuvan koko, hy&ouml;dyllinen jos levyn lopussa on k&auml;ytt&auml;m&auml;t&ouml;nt&auml; aluetta, jos koko on suurempi kuin kuvan fyysinen koko, se j&auml;tet&auml;&auml;n huomiotta</td></tr>
+<tr><td valign=top nowrap>
+<tt>FD=FIRSTDISK/K/N</tt>&nbsp;&nbsp;
+</td><td>ensimm&auml;isen levyn numero <br>oletus &quot;FD=1&quot; <br>esimerkki &quot;FD=0&quot;</td></tr>
+<tr><td valign=top>
+<tt>LD=LASTDISK/K/N</tt>
+</td><td>oletus &quot;LD=999999&quot; <br>esimerkki &quot;LD=3&quot;</td></tr>
+<tr><td valign=top>
+<tt>PEDANTIC/S</tt>
+</td><td>jos t&auml;m&auml; on m&auml;&auml;ritetty, DIC lopettaa v&auml;litt&ouml;m&auml;sti jos uraa ei voida lukea. K&auml;ytett&auml;v&auml;ksi asennuskomentojonoissa</td></tr>
+</table>
+<h4>Paluukoodi</h4>Paluukoodiksi asetetaan 0, jos kaikki levyt arvosta <tt>FD</tt> arvoon <tt>LD</tt>luetaan onnistuneesti. Muuten paluukoodi on 10.</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>Problémy</TITLE>
+<meta name="DC.Language" content="cs">
+<meta http-equiv="content-language" content="cs">
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<!-- $Id: WHDLoad/Docs/en/bugs.html	2007/02/04 18:11:09 -->
+</HEAD>
+<BODY>
+<h3>Neznámé závady</h3>
+Jestli objevíte jakékoliv nové závady nebo máte jakékoliv jiné problémy,
+prosím ohlaste je přes bugtracker na <a href="http://mantis.whdload.de/search.php?project_id=4&hide_status_id=-2">http://mantis.whdload.de</a>.
+<h4>Hlavní závady</h4>
+<ul>
+<li>Hlavní problém je všechen extra hardware připojený k Amize, který generuje
+přerušení při náhodných nebo regulerních časech. Například má síťová karta (Hydra).
+Pokud běží TCP/IP stack, téměř každý nainstalovaný program se po krátké době sekne,
+protože karta vytváří přerušení portu (to samé, jako přerušení od klávesnice) a toto
+přerušení nemůže být korektně zpracováno nainstalovaným programem. Hned, jak je žádost potvrzena
+rte, se totiž objevuje další přerušení. Tohoto problému se vyvaruji vypnutím TCP/IP
+stacku <a href="opt.html#ExecuteStartup">před spuštěním</a> WHDLoad.
+Do stejné kategorie spadají USB stacky (použijte příkaz "AddUSBHardware REMOVE ALL" pro Poseidon)
+a Voodoo přerušení karet Mediator (musíte nastavit "VoodooInt = No"). Ve WHDLoadu je
+od verze 16.8 přidán trik pro přerušení způsobované kartami Mediator, takže žádná speciální
+nastavení nejsou třeba.
+
+<li>Pokud vám naskakují chybová hlášení kvůli čtení/zapisování souborů, ujistěte se,
+že vaše harddisky jsou správně nakonfigurované. WHDLoad načítá velké bloky dat (větší než 1MB),
+což může způsobit problémy na nevhodných nastaveních, přestože jiné aplikace fungují normálně.
+To znamená mít správně nastavené hodnoty MaxTransfer a Mask v HDToolBoxu na všech oddílech disku.
+Bezpečná hodnota (pro zvláštní hardware) je MaxTransfer = 0x07FEC a Mask = 0x07FFFFC. To platí
+obzvláště pro karty v PCMCIA slotu a pro IDE-CF-kartové adaptéry.<br>
+
+Další důvod problémů mohou být alokace paměti. Jsou bohužel konfigurace, které mají problémy
+s alokacemi Reverse pamětí. V takové případu můžete WHDLoad nastavit tak, aby nepoužíval Reverse mód
+tím, že nastavíte volbu <a href="opt.html#NoMemReverse">NoMemReverse/S</a>.
+
+<li>Pokud používáte software pro Picasso96, ujistěte se, že volba FakeNativeModes je
+nastavena na "NO" (jako tooltype driveru pro monitor). Jinak se dostaví chyby v zobrazení
+a možná zhroucení systému.
+
+<li>Existují vzácné hardwarové konfigurace, které nepodporují MMU schopnosti WHDLoadu.
+Jsou to systémy, založené na 68030. Volba <a href="opt.html#MMU">MMU/S</a>
+nesmí být na těchto strojích zapnuta! Pokud je zapnuta, WHDLoad sekne celý systém.
+V současnosti to víme o následujícím hardware: turbokarty "Apollo A630", "Apollo 1230", "Elbox 1230" a "Magnum MK2".
+
+<li>Zdá se, že rozšíření RAM přes PCMCIA na A1200 způsobuje problémy -
+WHDLoad může zobrazit chybová hlášení jako <tt>Dos error #235 (executable not valid)
+on loading "xxx.slave"</tt>. Je to zřejmě z důvodů, že paměť je nesprávně vyhrazená
+v systémových listech paměti, protože WHDload allokuje paměť přes flag MEMF_REVERSE
+a na těchto pamětích dostává nesprávnou návratovou hodnotu (ukazatel na neexistující
+paměť). Není známo, jestli se tohle stává jen na specifických kartách nebo konfiguracích.
+</ul>
+<h4>Problémy pro vývojáře</h4>
+<ul>
+<li>Operace přepínání mezi OS a nainstalovaným programem není úplně spolehlivá.
+Většina custom registru a některé cia registry nemohou být načteny a tudíž nemohou
+být jejich hodnoty uloženy a později znovu navráceny. Sám WHDLoad tyto registry nemění,
+ale pokud přepíná z nainstalovaného programu do OS (např. kvůli nahrání souboru z disku)
+OS některé z těchto nenavratitelných registrů může změnit. Pokud nainstalovaný program
+trvá na nezměněných hodnotách všech registrů, způsobí to problémy. Je známo, že OS mění
+minimálně cop2lc, bltafwm a bltalwm, a možná víc. Jako řešení pro tento problém je nastolit
+změněné registry během přepínací sekvence. Hledejte podrobnosti v <A HREF="../autodoc.html#WHDLTAG_CBSWITCH_SET">WHDLTAG_CBSWITCH_SET</A>.
+</ul>
+</BODY>
+</HTML>

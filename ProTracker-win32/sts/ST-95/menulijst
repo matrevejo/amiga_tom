@@ -1,0 +1,35 @@
+Samples
+8
+Effect 1
+0
+playiff soundfiles/effect1
+Effect 2
+0
+playiff soundfiles/effect2
+Effect 3
+0
+playiff soundfiles/effect3
+Effect 4
+0
+playiff soundfiles/effect4
+Effect 5
+0
+playiff soundfiles/effect5
+Effect 6
+0
+playiff soundfiles/effect6
+Effect 7
+0
+playiff soundfiles/effect7
+Effect 8
+0
+playiff soundfiles/effect8
+Pictures
+2
+Digital Force Picture
+0
+execute dfp
+Info Picture
+0
+execute inp
+

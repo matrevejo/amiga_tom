@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>CRC16 * CRC16-tarkistussumman laskeminen</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: crc16.html 1.2 2009/02/05 20:38:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>CRC16 * CRC16-tarkistussumman laskeminen </h3>
+Ohjelma laskee CRC-16 -summan tietylle tiedoston osalle (tai koko tiedostolle). Ideana on, että sitä voidaan käyttää asennuskomentojonoissa, joiden tulee tunnistaa työstettävän tiedoston versio. Sen perusteella voidaan asentaa eri Slave-ohjelmat jne. Palautettava arvo on sama kuin <a href="../autodoc.html#resload_CRC16">resload_CRC16</a>:n laskema CRC-16, mistä saattaa olla hyötyä Slave-kehityksessä.
+<h4>Asennus</h4>
+kopioi hakemistoon C: tai vastaavaan
+<h4>Valinnat</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,OFFSET/K/N,LENGTH/K/N</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>
+tiedosto, josta tarkistussumma lasketaan  <br>esim. &quot;S:Startup-Sequence&quot;
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>OFFSET/K/N</tt>&nbsp;&nbsp;
+</td><td>
+alku-offset tiedostossa <br>oletusarvona tiedoston alku <br>esimerkki &quot;OFFSET=11264&quot; jolloin aloitetaan normaalin levynkuvan urasta 2
+</td></tr>
+<tr><td valign=top>
+<tt>LENGTH/K/N</tt>
+</td><td>
+tavujen määrä, josta crc lasketaan <br>oletusarvona tiedoston loppuun <br>esimerkki &quot;LENGTH=1024&quot;
+</td></tr>
+</table>
+<h4>Paluukoodi</h4>
+CRC16 palautetaan ohjelman poistumiskoodina.
+</BODY>
+</HTML>

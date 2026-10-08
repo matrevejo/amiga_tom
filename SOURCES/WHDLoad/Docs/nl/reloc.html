@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>Patcher * modificeren van programma's</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: reloc.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Reloc * Verplaatsen van uitvoerbare bestanden</h3>
+Een klein programma om een standaard AmigaDOS uitvoerbaar bestand te verplaatsen
+naar een absoluut adres en te schrijven naar een simpel databestand. Dit was vereist
+voor eerdere versies van WHDLoad om AmigaDOS uitvoerbare bestanden te bedienen.
+Sinds WHDLoad versie 8.0, kan de functie <a href="../autodoc.html#resload_Relocate">resload_Relocate</a> 
+gebruikt worden in plaats van Reloc.
+
+<h4>Installatie</h4>
+Reloc is alleen beschikbaar in het <tt>DEV</tt> archief, niet in het <TT>USR</tt> archief.
+<br>Kopieër het naar de C directory of een vergelijkbare plaats.
+<h4>Opties</h4>
+<table>
+<tr>
+<td colspan=2><tt>INPUTFILE/A,OUTPUTFILE,ADR/K,QUIET/S</tt></td></tr>
+<tr>
+<td valign=top nowrap><tt>INPUTFILE/A</tt>&nbsp;&nbsp;</td>
+<td>het uitvoerbare bestand dat word verplaatst, moet nader bepaald worden</td>
+</tr>
+<tr>
+<td valign=top><tt>OUTPUTFILE</tt></td>
+<td>de naam van het te schrijven bestand, wanneer het niet bepaald is, zal het bronbestand
+overschreven worden</td>
+</tr>
+<tr>
+<td valign=top><tt>ADR/K</tt></td>
+<td>het start adres voor het verplaatste bestand, wanneer het niet bepaald is word $400 gebruikt,
+je kan simpele expressies gebruiken zoals "$5000" = "20480" = " -$Ff +-33+
+19512+$4e8" (voorvoegsel "$" voor hexadecimale nummers, ondersteunde operators zijn "+"
+en "-", unair en binair)</td>
+</tr>
+<tr>
+<td valign=top><tt>QUIET/S</tt></td>
+<td>schakelt alle output uit, behalve foutmeldingen, schakel dit in voor gebruik in 
+samenwerking met de Installer</td>
+</tr>
+</table>
+<h4>Teruggegeven code</h4>
+De teruggegeven code word gezet op 0 als alles goed is gegaan, anders op 10.
+<h4>Achtergrond</h4>
+De HUNK's van de uitvoerbare bestanden worden gekopieerd in dezelfde volgorde 
+naar het absolute bestand. 
+BSS-HUNK's worden opgeblazen tot hun ware grootte. 
+HUNK's geïntroduceerd met AmigaDOS 2.0 (o.a. RELOC32_SHORT) worden niet ondersteund.
+</BODY>
+</HTML>

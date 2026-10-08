@@ -1,0 +1,18 @@
+Known bugs:
+ * If you lock your computer in Windows with keys WIN+L, the Windows key can get
+   stuck in ProTracker and it will be in a "pressed down" state forever.
+   A known symptom for this problem is that pressing some note keys will
+   transpose the pattern data instead of to play or enter notes.
+   To fix this, simply tap the left Windows key when ProTracker is in focus
+   and it will get free'd.
+   
+ * The OpenGL version (and its fullscreen mode) may be extremely slow or
+   non-working on computers with an old GPU (update your graphics card's driver)
+   
+ * Some keybindings are not accessable on Macintosh keyboards.
+   F.ex. on my PowerBook G4 laptop, both SHIFT keys and CMD keys are mapped
+   to the same equivalent key to the left, which is unbelievably stupid.
+   This is not the case for my MacBook Pro.
+   
+ * You can't type numbers while using a French keyboard layout, at least not in
+   OS X or GNU/Linux

@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>SP * Save Picture (Bewaar Plaatje)</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: sp.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>SP * Save Picture</h3>
+Een programma om een plaatje te maken van een <a href="dump.html">dumpbestand</a>
+gemaakt door WHDLoad.
+<h4>Installatie</h4>
+SP is alleen bewaard in het <tt>DEV</tt> archief, niet in het <TT>USR</tt>
+archief.
+<br>Kopieer het naar C directory of een vergelijkbare plaats.
+<h4>Gebruik</h4>
+Eerst moet er een dump gemaakt worden. Start het geïnstalleerde programma van waaruit het plaatje
+geript moet worden. Het moet starten met de <a href="opt.html#Snoop">Snoop/S</a>
+optie aan. Ook moeten de opties <a href="opt.html#Expert">Expert/S</a> en
+<a href="opt.html#DebugKey">DebugKey/K/N</a> aan staan. 
+Als het plaatje verschijnt dat geript moet worden, druk dan op de Debugkey.
+WHDLoad schrijft nu het dumpbestand. Gebruik een Shell/CLI om naar de directory
+van het dumpbestand te gaan.
+Roep nu <tt>SP</tt> aan met het bestandsnaam of schrijf hat als argument.
+Als je de optie <a href="opt.html#CoreDumpPath">CoreDumpPath</a> gebruikt,
+hoef je niet naar de directory van het dumpbestand te gaan, omdat SP het globale
+WHDLoad configuratie bestand leest om het te vinden.
+<tt>SP</tt> zal het dumpbestand laden en proberen het plaatje weg te schrijven.
+<h4>Opties</h4>
+<table>
+<tr>
+  <td colspan=2><tt>OutputFile/A,Cop/K,CS=CopStop/K,Width/K,Height/K,con0/K,mod1/K,mod2/K,pt1/K,pt2/K,pt3/K,pt4/K,NoCopLst/S</tt></td>
+</tr>
+<tr>
+  <td valign=top><tt>OutputFile/A</tt></td>
+  <td>het bestandsnaam van het te bewaren plaatje</td>
+</tr>
+<tr>
+  <td valign=top><tt>Cop/K</tt></td>
+  <td>zet het begin adres van het eerste copperlijst naar interpreteren, als 
+	u het adres dat bewaard wordt in het dumpbestand wilt overschrijven</td>
+</tr>
+<tr>
+  <td valign=top><tt>CS=CopStop/K</tt></td>
+  <td>zet het eind adres van de copperlijst-interpretatie. 
+	Het moet gebruikt worden wanneer het scherm is opgebouwd 
+	uit meer dan één plaatje.</td>
+</tr>
+<tr>
+  <td valign=top><tt>Width/K</tt></td>
+  <td>bepaald de wijdte van het te schrijven plaatje, dit heeft geen invloed op de modulo waardes!</td>
+</tr>
+<tr>
+  <td valign=top><tt>Height/K</tt></td>
+  <td>bepaald de hoogte van het te schrijven plaatje</td>
+</tr>
+<tr>
+  <td valign=top><tt>con0/K</tt></td>
+  <td>overschrijft het <tt>bplcon0</tt> register, bewaard in het dumpbestand</td>
+</tr>
+<tr>
+  <td valign=top><tt>mod1/K,mod2/K</tt></td>
+  <td>overschrijft het <tt>bplmod1</tt>/<tt>bplmod2</tt> register, bewaard in het dumpbestand</td>
+</tr>
+<tr>
+  <td valign=top nowrap><tt>pt1/K,pt2/K,pt3/K,pt4/K</tt>&nbsp;&nbsp;</td>
+  <td>overschrijft het <tt>bplpt1,2,3,4</tt> register, bewaard in het dumpbestand</td>
+</tr>
+<tr>
+  <td valign=top><tt>NoCopLst/S</tt></td>
+  <td>schakelt het dumpen van de copperlijst uit</td>
+</tr>
+</table>
+</BODY>
+</HTML>

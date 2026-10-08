@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>FindAccess * Find Accesses</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: fa.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>FindAccess * Find Adgang til en hukommelseslokation</h3>
+Dette v&aelig;rkt&oslash;j vil loade den specificerede fil og scanne den for adgange til en given adresse. Det vil finde alle absolutte og  relative 8-bit, 16-bit og 32-bit
+referencer. Det er blevet skrevet for at analysere coredump-filerne. Det er i stil med
+Freezer-kommandoen FA men vil ikke disassemble adgangen; men derimod vise den som et rent hex-dump.
+<h4>Installation</h4>
+FindAccess er kun indeholdt i <tt>DEV</tt> arkivet, ikke i
+<TT>USR</tt> arkivet <br>kopier det til C: eller et lignende sted
+<h4>Brug</h4>
+Jeg bruger det f&oslash;lgende alias (tilf&oslash;jet til min S:Shell-Startup) for at s&oslash;ge i det sidste memory-dump skrevet af WHDLoad:
+<p><tt>alias fa FindAccess C:.whdl_memory</tt></p>
+s&aring; jeg kan &aring;bne en Shell og f.eks. skrive:
+<p><tt>fa $15000</tt></p>
+og f&aring;r output'et:
+<p><tt>FindAccess 1.2 (17-Jan-99 14:45:18) by Bert Jahn
+<br>loading file <B>Workbench:CE/.whdl_memory</B>
+<br>scanning accesses to $15000 (86016)  file: $0-$80000
+<br>Relative  Word at $ 14240 -> 06C00000 07C00000 <B>0DC0</B> 00000CC0 000004C0
+</tt></p>
+<h4>Optioner</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,ADDRESS/A,ORG</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>
+navnet p&aring; filen, der skal scannes
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>ADDRESS/A</tt>&nbsp;&nbsp;
+</td><td>
+adgangs-adressen du leder efter; du kan bruge simple udtryk som "$5000"
+= "20480" = " -$Ff +-33+ 19512+$4e8" (prefix "$" for hexadecimal tal,
+underst&oslash;ttede operatorer er "+" and "-", un&aelig;r og bin&aelig;r)
+</td></tr>
+<tr><td valign=top>
+<tt>ORG</tt>
+</td><td>
+den logiske startadresse p&aring; filen, hvis ikke specificert benyttes  $0,du kan bruge de samme, simple udtryk som med ADDRESS/A
+</td></tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>ITD * Levynkuva levylle</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: itd.html 1.4 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>ITD * Levynkuva levylle</h3>Ty&ouml;kalu, jolla levynkuvia voidaan kirjoittaa takaisin levyasemankaltaiselle laitteelle.<h4>Asennus</h4>ITD on vain <tt>DEV</tt> -paketissa, ei <TT>USR</tt>-paketissa. <br>Kopioi tiedosto hakemistoon C: tai vastaavaan paikkaan.<h4>Valinnat</h4>
+<table>
+<tr><td colspan=2>
+<tt>File/A,Device,Format/S,BS=BlockSize/N,ASync/S,ForceOverwriteLargeDevice/S</tt>
+</td></tr><tr><td valign=top>
+<tt>File/A</tt>
+</td><td>laitteeseen kirjoitettavan levynkuvan tiedostonimi</td></tr><tr><td valign=top>
+<tt>Device</tt>
+</td><td>laite, jolle ITD kirjoittaa levynkuvan <br>oletus &quot;DF0:&quot; <br>esimerkiksi &quot;RAD:&quot;</td></tr><tr><td valign=top nowrap>
+<tt>Format/S</tt>
+</td><td>jos valinta on k&auml;yt&ouml;ss&auml;, levy my&ouml;s alustetaan kirjoituksen aikana &ndash; useimmiten t&auml;ll&auml; ei ole merkityst&auml;</td></tr><tr><td valign=top>
+<tt>BlockSize/N</tt>
+</td><td>kunkin syklin aikana luettu ja kirjoitettu tietom&auml;&auml;r&auml;, oletus on uran koko (lohkoja uraa kohti*lohkon koko)<br> suuremmilla laitteilla isomman lohkon k&auml;ytt&auml;minen saattaa parantaa suorituskyky&auml;, mutta huomaa, ett&auml; tietyt laitteet eiv&auml;t toimi oikein kun lohkon koko on yli 130 560 ($1fe00) tai joissain tapauksissa 65 024 ($fe00)</td></tr><tr><td valign=top>
+<tt>ASync/S</tt>
+</td><td>jos t&auml;m&auml; on k&auml;yt&ouml;ss&auml;, ITD kirjoittaa asynkronisesti laitteeseen<br> &auml;l&auml; k&auml;yt&auml; t&auml;t&auml;, jos l&auml;hdetiedosto ja kohdelaite ovat samalla fyysisell&auml; laitteella, sill&auml; se hidastaa toimenpidett&auml;<br> jos joko l&auml;hde tai kohde tukee DMA:ta, kopiointitoimenpiteen suorituskyky paranee huomattavasti</td></tr><tr><td valign=top>
+<tt>ForceOverwriteLargeDevice/S</tt>
+</td><td>normaalisti ITD ei lue yli 2 000 000 tavun kokoisia tiedostoja tai kirjoita sit&auml; suurempiin laitteisiin. T&auml;t&auml; kytkint&auml; k&auml;ytt&auml;m&auml;ll&auml; se toimii mink&auml; kokoisilla tiedostoilla ja laitteilla tahansa.</td></tr>
+</table>
+<h4>Paluukoodi</h4>Onnistuessa 0, muuten 20.<h4>Tausta</h4>ITD voi kirjoittaa mille tahansa trackdisk-tyyppiselle laitteelle. Ongelmien v&auml;ltt&auml;miseksi (esim. kiintolevyn vioittuminen) se ei kirjoita yli 2 000 000 tavun laitteille, ellei valinta ForceOverwriteLargeDevice/S ole k&auml;yt&ouml;ss&auml;. Jos kirjoitusoperaatio ylitt&auml;&auml; 4 Gt:n rajan, se k&auml;ytt&auml;&auml; TrackDisk64-komentoja.<br> Varmistusta EI tehd&auml;.<br> Saat varoituksen, jos levynkuva on pienempi kuin laite. ITD ei t&auml;ll&ouml;in muuta j&auml;ljell&auml; olevia uria, mutta py&ouml;rist&auml;&auml; koon t&auml;yteen lohkoon ja tyhjent&auml;&auml; sen j&auml;lkeen tulevan tilan. Jos levynkuva on suurempi, saat asiasta viestin ja ITD kirjoittaa niin paljon tietoa kuin laitteelle mahtuu.</BODY>
+</HTML>

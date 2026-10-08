@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Features</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: feat.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>WHDLoad funktioner</h3>
+<ul>
+<li>startbar via CLI eller Workbench
+<li><a href="mmu.html">hukommelsesbeskyttelse</a> benyttelse af MMU (hvis tilg&aelig;ngelig)
+<li>absolut ren returnering til OS'et (afh&aelig;nger af Slaven)
+<li>mulighed for at bruge "disk images" og/eller ordin&aelig;re filer
+
+<li>mulighed for <a href="opt.html#SavePath">omdirigering</a> skrevne filer til en separat filsystems-lokation, for at holde gemninger adskilt
+
+<li>variabel chip-memory st&oslash;rrelse for det installerede program fra $2000 op til $200000
+<li>ubegr&aelig;nset fast-memory st&oslash;rrelse for det installerede program
+<li>intelligent allokering af chip-memory, delvis absolut and delvis uafh&aelig;ngig
+
+<li>caching af filer and disk images on <a href="opt.html#Preload">startup</a>
+og dynamisk ved k&oslash;rsel (LRU)
+
+<li>automatisk decrunching af filer og disk images vha. XPK
+<li>automatisk decrunching af filer hvis Slaven underst&oslash;tter det (RNC/IMP/TPWM/CRM)
+<li>emulation af MOVE SR,ea from User-Mode on 68010+
+<li>emulation af ikke-underst&oslash;ttede heltals-instruktioner p&aring; 68060
+
+<li>advanceret fejlfindings-support (<a href="dump.html#memory">memory dump</a>, <a
+href="dump.html#register">register dump</a>, <a href="dump.html#filelog">filadgangs-logging</a>, <a href="snoop.html">detektering af Brugerdefinerede register-adgange</a>)
+
+<li>Enforcer/Cyberguard og VMM proof s&aring; l&aelig;nge option <a
+href="opt.html#NoVBRMove">NoVBRMove/S</a> ikke bliver anvendt
+
+</ul>
+</BODY>
+</HTML>

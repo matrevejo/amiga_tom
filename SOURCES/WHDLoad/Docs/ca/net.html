@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Funcions de xarxa</TITLE>
+<meta name="DC.Language" content="ca">
+<meta http-equiv="content-language" content="ca">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: net.html 1.1 2015/04/19 21:04:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+
+<h3>Resum d'accés a xarxa</h3>
+
+WHDLoad pot fer ús de l'accés a xarxa per a comprovar si hi ha una nova versió de WHDLoad 
+i el fitxer esclau especificat. Tota l'activitat de xarxa es du a terme
+emprant el protocol HTTP. Pot utilitzar-se l'opció global <a href="opt.html#Proxy">Proxy/S</a>
+per a encaminar el tràfic de xarxa fent servir un servidor proxy. Per a accedir a un 
+servidor proxy que requereixi autenticació, es pot especificar un usuari/contrassenya
+mitjançant l'opció <a href="opt.html#Proxy">Proxy/S</a>. WHDLoad només suporta el tipus d'autenticació 
+bàsic.
+
+<br>Si no es desitja l'accés a xarxa per part de WHDLoad, es pot desactivar tota l'activitat
+de xarxa mitjançant l'opció global <a href="opt.html#NoNetwork">NoNetwork/S</a>.
+
+<h3>Comprovació d'actualització de WHDLoad i l'Esclau</h3>
+
+Mitjançant un quadre de diàleg contra el servidor web de WHDLoad, es comprovarà si hi ha
+una nova versió de WHDLoad o el programa instal.lat (Esclau).
+
+<br>La comprovació només es realitzarà si la <a href="opt.html#SplashDelay">finestra 
+de presentació</a> es troba oberta ja que és on es mostrarà la informació resultant.
+
+<p>Per a la comprovació d'actualització de WHDLoad, s'enviarà la versió en ús del programari.
+Si existeix una nova versió, la finestra de presentació mostrarà el número i la data de la
+versió més actual de WHDLoad. Un botó addicional "Update WHDLoad" apareixerà a la finestra. 
+Si hi ha instal.lada la llibreria <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>, 
+prement aquest botó s'obrirà el navegador web amb l'adreça de la home de WHDLoad.
+Si la llibreria openurl.library no es troba, s'obrirà un quadre de diàleg amb la URL 
+de la pàgina web de WHDLoad. Si l'opció <a href="opt.html#Expert">Expert/S</a> es troba
+activa, la comprovació d'actualització també informarà sobre les versions beta de WHDLoad.
+
+<p>Per a realitzar la comprovació d'actualització de l'Esclau, WHDLoad calcula l'empremta SHA-256 
+del fitxer Esclau i l'envia al lloc web de WHDLoad on hi ha una base de dades de tots els 
+fitxers Esclaus. Si hi ha un nou Instal.lador/Esclau, la finestra de presentació 
+mostrarà la data de la versió més recent de l'Instal.lador. Un botó addicional 
+'Update Slave' es mostrarà en aquesta finestra. Si hi ha instal.lada la llibreria
+<a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>,
+s'obrirà al navegador web la plana web de WHDLoad corresponent a l'instal.lador en prémer
+el botó. Si la llibreria openurl.library no es troba disponible, es mostrarà un quadre de 
+diàleg amb la URL de l'instal.lador de WHDLoad.
+
+<p>Si existeix una nova versió de WHDLoad o l'Esclau, s'afegirà un botó 'Start'
+addicional a la finestra de presentació i aquesta no es tancarà de forma automàtica per a
+emfatitzar la possibilitat d'actualització. La finestra pot tancar-se de la forma 
+habitual emprant el ratolí o les tecles Espai, Return o Esc.
+
+<p>Si s'està utilitzant la llibreria <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>
+i es prem el botó 'Update', WHDLoad tractarà d'activar de nou la pila IP invocant la comanda <a 
+href="opt.html#ExecuteCleanup">ExecuteCleanup/K</a>, perquè normalment la pila IP s'haurà 
+desactivat prèviament amb la comanda <a href="opt.html#ExecuteStartup">ExecuteStartup/K</a>. Això podria 
+fallar si no hi ha prou memòria lliure per a arrencar el navegador web donat que <a href="opt.html#Preload">Preload/S</a> ha 
+utilizat la major part de la memòria. Així doncs, en condicions de baixa quantitat de memòria, el 
+botó "Update" podria no ésser utilitzable.
+
+</BODY>
+</HTML>

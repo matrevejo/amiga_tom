@@ -1,0 +1,100 @@
+
+ THIS PACKAGE COMES WITH ABSOLUTELY NO WARRANTY OF ANY KIND, EITHER EXPRESS OR
+ IMPLIED, STATUTORY OR OTHERWISE. THE ENTIRE RISK AS TO USE, RESULTS AND
+ PERFORMANCE OF THE PACKAGE IS ASSUMED BY YOU AND IF THE PACKAGE SHOULD PROVE
+ TO BE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING,
+ REPAIR OR OTHER REMEDIATION.
+ UNDER NO CIRCUMSTANCES, CAN THE AUTHOR BE HELD RESPONSIBLE FOR ANY DAMAGE
+ CAUSED IN ANY USUAL, SPECIAL, OR ACCIDENTAL WAY, ALSO IF THE OWNER OR A THIRD
+ PARTY HAS BEEN POINTED AT SUCH POSSIBILITIES OF DAMAGE.
+
+ This install applies to "Player Manager" © 1990 Anco.
+
+ Requirements:
+ -------------
+ This install requires WHDLoad and DIC to be in the path.
+ These programs can be found in the WHDLoad package.
+ To install from a different drive than DF0: select installation mode Expert.
+
+ The installed game requires 0.5 MB ChipMem (+600k other mem for preload option). 
+ It can be quit by pressing Del (key can be changed with Tooltype "QuitKey=").
+
+
+ Features:
+ ---------
+ - Full load from HD
+ - 7 versions supported
+ - Load/Save from data disk supported
+ - Protection removed (12xchecksums, 4xdisk checks, 1x "Cobra X-Rom" encryption)
+ - Invalid copperlist entries fixed (x2)
+ - Empty dbf loop in keyboard routine fixed
+ - Automatic creation of data disk (see below)
+ - NewIcon, RomIcon and OS3.5+ color icon (all created by Irek'72)
+ - Quit option that works on 68000 machines (default key is 'Del')
+
+ Finally got around to creating the install package for this
+ one too. Did the slave way back in March 2009 and somehow
+ didn't manage to create the install package. This is now
+ fixed. :)
+ Not much to say about this one, except for the usual
+ encrypted binary and lots of checksums there wasn't anything
+ special. Enjoy this classic from HD, I'm sure a few of
+ you will. ;)
+ 
+ If you already have a data disk create an image of it using
+ tools like DIC (can be found in the WHDLoad package), rename
+ the image to "disk.2" and copy it to the installation directory.
+
+ If no data disk is found it will be created, this feature
+ can be disabled with the CUSTOM1=1 tooltype.
+
+ Player Manager 2 (ECS) will be available soon too, it'll probably
+ the first install package I'll create in 2010. :)
+
+ Have fun with this game from HD now.
+ Sting, 25-Aug-2014
+
+ Greetings to all in Scarab and Scoopex, the WHDLoad team and to Musashi5150 :)
+ Extra greetings to the usual suspects on #amigascne, see you all at
+ Revision 2012! :)
+ Special thanks to lolafg and alkis21 for testing the install and to
+ Irek'72 for the nice icons.
+
+ Special greetings to Nova far away in Arizona.
+
+ History:
+ --------
+ version 1.03 (12.03.20) done by StingRay
+ - support for another german version added, thanks to Christoph Gleisberg
+   for the disk image
+
+ version 1.02 (25.08.14) done by StingRay
+ - support for another french version added, thanks to lolafg
+   for the disk image
+
+ version 1.01 (31.01.12) done by StingRay
+ - support for french version added, thanks to Xavier
+   Bodénand for the disk image
+ - lots of new icons created by Irek'72 included
+ 
+ version 1.00 (30.12.09) done by StingRay:
+ - initial version
+ - all known Player Manager versions supported
+ - load/save supported
+ - source code included
+
+
+
+ Contact:
+ --------
+ If you have problems with this installation please try and get a newer
+ version of this package from the WHDLoad WWW-Page. If that doesn't help try
+ some Tooltypes like NOCACHE, NOAUTOVEC, EXPCHIP, NOMMU, PAL or NTSC. If
+ that also fails, please inform the author via the Bug-Report-Form which
+ can be accessed on the WHDLoad WWW-Page.
+
+ For the full WHDLoad package, other installs and updates refer to:
+	http://www.whdload.de/
+ or	aminet:dev/misc/whdload#?
+ and	aminet:game/patch/
+

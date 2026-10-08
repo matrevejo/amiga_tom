@@ -1,0 +1,1024 @@
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+                                                                                                                      
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	                                                                                                                  
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+	dc.l $aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$FFFFFFFF,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa,$aaaaaaaa
+                                                      

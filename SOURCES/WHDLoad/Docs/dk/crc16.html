@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>CRC16 * Beregn CRC16 Checksum</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: crc16.html 1.2 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>CRC16 * Beregn CRC16 Checksum </h3>
+Dette program beregner CRC-16 af en specificeret del af en fil (eller
+hele filen). Hele ideen er at bruge det i installations scripts som
+har brug for at identificere hvilken version af en fil der arbejdes
+med for at installere forskellige slaver osv. Den returnerede v&aelig;rdi
+er den samme CRC-16 som resload_DRD16 udregner som m&aring;ske ogs&aring; er
+brugbar under slave udvikling.
+<h4>Installation</h4>
+Kopi&eacute;r det til C: eller et lignende sted.
+<h4>Valgmuligheder</h4>
+<table>
+<tr><td colspan=2>
+<tt>FILE/A,OFFSET/K/N,LENGTH/K/N</tt>
+</td></tr>
+<tr><td valign=top>
+<tt>FILE/A</tt>
+</td><td>
+Fil der skal udregnes checksum af
+<br>eksempel "S:Startup-Sequence"
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>OFFSET/K/N</tt>&nbsp;&nbsp;
+</td><td>
+start punkt i file
+<br>standard begyndelse af filen
+<br>eksempel "OFFSET=11264" for at starte i track 2 p&aring; et standard dis image
+</td></tr>
+<tr><td valign=top>
+<tt>LENGTH/K/N</tt>
+</td><td>
+antal bytes der skal udregnes crc af
+<br>standard slutningen af filen
+<br>eksempel "LENGTH=1024"
+</td></tr>
+</table>
+<h4>Retur kode</h4>
+CRC16 bliver returneret som programmets slut kode.
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+all the ST-xx sample disks re-archived for modern convenience
+original LHA files downloaded from http://aminet.net/mods/inst
+
+november 9th 2008
+
+all samples converted to wav for modern convenience, using SoX
+(http://sox.sourceforge.net).
+
+july 30th 2009
+
+credits:
+--------
+original aminet uploader: finn jacobs
+re-organized by: alex mauer
+wav-conversion by: motone
+renaming files: µB
+
+
+
+renamed for windows compatibility:
+----------------------------------------
+ -original- "./ST-04/Com1" thru "Com6"
+ -rename- "Com1_" thru "Com6_"
+----------------------------------------
+ -original- "./ST-20/don't she cry?"
+ -rename- "./ST-20/don't she cry_"
+----------------------------------------
+ -original- "./ST-14/Zak Dofff."
+ -rename- "Zak Dofff._"
+----------------------------------------
+ -original- "./ST-44/pluckorgan(037) "
+ -rename- "pluckorgan(037) _"
+----------------------------------------
+ -original- "./ST-68/bp1 (a#->c)"
+ -rename- "./ST-68/bp1 (a#-c)"
+----------------------------------------
+ -original- "./ST-68/bp2 (a#->c)"
+ -rename- "./ST-68/bp2 (a#-c)"
+----------------------------------------
+ -original- "./ST-70/bp3 (a#->c)"
+ -rename- "./ST-70/bp3 (a#-c)"
+----------------------------------------
+ -original- "./ST-72/?hihat1"
+ -rename- "./ST-72/_hihat1"
+----------------------------------------
+ -original- "./ST-72/?piano3"
+ -rename- "./ST-72/_piano3"
+----------------------------------------
+ -original- "./ST-72/?piano4"
+ -rename- "./ST-72/_piano4"
+----------------------------------------
+ -original- "./ST-A7/GuitBell0[001][??]"
+ -rename- "GuitBell0[001][--]"
+-----------------------------------------
+ -original- "./ST-B6/thpa.adv_bored?"
+ -rename- "./ST-B6/thpa.adv_bored_"
+-----------------------------------------

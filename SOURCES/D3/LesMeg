@@ -1,0 +1,64 @@
+På disketten ligger der to BASIC-programmmer, som er brugt til at udregne
+sinus- og cosinus tabellerne. De er skrevet i standard Amiga Basic.
+MakeSinCosTable.bas laver "SinCosTable" og MakeSRCSinCosTable.bas laver
+"SinCosTable.s".
+
+Alle programmerne i dette brevkursus er skrevet med DEVPAC 2 på Amiga.
+Da alle assemblere er lidt forskellige, kan du få problemer, hvis du ikke
+har netop denne.
+
+DEVPAC-sourcekoderne burde virke på de aller fleste assemblere uden
+modifikationer overhovedet. Vi har gjort vort yderste for at de skal
+fungere uden problemer på flest mulig assemblere. Forutsætningen er
+imidlertid, at det er en MAKRO-assembler, det vil sige, at assembleren 
+understøtter makroer.
+
+Det er også nogle andre småting som du skal være opmærksom på:
+
+Der er tre instruksjoner som kan skabe problemer. Hvis du får problemer,
+så skal du ændre dem som vist her:
+
+   dbra  ->  dbf
+
+   blo   ->  bcs
+
+   bhs   ->  bcc
+
+Det er muligt, at kolon efter label-navne ikke understøttes af din
+assembler. Hvis dette er tilfældet, så fjern alle kolon'er i sourcekoderne.
+
+I Seka er det lidt mere kompliseret, da Seka ikke følger den sædvanlige
+standard:
+
+"\@" -> "?0"
+
+"\" generelt i makroer: -> "?"
+
+"ENDC" -> "ENDIF"
+
+Kolon efter alle LABEL-navne.
+
+"include" støttes ikke. Filene må inkluderes manuelt!
+(med "R"-kommandoen).
+
+"dc" -> "d"
+
+"ds" -> "blk"
+
+"cmp (An)+,(Am)+" -> "cmpm (An)+,(Am)+"
+
+"()" i uttrykk -> "[]"  
+(Ex: "move #10*(var+2),d0" -> "move #10*[var+2],d0"
+
+"BSS" -> "DATA" (Dette kan skabe STORE problemer!)
+
+"SET"-pseudo-op støttes IKKE. Dette vanskeliggør brugen af nogle makroer.
+
+"_" I begyndelsen af et navn tillades ikke.
+
+IFEQ støttes ikke. Eneste IF - kommando er "IF", som svarer til"IFNE"
+
+Vi har taget hensyn til dette for dig og lagt SEKA filerne ind iet
+SEKA-directory på disketten.
+
+

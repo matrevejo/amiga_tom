@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>System-Monitorer / Freezer</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: freezer.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>System-Monitorer / Freezer</h3>
+
+Der er masser af rene software-freezere derude. Brugen af s&aring;danne v&aelig;rkt&oslash;jer kan v&aelig;re til stor hj&aelig;lp under udviklingen of fejlfindingen af Slaves og de installerede programmer. WHDLoad underst&oslash;tter direkte HRTmon og ThrillKill. Hvis du
+vil have direkte support for en anden, kan du kontakte mig og jeg vil pr&oslash;ve af inkludere support for den. Under opstart checker WHDLoad om en af de underst&oslash;ttede monitorer er aktive. Hvis en bliver fundet, vil WHDLoad g&oslash;re nogle specielle ting. Hvis
+MMU'en bliver brugt af WHDLoad, vil den deklarere hukommelsens brug af monitoren som gyldig og
+WriteThrough cache-bar. Mens spillet/demoen k&oslash;rer, vil den forwarde alle NMI-undtagelser
+til NMI-vektoren gemt fra monitorens vector-tabel. Ydermere, hvis VBR'en bliver flyttet af WHDLoad (<a href="opt.html#NoVBRMove">NoVBRMove/S</a> er ikke sat og
+CPU'en er mindst en 68010) vil den sammenligne <a
+href="opt.html#FreezeKey">FreezeKey</a> med den aktuelle tastaturv&aelig;rdi ved hvert interrupt. Hvis tasterne matcher, vil WHDLoad godtage tastaturet, transformere stackrammen til en NMI stackramme og tilg&aring; monitoren via dens NMI-handler.
+
+<h4>HRTmon</h4>
+
+Detekteringen af hukommelse skulle v&aelig;re sikker, is&aelig;r med nyere versioner af monitoren, fordi en ny signatur blev tilf&oslash;jet til  monitoren. V&aelig;r forsigtig, hvis MMU'en bliver brugt af WHDLoad: tilg&aring; ikke hukommelse udenfor BaseMem/ExpMem fra HRTmon. Den vil crashe fordi HRTmon ikke kan h&aring;ndtere den resulterende Adgangsfejl-undtagelse.
+
+<p>I HRTmonPrefs skal du checke 'No VBR move'-boksen, ellers vil du ikke v&aelig;re i stand til at tilg&aring; monitoren, mens WHDLoad k&oslash;rer.
+
+<p>Efter returnering fra en aktiveret HRTmon til programmet, der k&oslash;rer under WHDLoad,
+kan du muligvis bem&aelig;rke et ukorrekt grafikdisplay. Dette er fordi HRTmon overskriver nogle brugerdefinerede registre. Du kan omg&aring; dette ved at fort&aelig;lle HRTmon den korrekte v&aelig;rdi,
+brug f.eks. <tt>'e $100 $5200'</tt> for en 32 farvesk&aelig;rm f&oslash;r  returnering.
+
+<p>HRTmon'en, der er bygget ind i WinUAE, kan kun detekteres, hvis HRTmon forudg&aring;ende er blevet aktiveret mindst én gang (tryk tast PgUp). Dette er tilf&aelig;ldet, fordi f&oslash;rst efter den f&oslash;rste aktivering vil NMI-vektoren blive sat, hvilket er p&aring;kr&aelig;vet af WHDLoad for at finde sk&aelig;rmen.
+
+<p>Der er nyere udgivelser af HRTmon, der tilf&oslash;jer s&aelig;rlige kommandoer, n&aring;r den k&oslash;rer under WHDLoad. S&aring; du kan loade/gemme filer og bruge <a
+href="prot.html">resload_Protect#?</a> funktionerne fra selve HRTmon. Disse udgivelser kan downloades fra <a
+href="http://www.whdload.de/whdload/Tools/">WHDLoad-siden</a>.
+
+<h4>ThrillKill</h4>
+
+Der er ingen brugbar signatur i freezeren, s&aring; nogle kodesammenligninger bliver benyttet.
+Derfor virker detekteringen kun med kendte udgivelser.
+
+</BODY>
+</HTML>

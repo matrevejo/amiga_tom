@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<TITLE>Dumps en Logbestanden</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: dump.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>WHDLoad's dumps en logbestanden</h3>
+Hoofdzakelijk voor het doel te debuggen, WHDLoad kan verschillende 
+dump- en logbestanden creëren.
+<h4><a name="memory">Geheugendump</a></h4>
+Een geheugendump is het gehele geheugen dat gebruikt is door een install,
+dat vervolgens geschreven is naar een bestand. De grootte van de dump hangt af
+van de install (het is gelijk aan de waarde van
+<a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a> in de Slave structuur). 
+Een geheugendump wordt gemaakt als de <a href="opt.html#DebugKey">DebugKey</a> ingedrukt is
+of na een error als de CoreDump knop wordt ingedrukt. De naam van het geheugendumpbestand
+dat gemaakt word is ".whdl_memory". De standaard locatie is "PROGDIR:" maar kan veranderd worden met de
+<a href="opt.html#CoreDumpPath">CoreDumpPath</a> optie. Een bestaand bestand met dezelfde naam
+zal altijd overschreven worden. Als de install aangevulde expansieGeheugen (<a href="../autodoc.html#ws_ExpMem">ws_ExpMem</a>) gebruikt, word
+het geschreven onder het bestandsnaam ".whdl_expmem".
+<h4><a name="register">Register dump</a></h4>
+De register dump bevat de complete status van de processor (inclusief MMU), de CIA,
+en de Custom chips. Sommige CIA en Custom registers zijn niet leesbaar,
+deze zijn alleen aanwezig in het dumpbestand wanneer een<a
+href="opt.html#Snoop"> Snoop</a> mode actief was. De informatie wordt
+geschreven naar een ASCII bestand met een paar benadrukkingen, gebruikmakend
+van Escape sequences (gebruikend CSI - Control Sequence Introducer, decimal 155).
+Om ze te bekijken, is een programma aanbevolen welke de Escape sequences ondersteund
+(o.a More, MuchMore, MultiView,...). De naam van het dumpbestand is ".whdl_register",
+De standaard locatie is "PROGDIR:" maar kan veranderd worden met de <a href="opt.html#CoreDumppath">
+CoreDumpPath</a> optie. Wanneer een bestand met dezelfde naam al bestaat,
+zal de dump zich toevoegen aan dit bestand, anders zal er een nieuw bestand
+aangemaakt worden.
+
+<h4><a name="complete">Complete dumpbestand</a></h4> De Complete dumpbestand is een
+IFF bestand dat de informatie bevat van alle vorige genoteerde dumpbestanden.
+Het is bedoeld om gebruikt te worden met andere applicaties. De structuur
+van het bestand is beschreven in een extra inbegrepen bestand met de naam <tt>whddump.i</tt>.
+Op dit moment kunnen de applicaties WHDLoadGCI (graphical coders interface) en <a
+href="sp.html">SP</a> (save picture) het  complete dumpbestand lezen. 
+De naam van het complete dumpbestand dat gemaakt word is ".whdl_dump".
+De standaard locatie is "PROGDIR:" maar kan veranderd worden met de <a
+href="opt.html#CoreDumpPath">CoreDumpPath</a> optie. Een bestaand bestand zal 
+altijd overschreven worden.
+
+<h4><a name="FileLog">Bestand toegangs log</a></h4>
+Alle diskette toegangen worden bewaard in een log als de <a
+href="opt.html#FileLog">FileLog/S</a> optie geactiveerd is.
+Deze eigenschap is erg handig om een diskette-operaties te analyseren van een install
+om te debuggen en te optimaliseren. 
+De volgende resloadfuncties zal een notitie aanmaken in het logbestand:
+<ul>
+<li><a href="../autodoc.html#resload_DeleteFile">resload_DeleteFile</a>
+<li><a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a>
+<li><a href="../autodoc.html#resload_Examine">resload_Examine</a>
+<li><a href="../autodoc.html#resload_ExNext">resload_ExNext</a>
+<li><a href="../autodoc.html#resload_GetFileSize">resload_GetFileSize</a>
+<li><a href="../autodoc.html#resload_GetFileSizeDec">resload_GetFileSizeDec</a>
+<li><a href="../autodoc.html#resload_ListFiles">resload_ListFiles</a>
+<li><a href="../autodoc.html#resload_LoadFile">resload_LoadFile</a>
+<li><a href="../autodoc.html#resload_LoadFileDecrunch">resload_LoadFileDecrunch</a>
+<li><a href="../autodoc.html#resload_LoadFileOffset">resload_LoadFileOffset</a>
+<li><a href="../autodoc.html#resload_SaveFile">resload_SaveFile</a>
+<li><a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a>
+</ul>
+Elk bestandstoegang via de functies die hierboven staan, maakt 1 regel aan in het logbestand.
+Een logregel laat de aangeroepen functie zien, een crc van de lees/schrijf data, 
+de parameters en het resultaat. WHDLoad zal de log notities verzamelen in een interne
+<a href="opt.html#LogBuffer">LogBuffer/K/N</a> .  De buffer zal geleegd worden bij
+het stoppen of bij het maken van een log regel als de buffer vol is.
+De informatie zal worden weggeschreven naar een ASCII bestand, de naam van het dumpbestand is
+".whdl_log" (voor versie 18 van WHDLoad, heette dit bestand ".whdl_filelog"). De standaard locatie is "PROGDIR:", maar
+kan veranderd worden met de  <a href="opt.html#CoreDumppath">CoreDumpPath</a>
+optie. Als een bestand met de zelfde naam al bestaat, word dit in de dump toegevoegd
+anders word er een nieuwe bestand aangemaakt.
+
+<h4><a name="CustLog">Custom log entries</a></h4> Vanaf versie 18.0
+is het mogelijk om extra log toevoegingen te maken in het bestand ".whdl_log"
+gebruikmakend van de functie <a href="../autodoc.html#resload_Log">resload_Log</a>. De
+regels kunnen geformatteerd worden gebruik makend van een sprintf achtige format string en parameters.
+Regels worden gecached in de <a href="opt.html#LogBuffer">LogBuffer/K/N</a> om
+te verkomen dat er onnodig naar het besturingsysteem overgeschakeld wordt. Voor een grote hoeveelheid regels
+moet de LogBuffer naar verhouding vergroot worden. Om regels te kunnen schrijven moet
+de optie <a href="opt.html#FileLog">FileLog/S</a> geactiveerd worden.
+
+</BODY>
+</HTML>

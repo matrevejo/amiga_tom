@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>Αρχεία Ένδειξης (Dumping)</TITLE>
+<meta name="DC.Language" content="el">
+<meta http-equiv="content-language" content="el">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-7">
+<!-- $Id: dump.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Αρχεία ένδειξης και καταγραφής του WHDLoad</h3>
+Κυρίως για λόγους αποσφαλμάτωσης το WHDLoad μπορεί να δημιουργήσει διάφορα dump (αρχεία ένδειξης) και logs (αρχεία καταγραφής).
+
+<h4><a name="memory">Ένδειξη μνήμης (Memory Dump)</a></h4>
+Μια ένδειξη μνήμης είναι όλη η μνήμη που χρησιμοποιείται από το εγκατεστημένο πρόγραμμα γραμμένη σε ένα
+αρχείο. Το μέγεθος της ένδειξης εξαρτάται από το εγκατεστημένο πρόγραμμα (είναι ίσο με τη τιμή
+της <a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a> στη δομή του Slave). Ένα αρχείο ένδειξης μνήμης θα δημιουργηθεί
+εάν πατηθεί το <a href="opt.html#DebugKey">DebugKey</a> ή μετά από ένα
+σφάλμα πατηθεί το κουμπί CoreDump. Το όνομα του αρχείου της ένδειξης μνήμης
+που θα δημιουργηθεί είναι ".whdl_memory". Η προεπιλεγμένη τοποθεσία είναι η "PROGDIR:" αλλά μπορεί να
+αλλάξει με την επιλογή <a href="opt.html#CoreDumpPath">CoreDumpPath</a>. Αν
+υπάρχει αρχείο με την ίδια ονομασία αυτό πάντα θα επανεγγραφεί. Εάν το εγκατεστημένο
+πρόγραμμα χρησιμοποιεί επιπλέον Επεκτάσιμη-Μνήμη (<a href="../autodoc.html#ws_ExpMem">ws_ExpMem</a>), 
+θα αποθηκευθεί κάτω από το όνομα αρχείου ".whdl_expmem".
+
+<h4><a name="register">Ένδειξη καταχωρητών (Register Dump)</a></h4>
+Οι ενδείξεις καταχωρητών περιέχουν την πλήρη κατάσταση της CPU (μαζί με την MMU), των
+CIA και των Custom chips. Μερικοί καταχωρητές των CIA και Custom chips δεν μπορούν να διαβαστούν,
+αυτοί περιέχονται στο αρχείο ένδειξης μόνο αν είναι ενεργή μια λειτουργία <a
+href="opt.html#Snoop">Snoop</a>. Οι πληροφορίες
+θα γραφτούν σε ένα αρχείο ASCII με μερικές σημειώσεις με χρήση ακολουθιών διαφυγής - escape sequences
+(χρησιμοποιώντας CSI - Control Sequence Introducer, δεκαδικό 155). Για την εμφάνιση, συνιστάται ένα πρόγραμμα
+που να υποστηρίζει "escape sequences" (π.χ. More, MuchMore, MultiView κτλ). Το όνομα του αρχείου ένδειξης είναι ".whdl_register", η προεπιλεγμένη τοποθεσία είναι η "PROGDIR:", αλλά μπορεί να αλλαχθεί με την επιλογή <a
+href="opt.html#CoreDumppath">CoreDumpPath</a>. Εάν υπάρχει ήδη αρχείο
+με το ίδιο όνομα, το dump θα προστεθεί - διαφορετικά θα δημιουργηθεί νέο
+αρχείο.
+
+<h4><a name="complete">Ολοκληρωμένο αρχείο ένδειξης (Dump File)</a></h4> Το ολοκληρωμένο αρχείο ένδειξης είναι ένα
+αρχείο IFF που περιέχει τις πληροφορίες όλων των προηγουμένων αρχείων ένδειξης. Προορίζεται για
+χρήση από άλλες εφαρμογές. Η δομή του αρχείου περιγράφεται σε ένα επιπλέον
+αρχείο ενσωμάτωσης (include) με την ονομασία <tt>whddump.i</tt>. Προς το παρών οι
+εφαρμογές WHDLoadGCI (graphical coders interface) και <a
+href="sp.html">SP</a> (save picture) διαβάζουν το ολοκληρωμένο αρχείο ένδειξης. Το
+όνομα του ολοκληρωμένου αρχείου ένδειξης που δημιουργείται είναι ".whdl_dump". Η προεπιλεγμένη
+τοποθεσία είναι η "PROGDIR:", αλλά μπορεί να αλλαχθεί με την επιλογή <a
+href="opt.html#CoreDumpPath">CoreDumpPath</a>. Τυχόν ήδη υπαρκτό αρχείο πάντα
+θα επανεγγράφεται.
+
+<h4><a name="FileLog">Αρχείο καταγραφής πρόσβασης (Log Files)</a></h4>
+Όλες οι προσβάσεις δίσκου θα καταγραφούν αν έχει ενεργοποιηθεί η επιλογή <a
+href="opt.html#FileLog">FileLog/S</a>. Αυτή η λειτουργία
+θα είναι πολύ χρήσιμη για την ανάλυση των λειτουργιών δίσκου του εγκατεστημένου προγράμματος
+για λόγους αποσφαλμάτωσης και βελτιστοποίησης. Η ακόλουθες συναρτήσεις resload θα δημιουργήσουν
+μια καταχώρηση στο αρχείο καταγραφής:
+<ul>
+<li><a href="../autodoc.html#resload_DeleteFile">resload_DeleteFile</a>
+<li><a href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a>
+<li><a href="../autodoc.html#resload_Examine">resload_Examine</a>
+<li><a href="../autodoc.html#resload_ExNext">resload_ExNext</a>
+<li><a href="../autodoc.html#resload_GetFileSize">resload_GetFileSize</a>
+<li><a href="../autodoc.html#resload_GetFileSizeDec">resload_GetFileSizeDec</a>
+<li><a href="../autodoc.html#resload_ListFiles">resload_ListFiles</a>
+<li><a href="../autodoc.html#resload_LoadFile">resload_LoadFile</a>
+<li><a href="../autodoc.html#resload_LoadFileDecrunch">resload_LoadFileDecrunch</a>
+<li><a href="../autodoc.html#resload_LoadFileOffset">resload_LoadFileOffset</a>
+<li><a href="../autodoc.html#resload_SaveFile">resload_SaveFile</a>
+<li><a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a>
+</ul>
+Κάθε πρόσβαση αρχείου μέσω των παραπάνω συναρτήσεων δημιουργεί μία γραμμή στο αρχείο καταγραφής.
+Μια καταχώρηση καταγραφής αναφέρει την καλεσμένη συνάρτηση, ένα CRC των δεδομένων που διαβάστηκαν/γράφηκαν, τις
+παραμέτρους και το αποτέλεσμα. Το WHDLoad
+θα συλλέξει τις καταχωρήσεις της καταγραφής σε ένα εσωτερικό <a href="opt.html#LogBuffer">LogBuffer/K/N</a>. H ενδιάμεση μνήμη (buffer) θα καθαριστεί στην έξοδο και κατά την δημιουργία μιας καταχώρησης αν αυτή είναι γεμάτη. Οι πληροφορίες
+θα γραφούν σε ένα αρχείο ASCII. Το όνομα του αρχείου ένδειξης είναι
+".whdl_log" (πριν το WHDLoad 18.0 ήταν ".whdl_filelog). Η προεπιλεγμένη τοποθεσία είναι η "PROGDIR:", αλλά μπορεί να αλλάξει με την επιλογή <a href="opt.html#CoreDumppath">CoreDumpPath</a>. Εάν κάποιο αρχείο με το ίδιο όνομα υπάρχει ήδη, η
+ένδειξη θα προστεθεί, αλλιώς θα δημιουργηθεί ένα καινούργιο αρχείο.
+
+<h4><a name="CustLog">Προσαρμοσμένες καταχωρήσεις καταγραφής</a></h4> Ξεκινώντας με την έκδοση 18.0 του WHDLoad
+υπάρχει η δυνατότητα για δημιουργία επιπλέον προσαρμοσμένων καταχωρήσεων καταγραφής στο αρχείο ".whdl_log"
+χρησιμοποιώντας την λειτουργία <a href="../autodoc.html#resload_Log">resload_Log</a>. Οι καταχωρήσεις μπορούν να
+μορφοποιηθούν χρησιμοποιώντας ένα ειδός μορφής sprintf και τις παραμέτρους της. Οι καταχωρήσεις θα αποθηκευτούν προσωρινά στο <a href="opt.html#LogBuffer">LogBuffer/K/N</a> προς αποφυγή εναλλαγών προς το λειτουργικό σύστημα. Για έναν μεγάλο
+αριθμό καταχωρήσεων το LogBuffer θα αυξάνεται ανάλογα. Για να πάρετε τις καταχωρήσεις καταγραφής που έχουν εγγραφεί, η
+επιλογή <a href="opt.html#FileLog">FileLog/S</a> πρέπει να ενεργοποιηθεί.
+
+</BODY>
+</HTML>

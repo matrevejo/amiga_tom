@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<TITLE>Ofte Stillede Sp&oslash;rgsm&aring;l (FAQ)</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: faq.html 1.4 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Ofte Stillede Sp&oslash;rgsm&aring;l (FAQ)</h3>
+<table>
+<tr><td valign=top><i>
+Sp&oslash;rgsm&aring;l:
+</i></td><td><b>
+Ok, jeg fik installeren og der er problemer med enten installationen eller starten. Jeg er sikker p&aring;, at jeg har gjort alting rigtigt indtil nu.
+Hvad nu?
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+En s&aring;dan fejlagtig adf&aelig;rd kan have et antal grunde:
+<ul>
+<li>manglende/forkerte Tooltypes<br>
+Nogle fixes vil ikke k&oslash;re korrekt (eller i det hele taget), hvis du ikke s&aelig;tter de korrekte tooltypes for dit system. L&aelig;s dokumentationen for at finde ud af, hvilke tooltypes der er underst&oslash;ttede. Eksempelvise Tooltypes, der kan hj&aelig;lpe, er
+NoCache, NoVBRMove, NoAutoVec, PAL/NTSC, NoMMU.
+<li>l&aelig;smig-fil, der f&oslash;lger med install-pakken<br>
+Dette forklarer ofte nogle specifikke problemer, n&oslash;gler eller tooltypes, der skal indstilles.
+<li>forkert WHDLoad version<br> De fleste Installs kr&aelig;ver den nyeste version af WHDLoad
+og vil ikke k&oslash;re med en &aelig;ldre udgave. Den gyldne regel er altid at have den nyeste version installeret.
+<li>Din maskine er inkompatibel<br> Is&aelig;r en 68040/060 CPU eller nogle turboboards/anden hardware kan for&aring;rsage problemer. Pr&oslash;v at sl&aring; al ekstra hardware fra og pr&oslash;v at starte install'en igen.
+<li>ikke-underst&oslash;ttet version<br> Mange commercielle spil er blevet solgt i mere end én version (fuld pris-udgave/budget-udgave/coverdisk-udgave, PAL/NTSC-version,...).
+En install kan naturligvis kun fungere, hvis den er skrevet i en kompatibel udgavel, is&aelig;r ifm. en speciel udgave af et spil.
+Hvis du har en anden udgave af samme spil, fungerer det ikke.
+I det tilf&aelig;lde er den eneste m&aring;de, hvorp&aring; install'en kan bruges, ved at kontakte udgiveren af install'en og bede ham om at underst&oslash;tte din version.
+I de fleste tilf&aelig;lde vil udgiveren hj&aelig;lpe dig og patche din version af spillet ogs&aring;, i l&oslash;bet af nogle f&aring; dage.
+<li>gammel udgave af install'en<br>
+S&aring; snart en fejl er opdaget og fjernet, bliver den nye version af rettelsen gjort tilg&aelig;ngelig p&aring; WHDLoad websitet.
+Hent altid den seneste version af install'en. Bem&aelig;rk venligst, at den seneste version ikke altid er den, der er tilg&aelig;ngelig p&aring; Aminet. Nogle patches bliver slet ikke udgivet p&aring; Aminet, og mange bliver udgivet med nogle f&aring; ugers forsinkelse!
+<li>du opdagede en fejl<br> Selv om alle fejlretninger bliver testet inden udgivelse, kan en fejl v&aelig;re sluppet igennem uden at blive opdaget. Hvis du mener at have opdaget en fejl, s&aring; skriv en detaljeret rapport over dit problem til udgiveren af patchet. Brug rapportformularen til dette brug.
+Pr&oslash;v at rapportere dit problem s&aring; pr&aelig;cist som muligt.
+Hvis vi ikke bliver informeret om fejl, kan vi ikke rette dem.  Bem&aelig;rk: Det ENESTE rigtige sted til problem-/fejlrapporter er fejlrapporterings-formularen og ikke comp.sys.amiga.games eller et hvilket som helst forum, fordi ikke alle udviklere l&aelig;ser disse.
+</ul>
+</td></tr>
+<tr><td valign=top><i>
+Sp&oslash;rgsm&aring;l:
+</i></td><td><b>
+Jeg har et spil men kan ikke finde en installer til det.
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+Lav en liste over dine &oslash;nsker. Du kan ogs&aring; inkludere spil, der allerede i sig selv er installerbare p&aring; HD (kopierbare filer og/eller en installer, der er leveret med til spillet selv),
+hvilket har problemer (selv med simple nedgraderingsproblemer eller ingen afslutning).
+Husk p&aring;, at en person kun er i stand til at patche omkring 25 spil om &aring;ret.
+Indiker med en prioritet, hvilke der er dine favoritter (f.eks. ! og +) og dem, du ikke synes om,
+(-), and check selv, hvilke spil der allerede har HD installs.
+</td></tr>
+<tr><td valign=top><i>
+Sp&oslash;rgsm&aring;l:
+</i></td><td><b>
+Er det muligt at bruge WHDLoad til at installere en demo/et spil, der bruger operativsystemet?
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+Generelt er det ikke muligt for en demo/et spil, der k&oslash;rer inde i  WHDLoad at f&aring; adgang til OS-stof udenfor, fra der hvor WHDLoad er blevet startet. Du skal som fortatteren til det p&aring;kr&aelig;vede Slave-program patche alle adgange OS'et. Enden deaktiverer du s&aring;danne adgange, eller ogs&aring; skal du emulere dem hensigtsm&aelig;ssigt. For emuleringen af den s&aring;kaldte KickEmu findes der pakker. De er tilg&aelig;ngelige til forskellige  Kickstart-versioner
+(f.eks. 'Sources/whdload/kick13.s'). Ved at bruge et image af en rigtig kickstart, skaber de et komplet OS-milj&aelig; inde i  WHDLoad-hukommelsen. Der er en ekstra ReadMe-fil
+omhandlende dette: 'Sources/whdload/kick.readme'.
+</td></tr>
+<tr><td valign=top><i>
+Sp&oslash;rgsm&aring;l:
+</i></td><td><b>
+Hvis WHDLoad bruger MMU'en (optionen <a href="opt.html#NoMMU">NoMMU/S</a> er ikke sat og p&aring; en 68030 optionen <a href="opt.html#MMU">MMU/S</a> er sat) er der kortvarige fejl i grafikken og/eller i musikken (f.eks. Beast2). En fejl?
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+Dette sker under indl&aelig;sning. &aring;rsagen er, at WHDLoad er n&oslash;dt til at sl&aring; interrupts fra under indl&aelig;sning for en kort periode, hvis MMU'en benyttes Denne adf&aelig;rd kan ikke &aelig;ndres.
+</td></tr>
+<tr><td valign=top><i>
+Sp&oslash;rgsm&aring;l:
+</i></td><td><b>
+N&aring;r jeg fors&oslash;ger at benytte NTSC tooltypen, viser WHDLoad en Guru.
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+Der er en fejl i MCP 1.30 i ScreenManageren, der f&aring;r WHDLoad
+OpenScreenTags-kald til at crashe. Deaktiver ScreenManageren i MCP for at afhj&aelig;lpe dette.
+</td></tr>
+<tr><td valign=top><i>
+Question:
+</i></td><td><b>
+N&aring;r jeg k&oslash;rer spil, k&oslash;rer de hurtigere end normalt (Musikken lyder m&aelig;rkeligt) og bunden af billedet mangler.
+Jeg har pr&oslash;vet b&aring;de PAL &amp; NTSC tooltypes, men intet hj&aelig;lper.
+</b></td></tr><tr><td valign=top><i>
+Svar:
+</i></td><td>
+Hvis du bruger Voodoo monitor-driveren, s&aring; sl&aring; "FakeNativeModes" i tooltypes for monitor-driveren fra.
+</td></tr>
+</table>
+</BODY>
+</HTML>

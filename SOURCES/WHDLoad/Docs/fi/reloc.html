@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>Reloc * Ohjelmakoodin uudelleensijoitus</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: reloc.html 1.3 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>Reloc * Ohjelmakoodin uudelleensijoitus</h3>Pieni ty&ouml;kalu, joka sijoittaa normaalin AmigaDOS-ohjelman absoluuttiseen osoitteeseen ja tallentaa sen yksinkertaisena datatiedostona. T&auml;m&auml; vaadittiin aiemmissa WHDLoad-versioissa AmigaDOS-ohjelmien k&auml;sittelyyn. Alkaen WHDLoadin versiosta 8.0 voidaan t&auml;m&auml;n sijasta k&auml;ytt&auml;&auml; funktiota <a href="../autodoc.html#resload_Relocate">resload_Relocate</a>.<h4>Asennus</h4>Reloc on vain <tt>DEV</tt> -paketissa, ei <TT>USR</tt>-paketissa. <br>kopioi tiedosto hakemistoon C: tai vastaavaan paikkaan<h4>Valinnat</h4>
+<table>
+<tr>
+<td colspan=2><tt>INPUTFILE/A,OUTPUTFILE,ADR/K,QUIET/S</tt></td></tr>
+<tr>
+<td valign=top nowrap><tt>INPUTFILE/A</tt>&nbsp;&nbsp;</td>
+<td>uudelleensijoitettavan ohjelmatiedoston nimi, m&auml;&auml;ritett&auml;v&auml;</td>
+</tr>
+<tr>
+<td valign=top><tt>OUTPUTFILE</tt></td>
+<td>kirjoitettavan tiedoston nimi, ellei t&auml;t&auml; m&auml;&auml;ritet&auml; ylikirjoitetaan l&auml;hdetiedosto</td>
+</tr>
+<tr>
+<td valign=top><tt>ADR/K</tt></td>
+<td>uudelleensijoitetun tiedoston alkuosoite, ellei m&auml;&auml;ritet&auml; k&auml;ytet&auml;&auml;n arvoa $400. Voit k&auml;ytt&auml;&auml; yksinkertaisia lausekkeita kuten &quot;$5000&quot; = &quot;20480&quot; = &quot; -$Ff +-33+ 19512+$4e8&quot; (etuliite &quot;$&quot; heksanumeroille, tuetut operaattorit ovat &quot;+&quot; ja &quot;-&quot;, unaari ja bin&auml;&auml;ri)</td>
+</tr>
+<tr>
+<td valign=top><tt>QUIET/S</tt></td>
+<td>est&auml;&auml; kaiken tulostuksen pl. virheet, ota t&auml;m&auml; k&auml;ytt&ouml;&ouml;n Installer-komentojonojen kanssa</td>
+</tr>
+</table>
+<h4>Paluukoodi</h4>Paluukoodiksi asetetaan 0 jos kaikki sujui OK, muuten 10.<h4>Tausta</h4>HUNKit ohjelmasta kopioidaan samassa j&auml;rjestyksess&auml; absoluuttiseen tiedostoon. BSS-HUNKit suurennetaan todelliseen kokoon. AmigaDOS 2.0:n HUNKeja ei tueta (esim. RELOC32_SHORT).</BODY>
+</HTML>

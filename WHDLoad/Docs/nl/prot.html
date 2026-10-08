@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Gebruik van resload_Protect#?</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: prot.html,v 1.2 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Gebruik van resload_Protect#?</h3>
+<h4>Theorie</h4>
+Er zijn verschillende situaties waarin het handig kan zijn om geïnformeerd te
+worden wanneer een geïnstalleerd programma toegang maakt tot bepaalde specifieke
+geheugen locaties. Met de <a href="../autodoc.html">resload_Protect#?</a> functies
+is het mogelijk om bepaalde geheugen locaties te beschermen tegen het lezen en/of
+schrijven door de processor. Bescherming betekent dat elke toegang aan zo'n beschermd
+gebied, wanneer uitgevoerd, het een Toegangs Fout uitzondering maakt wat een geschikte
+venster geeft door WHDLoad. Als u een geheugen gebied aangeeft als beschermd met de
+<a href="../autodoc.html">resload_Protect#?</a> functie zal WHDLoad 
+de betrokken pagina descriptors in de MMU vertaal boom aanpassen.
+Nu zal bij elke toegang naar de beschermde pagina de CPU een Toegangs Fout
+uitzondering maken. De uitzondering handler in WHDLoad zal de reden nakijken
+voor de uitzondering. Als de reden een toegang was naar een beschermde <a href="mmu.html">pagina</a> 
+maar de toegang niet hetzelfde is zal er een emulatie van de toegang plaatsvinden, en de normale programma
+uitvoer gaat dan verder door. Anders zal WHDLoad stoppen met een geschikte venster.
+Als de toegang er één was naar de instructie stroom (ofwel de cpu probeert code te laden)
+zal het altijd geëmuleerd worden, of met andere woorden de <a
+href="../autodoc.html">resload_Protect#?</a> functies hebben alleen effect
+op het lezen en schrijven van data. Het feit is dat alle toegangen naar een beschermde
+pagina (pagina grootte is momenteel 4096 bytes) een Toegangs Fout maken, zelfs als het beschermde
+gebied een grootte heeft van 1 byte, met als gevolg een sterke vertraging van de uitvoerbare
+snelheid van een programma. Vooral als delen van de code gelegen zijn op dezelfde pagina.
+Als het programma afhankelijk is van de uitvoer snelheid, zijn verschillen in/uitvoer mogelijk.
+Dus het is mogelijk dat sommige programma's niet werken met de resload_Protect functie.
+
+<h4>Voorbeeld: checksums over code</h4>
+Als u een spel installeert met WHDLoad moet u de originele lader routines patchen
+in het spel op een manier zodat WHDLoad de speldata laad.
+Sommige spellen voeren checksums uit op bepaalde code gebieden om te zoeken of 
+de originele code gewijzigd is. Deze detectie routines kunnen soms moeilijk te vinden zijn.
+Maar met de <a href="../autodoc.html">resload_Protect#?</a> functies in WHDLoad is het heel erg makkelijk.
+U hoeft alleen de bytes te beschermen die u heeft veranderd in de spelcode tegen lezen.
+Nu elke routine welke probeert om een checksum te maken en de gepatchte code te lezen zal een Toegangs Fout geven.
+En u zal komen te weten waar de routine zich bevind. 
+<h4>Beperkingen</h4>
+U moet niet de geheugen pagina beschermen waar de SSP naar toe verwijst. Wanneer
+u dat wel zou doen en een Uitzondering ontstaat, dan zal er een Dubbele Bus Fout ontstaan, omdat de processor
+niet de exception stackframe kan wegschrijven.
+Na een Dubbele
+Bus Fout kan alleen met een reset de uitvoer hervatten. WHDLoad controleert op een conflict
+in het beschermde gebied met de SSP en beëindigd zonodig als er voldaan word aan de conditie. Maar dit
+zal niet helpen als de SSP later veranderd.
+
+<p>Voor meer limitaties en informatie, bekijk alstublieft de notities onder autodoc voor
+verschillende resload_Protect functies:
+<ul>
+<li><a href="../autodoc.html#resload_ProtectRead">resload_ProtectRead</a>
+<li><a href="../autodoc.html#resload_ProtectReadWrite">resload_ProtectReadWrite</a>
+<li><a href="../autodoc.html#resload_ProtectRemove">resload_ProtectRemove</a>
+<li><a href="../autodoc.html#resload_ProtectSMC">resload_ProtectSMC</a>
+<li><a href="../autodoc.html#resload_ProtectWrite">resload_ProtectWrite</a>
+</ul>
+</ul>
+</BODY>
+</HTML>

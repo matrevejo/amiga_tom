@@ -1,0 +1,48 @@
+                               ProTracker V2.3d
+                               ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                        Fixed for AGA by Detron in 1994
+                        ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+
+ProTracker have been fixed for AGA - Again! Yes I fixed it for the first time.
+I have tried 3 (Read: Three) fixed ProTrackers and none of them worked on my
+A4000/040. So I thought; What's the big deal? Fix it! And here it is. I just
+resourced the original ProTracker V2.3a by `Crayon' and adjusted the copper.
+ProTracker V2.3d is able to start from different screenmodes and hi-res mouse
+pointers doesn't matter too. It just works! Due to the fact that ProTracker is
+not one of my own creations I have made my `bragging' entrance to stay on the
+screen only at startup. Afterwards it will not become visible until the next
+startup.
+
+Note #1: I discovered a little bug which is NOT one of mine ;^) I got a module
+some day which contained samples of a certain length. Some of them had a RepLen
+of zero and then the troubles showed up. ProTracker will freeze 4ever. But just
+remember to set RepLen to two (2) and everything works!
+
+Note #2: Don't blame me for samples going nuts when switching screens. Due to
+the fact that you are switching from no-burst mode (ProTracker) to burstmode
+(WB?) samples might go nuts for a moment.
+
+Note #3: Since some of you guyz are so lucky to own either an A1200 or A4000
+some troubles may show up. The DMA wait value should be increased in order to
+give ProTracker enough cycles to turn off the samples. Mine is set to 9999 but
+try to play around a bit.
+
+Note #4: I discovered that you couldn't reach samples over $13 on the numeric
+keyboard on an A1200. It seems that Commodore changed the A1200 keyboard a
+little bit. This is fixed in this special A1200 release done by Duff of D&D.
+Just use the Enter key to toggle between low and high samples.
+
+Note #5: This version fixes a bug in the `Save Sample' routine of the previous
+version of ProTracker V2.3c which made samples contain a `click' when played.
+
+
+                  Good luck with your fixed ProTracker V2.3d!
+
+
+
+                           Signed : Detron And Duff
+                           ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+P.S.: Thanks to Duff for the amazing and stunning graphics in ProTracker V2.3d!

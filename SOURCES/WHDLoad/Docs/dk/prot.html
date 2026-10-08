@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>Using resload_Protect#?</TITLE>
+<meta name="DC.Language" content="da">
+<meta http-equiv="content-language" content="da">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: prot.html 1.3 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Brug af resload_Protect#?</h3>
+<h4>Teori</h4>
+Der er forskellige situationer, hvor det kan v&aelig;re brugbart at blive informeret om, hvorn&aring;r det installerede program foretager adgange til bestemte specifikke hukommelseslokationer.
+Med <a href="../autodoc.html">resload_Protect#?</a> funktionerne er det muligt at beskyttel bestemte hukommelseslokationer mod l&aelig;sning og/eller skrivning af processoren.
+At beskytte betyder, at hver eneste adgang til et s&aring;dant beskyttet omr&aring;de, hvis udf&oslash;rt, vil skabe en Access Fault undtagelse, der igen vil resultere i en passende foresp&oslash;rger fra WHDLoad. Hvis du deklarerer et hukommelsesomr&aring;de som beskyttet
+vha. en <a href="../autodoc.html">resload_Protect#?</a> funktion,
+vil WHDLoad modificere de p&aring;virkede sidebeskrivere i MMU-overs&aelig;ttelses-tr&aelig;et.
+Ved hver adgang til den beskyttede side vil CPU'en nu skabe en Adgangsfejls-undtagelse.
+Den interne undtagelsesh&aring;ndterer i WHDLoad vil verificere &aring;rsagen til undtagelsen. Hvis &aring;rsagen var en adgang til en beskyttet <a href="mmu.html">side</a> men adgange ikke matcher det beskyttede
+omr&aring;de, vil adgangen blive emuleret, og normal programafvikling forts&aelig;tter. Ellers vil WHDLoad stoppe med en passende foresp&oslash;rger. Hvis adgangen var en adgang til instruktionsstr&oslash;mmen (dvs. CPU'ens fors&oslash;g p&aring; at loade kode) vil den altid blive emuleret, eller med andre ord p&aring;virker <a
+href="../autodoc.html">resload_Protect#?</a> funktionerne kun l&aelig;sning og skrivning af data. Det faktum, at hver adgang til en beskyttet side (sidest&oslash;rrelse er pt. 4096 bytes) vil skabe en adgangsfejl, og -selv hvis det beskyttede omr&aring;de kun har en l&aelig;ngde p&aring; 1 byte - resultere i en st&aelig;rk neddrosling af programmets eksekveringshastighed. Is&aelig;r hvis dele af koden er placeret p&aring; den samme side.
+Hvis programmet afh&aelig;nger af eksekveringshastighed, er forskellige i eksekveringen mulige. S&aring; det er muligt, at nogle programme ikke vil virke med resload_Protect-funktionen.
+<h4>Eksempel: checksummer over kode</h4>
+Hvis du installerer et spil med WHDLoad er du n&oslash;dt til at patche de originale loader-rutiner i spillet p&aring; en m&aring;de der g&oslash;r, at disse vil bruge WHDLoad til at loade spilletes data.
+Nogle spil foretager checksums over bestemte kodeomr&aring;der for at detektere, hvis den originale kode er blevet modificeret.
+Disse detekterinsrutiner kan sommetider v&aelig;re sv&aelig;re at finde.
+Men ved at bruge <a
+href="../autodoc.html">resload_Protect#?</a> funktionerne i WHDLoad
+vil det v&aelig;re nemt. Alt du beh&oslash;ver at g&oslash;re, er at beskytte de bytes, du &aelig;ndrede i spillets kode, mod at blive l&aelig;st.
+Nu vil hver rutiner, der fors&oslash;ger at oprette en checksum og l&aelig;se din patchede kode for&aring;rsage en adgangsfejl.
+Og du vil dermed vide, hvor rutinen er placeret.
+<h4>Begr&aelig;nsninger</h4>
+Du m&aring; ikke bestkytte den hukommelsesside, som SSP peger p&aring;.
+Hvis du g&oslash;r dét, og en undtagelse opst&aring;r, vil en Dobbelt Busfejl finde sted, fordi CPU'en vil v&aelig;re ude af stand til at skrive undtagelses-stackrammen. Efter en Dobbelt Busfejl kan kun en reset benyttes for at forts&aelig;tte eksekveringen.
+WHDLoad checker for en konflikt ifm. det beskyttede omr&aring;de med SSP'en og terminerer hvis forholdet er tilstede. Men dette vil ikke hj&aelig;lpe, hvis SSP'en &aelig;ndrer sig senere.
+
+<p>For flere begr&aelig;sninger og information, check venligst Autodoc indgangene vedr. de forskellige resload_Protect funktioner:
+<ul>
+<li><a href="../autodoc.html#resload_ProtectRead">resload_ProtectRead</a>
+<li><a href="../autodoc.html#resload_ProtectReadWrite">resload_ProtectReadWrite</a>
+<li><a href="../autodoc.html#resload_ProtectRemove">resload_ProtectRemove</a>
+<li><a href="../autodoc.html#resload_ProtectSMC">resload_ProtectSMC</a>
+<li><a href="../autodoc.html#resload_ProtectWrite">resload_ProtectWrite</a>
+</ul>
+</BODY>
+</HTML>

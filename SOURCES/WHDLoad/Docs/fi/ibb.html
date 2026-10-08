@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<title>InstallBB * Käynnistyslohkojen asennus</title>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: ibb.html 1.2 2009/02/05 20:38:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>InstallBB * Käynnistyslohkojen asennus</h3>
+InstallBB lukee tai kirjoittaa käynnistyslohkoja levykkeeltä tai levykkeelle. Käynnistyslohkoja käsitellään suoritettavina tiedostoina. Kirjoituksessa säilytetään levykkeen tiedostojärjestelmän tyyppi lukemalla ensin käynnistyslohko ja yhdistämällä DosType (<tt>DOS0</tt>, <tt>DOS1</tt> ...) uuteen. Käynnistyslohkon tarkistussumma lasketaan automaattisesti.
+<h4>Asennus</h4>
+InstallBB on vain <tt>DEV</tt>-paketissa, ei <TT>USR</tt>-paketissa <br>kopioi se hakemistoon C: tai vastaavaan
+<h4>Valinnat</h4>
+<table>
+<tr><td colspan=2>
+<tt>PROGRAM/A,UNIT/K/N,WRITE/S</tt>
+</td></tr>
+<tr><td valign=top nowrap>
+<tt>PROGRAM/A</tt>&nbsp;&nbsp;
+</td><td>
+ajettava tiedosto jota luetaan tai kirjoitetaan, määritettävä
+</td></tr>
+<tr><td valign=top>
+<tt>UNIT/K/N</tt>
+</td><td>
+trackdisk-yksikkönumero (levyaseman numero) <br>oletus on 0 (DF0:)
+</td></tr>
+<tr><td valign=top>
+<tt>WRITE/S</tt>
+</td><td>
+kytkin, ellei määritetä luetaan käynnistyslohko levyltä tiedostoon, jos määritetään, annettu ohjelma kirjoitetaan levylle
+</td></tr>
+</table>
+</BODY>
+</HTML>

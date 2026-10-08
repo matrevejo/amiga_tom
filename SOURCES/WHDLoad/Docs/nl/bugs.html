@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>Bugs</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: bugs.html,v 1.4 2019/02/21 00:41:00 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Onbekende fouten</h3>
+Als u nieuwe fouten vindt of als u andere problemen heeft, laat dit weten via deze link in de bugtracker <a
+href="http://mantis.whdload.de/search.php?project_id=4&hide_status_id=-2">
+http://mantis.whdload.de</a>.
+<h3>Bekende fouten (Bugs)</h3>
+<h4>Algemene problemen</h4>
+<ul>
+<li>Er is een algemeen probleem met alle extra hardware verbonden aan
+de Amiga welke Interrupts willekeurig of op vaste tijden genereert.
+Een voorbeeld hiervan is mijn netwerkkaart (Hydra).
+Als ik mijn TCP/IP stack draai, dan loopt bijna na een korte tijd elk geïnstalleerde programma
+vast, omdat de kaart PORTS interrupts genereert (dezelfde type
+interrupts worden gecreëerd door het toetsenbord) welke niet correct terug beantwoord
+kunnen worden door het geïnstalleerde programma.
+Dit is omdat zodra het verzoek erkent is met een rte, ontstaat de volgende interrupt.
+Om dit probleem te vermijden, moet de TCP/IP stack gestopt worden
+<a href="opt.html#ExecuteStartup">voor het starten van</a> WHDLoad.<br>
+In dezelfde catergorie vallen USB-stacks (gebruik "AddUSBHardware REMOVE ALL"
+voor Poseidon) en de Voodoo interrupt van Mediator kaarten (U moet
+"VoodooInt = No" instellen). Vanaf WHDLoad versie 16.8 is er een
+alternatieve oplossing ingebouwd voor de interrupts die worden gecreëerd door de Mediator kaarten, daarom zijn er
+geen speciale instellingen nodig.<br>
+Het gebruik van de software Picasso96 met een versie 1.36 of hoger en ook de
+grafischekaart Spectrum gebruiken zo`n interrupt. Om dit probleem te voorkomen moet
+er een oudere versie van Picasso96 software gebruikt worden dan de versie 1.36 of
+anders moet de graphischekaartdriver uitgezet worden.
+
+<li>Als is er foutmeldingen ontstaan met betrekking tot het lezen en schrijven van bestanden
+controleer dan of u hardeschijf correct geconfigureerd is. WHDLoad leest grote
+stukken data in(>1MB), welke aan kan tonen dat er een onjuiste configuraties is, terwijl andere
+applicaties wel goed lijken te werken. Dit betekent dat u er zeker van moet zijn dat
+de instellingen van MaxTransfer en Mask in HDToolBox op alle partities goed zijn ingesteld.
+Een veilige waarde (voor niet gangbare hardware) is MaxTransfer = 0x7FEC en Mask = 0x0fffffc. Dit is vooral
+belangrijk voor kaarten in het PCMCIA slot en voor IDE-CF-card adapters.<br>
+Een andere reden voor problemen kunnen geheugen toewijzingen zijn. Deze zijn configuraties
+welke problemen hebben met omgekeerde geheugen toewijzingen. In zo'n geval kan WHDLoad
+vertelt worden om niet de omgekeerde geheugen toewijzingen te gebruiken door het instellen van de <a
+href="opt.html#NoMemReverse">NoMemReverse/S</a> optie.
+
+<li>Als u de Picasso96 software gebruikt maakt u er dan zelf zeker
+van dat de optie FakeNativeModes staat ingesteld op No (tooltype van de monitordriver).
+Anders kunnen er graphische foutmeldingen ontstaan en soms kan zelfs de computer vastlopen.
+
+<li>Er zijn een paar zeldzame configuraties welke niet de MMU kenmerken van WHDLoad ondersteunen.
+Dit heeft betrekking op de systemen die op de 68030 zijn gebaseerd.
+De optie <a href="opt.html#MMU">MMU/S</a> mag niet geactiveerd zijn op zulke systemen!
+Als deze optie aan staat zal WHDLoad het hele systeem vastlopen.
+Heden is bekend dat de volgende hardware problemen kan geven:
+acceleratiekaarten "Apollo A630", "Apollo 1230", "Elbox 1230" and "Magnum MK2".
+<li>Er lijkt een probleem met RAMexpansies voor de PCMCIA port op een A1200.
+WHDLoad kan foutmeldingen laten zien zoals <tt>Dos error #235 (uitvoerbaar bestand niet geldig)
+bij het laden van "xxx.slave"</tt>. De redenen zijn waarschijnlijk dat het geheugen niet correct
+is verbonden in de systeemgeheugenlijsten, omdat WHDLoad probeert om geheugen toe te wijzen
+met de flag MEMF_REVERSE krijgt hij hierdoor een onjuiste waarde terug (pointer wijst naar niet bestaand geheugen).
+Het is niet bekend of dit gebeurd met specifieke kaarten of specifieke configuraties.
+</ul>
+<h4>Ontwikkelaar gerelateerd</h4>
+<ul>
+<li>De operatie van het schakelen tussen het besturingssysteem en de
+geïnstalleerde programma's zijn niet helemaal betrouwbaar. Het probleem is
+dat de meeste Customregisters en sommige CIA-registers niet gelezen kunnen worden
+en daarom niet bewaard en hersteld kunnen worden. WHDLoad zelf veranderd deze registers niet,
+maar als het schakelt van het geïnstalleerde programma naar het besturingssysteem (bijv om een bestand te laden vanaf disk),
+kan het besturingssysteem sommige van die niet herstelbare registers wijzigen.
+Als het geïnstalleerde programma afhankelijk zou zijn dat alle registers onveranderd blijven, zal
+dit problemen geven. Het is bekend dat het besturingssysteem tenminste cop21c, bltafwm en bltalwm verandert en misschien
+wel meer. Om hier omheen te werken is er een mogelijkheid om de veranderde registers te herstellen gedurende
+het omschakelproces. Zie <A HREF="../autodoc.html#WHDLTAG_CBSWITCH_SET">WHDLTAG_CBSWITCH_SET</A> voor meer informatie.
+</ul>
+</BODY>
+</HTML>

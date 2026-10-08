@@ -1,0 +1,242 @@
+<HTML>
+<HEAD>
+<TITLE>Snooping</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: snoop.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Snooping</h3>
+
+<h4>Wat Snooping is</h4> Snooping is een functie van WHDLoad die bijhoud en een bestand aanmaakt, waarin de
+lees en schrijf operaties naar de Custom en CIA -registers genoteerd zijn die in een programma gebruikt zijn. Als <a
+href="opt.html#Snoop">Snoop</a> is geactiveerd zullen alle ongeldige toegangen een toegangs fout
+creëren en het geïnstalleerde programma wordt dan beëindigd. WHDLoad laat een venster zien die uitlegt
+wat de reden van deze fout is.
+
+<h4>Custom registers</h4>Alle lees en schrijf toegangen naar de customchipregisters worden gecontroleerd.
+Ongeldige toegangen zijn:
+<ul>
+<li>toegangen naar niet bestaande registers
+<li>lees toegangen naar, alleen schrijf registers
+<li>schrijf toegangen naar, alleen lees registers
+<li>toegangen naar eerder gelezen registers
+<li>byte schrijf toegangen (behalve <tt>bltcon0l</tt> en <tt>aud*vol+1</tt>)
+</ul>
+Strobe registers kunnen gelezen of beschreven worden. De reeks van geldige customchip registers kunnen
+variëren tussen OCS (Oude ChipSet - A500, A1000, oude A2000), ECS (Enhanced ChipSet
+- A600, nieuwe A2000, A3000) en AGA (Advanced Graphics Adapter - A1200, A4000). Dit is handig en
+speciaal om fouten te ontdekken in oude programma's veroorzaakt door ongedefinieerde toegangen tot
+nieuwe AGA registers.
+
+<p>Gebruikmakend van de functie
+<a href="../autodoc.html#resload_Control">resload_Control</a> en de tags
+<a href="../autodoc.html#WHDLTAG_CUST">WHDLTAG_CUST_DISABLE/READ/STROBE/WRITE</a>
+de interne configuratie van WHDLoad welke registers lees/schrijf -baar zijn kunnen
+gemodificeerd zijn.  Met dit, kunnen  illegale toegangen genegeerd worden of legale toegangen kunnen
+gedetecteerd worden. Dit zal alleen gebruikt worden tijdens het ontwikkelen van installs en niet
+voor gewoon gebruik.
+
+<h4>CIA registers</h4>Op de CIA registers worden alleen schrijf toegangen geverifieerd
+Dit betekend dat lees toegangen naar niet bestaande registers in het geheugen gebied
+van $bfd000...$bfefff niet worden gedetecteerd. Voor alle schrijf toegangen word de geschreven
+waarde intern weggeschreven door WHDLoad. Voor sommige CIA registers zijn daar speciale controles
+voor, afhankelijk van de geschreven waarde:
+
+<p><table border=1 summary="table of cia registers">
+<tr>
+	<th>adres</th>
+	<th>register</th>
+	<th>controle</th>
+</tr><tr>
+	<td>$bfe001</td>
+	<td>ciaa.ciapra</td>
+	<td>het zetten van de Overlay bit op #0 is verboden</td>
+</tr><tr>
+	<td>$bfe201</td>
+	<td>ciaa.ciaddra</td>
+	<td>bits #6-7 kunnen elke waarde hebben (gebruikt met een joypad), lagere bits moeten zijn %000011</td>
+</tr><tr>
+	<td>$bfe801</td>
+	<td>ciaa.ciatodlow</td>
+	<td rowspan=3>lees-modificeer-schrijf toegangen (bijv. bchg) zijn niet toegestaan als
+	 ALARM bit is ingesteld in ciaa.ciacrb (alleen gecontroleerd op een 68060)</td>
+</tr><tr>
+	<td>$bfe901</td>
+	<td>ciaa.ciatodmid</td>
+</tr><tr>
+	<td>$bfea01</td>
+	<td>ciaa.ciatodhi</td>
+</tr><tr>
+	<td>$bfed01</td>
+	<td>ciaa.ciaicr</td>
+	<td>lees-modificeer-schrijf toegangen (bijv. bchg) zijn niet toegestaan (alleen gecontroleerd op een 68060)</td>
+</tr><tr>
+	<td>$bfd100</td>
+	<td>ciab.ciaprb</td>
+	<td>de bits voor MOTOR #7, SELECT #3-6 en STEP #0 moeten niet leeggehaald worden, andere bits
+	kunnen veranderd worden; met dit kunnen alle toegangen tot diskette drives gedetecteerd worden</td>
+</tr><tr>
+	<td>$bfd200</td>
+	<td>ciab.ciaddra</td>
+	<td>de geschreven waarde moet zijn %11000000</td>
+</tr><tr>
+	<td>$bfd300</td>
+	<td>ciab.ciaddrb</td>
+	<td>de geschreven waarde moet zijn %11111111</td>
+</tr><tr>
+	<td>$bfd800</td>
+	<td>ciab.ciatodlow</td>
+	<td rowspan=3>lees-modificeer-schrijf toegangen (bijv. bchg) zijn niet toegestaan
+	als ALARM bit is ingesteld in ciab.ciacrb (alleen gecontroleerd op een 68060)</td>
+</tr><tr>
+	<td>$bfd900</td>
+	<td>ciab.ciatodmid</td>
+</tr><tr>
+	<td>$bfda00</td>
+	<td>ciab.ciatodhi</td>
+</tr><tr>
+	<td>$bfdd00</td>
+	<td>ciab.ciaicr</td>
+	<td>lees-modificeer-schrijf toegangen (bijv. bchg) zijn niet toegestaan (alleen gecontroleerd op een 68060)</td>
+</tr></table>
+
+<h4>Hoe werkt het</h4>
+Als Snoop geactiveerd is, markeert WHDLoad de adressen van de custom en CIA registers als ongeldig of beveiligd 
+tegen schrijven in de MMU vertaalboom. Hierom resulteert elke toegang naar een custom of CIA register in 
+een Toegangs Fout uitzondering.
+De uitzondering handler in WHDLoad behandelt deze uitzondering. Eerst controleert het of de toegang geldig is.
+Als de toegang ongeldig is wordt het programma beëindigd. Als de toegang geldig is en het een lees operatie
+is dan word het geëmuleerd en word de programma uitvoer hervat. Als het een schrijf operatie is zal WHDLoad
+extra de waarden schrijven naar een interne opslag.
+<br>Om de overhead van de uitzondering en de emulatie volgorde word de programma uitvoer
+langzamer. Hoeveel langzamer ligt aan het; processor type, Chip geheugen type (16/32-bit) en Stackpointer gepositioneerd 
+als de ChipGeheugen 32-bit is (Longword gepositioneerd of niet). Het verschilt ook voor de toegangs type
+(Byte/Word/LongWord, Lezen/Schrijven). Op de 68030 is Schrijven sneller dan lezen (omdat bij lezen de stack
+frame 92 bytes is en bij schrijven 32 bytes), op de 68060 is lezen sneller omdat de emulatie voor schrijven
+meer complex is.
+
+<h4>Snelle Snoop Mode</h4>
+De optie <a href="opt.html#Snoop">Snoop/S</a> activeert de snelle snooping. Lees toegangen
+worden niet gecontroleerd. Geen speciale controles worden uitgevoerd. Deze mode kan handig zijn
+om alleen de inhoud van Custom registers te verkrijgen, bijv. om een plaatje weg te schrijven 
+met <a href="sp.html">SP</a>.
+
+<h4>CopperLijst Scanner</h4>
+Vanaf versie 13 van WHDLoad worden ook copperlijsten zelf gecheckt. 
+De scanner word geactiveerd tijdens het schrijven naar de <tt>coplc</tt> registers als 
+de copper dma geactiveerd is, of wanneer het geïnstalleerde programma de copper dma activeert door het
+schrijven van het <tt>dmacon</tt> register. De scanner volgt de copperlijsten en valideert
+alle verplaats instructies door restricties toe te passen veroorzaakt door de Snoop optie
+(OCS/ECS/AGA). Sla over en Wacht instructies worden genegeerd (behalve CEND). Wanneer het
+ongeldige notities vindt, word het geïnstalleerde programma beëindigd. De scanner
+volgt takken (<tt>copjmp</tt>), detecteert loops en checkt tot wel 16 sublijsten.
+De Verplaatsingen in de copperlijst worden weggeschreven in de interne Customregister storage
+wat word gedumpt bij het verlaten van WHDLoad. De scanner is niet actief in de Snelle 
+Snoop Mode.
+
+<h4>AudioPointer Check</h4>
+wanneed de optie <a href="opt.html#ChkAudPt">ChkAudPt/S</a> is geactiveerd, WHDLoad
+zal dan de install controleren of het alleen juiste adressen naar de
+Custom Audio DMA pointers schrijft.  Juiste adressen houd in dat het binnen het BaseMem
+valt en ongelijk is aan 0. Er worden alleen lange schrijf operaties gechecked. Het schrijven van words
+wordt niet gechecked. Deze controle kan handig zijn met problemen in audioreplay
+routines.
+
+<h4>BlitterPrioriteit Check</h4>
+Wanneer de optie <a href="opt.html#ChkBltHog">ChkBltHog/S</a> is geactiveerd zal WHDLoad checken of het geïnstalleerde
+programma niet <tt>BltHog</tt> activeert door het schrijven naar de <tt>dmacon</tt> register.
+De Blitter prioriteit kan problemen veroorzaken op sommige hardware configuraties in samenwerking
+met grote blitter operaties (alle kanalen gebruikt.)
+
+<h4>BlitterGrote Check</h4>
+Wanneer de optie <a href="opt.html#ChkBltSize">ChkBltSize/S</a> is geactiveerd zal WHDLoad controleren dat blitter werkzaamheden
+niet toegang krijgen tot geheugen buiten het BaseMem gebied. Tijdens schrijf toegangen
+naar <tt>bltsize</tt> of <tt>bltsizh</tt> controleert het of de regel mode is ingeschakeld 
+in <tt>bltcon1</tt>. Als de regel mode actief is verbreekt het de grote controle.
+Anders zal WHDLoad de toegang van het eerste en laatste word berekenen voor elke
+geactiveerde DMA kanaal. Als er één adres buiten het BaseMem gebied bevind zal het programma
+worden gestopt met een keuze venster. De berekening is ontworpen om te werken met alle modes
+(stijgend/dalend, positieve/negatieve modulos, oneven modulos/verwijzing).
+<br>Houd rekening met dat de regel teken mode niet geverifieerd word en dat alle blitter registers
+ook geschreven worden door de copper als <tt>copcon</tt> is ingeschakeld.
+
+<h4>BlitterWacht Check</h4>
+Als de optie <a href="opt.html#ChkBltWait">ChkBltWait/S</a> is geactiveerd zal WHDLoad een instructie spoor gebruiken om
+te verifiëren dat het geïnstalleerde programma correct wacht op de blitter om te stoppen
+voordat het start met een nieuwe blitter operatie. Het gebruikt een interne variabele 
+welke de werkende staat van de blitter vertegenwoordigd. De variabele is ingeschakeld wanneer
+een schrijf toegang naar de <tt>bltsize</tt> of <tt>bltsizh</tt> plaatsvind en leeggemaakt word
+wanneer lees toegang naar het <tt>dmaconr</tt> register is uitgevoerd.
+Op elke schrijven naar een blitter register word de interne variabele gecontroleerd,
+als het een draaiende blitter operatie constateert, word het geïnstalleerde programma gestopt
+en zal WHDLoad de ProgramCounter van de laatst gestarte blitter operatie samen met de eigenlijke toegang rapporteren.
+<br>Er zijn twee grote knelpunten met deze functie. Ten eerste blitter gebruik
+via de copper is niet gecontroleerd en ten tweede het gebruik van blitter interrupts
+zorgt ervoor dat de controle routine fouten rapporteert die niet nodig zijn.
+
+<h4>KleurBurst Check</h4>
+Wanneer de optie <a href="opt.html#ChkColBst">ChkColBst/S</a> is geactiveerd, controleert WHDLoad
+bij elk schrijven naar de <code>custom.bplcon0</code> register of de
+<code>color</code> bit is gezet. Sommige hardware met name flickerfixers hebben nodig
+dat deze bit gezet is zodat er een juist videosignaal afgeven word. Voor de beste compatibiliteid
+moet deze bit altijd gezet zijn. Direct schrijven naar
+<code>custom.bplcon0</code> en schrijven via copperlijsten worden gecontroleerd. 
+
+<h4>CopperControl Check</h4>
+Wanneer de optie <a href="opt.html#ChkCopCon">ChkCopCon/S</a> is geactiveerd, dan
+controleerd WHDLoad of elk schrijven naar de code>custom.copcon</code> register de bit #1
+niet gezet is. Deze bit zorgt er voor als gezet dat de Copper naar de Blitter
+registers kan schrijven.  Het is soms handig om te detecteren of programma`s de Copper
+gebruiken om de DMA activiteiten aan te sturen.
+
+<h4>Toekomst</h4>
+Het is de bedoeling om eigenschappen toe te voegen zoals Freezing
+en Iconifing. Van deze, is Snoop een benodigheid. Daarom is het
+aanbevolen voor Install auteurs om hun Installs te controleren met Snoop
+om toekomstige compatibiliteit te waarborgen.
+<h4>Benodigdheden</h4>
+Een MMU is nodig voor de Snoop functie. Ook moet WHDLoad de MMU <a
+href="mmu.html#usercontrol">gebruiken</a>, daarom moet <a
+href="opt.html#MMU">MMU/S</a> geactiveerd zijn met 68030 machines.
+<h4>Beperkingen</h4>
+<ul>
+<li>68020 + 68851
+<ul>
+<li>Deze hardware word momenteel niet ondersteund
+</ul>
+<li>68030
+<ul>
+<li>lees-modificeer-schrijf toegangen naar de CIA-registers worden niet gedetecteerd
+</ul>
+<li>68040
+<ul>
+<li>lees-modificeer-schrijf toegangen naar de CIA-registers worden niet gedetecteerd
+<li><tt>movem</tt> geheugen lees instructies kunnen toegang vinden in ongeldige Custom registers
+zonder dat ze een Acces Fault exception genereren, dit is mogelijk omdat de eerste
+toegang word geverifieerd voor een overeenkomst met een geldig register
+<li>instructies moeten niet toegang zoeken met meer dan één snooped register per keer,
+dat betekend dat de code zoals <tt>move.b ($dff006),($bfd800)</tt> niet mee omgegaan kan
+worden, als zo iets wel gebeurd zal WHDLoad een Access Fault venster laten zien.
+</ul>
+<li>68060
+<ul>
+<li>de<tt> movem</tt> instructie kan toegang krijgen tot een ongeldig register
+zonder een Toegangs Fout uitzondering te maken, dit is mogelijk omdat alleen de eerste
+toegang wordt geverifieerd voor een gelijkmatig geldig register
+<li><tt>move &lt;CIA/Custom register&gt;,sr</tt> word incorrect uitgevoerd
+als het de supervisor gedeelte van het status register wil veranderen, de supervisor gedeelte
+blijft onveranderd
+<li>elke <tt>(ssp)+</tt> of <tt>-(ssp)</tt> in samenwerking met een schrijf toegang naar
+een CIA of Custom register kan niet behandeld worden door stackframe problemen, WHDLoad
+zal zulke toegangen detecteren en beëindigen met een geschikte keuzevenster
+<li>instructies mag niet meer toegang hebben dan één snoop register per keer,
+dat betekend dat de code zoals <tt>move.b ($dff006),($bfd800)</tt> niet behandeld
+kunnen worden, als zo'n code ontstaat laat WHDLoad een Toegangs Fout Venster zien
+</ul>
+</ul>
+</BODY>
+</HTML>
+
+

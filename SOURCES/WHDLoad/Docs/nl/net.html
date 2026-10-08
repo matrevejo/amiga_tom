@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Netwerk functies</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: net.html 1.1 2015/04/19 21:04:15 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+
+<h3>Netwerk toegangs overzicht</h3>
+
+WHDLoad kan op het internet kijken of er een
+nieuwe versie bestaat van WHDLoad en van het betreffende slave bestand. Alle netwerk activiteiten maken gebruik van
+een HTTP-protocol. De globale optie <a href="opt.html#Proxy">Proxy/S</a>
+kan gebruikt worden om alle netwerk verkeer door de Proxyserver te leiden. Als een Proxy een inlog met wachtwoord gebruikt dan kan deze met de <a
+href="opt.html#Proxy">Proxy/S</a> optie ingesteld worden. WHDLoad ondersteunt alleen de basis authenticatie type.
+
+<br>Als er geen netwerk verbinding is gewenst van WHDLoad, kunnen alle netwerk activiteiten worden uitgezet met de <a href="opt.html#NoNetwork">NoNetwork/S</a> optie.
+
+<h3>WHDLoad en Slave update check</h3>
+
+Gebruik makend van een aanvraag op de WHDLoad website, word gekeken of er een nieuwere versie van
+WHDLoad of het geïnstalleerde programma (Slave) aanwezig is.
+
+<br>Deze check wordt alleen uitgevoerd als het <a href="opt.html#SplashDelay">splashvenster</a>
+is geopend, omdat hier alleen de info te vinden is of er een update is gedaan.
+
+<p>Voor een WHDLoad update check word het versienummer van de gebruikte WHDLoad
+verstuurd. Als er een nieuwere WHDLoad bestaat dan zal het splashvenster het
+versienummer en uitgave datum van de laatste uitgave van WHDLoad laten zien.
+Toevoegend zal een 'update WHDLoad' knop te zien zijn in het splash-venster.  Als de <a
+href="http://sourceforge.net/projects/openurllib/">openurl.library</a> geïnstalleerd is
+en drukkend op deze knop dan zal de thuis pagina van de website van WHDLoad te voor zijn komen
+op de webbrowser die is geconfigureerd.
+Als de openurl.library niet aanwezig is dan verschijnt er een venster met de URL van
+de WHDLoad thuispagina. Als de optie <a href="opt.html#Expert">Expert/S</a> gezet is
+dan zal de update check ook informeren over nieuwe beta versies van WHDLoad.
+
+<p>Om de update van een Slave te checken rekent WHDLoad de SHA-256 digest van
+het Slave bestand uit, welke is verstuurd naar de WHDLoad website. Er is een database van
+alle uitgegeven Slave bestanden. Als er een nieuwere Installatie/Slave bestaat dan zal het splashvenster
+de datum van de laatste uitgave zien. Toevoegend is een
+'Update Slave' knop toegevoegd aan het splashvenster. Als de
+<a href="http://sourceforge.net/projects/openurllib/">openurl.library</a> is geïnstalleerd
+en drukkend op deze knop dan zal de webpagina van WHDLoad met de betreffende install openen met de browser die is geconfigureerd.
+Als er geen openurl.library aanwezig is dan zal er een venster verschijnen met
+de URL van deze WHDLoad pagina.
+
+<p>Als er een nieuwere WHDLoad of Slave bestaat dan zal er een extra 'Start' knop toegevoegd worden aan het
+splashvenster en het venster zal niet automatisch dicht gaan om de nadruk te leggen
+op een update mogelijkheid. Het venster kan dicht gedaan worden met; gewoon de muis,
+Space, Return of Esc.
+
+<p>Als <a href="http://sourceforge.net/projects/openurllib/">openurl.library</a>
+is gebruikt en er is op de 'Update' knop gedrukt dan wil WHDLoad de <a
+href="opt.html#ExecuteCleanup">ExecuteCleanup/K</a> commando uitvoeren, gebruikelijk om via
+<a href="opt.html#ExecuteStartup">ExecuteStartup/K</a>
+de IP-stack uit te zetten. Dit kan mis gaan als er niet voldoende geheugen aanwezig is voor het
+starten van de webbrowser, omdat <a href="opt.html#Preload">Preload/S</a> het meest van het
+geheugen bezet houd. Dus in geval van weinig geheugen kan het zijn dat de 'Update' knop niet
+te gebruiken is.
+
+</BODY>
+</HTML>

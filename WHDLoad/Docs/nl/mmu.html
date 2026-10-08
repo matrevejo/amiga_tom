@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>WHDLoad en de MMU</TITLE>
+<meta name="DC.Language" content="nl">
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: mmu.html,v 1.3 2014/12/04 23:37:38 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>WHDLoad en de MemoryManagementUnit (MMU)</h3>
+Een MMU is aanwezig in de volgende van de 68000 familie: 68030,
+68040, 68060. Er zijn ook zogeheten EC versies van deze processors
+welke een gebroken niet werkende MMU hebben. Bijvoorbeeld, alle standaard
+A4000/030 hebben alleen een 68EC030 CPU. Van derde partij acceleratiekaarten varieert dit,
+kijk in de geschikte documentatie om hier over te lezen. Zo ver dat bekend is,
+zijn alle 68040/68060's ooit gebouwd in een Amiga, zijn volle CPU'S die beschikking hebben
+over een werkende MMU. Dit is omdat Zorro III het MMU mappen van IO ruimte 
+nodig heeft.
+Het onderscheid tussen een volle CPU en een EC versie kan niet gemaakt worden met 
+software. Daarom moet de gebruiker dit doen
+door gebruik te maken van de <a href="#usercontrol">juiste opties</a> in WHDLoad.
+<br>Voor de 68020 is er een externe MMU genaamd 68851, maar dit wordt momenteel niet 
+ondersteund in WHDload.
+<h4>Eigenschappen van een MMU en het gebruik er van in WHDLoad</h4>
+Het voornaamste doel van de MMU is om de logische adressen te vertalen naar
+fysieke adressen. Dit is nodig voor virtuele geheugen en gescheiden adres ruimtes.
+Een andere eigenschap
+is om speciale eigenschappen zoals Supervisor Only, Tegen schrijven Beschermd en Cache mode 
+voor elk fysiek adres, configureert op een pagina basis, waar een pagina gebruikt in WHDLoad een 
+grootte heeft van 4096 bytes. WHDLoad gebruikt geen logische naar fysieke adress vertaling.
+Maar het gebruikt van de MMU voor <a href="#mem">geheugen bescherming</a>, <a
+href="cache.html">cache management</a> en een paar speciale eigenschappen (<a
+href="snoop.html">Snooping</a>, <A
+HREF="../autodoc.html">resload_Protect#?</a>).
+<h4><a name="mem">Geheugen bescherming in WHDLoad</a></h4>
+Tijdens het opstarten, scant WHDLoad de geheugenlijst en bouwt een vertaalboom
+wat alle toegankelijke geheugen bevat. Het markeert de volgende adres ruimtes
+als geldig en toegankelijk:$0...BaseMem (gebruikmakend van de informatie van de Slave),
+$dff000...$dff200 (Custom registers), $bfd000...$bff000 (CIA registers) en
+het geheugen gebruikt door de Slave en WHDLoad. Als een Freezer is gevonden in het
+geheugen, word het geheugen gebruikt door de Freezer ook gemarkeerd als geldig.
+Alle andere geheugen word gemarkeerd als ongeldig, en daarom met elke toegang tot
+zo'n gebied (Lezen of Schrijven) word er een Toegangs Fout Uitzondering gemaakt welke
+eindigt in een geschikte foutvenster door WHDLoad
+<h4><a name="usercontrol">Gebruikers controle van de MMU afhandeling in WHDLoad</a></h4>
+Er zijn 3 verschillende modes hoe WHDLoad invloed heeft op een bestaande MMU.
+<ol>
+<li><b>negeer MMU</b>:<br>
+In deze mode verandert WHDLoad niet één MMU gerelateerde register. Dit kan handig
+zijn als u programma's draait welke de MMU doen dichtslaan en u de functies van deze
+programma's intact wilt laten (bijvoorbeeld een software freezer zoals TK).
+<br>
+Waarschuwing: Omdat WHDLoad niet de MMU zelf bestuurt zijn er een heleboel problemen
+mogelijk. Deze problemen kunnen crashes, gebreken of andere onvoorziene misdragingen
+veroorzaken. Hier is een lijst van mogelijke risico's:
+<ul>
+<li>het draaien van Enforcer/CyberGuard of een vergelijkbare programma zal de
+machine vast lopen/crashen, omdat WHDLoad een heleboel Hits aanmaakt elke keer
+als hij het besturingssysteem aan en uit zet. Deze hits zijn geen bugs van WHDLoad maar deel van een
+normale operatie.
+<li>nieuwere versies van de 68060.library (beginnend met v41.1) zal het geheugen 
+$0-$1000 (de eerste paging) hermappen naar een fastgeheugen locatie gebruikmakend van de MMU, in
+"negeer MMU" mode zal de adres vertaling intact blijven, als het geïnstalleerde programma
+probeert om dit gebied te gebruiken voor een elk DMA actie (bijv een copperlijst in dit gebied)
+zullen de resultaten onvoorzien zijn, omdat de processor het fastgeheugen zal lezen/schrijven
+terwijl de DMA`s het echte Chipgeheugen is welke willekeurige data bevat.
+<li>Als de draaiende MMU-dingen, elk geheugen gebruikt (exception handler, vertaalboom, ...)
+in de BaseMem van het geïnstalleerde programma, kan het crashen, omdat de BaseMem overschreven
+word tijdens de uitvoer van het geïnstalleerde programma
+<li>algemeen is dat elk programma dat de basis functies van het systeem veranderd
+(gebruikmakend van de MMU) een conflict kan veroorzaken met WHDLoad ...
+</ul>
+<li><b>Schakel MMU uit</b>:<br>
+In deze mode, welke alleen mogelijk is op de 68030, zal de MMU uitgeschakeld worden door 
+WHDLoad, geen MMU gerelateerde eigenschappen zijn beschikbaar.
+<li><b>gebruik MMU</b>:<br>
+In deze mode neemt WHDLoad de gehele controle over de MMU en realiseert geheugen 
+bescherming en cache management zoals beschreven hierboven.
+</ol>
+Op de 68030 is de standaard mode<i> disable MMU</i>. Op de 68040/68060 is de standaard <i>use MMU</i>. 
+Er zijn opties om dit gedrag te beinvloeden.<a href="opt.html#MMU"> MMU/S</a> forceert WHDLoad om
+<i>gebruiken te maken</i> van <i>MMU</i> en is vereist op 68030 systemen om de MMU eigenschappen te krijgen. 
+<a href="opt.html#NoMMU">NoMMU/S</a> schakelt het MMU gebruik uit door WHDLoad (<i>negeer MMU</i>).
+<center><p><cite>Een Enforcer hit is een Enforcer hit, punt.</cite> (Michael Sinz)</p></center>
+</BODY>
+</HTML>

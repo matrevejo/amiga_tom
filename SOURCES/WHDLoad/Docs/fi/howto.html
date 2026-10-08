@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<TITLE>WHDLoadin ohjelmointi</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=Windows-1252"><!-- $Id: howto.html 1.3 2014/12/04 23:37:38 wepl Exp wepl $ --></HEAD>
+<BODY>
+<h3>Suorituksen virtauskaavio</h3>
+<p>Seuraavassa taulukossa esitet&auml;&auml;n ohjelman kulku, kun WHDLoadilla asennettu ohjelma suoritetaan. Toivon, ett&auml; se auttaa ymm&auml;rt&auml;m&auml;&auml;n, miten WHDLoad toimii ja kuinka WHDLoad, Slave ja asennettu ohjelma toimivat yhdess&auml;.</p>
+<table cellpadding=3>
+  <tr>
+    <td valign=top>K&Auml;YTT&Auml;J&Auml;</td>
+    <td>
+      <ul>
+        <li>k&auml;ynnist&auml;&auml; demon tai pelin napsauttamalla kuvaketta tai k&auml;ynnist&auml;m&auml;ll&auml; WHDLoadin komentorivilt&auml;</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>K&auml;ytt&ouml;j&auml;rjestelm&auml;</td>
+    <td valign=top>
+      <ul>
+        <li>lataa WHDLoad-ohjelman ja k&auml;ynnist&auml;&auml; sen</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>WHDLoad</td>
+    <td>
+      <ul>
+        <li>tarkistaa ohjelmisto- ja laitteistoymp&auml;rist&ouml;n<li>lataa ja tarkistaa Slaven<li>varaa asennetulle ohjelmalle vaaditun muistim&auml;&auml;r&auml;n<li>jos <a href="opt.html#Preload">Preload/S</a> on k&auml;yt&ouml;ss&auml;, lataa levynkuvia ja tiedostoja RAM-muistiin (niin kauan kuin vapaata muistia riitt&auml;&auml;)<li>kytkee k&auml;ytt&ouml;j&auml;rjestelm&auml;n pois (sammuttaa moniajon ja keskeytykset, alentaa grafiikkalaitteiston OCS-tasolle, alustaa kaiken laitteiston m&auml;&auml;ritetyill&auml; arvoilla)<li>siirtyy Slaveen</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Slave</td>
+    <td>
+      <ul>
+        <li>lataa asennetun ohjelman suoritettavan osan kutsumalla WHDLoad-funktiota (esim. <a
+            href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a> tai <a
+            href="../autodoc.html#resload_LoadFile">resload_LoadFile</a>)<li>p&auml;ivitt&auml;&auml; suoritettavan osan (jotta ohjelma lataa tiedot Slaven kautta, korjaa yhteensopivuusongelmat, mahdollistaa poistumisen ohjelmasta)<li>kutsuu suoritettavaa osaa</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Asennettu ohjelma</td>
+    <td>
+      <ul>
+        <li>tekee mit&auml; tekee<li>ladatessaan tietoa levylt&auml; se kutsuu Slavea (koska Slave on p&auml;ivitt&auml;nyt sen n&auml;in aiemmin) ja Slave kutsuu WHDLoadia, jolloin WHDLoad ottaa osan k&auml;ytt&ouml;j&auml;rjestelm&auml;&auml; k&auml;ytt&ouml;&ouml;n tiedon lataamiseksi (vain jos <a
+            href="opt.html#Preload">Preload</a> ei ole k&auml;yt&ouml;ss&auml;) ja palaa takaisin, jolloin asennettu ohjelma jatkuu</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>K&Auml;YTT&Auml;J&Auml;</td>
+    <td>
+      <ul>
+        <li>poistuu ohjelmasta <a
+            href="opt.html#QuitKey">QuitKey</a>-n&auml;pp&auml;imell&auml;</ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>Slave</td>
+    <td>
+      <ul>
+        <li>palaa WHDLoadiin kutsumalla funktiota <a
+            href="../autodoc.html#resload_Abort">resload_Abort</a></ul>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>WHDLoad</td>
+    <td>
+      <ul>
+        <li>ottaa k&auml;ytt&ouml;j&auml;rjestelm&auml;n uudelleen k&auml;ytt&ouml;&ouml;n (palauttaa laitteistorekisterit, n&auml;yt&ouml;n ja muistin)<li>vapauttaa varatut resurssit<li>palaa k&auml;ytt&ouml;j&auml;rjestelm&auml;&auml;n</ul>
+    </td>
+  </tr>
+</table>
+<h3>Miten asennetaan yksinkertainen, yhden levyn trackloader</h3>T&auml;m&auml; on hyvin pieni ja lyhyt vaiheittainen opas, jonka avulla voidaan luoda WHDLoad-asennusohjelma NDOS-levykkeell&auml; toimivalle demolle tai pelille. Opas kuvaa ihanteellista, yksinkertaista tapausta. Tosiel&auml;m&auml;ss&auml; t&auml;llaista tapausta tuskin koskaan esiintyy. Erityistapaustan ja ongelmien varalta lue t&auml;t&auml; seuraavat kappaleet.<ol>
+  <li>Esity&ouml;<ul>
+      <li>Tee kansio, johon kaikki tiedostot tallennetaan.<li>Luo t&auml;h&auml;n kansioon levynkuva  <A HREF="dic.html">DIC</A>-ohjelmalla.<li>Luo <a href="opt.html#optwb">#?.info</a> tiedosto, jonka &lt;Default Tool&gt; on &quot;WHDLoad&quot; ja Tooltype &quot;SLAVE=#?&quot; sis&auml;lt&auml;&auml; slave-tiedoston nimen. (tai kopioi kuvake esimerkist&auml; ja poista kaikki tooltypet paitsi &quot;SLAVE=&quot;).</ul>
+  <li>Slave<br> Slave-tiedoston kirjoittamiseen tarvitaan seuraavat tiedot:<ol>
+      <li>Miss&auml; suoritettava ohjelma on levyll&auml;?<li>Miss&auml; kohtaa suoritettavaa ohjelmaa levylataaja on?</ol>T&auml;m&auml;n tiedon saamiseksi analysoimme ensin k&auml;ynnistyslohkoa. Useimmiten suoritettava ohjelma ladataan t&auml;&auml;lt&auml; k&auml;skyll&auml; exec.DoIO(). Joskus k&auml;ynnistyslohkolla on erityinen trackloader. Kirjoitamme Slaven, joka simuloi k&auml;ynnistyslohkoa ja lataa suoritettavan ohjelman levynkuvasta. Tallennamme suoritettavan ohjelman levynkuvasta tai <a
+    href="dump.html#memory">muistidumpista</a>. T&auml;m&auml;n j&auml;lkeen on l&ouml;ydett&auml;v&auml; latausrutiini. Nopea tapa on etsi&auml; merkkijonoa<tt>$AAAAAAAA</tt> (jota k&auml;ytet&auml;&auml;n MFM-dekoodaukseen) heksaeditorilla. Leikkaa sitten l&ouml;ydetty alue (+/- <tt>$1000</tt> tavua), pura se ja etsi rutiinin alku. Ymm&auml;rr&auml; parametrien luettelo. Nyt luomme Slavelle koodin, joka p&auml;ivitt&auml;&auml; latausrutiinin niin, ett&auml; latausrutiinin kutsut ohjataan uudelleen Slavelle. Slave s&auml;&auml;t&auml;&auml; parametrit ja kutsuu WHDLoad-funktiota <a
+    href="../autodoc.html#resload_DiskLoad">resload_DiskLoad</a>.<li>Ihannetapauksessa asennusohjelma on nyt valmis.<br> J&auml;ljell&auml; on vain mukavan kuvakkeen tekeminen. Nappaa kaksi kuvaa WHDLoadin <a
+href="snoop.html">snoop-toiminnolla</a> ja <a href="sp.html">SP</a>:ll&auml; tai j&auml;&auml;dytysohjelmalla tai UAE:ll&auml; ja luo kuvake. Suositus on 16 v&auml;rin <a href="http://aminet.net/package/pix/mwb/RomIcons10.lha">RomIcon</a>-paletti.</ol>
+<h3>Mahdolliset ongelmat ja erikoistapaukset</h3>
+<h4>Ep&auml;standardi trackloader</h4>Jotkin ohjelmat k&auml;ytt&auml;v&auml;t aivan omaa levyformaattiaan. T&auml;m&auml; tarkoittaa, ett&auml; <a
+href="dic.html">DIC</a> ei voi luoda levynkuvia. Tiedostojen tai levynkuvien luontiin t&auml;llaisista levyist&auml; suositellaan <a href="rawdic.html">RawDIC</a>-ohjelmaa. Lis&auml;tietoja on RawDIC-ohjeessa.<h4>Useat levyt</h4>Jos ohjelmassa on useampi levyke, Slaven tulee ohjata levynk&auml;ytt&ouml; oikeaan levynkuvatiedostoon. T&auml;m&auml; ei ole aina helppoa. Jotkin ohjelmat tukevat useampaa levyasemaa, jolloin voit k&auml;ytt&auml;&auml; levyn valintaan aseman numeroa. Useimmat ohjelmat k&auml;ytt&auml;v&auml;t kullakin levyll&auml; tunnusta, jolla ne erotetaan. T&auml;ss&auml; tapauksessa k&auml;yt&auml; muuttujaa, jossa on levyn numero, ja joka kerta kun levyn tunnusta k&auml;ytet&auml;&auml;n (m&auml;&auml;rit&auml; se analysoimalla latausrutiinin parametreja) lis&auml;&auml; muuttujan arvoa (viimeisell&auml; levyll&auml; v&auml;henn&auml; sit&auml;). N&auml;in latausohjelma toivottavasti lukee tunnusta uudestaan ja uudestaan kunnes oikea levy sy&ouml;tet&auml;&auml;n. Mik&auml;li ohjelmassa on k&auml;ytt&auml;j&auml;lle pyynt&ouml; sy&ouml;tt&auml;&auml; oikea levy, kytke se pois.<h4>Tulosten tallennus</h4>Kirjoita oikea muistialue levylle <a
+href="../autodoc.html#resload_SaveFile">resload_SaveFile</a>-funktiolla. Halutessasi voit salakirjoittaa sit&auml; hieman, jolloin lamerit eiv&auml;t p&auml;&auml;se liian helposti muuttelemaan sit&auml;. Ei kannata kirjoittaa suoraan levynkuviin (funktiolla <a href="../autodoc.html#resload_SaveFileOffset">resload_SaveFileOffset</a>), koska jos jokin menee pieleen (esim. kaatuminen), levynkuvat voivat vioittua.<h4>Pelitallennukset</h4>Pelitallennuksia k&auml;sitell&auml;&auml;n kuten tuloksia.<h4>K&auml;ytt&ouml;j&auml;rjestelm&auml;kutsut</h4> Slaven ja asennetun ohjelman suorituksen aikana k&auml;ytt&ouml;j&auml;rjestelm&auml;&auml; ei ole, eik&auml; sit&auml; voi k&auml;ytt&auml;&auml;, eik&auml; sen k&auml;yt&ouml;ss&auml; ole mit&auml;&auml;n j&auml;rke&auml;! Siksi kaikki asennetun ohjelman tekem&auml;t kutsut tulee est&auml;&auml;. Jos niit&auml; ei ole monia, eik&auml; niiss&auml; ole j&auml;rke&auml; WHDLoad-ymp&auml;rist&ouml;ss&auml; (kuten exec.Disable() tai exec.SuperState()), korvaa ne vain NOP:lla (<tt>$4e71</tt>). Jos kutsuilla on t&auml;rke&auml; toiminto (kuten exec.DoIO()), ohjaa ne Slaveen ja emuloi ne. Jos niit&auml; on paljon, luo yksinkertainen exec.library k&auml;ytt&auml;m&auml;tt&ouml;m&auml;lle muistialueelle (alusta longword osoitteessa <tt>$4</tt>). Voit katsoa Oscar.Slaven l&auml;hdekoodia, jossa emuloidaan exec.AllocMem(). K&auml;ytt&ouml;j&auml;rjestelm&auml;kutsujen tunnistamiseksi execbasen arvo on aluksi <tt>$f0000001,</tt> mink&auml; tarkoitus on, ett&auml; kaikki execbasea k&auml;ytt&auml;v&auml;t rutiinit synnytt&auml;v&auml;t &quot;Address Error&quot; -poikkeuksen.<br> Jos k&auml;ytt&ouml;j&auml;rjestelm&auml;funktioita k&auml;ytet&auml;&auml;n runsaasti, k&auml;yt&auml; kickemu-paketteja, jotka ovat WHDLoad-dev -paketissa. Omat pakettinsa on Kick 1.3:lle (<a
+href="../../src/sources/whdload/kick13.s">&apos;src/sources/whdload/kick13.s&apos;</a>) ja Kick 3.1:lle (<a
+href="../../src/sources/whdload/kick31.s">&apos;src/sources/whdload/kick31.s&apos;</a>). N&auml;m&auml; paketit vaativat alkuper&auml;isen kickstart-muistinkuvan ja luovat t&auml;ydellisen k&auml;ytt&ouml;j&auml;rjestelm&auml;ymp&auml;rist&ouml;n WHDLoadin sis&auml;&auml;n. Katso lis&auml;tietoja my&ouml;s mukana tulevasta <a
+href="../../src/sources/whdload/kick.readme">readme</a>-tiedostosta.<h3>Yleisi&auml; yhteensopivuusongelmia</h3>
+
+<h4>Rajoitettu osoiteavaruus 68000/68010/68ec020:ssa</h4>N&auml;iss&auml; suorittimissa osoiteavaruus on rajoitettu 16 megatavuun (<tt>$000000...$ffffff</tt>), koska suorittimissa on vain 24 osoitelinjaa. T&auml;m&auml;n tuloksena korkeampiin osoitteisiin tehdyt kutsut ohjataan alempaan 16 megatavuun ohittamalla merkitt&auml;vimm&auml;t 8 bitti&auml;. Jotkut ohjelmat k&auml;ytt&auml;v&auml;t bittej&auml; tallentamaan tietoa tai unohtavat vain tyhjent&auml;&auml; ne. Jos prosessorin muistiavaruus on t&auml;ydet 4 gigatavua, kuten 68020/680ec30/68030/68040/68060:ll&auml;, t&auml;m&auml; ei toimi, koska t&auml;ytt&auml; 32-bittist&auml; osoitetta k&auml;ytet&auml;&auml;n.<br> T&auml;m&auml;n ratkaisemiseksi n&auml;m&auml; kutsut tulee korjata ja ohjata ne sopivaan osoitteeseen.<br> Joskus outoihin osoitteisiin teht&auml;vien kutsujen syyn&auml; voi olla alustamaton osoitin. T&auml;ss&auml; tapauksessa saattaa kannattaa tyhjent&auml;&auml; muisti <tt>$400</tt> - <a
+href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a>; t&auml;m&auml; saavutetaan my&ouml;s lipulla <a
+href="../autodoc.html#WHDL_ClearMem">WHDL_ClearMem</a>.<h4>Eri pinokehykset kullakin suorittimella</h4> Suorittimen luomat pinokehykset keskeytyksiss&auml; ja poikkeuksissa ovat erilaiset 68k-perheen j&auml;senille. 68000:lla pinokehys on 6 tavua, paitsi v&auml;yl&auml;- ja osoitevirheiss&auml;. Pinokehys sis&auml;lt&auml;&auml; tallennetun SR:n osoitteessa (a7) ja tallennetun PC:n osoitteessa (2,a7). Kaikilla muilla suorittimilla (68010+) pinokehyksen minimi on 8 tavua ja se sis&auml;lt&auml;&auml; lis&auml;ksi vektorin numeron sanana osoitteessa (6,a7). T&auml;m&auml; nelj&auml;n sanan pinokehysmuoto <tt>$0</tt> tehd&auml;&auml;n 68010&ndash;68060:lla Trapille &quot;#xx&quot; ja keskeytyksille. Poikkeusten pinokehykset ovat erilaiset jokaisella suorittimella. RTE-k&auml;sky toimii eri tavoin 68000:lla ja 68010+:lla. 68000:lla se palauttaa SR:n ja PC:n ja jatkaa ohjelman suoritusta keskeytetyst&auml; osoitteesta. 68010+:lla se vapauttaa lis&auml;ksi pinokehyksen riippuen sen muodosta. <br>Jotkin ohjelmat pushaavat osoitteen (PC) ja SR:n ja suorittavat sitten RTE-k&auml;skyn. T&auml;m&auml; toimii vain 68000:lla, 68010+:lla tulokset ovat odottamattomia. <br>Jos ohjelma tekee n&auml;in, se on korjattava. Joskus riitt&auml;&auml;, kun RTE:n korvaa RTR:ll&auml;.<h4>MOVEM.x RL,-(An) 68000/010:lla ja 68020-68060:ll&auml;</h4>T&auml;ss&auml; on eroa sen mukaan, onko ennen v&auml;hennyst&auml; k&auml;ytetty rekisteri (RL) my&ouml;s rekisteriluettelossa. 68020-68060:ll&auml; muistiin kirjoitettu arvo on rekisterin alkuarvo v&auml;hennettyn&auml; operaation koolla. 68000 ja 68010 kirjoittavat rekisterin alkuarvon (ilman v&auml;hennyst&auml;).<br> T&auml;st&auml; ongelmasta k&auml;rsivi&auml; ohjelmistoja ei ole tiedossa.<h3>Yleisohjeita asennusohjelmien kirjoitukseen</h3>
+<ul>
+
+<li>&Auml;l&auml; muokkaa suoritinrekistereit&auml;, jotka ovat k&auml;yt&ouml;ss&auml; uudemmissa suorittimissa, kuten VBR:&auml;&auml; tai CACR:&auml;&auml;. VBR on Slaven ohjelmoijan n&auml;k&ouml;kulmasta aina 0, vaikka sit&auml; siirrett&auml;isiin autovektorien (ja trapien, jos <a
+href="../autodoc.html#WHDL_EmulTrap">WHDL_EmulTrap</a>-lippu on asetettu) emuloinnin vuoksi. CACR:n bitit ovat erilaiset jokaiselle suorittimelle. <a href="cache.html">V&auml;limuistien</a> k&auml;ytt&ouml;&ouml;n on vain yksi kelvollinen tapa. K&auml;yt&auml; <a
+href="../autodoc.html">resload_SetCACR/SetCPU</a>-funktiota ja bittim&auml;&auml;rityksi&auml; include-tiedostoista  &apos;exec/execbase.i&apos; ja &apos;whdload.i&apos;. My&ouml;s kaikki ohjelman osat, jotka kuormittavat n&auml;it&auml; rekistereit&auml; on kytkett&auml;v&auml; pois tai ohitettava, sill&auml; WHDLoad ei voi muuten toimia oikein!<li>&Auml;l&auml; muokkaa levynkuvia. T&auml;ll&auml; on se etu, ett&auml; jos joku haluaa k&auml;ynnist&auml;&auml; ohjelman levykkeelt&auml;, tarvitsee vain kirjoittaa kuva takaisin levylle (olettaen, ett&auml; ohjelma toimii ilman useita korjauksia).<li> &Auml;l&auml; k&auml;yt&auml; ohjelman alkuper&auml;isi&auml; osia suoraan Slavessa (tekij&auml;noikeussyist&auml;).<li>Ota v&auml;limuistit k&auml;ytt&ouml;&ouml;n vain, jos olet varma, ett&auml; se toimii kaikilla suorittimilla.<li>K&auml;yt&auml; mahdollisimman v&auml;h&auml;n muistia <a
+href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a>-arvona. Joillakin on muistinvaraisia tunnisteita Chip-muistin lopussa, joten kannattaa k&auml;ytt&auml;&auml; arvoa<tt>$1f0000</tt> arvon <tt>$200000</tt> sijaan, ja WHDLoad voi k&auml;ytt&auml;&auml; absoluuttista varattua muistia.</ul>
+<h3>Vinkkej&auml; ja jippoja</h3>
+
+<h4>Kumpi on parempi, levynkuvien vai tiedostojen k&auml;ytt&ouml;?</h4> Joskus voit k&auml;ytt&auml;&auml; joko levynkuvia tai oikeita tiedostoja. Molemmissa on etunsa. Levynkuvat ovat yleens&auml; helpompi ja nopeampi tapa kirjoittaa Slave. Toisaalta oikeat tiedostot on helpompi kopioida v&auml;limuistiin (jos muistia on v&auml;h&auml;n tai se on pirstoutunut). Kiintolevylt&auml; tarvittava tila on my&ouml;s pienempi oikeilla tiedostoilla kuin levynkuvilla. K&auml;yt&auml; levynkuvia vain, jos tiedostoja on paljon (yli 30).</BODY>
+</HTML>

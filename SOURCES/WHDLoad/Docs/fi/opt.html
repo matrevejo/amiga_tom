@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+<TITLE>Käyttö ja valinnat</TITLE>
+<meta name="DC.Language" content="fi">
+<meta http-equiv="content-language" content="fi">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<!-- $Id: opt.html 1.11 2021/12/21 21:58:14 wepl Exp wepl $ -->
+</HEAD>
+<BODY>
+<h3>Käyttö</h3>
+WHDLoad voidaan käynnistää komentoriviltä (CLI/Shell) tai Workbenchista. Valinnat voidaan määrittää yleisessä asetustiedostossa sekä argumentteina tai Tooltypen kautta. <a href="#Slave">Slave</a>-valinta vaaditaan yleensä. Muitakin valintoja saatetaan tarvita riippuen laitteistostasi ja WHDLoadilla suoritettavasta ohjelmasta. Käynnistettäessä komentoriviltä WHDLoad antaa poistumisen yhteydessä seuraavat paluukoodit:
+<ul>
+<li>0 - onnistunut suoritus
+<li>5 - Esilataus on keskeytetty painamalla Esc-näppäintä käynnistysikkunassa
+<li>10 - virhe, Slave-ohjelmaa ei voitu suorittaa aiempien ongelmien vuoksi, virheviesti näytetään
+<li>20 - vakava virhe, ei riittävästi muistia
+<li>&gt; 100 - Slave on suoritettu ja se antaa paluukoodin 100 + TDREASON
+</ul>
+
+<h3>Valinnat ja yleiset asetukset</h3>
+Valintoja on kahta tyyppiä, paikallisia ja yleisiä. Paikalliset valinnat määritetään komentorivin argumentteina tai ToolTypesin kautta, kun ohjelma käynnistetään Workbenchista. <br/>Jos jokin valinta on määritetty sekä yleisesti että paikallisesti, paikallinen määritys korvaa yleisen. Voit asettaa esimerkiksi yleisen <a href="#QuitKey">QuitKey</a>-asetuksen kaikille asennetuille ohjelmille ja määrittää yksittäisen <a href="#QuitKey">QuitKey</a>-asetuksen asennuskohtaisesti kuvakkeen Tooltypen kautta. <br/>Jos WHDLoad käynnistetään Workbenchistä kuvakkeen kautta, se yrittää päivittää kuvaketta valintojen <a href="#PreloadSize">PreloadSize</a> ja <a href="#Config">Config</a> sekä mahdollisten käynnistysikkunassa tehtyjen muutosten osalta. Jos tällainen toiminta halutaan käyttöön myös komentoriviltä käynnistettäessä, on Workbench-käynnistystä simuloitava esim. WBRun-työkalulla (sisältyy OS3.5/3.9:ään). <br/>Yleinen asetustiedosto on "<code>S:WHDLoad.prefs</code>". Se on tavallinen ASCII-tiedosto ja sisältää yhden valinnan riviä kohti. Tyhjät rivit ja kommentit jätetään huomiotta. Kommentit ovat rivipohjaisia, alkavat merkillä "<code>;</code>" ja jatkuvat rivin loppuun. <br/>Esimerkki asetustiedostosta on WHDLoad-paketissa ("<code><a href="../../S/WHDLoad.prefs">S/WHDLoad.prefs</a></code>").
+
+<h3>Luettelo käytettävissä olevista valinnoista</h3>
+
+<p>valintoja on kolmea tyyppiä:
+<table cellpadding=3>
+  <tr>
+    <td valign=top>numeeriset:</td>
+    <td>valinnan arvo on kokonaisluku,<br/> komentorivillä tulee käyttää desimaalimerkintää, ToolTypessä voidaan käyttää myös heksadesimaalia, jonka alussa on "<code>$</code>"
+    </td>
+  </tr>
+  <tr>
+    <td>merkkijono:</td>
+    <td>valinnan arvo on merkkijono</td>
+  </tr>
+  <tr>
+    <td>kytkin:</td>
+    <td>valinta otetaan käyttöön, jos se määritetään (boolean)</td>
+  </tr>
+</table>
+
+<p>Paikallinen-sarake näyttää, voidaanko valintaa käyttää komentorivillä ja kuvakkeen tooltypenä. Yleinen-sarake näyttää, voidaanko valintaa käyttää yleisessä asetustiedostossa.
+
+<p>Monet valinnoista eivät ole käytettävissä erikoisversio <a href="cd32.html">WHDLoadCD32</a>:ssa. CD³²-sarake näyttää, onko valinta käytettävissä tässä WHDLoadin erikoisversiossa.
+
+<table border=1 cellpadding=3>
+<tr><th>Valinnan nimi</th><th>Tyyppi</th><th>Paikallinen</th><th>Yleinen</th><th>CD³²</th><th>Oletusarvo</th></tr>
+<tr><td><a href="#BranchCache">BranchCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ButtonWait">ButtonWait</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#Cache">Cache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#Chk">Chk</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkAudPt">ChkAudPt</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltHog">ChkBltHog</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltSize">ChkBltSize</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkBltWait">ChkBltWait</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkColBst">ChkColBst</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkCopCon">ChkCopCon</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChkInts">ChkInts</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ChipNoCache">ChipNoCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#Config">Config</a></td><td>merkkijono</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>""</td></tr>
+<tr><td><a href="#ConfigDelay">ConfigDelay</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>400</td></tr>
+<tr><td><a href="#CoreDump">CoreDump</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#CoreDumpPath">CoreDumpPath</a></td><td>merkkijono</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>PROGDIR:</td></tr>
+<tr><td><a href="#Custom">Custom</a></td><td>merkkijono</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>""</td></tr>
+<tr><td><a href="#Custom">Custom1</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom2</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom3</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom4</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#Custom">Custom5</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#D">D</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Data">Data</a></td><td>merkkijono</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>-</td></tr>
+<tr><td><a href="#DebugKey">DebugKey</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#DCache">DCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#ExecuteCleanup">ExecuteCleanup</a></td><td>merkkijono</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecutePreDisk">ExecutePreDisk</a></td><td>merkkijono</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecutePostDisk">ExecutePostDisk</a></td><td>merkkijono</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ExecuteStartup">ExecuteStartup</a></td><td>merkkijono</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#Expert">Expert</a></td><td>kytkin</td><td align=center>-</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">ExpChip</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">ExpLocal</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Exp">Exp24Bit</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#FileLog">FileLog</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#FreezeKey">FreezeKey</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#FullChip">FullChip</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#LogBuffer">LogBuffer</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>4096</td></tr>
+<tr><td><a href="#MMU">MMU</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoAutoVec">NoAutoVec</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoCache">NoCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoFileCache">NoFileCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoFilter">NoFilter</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoFlushMem">NoFlushMem</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoMemReverse">NoMemReverse</a></td><td>kytkin</td><td align=center>-</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoMMU">NoMMU</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoNetwork">NoNetwork</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoResInt">NoResInt</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoReq">NoReq</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#NoVBRMove">NoVBRMove</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>x</td></tr>
+<tr><td><a href="#NoWriteCache">NoWriteCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NoWriteInfo">NoWriteInfo</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>-</td></tr>
+<tr><td><a href="#NTSC">NTSC</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#PAL">PAL</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#Preload">Preload</a></td><td>kytkin</td><td align=center>x</td><td align=center>x</td><td align=center>x</td></tr>
+<tr><td><a href="#PreloadSize">PreloadSize</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Proxy">Proxy</a></td><td>merkkijono</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#QuitKey">QuitKey</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>$59 (F10)</td></tr>
+<tr><td><a href="#ReadDelay">ReadDelay</a></td><td>numeerinen</td><td align=center>-</td><td align=center>x</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#RestartKey">RestartKey</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>$78 (CAA)</td></tr>
+<tr><td><a href="#SaveDir">SaveDir</a></td><td>merkkijono</td><td align=center>x</td><td align=center>-</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#SavePath">SavePath</a></td><td>merkkijono</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>-</td></tr>
+<tr><td><a href="#ShowRegs">ShowRegs</a></td><td>merkkijono</td><td align=center>-</td><td align=center>x</td><td align=center>-</td><td>SYS:Utilities/MultiView</td></tr>
+<tr><td><a href="#Slave">Slave</a></td><td>merkkijono</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>WHDLoad.Slave</td></tr>
+<tr><td><a href="#Snoop">Snoop</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopAGA</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopECS</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#Snoop">SnoopOCS</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#SplashDelay">SplashDelay</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>x</td><td>200</td></tr>
+<tr><td><a href="#StoreBuffer">StoreBuffer</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#SuperScalar">SuperScalar</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#TimeOut">TimeOut</a></td><td>numeerinen</td><td align=center>x</td><td align=center>-</td><td align=center>x</td><td>0</td></tr>
+<tr><td><a href="#WriteCache">WriteCache</a></td><td>kytkin</td><td align=center>x</td><td align=center>-</td><td align=center>-</td></tr>
+<tr><td><a href="#WriteDelay">WriteDelay</a></td><td>numeerinen</td><td align=center>x</td><td align=center>x</td><td align=center>-</td><td>150</td></tr>
+</table>
+<h4>Käyttöesimerkki</h4>
+<table cellpadding=3>
+  <tr>
+    <td valign=top><a name="optwb">Workbench:</a></td>
+    <td><img src="../pic/wbopt.gif" alt="Workbench-valinnat"/></td>
+  </tr>
+  <tr>
+    <td valign=top><a name="optcli">CLI tai Shell:</a></td>
+    <td><tt>1&gt; WHDLoad SuperGame.Slave Preload NTSC QuitKey=69 Custom1=1</tt></td>
+  </tr>
+</table>
+<h3>Jokaisen valinnan kuvaus</h3>
+
+
+
+<a name="ButtonWait"></a><h4>ButtonWait/S</h4> Valinta ei vaikuta itse WHDLoadiin, mutta Slave-ohjelma voi testata sen. <br/>Valinnan merkitys on, että jos se on valittuna, käyttäjä haluaa asennetun ohjelman odottavan näppäimen painallusta näyttäessään kuvia ja/tai soittaessaan musiikkia, mikä normaalisti kestäisi todella lyhyen ajan (kiintolevy/RAM-latauksen ollessa huomattavasti levykkeeltä lataamista nopeampaa). 
+
+<a name="BranchCache"></a><h4>BranchCache/S</h4> Tämä valinta ottaa 68060:n branch cache -toiminnon käyttöön. Muilla suoritintyypeillä sillä ei ole vaikutusta. <br/>Valinnalla ei ole vaikutusta, jos <a href="#NoCache">NoCache/S</a> on myös asetettuna.
+
+<a name="Cache"></a><h4>Cache/S</h4> Tämä valinta ottaa asennetulle ohjelmalle käyttöön käskyvälimuistin ja kytkee datavälimuistin pois. 68030:llä myös instruction burst otetaan käyttöön. Mikäli MMU on WHDLoadin käytössä, se merkitsee Chip-muistin tilaan Cacheable Writethrough (epätarkka). <br/>Valinnalla ei ole vaikutusta, jos <a href="#NoCache">NoCache/S</a> on myös asetettuna.
+
+<a name="Chk"></a><h4>Chk/S</h4> Tämä valinta on oikotie, joka kytkee valinnat <a href="#ChkBltSize">ChkBltSize/S</a>, <a href="#ChkBltWait">ChkBltWait/S</a> ja <a href="#ChkColBst">ChkColBst/S</a>.
+
+<a name="ChkAudPt"></a><h4>ChkAudPt/S</h4> Tämä valinta tarkistaa, että Custom-äänidataosoittimiin kirjoitetut osoittimet ovat kelvollisissa chip-muistin osoitteissa. Osoittimet eivät saa olla tyhjäarvoisia ja niiden tulee olla BaseMem-arvon sisällä. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa. Tästä ominaisuudesta on apua selvitettäessä äänen toistorutiineihin liittyviä ongelmia.
+
+<a name="ChkBltHog"></a><h4>ChkBltHog/S</h4> Tämä valinta tarkistaa jatkuvasti, että bitti <code>blthog</code> (<code>bltpri</code>) rekisterissä custom.dmacon ei ole asetettuna. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa. Kun <code>blthog</code> on käytössä, blitteri on etusijalla suorittimeen nähden muistin käytössä, mikä voi aiheuttaa ongelmia tietyillä kokoonpanoilla. Ajoittain voi olla myös tehokkaampaa antaa suorittimelle muutamia väyläjaksoja.
+
+<a name="ChkBltSize"></a><h4>ChkBltSize/S</h4> Tämä valinta tarkistaa, että asennettu ohjelma käyttää blitteriä oikein, jotta vain kelvollisia muistialueita käytetään blitteritoimenpiteisiin. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa. Viivanpiirtotilaa lukuun ottamatta kaikki blitteritoimenpiteet tarkistetaan.
+
+<a name="ChkBltWait"></a><h4>ChkBltWait/S</h4> Tämä valinta tarkistaa, että asennettu ohjelma odottaa oikein blitterin vapautumista ennen uuden blitterityön aloitusta. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa.
+
+<a name="ChkColBst"></a><h4>ChkColBst/S</h4> Tämä valinta tarkistaa jatkuvasti, että bitti <code>color</code> rekisterissä <code>custom.dmacon</code> on asetettuna. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa. Jotkin laitteet, erityisesti flickerfixerit, vaativat tämän bitin asettamista, jotta videosignaali näkyy oikein. Tämä bitti pitäisi siis aina asettaa, että saavutetaan paras yhteensopivuus. Suorat kirjoitukset rekisteriin <code>custom.bplcon0</code> sekä kaikki Copper-listat tarkistetaan.
+
+<a name="ChkCopCon"></a><h4>ChkCopCon/S</h4> Tämä valinta tarkistaa, että asennettu ohjelma ei anna Copperille pääsyä DMA-rekistereihin asettamalla <code>custom.copcon</code>-bittiä. Ominaisuus toimii vain yhdessä jonkin valinnoista <a href="snoop.html">SnoopOCS/SnoopECS/SnoopAGA</a> kanssa. Ajoittain voi olla tarpeen tunnistaa, käyttävätkö ohjelmat Copperia ohjaamaan DMA-toimintaa.
+
+<a name="ChkInts"></a><h4>ChkInts/S</h4> Tämä valinta tarkistaa jokaisen keskeytyksen kohdalla, onko ko. keskeytykselle yhteensopiva pari asetettu kohteissa <code>intreq</code> ja <code>intena</code>. Mikäli näin ei ole, asennettu ohjelma pysäytetään sopivalla virhekoodilla. Tämän toiminnon avulla voidaan helposti havaita keskeytysten kuittausongelmat nopeammilla koneilla (68040/060) tai laitteistoviat, jotka aiheuttavat ei-toivottuja keskeytyksiä. Koska tämä tilanne saattaa aiheutua myös silloin, kun keskeytykset on poistettu asettamalla <code>intena</code> keskeytyksen tapahtumahetkellä, toiminto voidaan kytkeä päälle tai pois. WHDLoad-versiosta 17.1 alkaen tämä vaihtoehto ottaa käyttöön myös keskeytystasoille 4-6 kaikki toimivuus- ja näppäimistötarkistukset, jotka normaalisti tehdään vain tasoilla 1-3.
+
+<a name="ChipNoCache"></a><h4>ChipNoCache/S</h4> Tämä valinta poistaa mahdollisuuden siirtää Chip-muistia (BaseMem) välimuistiin. Sitä tulee käyttää laitteistossa, joka ei salli Chip-muistin siirtämistä välimuistiin (esim. BlizzardPPC-kortit), jotta vältetään asennetun ohjelman hidastelu. Katso myös kohtaa <cite><a href="cache.html#chipmem">Suorittimen välimuistin käsittely</a></cite>.
+
+<a name="Config"></a><h4>Config/K</h4> Tällä valinnalla voidaan määrittää kokoonpanokohteet, jotka näytetään WHDLoadin käynnistysikkunassa. Tämä valinta korvaa Slave-tiedoston <a href="../autodoc.html#ws_config">ws_config</a>-muuttujan arvon. Katso käytettävä syntaksi autodocs-kohdasta <a href="../autodoc.html#ws_config">ws_config</a>.<br/> Jos asetusta <a href="../autodoc.html#ws_config">ws_config</a> ei ole määritetty Slave-tiedostossa tai Config/K-asetuksessa ja Slave tarkistaa kohteet <a href="#custom">Custom1-5/K/N</a> tai <a href="#buttonwait">ButtonWait/S</a> funktion <a HREF="../autodoc.html#resload_Control">resload_Control</a> kautta, WHDLoad lisää Config/K-valinnan kuvakkeeseen Workbenchista käynnistyksen yhteydessä. Kohteiden tyyppi muodostetaan <a href="#custom">Custom1-5/K/N</a>-valintojen todellisista arvoista (0-1 looginen, 2-63 luettelo, &gt;63 binääri).
+
+<a name="ConfigDelay"></a><h4>ConfigDelay/K/N</h4> Tämä valinta määrittää ajan (1/50 s jaksoina), jonka WHDLoad näyttää tietoikkunaa käynnistyksen yhteydessä, jos ko. ikkunassa on painikkeita (ks. <a href="#Config">Config/K</a> ja <a href="#Expert">Expert/S</a>). Jos ConfigDelay/K/N on alempi kuin <a href="#ReadDelay">ReadDelay/K/N</a> tai <a href="#SplashDelay">SplashDelay/K/N</a>, se jätetään huomiotta. Ikkuna näytetään ainakin niin kauan kuin <a href="#Preload">Preload/S</a> on käynnissä. Jos kokoonpanopainiketta painetaan, ConfigDelay-ajastin alkaa uudelleen alusta.<br/> Jos asetukselle annetaan arvo -1, ikkunaan lisätään Start-painike ja ikkuna pysyy auki, kunnes tätä painiketta painetaan. Tietoikkuna voidaan sulkea myös painamalla välilyöntiä, Returnia, Enteriä tai portissa 1 olevan joystickin tulituspainiketta. Jos painetaan Esc, WHDLoad pysäyttää <a href="#Preload">Preload/S</a>-toiminnon ja poistuu välittömästi.
+
+<a name="CoreDump"></a><h4>CoreDump/S</h4> Mikäli tämä on valittuna, WHDLoad luo aina ohjelmasta poistuttaessa <a href="dump.html">muisti- ja rekisteridumpin</a>. Tästä voi olla apua, jos halutaan irrottaa musiikkimoduuli muistidumpista tai etsiä vikaa.
+
+<a name="CoreDumpPath"></a><h4>CoreDumpPath</h4> Kaikkien WHDLoadin <a href="dump.html">dumppitiedostojen</a> kohdehakemisto.
+
+<a name="Custom"></a><h4>Custom/K, Custom1/K/N, Custom2/K/N, Custom3/K/N, Custom4/K/N, Custom5/K/N</h4> WHDLoad itse ei käytä näitä valintoja, mutta Slave-ohjelma voi käyttää niitä ohjaamaan useita ohjelmakohtaisia seikkoja. Custom/K voi sisältää merkkijonon ja Custom1-5/K vain kokonaisluvun. Tarkista kunkin asennustiedoston dokumentoinnista, tukeeko se Custom-valintoja.
+
+<a name="D"></a><h4>D/S</h4>Tämä valinta on hyödyllinen vianetsintään. Mikäli valinta on käytössä ja muistista löytyy tuettu <a href="freezer.html">freezer-ohjelma</a> (HRT/TK), WHDLoad simuloi NMI:tä ennen kuin suorittaa Slave-ohjelman ensimmäisen suoritinkäskyn hypätäkseen freezeriin.
+
+<a name="Data"></a><h4>Data/K</h4>Tällä valinnalla voidaan määrittää hakemisto, joka toimii asennetun ohjelman tiedosto-operaatioiden perushakemistona. Myös useita hakemistoja voidaan määrittää pilkulla erotettuna (joten hakemiston nimessä ei voi olla pilkkua!). Jos datahakemistoja annetaan useita, latauksen yhteydessä ladattavaa tiedostoa etsitään kaikista hakemistoista. Kirjoittaminen tehdään aina ensimmäiseen datahakemistoon. Tämä valinta korvaa Slave-ohjelman <a href="../autodoc.html#ws_CurrentDir">ws_CurrentDir</a>-arvon. 
+
+<a name="DCache"></a><h4>DCache/S</h4> Tämä valinta ottaa asennetulle ohjelmalle käyttöön käsky- ja datavälimuistin. 68030:llä myös instruction burst otetaan käyttöön. Mikäli MMU on WHDLoadin käytössä, se merkitsee Chip-muistin tilaan Cacheable Writethrough (epätarkka). <br/>Valinnalla ei ole vaikutusta, jos <a href="#NoCache">NoCache/S</a> on myös asetettuna.
+
+<a name="DebugKey"></a><h4>DebugKey/K/N</h4> Asettaa <a HREF="rawkey.html">rawkey</a>-koodin, jolla asennettu ohjelma loppuu ja kirjoittaa <a href="dump.html">coredump-tiedostot</a>. Tämä toimii vain, mikäli <a href="#Expert">expert-tila</a> on käytössä ja WHDLoad siirtää VBR:n (<a href="#NoVBRMove">NoVBRMove/S</a> ei ole asetettuna ja suoritin on vähintään 68010) tai jos itse Slave-ohjelma tukee sitä. 
+
+<a name="ExecuteCleanup"></a><h4>ExecuteCleanup</h4> Tällä valinnalla voidaan määrittää komento, jonka WHDLoad suorittaa poistuttaessa. Myös komentosarja voidaan suorittaa käyttämällä järjestelmän Execute-komentoa. <br/>Esimerkki komentosarjasta on WHDLoad-paketissa ("<code><a href="../../S/WHDLoad-Cleanup">S/WHDLoad-Cleanup</a></code>"). 
+
+<a name="ExecutePreDisk"></a><h4>ExecutePreDisk</h4> Tällä valinnalla voidaan määrittää komento, jonka WHDLoad suorittaa ennen kuin se tekee mitään levyoperaatioita tietojen lataamiseksi/tallentamiseksi. Käyttöjärjestelmään vaihdettaessa komento suoritetaan ennen levyn käyttöä. Se suoritetaan myös poistuttaessa WHDLoadista. 
+
+<a name="ExecutePostDisk"></a><h4>ExecutePostDisk</h4> Tällä valinnalla voidaan määrittää komento, jonka WHDLoad suorittaa tehtyään levyoperaatioita tietojen lataamiseksi/tallentamiseksi. Käyttöjärjestelmään vaihdettaessa komento suoritetaan levyn käytön jälkeen. Se suoritetaan myös WHDLoadin käynnistyessä. 
+
+<a name="ExecuteStartup"></a><h4>ExecuteStartup</h4> Tällä valinnalla voidaan määrittää komento, jonka WHDLoad suorittaa käynnistettäessä. Tätä voidaan käyttää kytkemään pois laitteita, jotka aiheuttavat ongelmia WHDLoadin kanssa, kuten IP- tai USB-pino. Lisätietoja on luvussa <a href="bugs.html">Bugit</a>. Myös komentosarja voidaan suorittaa käyttämällä järjestelmän Execute-komentoa. <br/>Esimerkki komentosarjasta on WHDLoad-paketissa ("<code><a href="../../S/WHDLoad-Startup">S/WHDLoad-Startup</a></code>"). 
+
+<a name="Expert"></a><h4>Expert/S</h4> Tämä valinta kytkee WHDLoadin expert-tilaan. Tällä hetkellä se vaikuttaa <a href="#DebugKey">DebugKey/S</a>-ominaisuuteen sekä varoituksiin vaihdettaessa asennetun ohjelman ja käyttöjärjestelmän välillä (väriliuku-copperruudut). Mikäli expert-tila ei ole käytössä, <a href="#DebugKey">DebugKey/S</a> ei ole käytettävissä. Expert-tilassa joihinkin WHDLoadin virheilmoituksiin ilmestyy myös toinen painike. Painike <a href="#ShowRegs"><i>Show Regs</i></a> näyttää rekisteri- ja tilatietoa samalla tavoin kuin <a href="dump.html#register">rekisteridumppi</a>. Lisäksi <a href="#ConfigDelay">käynnistysikkunaan</a> lisätään muutamia painikkeita, joista voidaan vaihtaa vianetsintään liittyviä valintoja. Käynnistysikkunassa muutetut valinnat tallennetaan kuvakkeeseen Workbenchista käynnistyksen yhteydessä. 
+
+<a name="Exp"></a><h4>ExpChip/S, ExpLocal/S, Exp24Bit/S</h4>Mikäli asennettu ohjelma käyttää laajennettua muistia (<a href="../autodoc.html#ws_ExpMem">ws_ExpMem</a>), näillä valinnoilla WHDLoad voidaan pakottaa varaamaan tämä muisti Chip-, Local- tai 24BitDma-muistista. Tämä saattaa huonontaa suorituskykyä, sillä määritetty muisti saattaa olla hitaampaa CPU:n käytössä oletusarvoiseen Fast-muistiin verrattuna. Ulkopuolisten työkalujen (esim. SysInfo, GvpInfo) avulla voit tarkistaa muistiasetuksesi ja katsoa, millä muistilla on mitkäkin ominaisuudet.<br/>Näitä valintoja käytetään korjaamaan yhteensopivuusongelmia asennetuissa ohjelmissa nopeilla koneilla: suoritusnopeutta hidastetaan ohjaamalla suoritus hitaampaan muistiin. 
+
+<a name="FileLog"></a><h4>FileLog/S</h4> Tätä valintaa käytetään vain vianetsintätarkoituksiin. Lisätietoja on kohdassa <cite><a href="dump.html#FileLog">Dumpit ja lokitiedostot</a></cite>. 
+
+<a name="FreezeKey"></a><h4>FreezeKey/K/N</h4> Jos käytät tuettua freezer-ohjelmaa (HRTMon tai Thrillkill), voit tämän valinnan kautta asettaa <a HREF="rawkey.html">rawkey</a>-koodin, jota painettaessa WHDLoad siirtyy freezeriin. Jotta tämä toimii, WHDLoadin on siirrettävä VBR (<a href="#NoVBRMove">NoVBRMove/S</a> ei saa olla asetettuna ja suorittimen on oltava vähintään 68010) ja freezer-ohjelman on oltava aktiivinen. Katso lisätietoa myös luvusta <a href="freezer.html">Järjestelmämonitorit / Muistin jäädytys</a>. 
+
+<a name="FullChip"></a><h4>FullChip/S</h4> Kun tämä valinta määritetään, WHDLoad ei tallenna ja palauta ainoastaan Slave-tiedostossa arvolla <a href="../autodoc.html#ws_BaseMemSize">ws_BaseMemSize</a> määritettyä chip-muistialuetta vaan koko chip-muistin (execbase.MaxLocMem). Jos WHDLoad suojaa muistia MMU:lla, tämä kattaa vain suorittimen laittomat muistikäytöt. Suorat muistioperaatiot kuten Blitter/Disk-DMA eivät ole suojattuja. Nämä DMA-toimet voivat sekoittaa chip-muistin ilman, että WHDLoadin muistinsuojaus havaitsee sitä. Kun tämä valinta on valittuna, tällaiset ongelmat eivät voi vahingoittaa isäntäkäyttöjärjestelmää, koska koko chip-muisti tallennetaan ja palautetaan. <br/>Ennen asennetun ohjelman käynnistystä tallennetun chip-muistin lisäosa (osa BaseMemSize- ja MaxLocMem-muuttujien välissä) täytetään erityisellä merkkijonolla. Kun asennettu ohjelma palaa, WHDLoad tarkistaa, onko muistin lisäosaa muutettu. Jos muutos havaitaan, WHDLoad antaa asiasta virheilmoituksen. Vain tässä tapauksessa lisämuisti kirjoitetaan <a href="dump.html#memory">muistidumppitiedostoon</a> (ei <a href="dump.html#complete">täydelliseen dumppitiedostoon</a>), josta asiaa voidaan tutkia lähemmin. <br/>Tästä toiminnosta voi olla hyötyä kehityksessä/vianetsinnässä, koska se välttää isäntä-AmigaOS:n vahingoittumista. Sillä voidaan myös tilapäisesti korjata rikkinäiset asennustiedostot, jotka eivät täysin korjaa kaikkia asennetun ohjelman virheitä. <br/>FullChip/S ei voi olla käytössä yhtä aikaa valinnan <a href="#Exp">ExpChip/S</a> kanssa. Jos molemmat asetetaan, FullChip/S ohitetaan. 
+
+<a name="LogBuffer"></a><h4>LogBuffer/K/N</h4> Tällä valinnalla voidaan määrittää WHDLoadin sisäinen puskuri, jolla siirretään lokiviestejä <a href="#FileLog">FileLog/S</a>-ominaisuudelta ja <a HREF="../autodoc.html#resload_Log">resload_Log</a>-funktiolta. Puskurin pituus on oletuksena 4096 tavua. Puskuri varataan vain, jos valinta <a href="#FileLog">FileLog/S</a> on määritetty. Jos puskuri on täynnä, WHDLoad keskeyttää asennetun ohjelman ja siirtyy käyttöjärjestelmään tyhjentämään puskurin ja kirjoittamaan sen sisällön lokitiedostoon. Jotta tällaiset siirtymät voidaan välttää, puskurin koko pitää valita riittävän suureksi, jotta siihen mahtuu mahdollisimman monia merkintöjä. 
+
+<a name="MMU"></a><h4>MMU/S</h4> Tätä valintaa tulee käyttää 68030-koneissa, jotta saadaan MMU-toiminnot käyttöön (<a href="mmu.html#mem">muistin suojaus</a>, parannettu <a href="mmu.html#cache">välimuistin hallinta</a>, <a href="snoop.html">Nuuskinta</a> ja <a HREF="../autodoc.html#resload_ProtectRead">resload_Protect#?</a>-toiminnot). Tällä valinnalla ei ole vaikutusta 68040/060-suorittimissa, koska MMU on oletuksena käytössä. On suositeltavaa asettaa valinta yleisessä asetustiedostossa kaikissa järjestelmissä, joissa on 68030 toimivalla MMU:lla (ts. ei 68ec030), koska se parantaa vakautta ja turvallisuutta huomattavasti. Mikäli valinta <a href="#NoMMU">NoMMU/S</a> on myös asetettuna, tällä valinnalla ei ole vaikutusta. 
+
+<a name="NoAutoVec"></a><h4>NoAutoVec/S</h4> Mikäli tämä valinta on asetettuna, WHDLoad ei keskeydy, jos saadaan odottamaton autovector-keskeytys tai NMI (vektorit #25-31 / $64-$7c). Tätä voidaan käyttää järjestelmissä, joissa syntyy satunnaisesti tällaisia keskeytyksiä, jolloin WHDLoad ei keskeydy. Huomaa kuitenkin, että tämä valinta ei korjaa rikkinäistä laitteistoa, joka synnyttää tällaisia keskeytyksiä. Jotkin asennetut ohjelmat eivät ehkä toimi oikein silloinkaan, kun tämä valinta on valittuna. Parempi olisi siis poistaa (tai korjata, jos mahdollista) keskeytyksiä synnyttävä laitteisto. 
+
+<a name="NoCache"></a><h4>NoCache/S</h4> Mikäli tämä on valittuna, kaikki <a href="cache.html">välimuistit</a> kytketään pois. <br/>Tämä valinta ohittaa valinnat <a href="#BranchCache">BranchCache/S</a>, <a href="#Cache">Cache/S</a>, <a href="#DCache">DCache/S</a>, <a href="#StoreBuffer">StoreBuffer/S</a> ja <a href="#SuperScalar">SuperScalar/S</a>.<h4>NoFileCache/S</h4> Kytkee WHDLoadin tiedostovälimuistin pois ja pakottaa siirtymään käyttöjärjestelmään aina asennetun ohjelman käyttäessä levyä. <br/>Tämä valinta kytkee pois valinnan <a href="#Preload">Preload/S</a>. 
+
+<a name="NoFilter"></a><h4>NoFilter/S</h4> Kytkee audiosuotimen pois. Huomaa, että tämä valinta vaikuttaa vain alustukseen käynnistyksen yhteydessä; jos itse ohjelma muuttaa äänisuotimen tilaa, tällä valinnalla ei ole vaikutusta. 
+
+<a name="NoFlushMem"></a><h4>NoFlushMem/S</h4> Normaalisti WHDLoad tyhjentää muistin käynnistyksen yhteydessä, jotta <a href="#Preload">Preload/S</a>-toimintoa varten saadaan mahdollisimman paljon vapaata muistia. Se poistaa muistista käyttämättömät resurssit, kuten kirjastot, fontit jne. Tätä valintaa käytettäessä WHDLoad ei tyhjennä muistia. Sitä voidaan käyttää järjestelmissä, joissa on paljon vapaata muistia. Muistinvaraisia resursseja ei tarvitse ladata uudestaan, jolloin järjestelmän suorituskyky paranee. 
+
+<a name="NoMemReverse"></a><h4>NoMemReverse/S</h4> Jos tämä valinta on käytössä, WHDLoad ei varaa muistia MEM_REVERSE -lipulla. On raportoitu, että tämän lipun käyttö aiheuttaa ongelmia tietyillä laitteistokokoonpanoilla (esim. jos käytetään A600/A1200:n PCMCIA-paikassa olevaa muistia fast-muistina tai M-Tec 1230/8 MB -lisäkorttia OS3.0:ssa). Ongelmien syytä ei tunneta. Valinnasta voi olla apua myös, jos ylemmässä muistissa on vikaa, koska WHDLoad käyttää tällöin ensin alempien osoitteiden muistia. Jos saat outoja virheilmoituksia, tätä valintaa kannattaa kokeilla.<br/> Tämä valinta on aina aktiivinen Kickstart 2.0:ssa (V37), koska tässä Kickstartissa on virhe joka saattaa jumittaa toiminnan exec.AllocMemin aikana. 
+
+<a name="NoMMU"></a><h4>NoMMU/S</h4> Mikäli tämä valinta on asetettuna, WHDLoad ei käytä MMU:ta. Tämä on kriittinen ja vaarallinen valinta, jota suositellaan vain testaukseen ja vianetsintään, ei normaaliin käyttöön. Lisätietoja on luvussa <a href="mmu.html#usercontrol">MMU</a>. Tämä valinta ohittaa valinnan <a href="#MMU">MMU/S</a>. 
+
+<a name="NoNetwork"></a><h4>NoNetwork/S</h4> Jos tämä valinta on käytössä, WHDLoad ei yritä muodostaa internetyhteyttä ja tehdä <a href="net.html">päivitystarkistusta</a> käytössä olevalle Slave-tiedostolle ja itse WHDLoadille. 
+
+<a name="NoReq"></a><h4>NoReq/S</h4> Tätä valintaa voidaan käyttää vain, kun WHDLoad on käynnistetty komentoriviltä (CLI/Shell). Workbenchista käynnistettynä sillä ei ole vaikutusta. Tämä valinta aiheuttaa sen, että WHDLoad ei näytä valitsimia uudessa, erillisessä ikkunassa vaan ohjaa tulostuksen komentoikkunaan, josta WHDLoad on käynnistetty. 
+
+<a name="NoResInt"></a><h4>NoResInt/S</h4> Tämä valinta kytkee keskeytykset pois päältä suoritettaessa resload-toimintoja. Normaalisti keskeytykset sallitaan resload-toimintojen aikana. Keskeytykset saattavat toistaa ääntä, päivittää ruutua tai tehdä muuta tärkeää. Niiden estäminen saattaa aiheuttaa äänen/kuvan häiriötä tai yleisempää väärää toimintaa. Virheellisesti toimivat keskeytykset voivat kuitenkin tuhota WHDLoadin data-alueita, mikä johtaa useimmiten WHDLoadin ja todennäköisesti koko käyttöjärjestelmän kaatumiseen. Tällä valinnalla voidaan tarkkailla näitä ongelmia. Mikäli asennustiedosto käyttäytyy oudosti tai kaataa WHDLoadin ilman tätä valintaa, mutta toimii hyvin valinnan kanssa, syynä on hyvin todennäköisesti keskeytysongelma. Tällöin asennustiedosto tulee korjata.<br/> WHDLoad-versiosta 17.0 alkaen blitterin aktiivisuus tarkistetaan resload-funktioon siirryttäessä. Jos blitteri on aktiivinen, WHDLoad sulkeutuu ja antaa tästä ilmoituksen. 
+
+<a name="NoVBRMove"></a><h4>NoVBRMove/S</h4>Oletuksena WHDLoad siirtää vektoritaulukon VBR:n (Vector Base Register) avulla eri muistiosoitteeseen. Tämän etu on, että asennettu ohjelma ei voi muuttaa vektoritaulukkoa, mikä parantaa huomattavasti WHDLoadin turvallisuutta ja vakautta. Jotkin asennetut ohjelmat eivät toimi oikein siirretyllä vektoritaulukolla. Syynä voi olla, että asennettu ohjelma käyttää suorittimen poikkeuksia tai tekee muuta outoa. Tässä tapauksessa valinta tulee asettaa, jotta WHDLoad ei siirrä vektorien alkuosoitetta. <br/>Toinen siirretyn VBR:n ominaisuus on, että WHDLoad voi tarkistaa näppäimistön tilan joka kerta, kun tapahtuu Autovector-keskeytys. Tämän tarkistuksen avulla WHDLoad voi sulkea asennetun ohjelman siitä itsestään riippumatta, jos <a href="#QuitKey">QuitKey/S</a>- tai <a href="#DebugKey">DebugKey/S</a>-näppäintä painetaan tai siirtyä monitoriin, jos <a href="#FreezeKey">FreezeKey/S</a>-näppäintä painetaan. <br/>VBR:n siirtotoiminto vaatii vähintään 68010-suorittimen. 68000-suorittimella valinnalla ei ole vaikutusta, sillä VBR:ää ei ole ja vektoritaulukko alkaa aina osoitteesta $0 eikä sitä voi siirtää. 68000-suorittimella WHDLoad tukee joitakin erityislaitteistoja (ACA500, Zeus), joiden avulla Autovector-keskeytysvektorit voidaan sijoittaa eri muistipaikkaan. Näin <a href="#QuitKey">QuitKey/S</a>-ominaisuutta voidaan tukea aina. Näitä laitteiston erikoisominaisuuksia ei käytetä, jos tämä valinta on käytössä. 
+
+<a name="NoWriteCache"></a><h4>NoWriteCache/S</h4> Tämä valinta poistaa WHDLoadin levykirjoitusvälimuistin käytöstä. Ilman tätä valintaa WHDLoad yrittää pitää kaikki kirjoitusoperaatiot muistissa ja suorittaa ne vasta poistuttaessa ohjelmasta, jotta vältetään tarpeettomilta siirtymiltä käyttöjärjestelmään. 
+
+<a name="NoWriteInfo"></a><h4>NoWriteInfo/S</h4> Mikäli tämä valinta on asetettuna, WHDLoad ei päivitä .info-tiedostoa Workbenchistä käynnistettäessä. Normaalisti WHDLoad päivittää PreloadSize-Tooltypen, jos sitä on muutettu, ja päivittää valinnat kuten <a href="#custom">Custom1-5/K/N</a> ja <a href="#buttonwait">ButtonWait/S</a>, jos niitä on muutettu käynnistysikkunan kautta 
+
+<a name="NTSC"></a><h4>NTSC/S</h4> Mikäli tämä on valittuna, WHDLoad käyttää NTSC-näyttöä (60 Hz) asennetulle ohjelmalle. PAL-Amigassa tulee asentaa NTSC-näyttöajuri hakemistoon "<code>DEVS:Monitors/</code>". 
+
+<a name="PAL"></a><h4>PAL/S</h4> Mikäli tämä on valittuna, WHDLoad käyttää PAL-näyttöä (50 Hz) asennetulle ohjelmalle. NTSC-Amigassa tulee asentaa PAL-näyttöajuri hakemistoon "<code>DEVS:Monitors/</code>". 
+
+<a name="Preload"></a><h4>Preload/S</h4> Mikäli valinta on käytössä, WHDLoad lataa mahdollisimman monta tiedostoa ja levynkuvaa muistiin käynnistyksen yhteydessä. Jos vapaan muistin määrä ei riitä jollekin tiedostolle esilatauksen aikana, esilataus pysähtyy. Tällöin vain osa tiedostoista esiladataan. Tämä parantaa suorituskykyä asennetun ohjelman ollessa käynnissä, koska siten vältetään siirtyminen käyttöjärjestelmään tietojen lataamiseksi suoraan kiintolevyltä. Tämän valinnan tulee olla aina käytössä. 
+
+<a name="PreloadSize"></a><h4>PreloadSize/N</h4> Tämä valinta kertoo WHDLoadille, kuinka paljon dataa voidaan <a href="#Preload">esiladata</a>. Tietoa käytetään vain laskemaan käynnistysikkunan Preload-etenemispalkki. Jos asennettu ohjelma käynnistetään Workbenchista, WHDLoad asettaa/päivittää valinnan ToolTypeen käyttöjärjestelmään paluun yhteydessä (ellei valinta <a href="#NoWriteInfo">NoWriteInfo/S</a> ole käytössä). PreloadSize-lukema ei ole vain kaikkien tiedostojen koon summa. Arvoa ei siis käytännössä pysty laskemaan itse. <br/>Esilatauksessa on kaksi mahdollista vaihetta, jotka näytetään etenemispalkin eri väreillä. WHDLoad kerää järjestelmän metatiedot esiladattavista tiedostoista vain silloin, kun lippu <a href="../autodoc.html#WHDL_Examine">WHDLF_Examine</a> on asetettu Slave-tiedostossa. Ensimmäisen vaiheen väri on oletuksena musta. Toinen vaihe on aina aktiivinen, jos valinta <a href="#Preload">Preload</a> on asetettu. Tämän toisen vaiheen väri on oletuksena sininen. 
+
+<a name="Proxy"></a><h4>Proxy/K</h4> Tällä valinnalla voidaan määrittää HTTP-välityspalvelin, jonka avulla WHDLoad <a href="net.html">muodostaa internetyhteyden</a>. Tästä on hyötyä vain, jos suora yhteys ei ole mahdollinen, koska WHDLoad tekee vain yhden, yksinkertaisen HTTP-pyynnön. Välityspalvelimen määrityksen syntaksi on [käyttäjänimi:salasana@]isäntänimi[:portti]. Välityspalvelimen isäntänimi on pakollinen. Välityspalvelimen portti on valinnainen; jos sitä ei määritetä, käytetään porttia 80. Jos välityspalvelin vaatii todennusta, on määrityksen alkuun lisättävä käyttäjänimi ja salasana. WHDLoad tukee vain perustason todennusta. 
+
+<a name="QuitKey"></a><h4>QuitKey/K/N</h4> Asettaa <a HREF="rawkey.html">rawkey</a>-koodin, jolla ohjelma loppuu; tämä toimii vain, jos WHDLoad on siirtänyt VBR:n (<a href="#NoVBRMove">NoVBRMove/S</a> ei saa olla asetettuna ja suorittimen on oltava vähintään 68010) tai Slave tukee sitä. 
+
+<a name="ReadDelay"></a><h4>ReadDelay/K/N</h4> Tämä valinta määrittää ajan, yksikkönä 1/50s, jonka WHDLoad odottaa ladattuaan tietoa levyltä. Se odottaa tämän ajan myös <a href="#Preload">Preload/S</a>-käskyn suorituksen jälkeen. Tämä ratkaisee ongelmia sellaisten asemien (esim. CD-asemat) kanssa, jotka haluavat tehdä jotain lukemisen jälkeen (esim. kytkeä moottorin pois päältä). 
+
+<a name="RestartKey"></a><h4>RestartKey/K/N</h4> Tämän valinnan avulla voit määrittää <a HREF="rawkey.html">rawkey</a>-koodin, jota painettaessa WHDLoad käynnistää asennetun ohjelman uudestaan. 
+
+<a name="SaveDir"></a><h4>SaveDir/K</h4> Tämä valinta määrittää asennetun ohjelman kirjoitustoimenpiteisiin käytettävän hakemiston yhdessä <a href="#SavePath">SavePath/K</a>-valinnan kanssa. Tämä asetus voi olla tarpeen määrittää erikseen eikä antaa WHDLoadin määrittää sitä, jos olet asentanut pelistä useita versioita, jotka käyttävät samaa Slave-tiedostoa mutta joiden tallennustiedostot ovat epäyhteensopivia. Se saattaa olla hyödyllistä myös jos Slave-tiedosto ei sisällä pelin nimeä, etkä halua tallennushakemiston nimeksi Slave-tiedoston nimeä. 
+
+<a name="SavePath"></a><h4>SavePath/K</h4> Tällä valinnalla WHDLoad pakotetaan ohjaamaan kaikki asennetun ohjelman kirjoitustoimenpiteet eri sijaintiin levyllä. Tämä valinta määrittää kaikkien asennettujen ohjelmien perushakemiston. Jokaisella asennetulla ohjelmalla on sen alla oma alihakemistonsa. WHDLoad luo alihakemiston (ensimmäisellä kirjoituskerralla), jos sitä ei ole olemassa. Alihakemisto voidaan määrittää <a href="#SaveDir">SaveDir/K</a>-valinnalla, tai jos sitä ei ole asetettu, WHDLoad muodostaa sen Slave-tiedoston tiedoista (<a href="../autodoc.html#ws_name">ws_name</a> tai Slave-tiedoston tiedostonimi). Sisäisesti tätä tallennushakemistoa käsitellään ylimääräisenä (ensisijaisena) <a href="#Data">Data</a>-hakemistona. 
+
+<a name="ShowRegs"></a><h4>ShowRegs/K/N</h4> Tämä valinta on hyödyllinen vain valinnan <a href="#Expert">Expert/S</a> kanssa. Tällä valinnalla voidaan määrittää, millä ohjelmalla WHDLoad näyttää rekisteridumpin jos painetaan <i>Show Regs</i> -painiketta WHDLoadin virheilmoituksessa. WHDLoad lisää tilapäisesti tallennetun tiedoston nimen (tällä hetkellä <tt>T:.whdl_register</tt>) määritettyyn komentomerkkijonoon. 
+
+<a name="Slave"></a><h4>Slave</h4> WHDLoadin käyttämän Slave-ohjelman nimi. Slave sisältää rajapintakoodin, jota tarvitaan tiedonsiirtoon asennetun ohjelman ja WHDLoadin välillä. Jos Slaveksi määritetään "*", WHDLoad hakee nykyisestä hakemistosta merkkijonolla ja "#?.slave" käyttää ensimmäistä hakua vastaavaa tiedostoa. Jos hakua vastaavaa tiedostoa ei löydy, virheviestiä varten käytetään oletusarvoa "WHDLoad.Slave". 
+
+<a name="Snoop"></a><h4>Snoop/S, SnoopAGA/S, SnoopECS/S, SnoopOCS/S</h4>
+Nämä valinnat ottavat käyttöön WHDLoadin <a href="snoop.html">CIA/Custom register snoop</a> -toiminnon. 
+
+<a name="SplashDelay"></a><h4>SplashDelay/K/N</h4> Tämä valinta määrittää, kuinka pitkään WHDLoad näyttää tietoikkunan käynnistyksen yhteydessä. Yksikkönä on 1/50 s. Mikäli SplashDelay/K/N on pienempi kuin <a href="#ReadDelay">ReadDelay/K/N</a>, se jätetään huomioimatta, ja ikkunaa näytetään valinnan <a href="#ReadDelay">ReadDelay/K/N</a> määrittämän ajan. Ikkuna näytetään ainakin niin kauan kuin <a href="#Preload">Preload/S</a> on käynnissä.<br/> Jos valinnan arvo on 0, ikkunaa ei näytetä ollenkaan. Jos asetukselle annetaan arvo -1, ikkunaan lisätään Start-painike ja ikkuna pysyy auki, kunnes tätä painiketta painetaan. Käynnistysikkuna voidaan sulkea myös painamalla välilyöntiä, Returnia, Enteriä tai portissa 1 olevan peliohjaimen tulituspainiketta. Jos painetaan Esc, WHDLoad pysäyttää <a href="#Preload">Preload/S</a>-toiminnon ja poistuu välittömästi. Katso myös <a href="#ConfigDelay">ConfigDelay/K/N</a>. 
+
+<a name="StoreBuffer"></a><h4>StoreBuffer/S</h4> Tämä valinta ottaa 68060:n Store Buffer -toiminnon käyttöön. Muilla suoritintyypeillä sillä ei ole vaikutusta. <br/>Valinnalla ei ole vaikutusta, jos <a href="#NoCache">NoCache/S</a> on myös asetettuna. 
+
+<a name="SuperScalar"></a><h4>SuperScalar/S</h4> Tämä valinta ottaa käyttöön 68060:n kyvyn suorittaa useita käskyjä kellojaksolla. Muilla suoritintyypeillä sillä ei ole vaikutusta. <br/>Valinnalla ei ole vaikutusta, jos <a href="#NoCache">NoCache/S</a> on myös asetettuna. 
+
+<a name="TimeOut"></a><h4>TimeOut/K/N</h4> Jos tämä on asetettuna, se antaa WHDLoadin ja asennetun ohjelman päättyä määritellyn ajan jälkeen. Edellyttää, että valinta <a href="#NoVBRMove">NoVBRMove/S</a> ei ole asetettuna, ja että asennettu ohjelma ei muuta <code>ciaa.ciatod</code>-ajastinta. Lopetusaika määritellään yksikkönä 1/50 s. Voit mitata tämän ajan demolle tai pelille ottamalla käyttöön valinnan <a href="#Expert">Expert/S</a> ja asettamalla <a href="#DebugKey">DebugKey/K/N</a>:n; kun haluamasi lopetuskohta saavutetaan, paina debug-näppäintä. Katso nyt luotua<a href="dump.html">.whdl_register</a>-tiedostoa ja etsi arvo <code>ciaa-event</code>. Mikäli virtalähteen taajuus on 50 Hz, arvo on suoraan se, joka tulee asettaa TimeOut/K/N:ään; jos taajuus on 60 Hz, arvo tulee kertoa 5/6:lla. 
+
+<a name="WriteCache"></a><h4>WriteCache/S</h4> Tämä valinta ottaa WHDLoadin levykirjoitusvälimuistin käyttöön. Koska ominaisuus on oletuksena käytössä, valinnan käytössä on järkeä vain jos halutaan korvata aktiivinen paikallinen valinta <a href="#NoWriteCache">NoWriteCache/S</a>. Voit siis kytkeä valinnan pois päältä kaikille asennuksille ja ottaa sen käyttöön vain muutamille. 
+
+<a name="WriteDelay"></a><h4>WriteDelay/K/N</h4> Tämä valinta määrittää ajan, jonka WHDLoad odottaa kirjoitettuaan mitään fyysisesti levylle. Se vaikuttaa kaikkiin <a HREF="../autodoc.html">resload_Save#?</a>-toimintoihin ja <a href="#FileLog">FileLog/S</a>-ominaisuuteen. Tässä on järkeä, koska tiedostojärjestelmät eivät yleensä kirjoita tietoja levylle välittömästi. Kestää jonkin aikaa (1-3 sekuntia) ennen kuin kaikki tiedostojärjestelmän rakenteet on päivitetty onnistuneesti. Oletusarvo WriteDelaylle on 150, jolloin WHDLoad odottaa 3 sekuntia jokaisen kiintolevylle kirjoituksen jälkeen. Voit asettaa arvoksi 0, mutta silloin asennetusta ohjelmasta ei saa poistua resetoimalla konetta, koska tallennetut tiedot eivät ehkä ole kirjoitettuna levylle oikein.
+
+</BODY>
+</HTML>

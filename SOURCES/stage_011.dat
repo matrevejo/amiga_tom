@@ -1,0 +1,3924 @@
+
+
+
+
+
+
+
+
+	dc.w  9
+	dc.b  6,$C
+
+	dc.w  10
+	dc.b  6,$C
+
+	dc.w  11
+	dc.b  6,$C
+
+	dc.w  12
+	dc.b  6,$C
+
+	dc.w  13
+	dc.b  6,$C
+
+	dc.w  14
+	dc.b  6,$C
+
+	dc.w  15
+	dc.b  6,$C
+
+	dc.w  16
+	dc.b  6,$C
+
+	dc.w  17
+	dc.b  6,$C
+
+	dc.w  18
+	dc.b  6,$C
+
+	dc.w  19
+	dc.b  6,$C
+
+	dc.w  20
+	dc.b  6,$C
+
+	dc.w  21
+	dc.b  6,$C
+
+	dc.w  22
+	dc.b  7,$C
+
+	dc.w  23
+	dc.b  7,$C
+
+	dc.w  24
+	dc.b  7,$C
+
+	dc.w  25
+	dc.b  7,$C
+
+	dc.w  26
+	dc.b  7,$C
+
+	dc.w  27
+	dc.b  7,$C
+
+	dc.w  28
+	dc.b  7,$C
+
+	dc.w  29
+	dc.b  7,$C
+
+	dc.w  30
+	dc.b  7,$C
+
+	dc.w  31
+	dc.b  7,$C
+
+
+
+	dc.w  34
+	dc.b  5,$B
+
+	dc.w  35
+	dc.b  5,$B
+
+	dc.w  36
+	dc.b  5,$B
+
+	dc.w  37
+	dc.b  5,$B
+
+	dc.w  38
+	dc.b  5,$B
+
+	dc.w  39
+	dc.b  5,$B
+
+	dc.w  40
+	dc.b  5,$B
+
+	dc.w  41
+	dc.b  5,$B
+
+	dc.w  42
+	dc.b  5,$B
+
+	dc.w  43
+	dc.b  5,$B
+
+	dc.w  44
+	dc.b  5,$B
+
+	dc.w  45
+	dc.b  5,$B
+
+	dc.w  46
+	dc.b  5,$B
+
+	dc.w  47
+	dc.b  5,$B
+
+	dc.w  48
+	dc.b  5,$B
+
+	dc.w  49
+	dc.b  5,$B
+
+	dc.w  50
+	dc.b  5,$B
+
+	dc.w  51
+	dc.b  5,$B
+
+	dc.w  52
+	dc.b  5,$B
+
+	dc.w  53
+	dc.b  5,$B
+
+	dc.w  54
+	dc.b  5,$B
+
+	dc.w  55
+	dc.b  5,$B
+
+	dc.w  56
+	dc.b  5,$B
+
+	dc.w  57
+	dc.b  5,$B
+
+	dc.w  58
+	dc.b  5,$B
+
+	dc.w  59
+	dc.b  4,$B
+
+	dc.w  60
+	dc.b  4,$B
+
+	dc.w  61
+	dc.b  4,$B
+
+	dc.w  62
+	dc.b  4,$B
+
+	dc.w  63
+	dc.b  4,$B
+
+	dc.w  64
+	dc.b  4,$B
+
+	dc.w  65
+	dc.b  4,$B
+
+	dc.w  66
+	dc.b  4,$B
+
+	dc.w  67
+	dc.b  4,$B
+
+	dc.w  68
+	dc.b  4,$B
+
+	dc.w  69
+	dc.b  4,$B
+
+	dc.w  70
+	dc.b  4,$B
+
+	dc.w  71
+	dc.b  4,$B
+
+	dc.w  72
+	dc.b  4,$B
+
+	dc.w  73
+	dc.b  4,$B
+
+	dc.w  74
+	dc.b  4,$B
+
+	dc.w  75
+	dc.b  4,$B
+
+	dc.w  76
+	dc.b  4,$B
+
+	dc.w  77
+	dc.b  4,$B
+
+	dc.w  78
+	dc.b  4,$B
+
+	dc.w  79
+	dc.b  4,$B
+
+	dc.w  80
+	dc.b  4,$B
+
+	dc.w  81
+	dc.b  4,$B
+
+	dc.w  82
+	dc.b  4,$B
+
+	dc.w  83
+	dc.b  4,$B
+
+	dc.w  84
+	dc.b  4,$B
+
+	dc.w  85
+	dc.b  4,$B
+
+	dc.w  86
+	dc.b  4,$B
+
+	dc.w  87
+	dc.b  4,$B
+
+	dc.w  88
+	dc.b  4,$B
+
+	dc.w  89
+	dc.b  4,$B
+
+	dc.w  90
+	dc.b  4,$B
+
+	dc.w  91
+	dc.b  4,$B
+
+	dc.w  92
+	dc.b  4,$B
+
+	dc.w  93
+	dc.b  4,$B
+
+	dc.w  94
+	dc.b  4,$B
+
+	dc.w  95
+	dc.b  5,$0
+	dc.w  95
+	dc.b  6,$0
+	dc.w  95
+	dc.b  7,$0
+	dc.w  95
+	dc.b  8,$0
+	dc.w  95
+	dc.b  9,$0
+	dc.w  95
+	dc.b  10,$0
+	dc.w  95
+	dc.b  11,$0
+	dc.w  95
+	dc.b  12,$0
+
+	dc.w  96
+	dc.b  5,$0
+	dc.w  96
+	dc.b  6,$0
+	dc.w  96
+	dc.b  7,$0
+	dc.w  96
+	dc.b  8,$0
+	dc.w  96
+	dc.b  9,$0
+	dc.w  96
+	dc.b  10,$0
+	dc.w  96
+	dc.b  11,$0
+	dc.w  96
+	dc.b  12,$0
+
+	dc.w  97
+	dc.b  5,$0
+	dc.w  97
+	dc.b  6,$0
+	dc.w  97
+	dc.b  7,$0
+	dc.w  97
+	dc.b  8,$0
+	dc.w  97
+	dc.b  9,$0
+	dc.w  97
+	dc.b  10,$0
+	dc.w  97
+	dc.b  11,$0
+	dc.w  97
+	dc.b  12,$0
+
+	dc.w  98
+	dc.b  5,$0
+	dc.w  98
+	dc.b  6,$0
+	dc.w  98
+	dc.b  7,$0
+	dc.w  98
+	dc.b  8,$0
+	dc.w  98
+	dc.b  9,$0
+	dc.w  98
+	dc.b  10,$0
+	dc.w  98
+	dc.b  11,$0
+	dc.w  98
+	dc.b  12,$0
+
+	dc.w  99
+	dc.b  5,$0
+	dc.w  99
+	dc.b  6,$0
+	dc.w  99
+	dc.b  7,$0
+	dc.w  99
+	dc.b  8,$0
+	dc.w  99
+	dc.b  9,$0
+	dc.w  99
+	dc.b  10,$0
+	dc.w  99
+	dc.b  11,$0
+	dc.w  99
+	dc.b  12,$0
+
+	dc.w  100
+	dc.b  5,$0
+	dc.w  100
+	dc.b  6,$0
+	dc.w  100
+	dc.b  7,$0
+	dc.w  100
+	dc.b  8,$0
+	dc.w  100
+	dc.b  9,$0
+	dc.w  100
+	dc.b  10,$0
+	dc.w  100
+	dc.b  11,$0
+	dc.w  100
+	dc.b  12,$0
+
+	dc.w  101
+	dc.b  5,$0
+	dc.w  101
+	dc.b  6,$0
+	dc.w  101
+	dc.b  7,$0
+	dc.w  101
+	dc.b  8,$0
+	dc.w  101
+	dc.b  9,$0
+	dc.w  101
+	dc.b  10,$0
+	dc.w  101
+	dc.b  11,$0
+	dc.w  101
+	dc.b  12,$0
+
+	dc.w  102
+	dc.b  5,$0
+	dc.w  102
+	dc.b  6,$0
+	dc.w  102
+	dc.b  7,$0
+	dc.w  102
+	dc.b  8,$0
+	dc.w  102
+	dc.b  9,$0
+	dc.w  102
+	dc.b  10,$0
+	dc.w  102
+	dc.b  11,$0
+	dc.w  102
+	dc.b  12,$0
+
+	dc.w  103
+	dc.b  5,$0
+	dc.w  103
+	dc.b  6,$0
+	dc.w  103
+	dc.b  7,$0
+	dc.w  103
+	dc.b  8,$0
+	dc.w  103
+	dc.b  9,$0
+	dc.w  103
+	dc.b  10,$0
+	dc.w  103
+	dc.b  11,$0
+	dc.w  103
+	dc.b  12,$0
+
+	dc.w  104
+	dc.b  5,$0
+	dc.w  104
+	dc.b  6,$0
+	dc.w  104
+	dc.b  7,$0
+	dc.w  104
+	dc.b  8,$0
+	dc.w  104
+	dc.b  9,$0
+	dc.w  104
+	dc.b  10,$0
+	dc.w  104
+	dc.b  11,$0
+	dc.w  104
+	dc.b  12,$0
+
+	dc.w  105
+	dc.b  5,$0
+	dc.w  105
+	dc.b  6,$0
+	dc.w  105
+	dc.b  7,$0
+	dc.w  105
+	dc.b  8,$0
+	dc.w  105
+	dc.b  9,$0
+	dc.w  105
+	dc.b  10,$0
+	dc.w  105
+	dc.b  11,$0
+	dc.w  105
+	dc.b  12,$0
+
+	dc.w  106
+	dc.b  5,$0
+	dc.w  106
+	dc.b  6,$0
+	dc.w  106
+	dc.b  7,$0
+	dc.w  106
+	dc.b  8,$0
+	dc.w  106
+	dc.b  9,$0
+	dc.w  106
+	dc.b  10,$0
+	dc.w  106
+	dc.b  11,$0
+	dc.w  106
+	dc.b  12,$0
+
+	dc.w  107
+	dc.b  5,$0
+	dc.w  107
+	dc.b  6,$0
+	dc.w  107
+	dc.b  7,$0
+	dc.w  107
+	dc.b  8,$0
+	dc.w  107
+	dc.b  9,$0
+	dc.w  107
+	dc.b  10,$0
+	dc.w  107
+	dc.b  11,$0
+	dc.w  107
+	dc.b  12,$0
+
+	dc.w  108
+	dc.b  5,$0
+	dc.w  108
+	dc.b  6,$0
+	dc.w  108
+	dc.b  7,$0
+	dc.w  108
+	dc.b  8,$0
+	dc.w  108
+	dc.b  9,$0
+	dc.w  108
+	dc.b  10,$0
+	dc.w  108
+	dc.b  11,$0
+	dc.w  108
+	dc.b  12,$0
+
+	dc.w  109
+	dc.b  5,$0
+	dc.w  109
+	dc.b  6,$0
+	dc.w  109
+	dc.b  7,$0
+	dc.w  109
+	dc.b  8,$0
+	dc.w  109
+	dc.b  9,$0
+	dc.w  109
+	dc.b  10,$0
+	dc.w  109
+	dc.b  11,$0
+	dc.w  109
+	dc.b  12,$0
+
+	dc.w  110
+	dc.b  5,$0
+	dc.w  110
+	dc.b  6,$0
+	dc.w  110
+	dc.b  7,$0
+	dc.w  110
+	dc.b  8,$0
+	dc.w  110
+	dc.b  9,$0
+	dc.w  110
+	dc.b  10,$0
+	dc.w  110
+	dc.b  11,$0
+	dc.w  110
+	dc.b  12,$0
+
+	dc.w  111
+	dc.b  5,$0
+	dc.w  111
+	dc.b  6,$0
+	dc.w  111
+	dc.b  7,$0
+	dc.w  111
+	dc.b  8,$0
+	dc.w  111
+	dc.b  9,$0
+	dc.w  111
+	dc.b  10,$0
+	dc.w  111
+	dc.b  11,$0
+	dc.w  111
+	dc.b  12,$0
+
+	dc.w  112
+	dc.b  5,$0
+	dc.w  112
+	dc.b  6,$0
+	dc.w  112
+	dc.b  7,$0
+	dc.w  112
+	dc.b  8,$0
+	dc.w  112
+	dc.b  9,$0
+	dc.w  112
+	dc.b  10,$0
+	dc.w  112
+	dc.b  11,$0
+	dc.w  112
+	dc.b  12,$0
+
+	dc.w  113
+	dc.b  6,$0
+	dc.w  113
+	dc.b  7,$0
+	dc.w  113
+	dc.b  8,$0
+	dc.w  113
+	dc.b  9,$0
+	dc.w  113
+	dc.b  10,$0
+	dc.w  113
+	dc.b  11,$0
+	dc.w  113
+	dc.b  12,$0
+
+	dc.w  114
+	dc.b  6,$0
+	dc.w  114
+	dc.b  7,$0
+	dc.w  114
+	dc.b  8,$0
+	dc.w  114
+	dc.b  9,$0
+	dc.w  114
+	dc.b  10,$0
+	dc.w  114
+	dc.b  11,$0
+	dc.w  114
+	dc.b  12,$0
+
+	dc.w  115
+	dc.b  6,$0
+	dc.w  115
+	dc.b  7,$0
+	dc.w  115
+	dc.b  8,$0
+	dc.w  115
+	dc.b  9,$0
+	dc.w  115
+	dc.b  10,$0
+	dc.w  115
+	dc.b  11,$0
+	dc.w  115
+	dc.b  12,$0
+
+	dc.w  116
+	dc.b  6,$0
+	dc.w  116
+	dc.b  7,$0
+	dc.w  116
+	dc.b  8,$0
+	dc.w  116
+	dc.b  9,$0
+	dc.w  116
+	dc.b  10,$0
+	dc.w  116
+	dc.b  11,$0
+	dc.w  116
+	dc.b  12,$0
+
+	dc.w  117
+	dc.b  6,$0
+	dc.w  117
+	dc.b  7,$0
+	dc.w  117
+	dc.b  8,$0
+	dc.w  117
+	dc.b  9,$0
+	dc.w  117
+	dc.b  10,$0
+	dc.w  117
+	dc.b  11,$0
+	dc.w  117
+	dc.b  12,$0
+
+	dc.w  118
+	dc.b  6,$0
+	dc.w  118
+	dc.b  7,$0
+	dc.w  118
+	dc.b  8,$0
+	dc.w  118
+	dc.b  9,$0
+	dc.w  118
+	dc.b  10,$0
+	dc.w  118
+	dc.b  11,$0
+	dc.w  118
+	dc.b  12,$0
+
+	dc.w  119
+	dc.b  6,$0
+	dc.w  119
+	dc.b  7,$0
+	dc.w  119
+	dc.b  8,$0
+	dc.w  119
+	dc.b  9,$0
+	dc.w  119
+	dc.b  10,$0
+	dc.w  119
+	dc.b  11,$0
+	dc.w  119
+	dc.b  12,$0
+
+	dc.w  120
+	dc.b  6,$8
+	dc.w  120
+	dc.b  7,$0
+	dc.w  120
+	dc.b  8,$0
+	dc.w  120
+	dc.b  9,$0
+	dc.w  120
+	dc.b  10,$0
+	dc.w  120
+	dc.b  11,$0
+	dc.w  120
+	dc.b  12,$0
+
+	dc.w  121
+	dc.b  6,$0
+	dc.w  121
+	dc.b  7,$0
+	dc.w  121
+	dc.b  8,$0
+	dc.w  121
+	dc.b  9,$0
+	dc.w  121
+	dc.b  10,$0
+	dc.w  121
+	dc.b  11,$0
+	dc.w  121
+	dc.b  12,$0
+
+	dc.w  122
+	dc.b  6,$0
+	dc.w  122
+	dc.b  7,$0
+	dc.w  122
+	dc.b  8,$0
+	dc.w  122
+	dc.b  9,$0
+	dc.w  122
+	dc.b  10,$0
+	dc.w  122
+	dc.b  11,$0
+	dc.w  122
+	dc.b  12,$0
+
+	dc.w  123
+	dc.b  6,$0
+	dc.w  123
+	dc.b  7,$0
+	dc.w  123
+	dc.b  8,$0
+	dc.w  123
+	dc.b  9,$0
+	dc.w  123
+	dc.b  10,$0
+	dc.w  123
+	dc.b  11,$0
+	dc.w  123
+	dc.b  12,$0
+
+	dc.w  124
+	dc.b  6,$0
+	dc.w  124
+	dc.b  7,$0
+	dc.w  124
+	dc.b  8,$0
+	dc.w  124
+	dc.b  9,$0
+	dc.w  124
+	dc.b  10,$0
+	dc.w  124
+	dc.b  11,$0
+	dc.w  124
+	dc.b  12,$0
+
+	dc.w  125
+	dc.b  6,$0
+	dc.w  125
+	dc.b  7,$0
+	dc.w  125
+	dc.b  8,$0
+	dc.w  125
+	dc.b  9,$0
+	dc.w  125
+	dc.b  10,$0
+	dc.w  125
+	dc.b  11,$0
+	dc.w  125
+	dc.b  12,$0
+
+	dc.w  126
+	dc.b  6,$0
+	dc.w  126
+	dc.b  7,$0
+	dc.w  126
+	dc.b  8,$0
+	dc.w  126
+	dc.b  9,$0
+	dc.w  126
+	dc.b  10,$0
+	dc.w  126
+	dc.b  11,$0
+	dc.w  126
+	dc.b  12,$0
+
+	dc.w  127
+	dc.b  6,$0
+	dc.w  127
+	dc.b  7,$0
+	dc.w  127
+	dc.b  8,$0
+	dc.w  127
+	dc.b  9,$0
+	dc.w  127
+	dc.b  10,$0
+	dc.w  127
+	dc.b  11,$0
+	dc.w  127
+	dc.b  12,$0
+
+	dc.w  128
+	dc.b  6,$0
+	dc.w  128
+	dc.b  7,$0
+	dc.w  128
+	dc.b  8,$0
+	dc.w  128
+	dc.b  9,$0
+	dc.w  128
+	dc.b  10,$0
+	dc.w  128
+	dc.b  11,$0
+	dc.w  128
+	dc.b  12,$0
+
+	dc.w  129
+	dc.b  6,$0
+	dc.w  129
+	dc.b  7,$0
+	dc.w  129
+	dc.b  8,$0
+	dc.w  129
+	dc.b  9,$0
+	dc.w  129
+	dc.b  10,$0
+	dc.w  129
+	dc.b  11,$0
+	dc.w  129
+	dc.b  12,$0
+
+	dc.w  130
+	dc.b  6,$0
+	dc.w  130
+	dc.b  7,$0
+	dc.w  130
+	dc.b  8,$0
+	dc.w  130
+	dc.b  9,$0
+	dc.w  130
+	dc.b  10,$0
+	dc.w  130
+	dc.b  11,$0
+	dc.w  130
+	dc.b  12,$0
+
+	dc.w  131
+	dc.b  7,$0
+	dc.w  131
+	dc.b  8,$0
+	dc.w  131
+	dc.b  9,$0
+	dc.w  131
+	dc.b  10,$0
+	dc.w  131
+	dc.b  11,$0
+	dc.w  131
+	dc.b  12,$0
+
+	dc.w  132
+	dc.b  7,$0
+	dc.w  132
+	dc.b  8,$0
+	dc.w  132
+	dc.b  9,$0
+	dc.w  132
+	dc.b  10,$0
+	dc.w  132
+	dc.b  11,$0
+	dc.w  132
+	dc.b  12,$0
+
+	dc.w  133
+	dc.b  7,$0
+	dc.w  133
+	dc.b  8,$0
+	dc.w  133
+	dc.b  9,$0
+	dc.w  133
+	dc.b  10,$0
+	dc.w  133
+	dc.b  11,$0
+	dc.w  133
+	dc.b  12,$0
+
+	dc.w  134
+	dc.b  7,$0
+	dc.w  134
+	dc.b  8,$0
+	dc.w  134
+	dc.b  9,$0
+	dc.w  134
+	dc.b  10,$0
+	dc.w  134
+	dc.b  11,$0
+	dc.w  134
+	dc.b  12,$0
+
+	dc.w  135
+	dc.b  7,$0
+	dc.w  135
+	dc.b  8,$0
+	dc.w  135
+	dc.b  9,$0
+	dc.w  135
+	dc.b  10,$0
+	dc.w  135
+	dc.b  11,$0
+	dc.w  135
+	dc.b  12,$0
+
+	dc.w  136
+	dc.b  7,$0
+	dc.w  136
+	dc.b  8,$0
+	dc.w  136
+	dc.b  9,$0
+	dc.w  136
+	dc.b  10,$0
+	dc.w  136
+	dc.b  11,$0
+	dc.w  136
+	dc.b  12,$0
+
+	dc.w  137
+	dc.b  7,$0
+	dc.w  137
+	dc.b  8,$0
+	dc.w  137
+	dc.b  9,$0
+	dc.w  137
+	dc.b  10,$0
+	dc.w  137
+	dc.b  11,$0
+	dc.w  137
+	dc.b  12,$0
+
+	dc.w  138
+	dc.b  7,$0
+	dc.w  138
+	dc.b  8,$0
+	dc.w  138
+	dc.b  9,$0
+	dc.w  138
+	dc.b  10,$0
+	dc.w  138
+	dc.b  11,$0
+	dc.w  138
+	dc.b  12,$0
+
+	dc.w  139
+	dc.b  7,$0
+	dc.w  139
+	dc.b  8,$0
+	dc.w  139
+	dc.b  9,$0
+	dc.w  139
+	dc.b  10,$0
+	dc.w  139
+	dc.b  11,$0
+	dc.w  139
+	dc.b  12,$0
+
+	dc.w  140
+	dc.b  6,$C
+	dc.w  140
+	dc.b  7,$0
+	dc.w  140
+	dc.b  8,$0
+	dc.w  140
+	dc.b  9,$0
+	dc.w  140
+	dc.b  10,$0
+	dc.w  140
+	dc.b  11,$0
+	dc.w  140
+	dc.b  12,$0
+
+	dc.w  141
+	dc.b  6,$C
+	dc.w  141
+	dc.b  7,$0
+	dc.w  141
+	dc.b  8,$0
+	dc.w  141
+	dc.b  9,$0
+	dc.w  141
+	dc.b  10,$0
+	dc.w  141
+	dc.b  11,$0
+	dc.w  141
+	dc.b  12,$0
+
+	dc.w  142
+	dc.b  6,$C
+	dc.w  142
+	dc.b  7,$0
+	dc.w  142
+	dc.b  8,$0
+	dc.w  142
+	dc.b  9,$0
+	dc.w  142
+	dc.b  10,$0
+	dc.w  142
+	dc.b  11,$0
+	dc.w  142
+	dc.b  12,$0
+
+	dc.w  143
+	dc.b  6,$C
+	dc.w  143
+	dc.b  7,$0
+	dc.w  143
+	dc.b  8,$0
+	dc.w  143
+	dc.b  9,$0
+	dc.w  143
+	dc.b  10,$0
+	dc.w  143
+	dc.b  11,$0
+	dc.w  143
+	dc.b  12,$0
+
+	dc.w  144
+	dc.b  6,$C
+	dc.w  144
+	dc.b  7,$0
+	dc.w  144
+	dc.b  8,$0
+	dc.w  144
+	dc.b  9,$0
+	dc.w  144
+	dc.b  10,$0
+	dc.w  144
+	dc.b  11,$0
+	dc.w  144
+	dc.b  12,$0
+
+	dc.w  145
+	dc.b  6,$C
+	dc.w  145
+	dc.b  7,$0
+	dc.w  145
+	dc.b  8,$0
+	dc.w  145
+	dc.b  9,$0
+	dc.w  145
+	dc.b  10,$0
+	dc.w  145
+	dc.b  11,$0
+	dc.w  145
+	dc.b  12,$0
+
+	dc.w  146
+	dc.b  6,$C
+	dc.w  146
+	dc.b  7,$0
+	dc.w  146
+	dc.b  8,$0
+	dc.w  146
+	dc.b  9,$0
+	dc.w  146
+	dc.b  10,$0
+	dc.w  146
+	dc.b  11,$0
+	dc.w  146
+	dc.b  12,$0
+
+	dc.w  147
+	dc.b  6,$C
+	dc.w  147
+	dc.b  7,$0
+	dc.w  147
+	dc.b  8,$0
+	dc.w  147
+	dc.b  9,$0
+	dc.w  147
+	dc.b  10,$0
+	dc.w  147
+	dc.b  11,$0
+	dc.w  147
+	dc.b  12,$0
+
+	dc.w  148
+	dc.b  6,$C
+	dc.w  148
+	dc.b  7,$0
+	dc.w  148
+	dc.b  8,$0
+	dc.w  148
+	dc.b  9,$0
+	dc.w  148
+	dc.b  10,$0
+	dc.w  148
+	dc.b  11,$0
+	dc.w  148
+	dc.b  12,$0
+
+	dc.w  149
+	dc.b  6,$C
+	dc.w  149
+	dc.b  8,$0
+	dc.w  149
+	dc.b  9,$0
+	dc.w  149
+	dc.b  10,$0
+	dc.w  149
+	dc.b  11,$0
+	dc.w  149
+	dc.b  12,$0
+
+	dc.w  150
+	dc.b  6,$C
+	dc.w  150
+	dc.b  8,$0
+	dc.w  150
+	dc.b  9,$0
+	dc.w  150
+	dc.b  10,$0
+	dc.w  150
+	dc.b  11,$0
+	dc.w  150
+	dc.b  12,$0
+
+	dc.w  151
+	dc.b  6,$C
+	dc.w  151
+	dc.b  8,$0
+	dc.w  151
+	dc.b  9,$0
+	dc.w  151
+	dc.b  10,$0
+	dc.w  151
+	dc.b  11,$0
+	dc.w  151
+	dc.b  12,$0
+
+	dc.w  152
+	dc.b  6,$C
+	dc.w  152
+	dc.b  8,$0
+	dc.w  152
+	dc.b  9,$0
+	dc.w  152
+	dc.b  10,$0
+	dc.w  152
+	dc.b  11,$0
+	dc.w  152
+	dc.b  12,$0
+
+	dc.w  153
+	dc.b  8,$0
+	dc.w  153
+	dc.b  9,$0
+	dc.w  153
+	dc.b  10,$0
+	dc.w  153
+	dc.b  11,$0
+	dc.w  153
+	dc.b  12,$0
+
+	dc.w  154
+	dc.b  8,$0
+	dc.w  154
+	dc.b  9,$0
+	dc.w  154
+	dc.b  10,$0
+	dc.w  154
+	dc.b  11,$0
+	dc.w  154
+	dc.b  12,$0
+
+	dc.w  155
+	dc.b  8,$0
+	dc.w  155
+	dc.b  9,$0
+	dc.w  155
+	dc.b  10,$0
+	dc.w  155
+	dc.b  11,$0
+	dc.w  155
+	dc.b  12,$0
+
+	dc.w  156
+	dc.b  8,$0
+	dc.w  156
+	dc.b  9,$0
+	dc.w  156
+	dc.b  10,$0
+	dc.w  156
+	dc.b  11,$0
+	dc.w  156
+	dc.b  12,$0
+
+	dc.w  157
+	dc.b  8,$0
+	dc.w  157
+	dc.b  9,$0
+	dc.w  157
+	dc.b  10,$0
+	dc.w  157
+	dc.b  11,$0
+	dc.w  157
+	dc.b  12,$0
+
+	dc.w  158
+	dc.b  6,$0
+	dc.w  158
+	dc.b  7,$C
+	dc.w  158
+	dc.b  8,$0
+	dc.w  158
+	dc.b  9,$0
+	dc.w  158
+	dc.b  10,$0
+	dc.w  158
+	dc.b  11,$0
+	dc.w  158
+	dc.b  12,$0
+
+	dc.w  159
+	dc.b  6,$0
+	dc.w  159
+	dc.b  7,$C
+	dc.w  159
+	dc.b  8,$0
+	dc.w  159
+	dc.b  9,$0
+	dc.w  159
+	dc.b  10,$0
+	dc.w  159
+	dc.b  11,$0
+	dc.w  159
+	dc.b  12,$0
+
+	dc.w  160
+	dc.b  6,$0
+	dc.w  160
+	dc.b  7,$C
+	dc.w  160
+	dc.b  8,$0
+	dc.w  160
+	dc.b  9,$0
+	dc.w  160
+	dc.b  10,$0
+	dc.w  160
+	dc.b  11,$0
+	dc.w  160
+	dc.b  12,$0
+
+	dc.w  161
+	dc.b  6,$0
+	dc.w  161
+	dc.b  7,$C
+	dc.w  161
+	dc.b  8,$0
+	dc.w  161
+	dc.b  9,$0
+	dc.w  161
+	dc.b  10,$0
+	dc.w  161
+	dc.b  11,$0
+	dc.w  161
+	dc.b  12,$0
+
+	dc.w  162
+	dc.b  6,$0
+	dc.w  162
+	dc.b  7,$C
+	dc.w  162
+	dc.b  8,$0
+	dc.w  162
+	dc.b  9,$0
+	dc.w  162
+	dc.b  10,$0
+	dc.w  162
+	dc.b  11,$0
+	dc.w  162
+	dc.b  12,$0
+
+	dc.w  163
+	dc.b  6,$0
+	dc.w  163
+	dc.b  7,$C
+	dc.w  163
+	dc.b  8,$0
+	dc.w  163
+	dc.b  9,$0
+	dc.w  163
+	dc.b  10,$0
+	dc.w  163
+	dc.b  11,$0
+	dc.w  163
+	dc.b  12,$0
+
+	dc.w  164
+	dc.b  6,$0
+	dc.w  164
+	dc.b  7,$C
+	dc.w  164
+	dc.b  8,$0
+	dc.w  164
+	dc.b  9,$0
+	dc.w  164
+	dc.b  10,$0
+	dc.w  164
+	dc.b  11,$0
+	dc.w  164
+	dc.b  12,$0
+
+	dc.w  165
+	dc.b  6,$0
+	dc.w  165
+	dc.b  7,$C
+	dc.w  165
+	dc.b  8,$0
+	dc.w  165
+	dc.b  9,$0
+	dc.w  165
+	dc.b  10,$0
+	dc.w  165
+	dc.b  11,$0
+	dc.w  165
+	dc.b  12,$0
+
+	dc.w  166
+	dc.b  6,$0
+	dc.w  166
+	dc.b  7,$C
+	dc.w  166
+	dc.b  8,$0
+	dc.w  166
+	dc.b  9,$0
+	dc.w  166
+	dc.b  10,$0
+	dc.w  166
+	dc.b  11,$0
+	dc.w  166
+	dc.b  12,$0
+
+	dc.w  167
+	dc.b  6,$0
+	dc.w  167
+	dc.b  7,$C
+	dc.w  167
+	dc.b  9,$0
+	dc.w  167
+	dc.b  10,$0
+	dc.w  167
+	dc.b  11,$0
+	dc.w  167
+	dc.b  12,$0
+
+	dc.w  168
+	dc.b  6,$0
+	dc.w  168
+	dc.b  7,$C
+	dc.w  168
+	dc.b  9,$0
+	dc.w  168
+	dc.b  10,$0
+	dc.w  168
+	dc.b  11,$0
+	dc.w  168
+	dc.b  12,$0
+
+	dc.w  169
+	dc.b  6,$0
+	dc.w  169
+	dc.b  7,$C
+	dc.w  169
+	dc.b  9,$0
+	dc.w  169
+	dc.b  10,$0
+	dc.w  169
+	dc.b  11,$0
+	dc.w  169
+	dc.b  12,$0
+
+	dc.w  170
+	dc.b  6,$0
+	dc.w  170
+	dc.b  7,$C
+	dc.w  170
+	dc.b  9,$0
+	dc.w  170
+	dc.b  10,$0
+	dc.w  170
+	dc.b  11,$0
+	dc.w  170
+	dc.b  12,$0
+
+	dc.w  171
+	dc.b  9,$0
+	dc.w  171
+	dc.b  10,$0
+	dc.w  171
+	dc.b  11,$0
+	dc.w  171
+	dc.b  12,$0
+
+	dc.w  172
+	dc.b  9,$0
+	dc.w  172
+	dc.b  10,$0
+	dc.w  172
+	dc.b  11,$0
+	dc.w  172
+	dc.b  12,$0
+
+	dc.w  173
+	dc.b  9,$0
+	dc.w  173
+	dc.b  10,$0
+	dc.w  173
+	dc.b  11,$0
+	dc.w  173
+	dc.b  12,$0
+
+	dc.w  174
+	dc.b  2,$E
+	dc.w  174
+	dc.b  9,$0
+	dc.w  174
+	dc.b  10,$0
+	dc.w  174
+	dc.b  11,$0
+	dc.w  174
+	dc.b  12,$0
+
+	dc.w  175
+	dc.b  2,$E
+	dc.w  175
+	dc.b  10,$0
+	dc.w  175
+	dc.b  11,$0
+	dc.w  175
+	dc.b  12,$0
+
+	dc.w  176
+	dc.b  2,$E
+	dc.w  176
+	dc.b  9,$8
+	dc.w  176
+	dc.b  10,$0
+	dc.w  176
+	dc.b  11,$0
+	dc.w  176
+	dc.b  12,$0
+
+	dc.w  177
+	dc.b  2,$E
+	dc.w  177
+	dc.b  10,$0
+	dc.w  177
+	dc.b  11,$0
+	dc.w  177
+	dc.b  12,$0
+
+	dc.w  178
+	dc.b  2,$E
+	dc.w  178
+	dc.b  9,$0
+	dc.w  178
+	dc.b  10,$0
+	dc.w  178
+	dc.b  11,$0
+	dc.w  178
+	dc.b  12,$0
+
+	dc.w  179
+	dc.b  9,$0
+	dc.w  179
+	dc.b  10,$0
+	dc.w  179
+	dc.b  11,$0
+	dc.w  179
+	dc.b  12,$0
+
+	dc.w  180
+	dc.b  9,$0
+	dc.w  180
+	dc.b  10,$0
+	dc.w  180
+	dc.b  11,$0
+	dc.w  180
+	dc.b  12,$0
+
+	dc.w  181
+	dc.b  9,$0
+	dc.w  181
+	dc.b  10,$0
+	dc.w  181
+	dc.b  11,$0
+	dc.w  181
+	dc.b  12,$0
+
+	dc.w  182
+	dc.b  9,$0
+	dc.w  182
+	dc.b  10,$0
+	dc.w  182
+	dc.b  11,$0
+	dc.w  182
+	dc.b  12,$0
+
+	dc.w  183
+	dc.b  9,$0
+	dc.w  183
+	dc.b  10,$0
+	dc.w  183
+	dc.b  11,$0
+	dc.w  183
+	dc.b  12,$0
+
+	dc.w  184
+	dc.b  9,$0
+	dc.w  184
+	dc.b  10,$0
+	dc.w  184
+	dc.b  11,$0
+	dc.w  184
+	dc.b  12,$0
+
+	dc.w  185
+	dc.b  7,$0
+	dc.w  185
+	dc.b  8,$C
+	dc.w  185
+	dc.b  10,$0
+	dc.w  185
+	dc.b  11,$0
+	dc.w  185
+	dc.b  12,$0
+
+	dc.w  186
+	dc.b  5,$E
+	dc.w  186
+	dc.b  7,$0
+	dc.w  186
+	dc.b  8,$C
+	dc.w  186
+	dc.b  10,$0
+	dc.w  186
+	dc.b  11,$0
+	dc.w  186
+	dc.b  12,$0
+
+	dc.w  187
+	dc.b  5,$E
+	dc.w  187
+	dc.b  7,$0
+	dc.w  187
+	dc.b  8,$C
+	dc.w  187
+	dc.b  10,$0
+	dc.w  187
+	dc.b  11,$0
+	dc.w  187
+	dc.b  12,$0
+
+	dc.w  188
+	dc.b  5,$E
+	dc.w  188
+	dc.b  7,$0
+	dc.w  188
+	dc.b  8,$C
+	dc.w  188
+	dc.b  10,$0
+	dc.w  188
+	dc.b  11,$0
+	dc.w  188
+	dc.b  12,$0
+
+	dc.w  189
+	dc.b  5,$E
+	dc.w  189
+	dc.b  7,$0
+	dc.w  189
+	dc.b  8,$C
+	dc.w  189
+	dc.b  10,$0
+	dc.w  189
+	dc.b  11,$0
+	dc.w  189
+	dc.b  12,$0
+
+	dc.w  190
+	dc.b  5,$E
+	dc.w  190
+	dc.b  7,$0
+	dc.w  190
+	dc.b  8,$C
+	dc.w  190
+	dc.b  10,$0
+	dc.w  190
+	dc.b  11,$0
+	dc.w  190
+	dc.b  12,$0
+
+	dc.w  191
+	dc.b  5,$E
+	dc.w  191
+	dc.b  7,$0
+	dc.w  191
+	dc.b  8,$C
+	dc.w  191
+	dc.b  10,$0
+	dc.w  191
+	dc.b  11,$0
+	dc.w  191
+	dc.b  12,$0
+
+	dc.w  192
+	dc.b  5,$E
+	dc.w  192
+	dc.b  7,$0
+	dc.w  192
+	dc.b  8,$C
+	dc.w  192
+	dc.b  10,$0
+	dc.w  192
+	dc.b  11,$0
+	dc.w  192
+	dc.b  12,$0
+
+	dc.w  193
+	dc.b  5,$E
+	dc.w  193
+	dc.b  7,$0
+	dc.w  193
+	dc.b  8,$C
+	dc.w  193
+	dc.b  10,$0
+	dc.w  193
+	dc.b  11,$0
+	dc.w  193
+	dc.b  12,$0
+
+	dc.w  194
+	dc.b  5,$E
+	dc.w  194
+	dc.b  7,$0
+	dc.w  194
+	dc.b  8,$C
+	dc.w  194
+	dc.b  10,$0
+	dc.w  194
+	dc.b  11,$0
+	dc.w  194
+	dc.b  12,$0
+
+	dc.w  195
+	dc.b  5,$E
+	dc.w  195
+	dc.b  7,$0
+	dc.w  195
+	dc.b  8,$C
+	dc.w  195
+	dc.b  10,$0
+	dc.w  195
+	dc.b  11,$0
+	dc.w  195
+	dc.b  12,$0
+
+	dc.w  196
+	dc.b  7,$0
+	dc.w  196
+	dc.b  8,$C
+	dc.w  196
+	dc.b  10,$0
+	dc.w  196
+	dc.b  11,$0
+	dc.w  196
+	dc.b  12,$0
+
+	dc.w  197
+	dc.b  7,$0
+	dc.w  197
+	dc.b  8,$C
+	dc.w  197
+	dc.b  10,$0
+	dc.w  197
+	dc.b  11,$0
+	dc.w  197
+	dc.b  12,$0
+
+	dc.w  198
+	dc.b  2,$E
+	dc.w  198
+	dc.b  3,$E
+	dc.w  198
+	dc.b  4,$E
+	dc.w  198
+	dc.b  6,$E
+	dc.w  198
+	dc.b  10,$0
+	dc.w  198
+	dc.b  11,$0
+	dc.w  198
+	dc.b  12,$0
+
+	dc.w  199
+	dc.b  2,$E
+	dc.w  199
+	dc.b  3,$E
+	dc.w  199
+	dc.b  4,$E
+	dc.w  199
+	dc.b  6,$E
+	dc.w  199
+	dc.b  10,$0
+	dc.w  199
+	dc.b  11,$0
+	dc.w  199
+	dc.b  12,$0
+
+	dc.w  200
+	dc.b  2,$E
+	dc.w  200
+	dc.b  3,$E
+	dc.w  200
+	dc.b  4,$E
+	dc.w  200
+	dc.b  6,$E
+	dc.w  200
+	dc.b  10,$0
+	dc.w  200
+	dc.b  11,$0
+	dc.w  200
+	dc.b  12,$0
+
+	dc.w  201
+	dc.b  2,$E
+	dc.w  201
+	dc.b  3,$E
+	dc.w  201
+	dc.b  4,$E
+	dc.w  201
+	dc.b  6,$E
+	dc.w  201
+	dc.b  10,$0
+	dc.w  201
+	dc.b  11,$0
+	dc.w  201
+	dc.b  12,$0
+
+	dc.w  202
+	dc.b  2,$E
+	dc.w  202
+	dc.b  3,$E
+	dc.w  202
+	dc.b  4,$E
+	dc.w  202
+	dc.b  6,$E
+	dc.w  202
+	dc.b  10,$0
+	dc.w  202
+	dc.b  11,$0
+	dc.w  202
+	dc.b  12,$0
+
+	dc.w  203
+	dc.b  2,$E
+	dc.w  203
+	dc.b  3,$E
+	dc.w  203
+	dc.b  4,$E
+	dc.w  203
+	dc.b  6,$E
+	dc.w  203
+	dc.b  9,$8
+	dc.w  203
+	dc.b  10,$0
+	dc.w  203
+	dc.b  11,$0
+	dc.w  203
+	dc.b  12,$0
+
+	dc.w  204
+	dc.b  2,$E
+	dc.w  204
+	dc.b  3,$E
+	dc.w  204
+	dc.b  4,$E
+	dc.w  204
+	dc.b  6,$E
+	dc.w  204
+	dc.b  9,$0
+	dc.w  204
+	dc.b  10,$0
+	dc.w  204
+	dc.b  11,$0
+	dc.w  204
+	dc.b  12,$0
+
+	dc.w  205
+	dc.b  2,$E
+	dc.w  205
+	dc.b  3,$E
+	dc.w  205
+	dc.b  4,$E
+	dc.w  205
+	dc.b  6,$E
+	dc.w  205
+	dc.b  9,$0
+	dc.w  205
+	dc.b  10,$0
+	dc.w  205
+	dc.b  11,$0
+	dc.w  205
+	dc.b  12,$0
+
+	dc.w  206
+	dc.b  2,$E
+	dc.w  206
+	dc.b  3,$E
+	dc.w  206
+	dc.b  4,$E
+	dc.w  206
+	dc.b  6,$E
+	dc.w  206
+	dc.b  9,$0
+	dc.w  206
+	dc.b  10,$0
+	dc.w  206
+	dc.b  11,$0
+	dc.w  206
+	dc.b  12,$0
+
+	dc.w  207
+	dc.b  2,$E
+	dc.w  207
+	dc.b  3,$E
+	dc.w  207
+	dc.b  4,$E
+	dc.w  207
+	dc.b  6,$E
+	dc.w  207
+	dc.b  9,$0
+	dc.w  207
+	dc.b  10,$0
+	dc.w  207
+	dc.b  11,$0
+	dc.w  207
+	dc.b  12,$0
+
+	dc.w  208
+	dc.b  4,$E
+	dc.w  208
+	dc.b  9,$0
+	dc.w  208
+	dc.b  10,$0
+	dc.w  208
+	dc.b  11,$0
+	dc.w  208
+	dc.b  12,$0
+
+	dc.w  209
+	dc.b  4,$E
+	dc.w  209
+	dc.b  9,$0
+	dc.w  209
+	dc.b  10,$0
+	dc.w  209
+	dc.b  11,$0
+	dc.w  209
+	dc.b  12,$0
+
+	dc.w  210
+	dc.b  4,$E
+	dc.w  210
+	dc.b  9,$0
+	dc.w  210
+	dc.b  10,$0
+	dc.w  210
+	dc.b  11,$0
+	dc.w  210
+	dc.b  12,$0
+
+	dc.w  211
+	dc.b  4,$E
+	dc.w  211
+	dc.b  9,$0
+	dc.w  211
+	dc.b  10,$0
+	dc.w  211
+	dc.b  11,$0
+	dc.w  211
+	dc.b  12,$0
+
+	dc.w  212
+	dc.b  4,$E
+	dc.w  212
+	dc.b  8,$8
+	dc.w  212
+	dc.b  9,$0
+	dc.w  212
+	dc.b  10,$0
+	dc.w  212
+	dc.b  11,$0
+	dc.w  212
+	dc.b  12,$0
+
+	dc.w  213
+	dc.b  4,$E
+	dc.w  213
+	dc.b  9,$0
+	dc.w  213
+	dc.b  10,$0
+	dc.w  213
+	dc.b  11,$0
+	dc.w  213
+	dc.b  12,$0
+
+	dc.w  214
+	dc.b  4,$E
+	dc.w  214
+	dc.b  9,$0
+	dc.w  214
+	dc.b  10,$0
+	dc.w  214
+	dc.b  11,$0
+	dc.w  214
+	dc.b  12,$0
+
+	dc.w  215
+	dc.b  4,$E
+	dc.w  215
+	dc.b  9,$0
+	dc.w  215
+	dc.b  10,$0
+	dc.w  215
+	dc.b  11,$0
+	dc.w  215
+	dc.b  12,$0
+
+	dc.w  216
+	dc.b  4,$E
+	dc.w  216
+	dc.b  9,$0
+	dc.w  216
+	dc.b  10,$0
+	dc.w  216
+	dc.b  11,$0
+	dc.w  216
+	dc.b  12,$0
+
+	dc.w  217
+	dc.b  4,$E
+	dc.w  217
+	dc.b  5,$E
+	dc.w  217
+	dc.b  9,$0
+	dc.w  217
+	dc.b  10,$0
+	dc.w  217
+	dc.b  11,$0
+	dc.w  217
+	dc.b  12,$0
+
+	dc.w  218
+	dc.b  5,$E
+	dc.w  218
+	dc.b  9,$0
+	dc.w  218
+	dc.b  10,$0
+	dc.w  218
+	dc.b  11,$0
+	dc.w  218
+	dc.b  12,$0
+
+	dc.w  219
+	dc.b  5,$E
+	dc.w  219
+	dc.b  9,$0
+	dc.w  219
+	dc.b  10,$0
+	dc.w  219
+	dc.b  11,$0
+	dc.w  219
+	dc.b  12,$0
+
+	dc.w  220
+	dc.b  5,$E
+	dc.w  220
+	dc.b  9,$0
+	dc.w  220
+	dc.b  10,$0
+	dc.w  220
+	dc.b  11,$0
+	dc.w  220
+	dc.b  12,$0
+
+	dc.w  221
+	dc.b  5,$E
+	dc.w  221
+	dc.b  9,$0
+	dc.w  221
+	dc.b  10,$0
+	dc.w  221
+	dc.b  11,$0
+	dc.w  221
+	dc.b  12,$0
+
+	dc.w  222
+	dc.b  5,$E
+	dc.w  222
+	dc.b  9,$0
+	dc.w  222
+	dc.b  10,$0
+	dc.w  222
+	dc.b  11,$0
+	dc.w  222
+	dc.b  12,$0
+
+	dc.w  223
+	dc.b  5,$E
+	dc.w  223
+	dc.b  9,$0
+	dc.w  223
+	dc.b  10,$0
+	dc.w  223
+	dc.b  11,$0
+	dc.w  223
+	dc.b  12,$0
+
+	dc.w  224
+	dc.b  5,$E
+	dc.w  224
+	dc.b  8,$8
+	dc.w  224
+	dc.b  9,$0
+	dc.w  224
+	dc.b  10,$0
+	dc.w  224
+	dc.b  11,$0
+	dc.w  224
+	dc.b  12,$0
+
+	dc.w  225
+	dc.b  5,$E
+	dc.w  225
+	dc.b  10,$0
+	dc.w  225
+	dc.b  11,$0
+	dc.w  225
+	dc.b  12,$0
+
+	dc.w  226
+	dc.b  3,$E
+	dc.w  226
+	dc.b  4,$E
+	dc.w  226
+	dc.b  5,$E
+	dc.w  226
+	dc.b  10,$0
+	dc.w  226
+	dc.b  11,$0
+	dc.w  226
+	dc.b  12,$0
+
+	dc.w  227
+	dc.b  3,$E
+	dc.w  227
+	dc.b  4,$E
+	dc.w  227
+	dc.b  5,$E
+	dc.w  227
+	dc.b  10,$0
+	dc.w  227
+	dc.b  11,$0
+	dc.w  227
+	dc.b  12,$0
+
+	dc.w  228
+	dc.b  3,$E
+	dc.w  228
+	dc.b  4,$E
+	dc.w  228
+	dc.b  5,$E
+	dc.w  228
+	dc.b  12,$0
+
+	dc.w  229
+	dc.b  3,$E
+	dc.w  229
+	dc.b  4,$E
+	dc.w  229
+	dc.b  5,$E
+	dc.w  229
+	dc.b  12,$0
+
+	dc.w  230
+	dc.b  3,$E
+	dc.w  230
+	dc.b  4,$E
+	dc.w  230
+	dc.b  12,$0
+
+	dc.w  231
+	dc.b  3,$E
+	dc.w  231
+	dc.b  4,$E
+	dc.w  231
+	dc.b  12,$0
+
+	dc.w  232
+	dc.b  3,$E
+	dc.w  232
+	dc.b  4,$E
+	dc.w  232
+	dc.b  12,$0
+
+	dc.w  233
+	dc.b  3,$E
+	dc.w  233
+	dc.b  4,$E
+	dc.w  233
+	dc.b  12,$0
+
+	dc.w  234
+	dc.b  3,$E
+	dc.w  234
+	dc.b  4,$E
+	dc.w  234
+	dc.b  12,$0
+
+	dc.w  235
+	dc.b  3,$E
+	dc.w  235
+	dc.b  4,$E
+	dc.w  235
+	dc.b  12,$0
+
+	dc.w  236
+	dc.b  12,$0
+
+	dc.w  237
+	dc.b  12,$0
+
+	dc.w  238
+	dc.b  12,$0
+
+	dc.w  239
+	dc.b  12,$0
+
+	dc.w  240
+	dc.b  7,$E
+	dc.w  240
+	dc.b  8,$E
+	dc.w  240
+	dc.b  9,$E
+	dc.w  240
+	dc.b  10,$E
+	dc.w  240
+	dc.b  12,$0
+
+	dc.w  241
+	dc.b  7,$E
+	dc.w  241
+	dc.b  8,$E
+	dc.w  241
+	dc.b  9,$E
+	dc.w  241
+	dc.b  10,$E
+	dc.w  241
+	dc.b  12,$0
+
+	dc.w  242
+	dc.b  7,$E
+	dc.w  242
+	dc.b  8,$E
+	dc.w  242
+	dc.b  9,$E
+	dc.w  242
+	dc.b  10,$E
+	dc.w  242
+	dc.b  12,$0
+
+	dc.w  243
+	dc.b  7,$E
+	dc.w  243
+	dc.b  8,$E
+	dc.w  243
+	dc.b  9,$E
+	dc.w  243
+	dc.b  10,$E
+	dc.w  243
+	dc.b  12,$0
+
+	dc.w  244
+	dc.b  7,$E
+	dc.w  244
+	dc.b  8,$E
+	dc.w  244
+	dc.b  9,$E
+	dc.w  244
+	dc.b  10,$E
+	dc.w  244
+	dc.b  12,$0
+
+	dc.w  245
+	dc.b  3,$E
+	dc.w  245
+	dc.b  4,$E
+	dc.w  245
+	dc.b  7,$E
+	dc.w  245
+	dc.b  8,$E
+	dc.w  245
+	dc.b  9,$E
+	dc.w  245
+	dc.b  10,$E
+	dc.w  245
+	dc.b  12,$0
+
+	dc.w  246
+	dc.b  3,$E
+	dc.w  246
+	dc.b  4,$E
+	dc.w  246
+	dc.b  7,$E
+	dc.w  246
+	dc.b  8,$E
+	dc.w  246
+	dc.b  9,$E
+	dc.w  246
+	dc.b  10,$E
+	dc.w  246
+	dc.b  12,$0
+
+	dc.w  247
+	dc.b  3,$E
+	dc.w  247
+	dc.b  4,$E
+	dc.w  247
+	dc.b  7,$E
+	dc.w  247
+	dc.b  8,$E
+	dc.w  247
+	dc.b  9,$E
+	dc.w  247
+	dc.b  10,$E
+	dc.w  247
+	dc.b  12,$0
+
+	dc.w  248
+	dc.b  3,$E
+	dc.w  248
+	dc.b  4,$E
+	dc.w  248
+	dc.b  7,$E
+	dc.w  248
+	dc.b  8,$E
+	dc.w  248
+	dc.b  9,$E
+	dc.w  248
+	dc.b  10,$E
+	dc.w  248
+	dc.b  12,$0
+
+	dc.w  249
+	dc.b  3,$E
+	dc.w  249
+	dc.b  4,$E
+	dc.w  249
+	dc.b  7,$E
+	dc.w  249
+	dc.b  8,$E
+	dc.w  249
+	dc.b  9,$E
+	dc.w  249
+	dc.b  10,$E
+	dc.w  249
+	dc.b  12,$0
+
+	dc.w  250
+	dc.b  3,$E
+	dc.w  250
+	dc.b  4,$E
+	dc.w  250
+	dc.b  7,$E
+	dc.w  250
+	dc.b  8,$E
+	dc.w  250
+	dc.b  9,$E
+	dc.w  250
+	dc.b  10,$E
+	dc.w  250
+	dc.b  12,$0
+
+	dc.w  251
+	dc.b  3,$E
+	dc.w  251
+	dc.b  4,$E
+	dc.w  251
+	dc.b  7,$E
+	dc.w  251
+	dc.b  8,$E
+	dc.w  251
+	dc.b  9,$E
+	dc.w  251
+	dc.b  10,$E
+	dc.w  251
+	dc.b  12,$0
+
+	dc.w  252
+	dc.b  3,$E
+	dc.w  252
+	dc.b  4,$E
+	dc.w  252
+	dc.b  7,$E
+	dc.w  252
+	dc.b  8,$E
+	dc.w  252
+	dc.b  9,$E
+	dc.w  252
+	dc.b  10,$E
+	dc.w  252
+	dc.b  12,$0
+
+	dc.w  253
+	dc.b  3,$E
+	dc.w  253
+	dc.b  4,$E
+	dc.w  253
+	dc.b  7,$E
+	dc.w  253
+	dc.b  8,$E
+	dc.w  253
+	dc.b  9,$E
+	dc.w  253
+	dc.b  10,$E
+	dc.w  253
+	dc.b  12,$0
+
+	dc.w  254
+	dc.b  3,$E
+	dc.w  254
+	dc.b  4,$E
+	dc.w  254
+	dc.b  7,$E
+	dc.w  254
+	dc.b  8,$E
+	dc.w  254
+	dc.b  9,$E
+	dc.w  254
+	dc.b  10,$E
+	dc.w  254
+	dc.b  12,$0
+
+	dc.w  255
+	dc.b  7,$E
+	dc.w  255
+	dc.b  8,$E
+	dc.w  255
+	dc.b  9,$E
+	dc.w  255
+	dc.b  10,$E
+	dc.w  255
+	dc.b  12,$0
+
+	dc.w  256
+	dc.b  7,$E
+	dc.w  256
+	dc.b  8,$E
+	dc.w  256
+	dc.b  9,$E
+	dc.w  256
+	dc.b  10,$E
+	dc.w  256
+	dc.b  12,$0
+
+	dc.w  257
+	dc.b  12,$0
+
+	dc.w  258
+	dc.b  12,$0
+
+	dc.w  259
+	dc.b  12,$0
+
+	dc.w  260
+	dc.b  3,$E
+	dc.w  260
+	dc.b  8,$C
+	dc.w  260
+	dc.b  12,$0
+
+	dc.w  261
+	dc.b  3,$E
+	dc.w  261
+	dc.b  8,$C
+	dc.w  261
+	dc.b  12,$0
+
+	dc.w  262
+	dc.b  3,$E
+	dc.w  262
+	dc.b  8,$C
+	dc.w  262
+	dc.b  12,$0
+
+	dc.w  263
+	dc.b  3,$E
+	dc.w  263
+	dc.b  8,$C
+	dc.w  263
+	dc.b  12,$0
+
+	dc.w  264
+	dc.b  3,$E
+	dc.w  264
+	dc.b  8,$C
+	dc.w  264
+	dc.b  12,$0
+
+	dc.w  265
+	dc.b  3,$E
+	dc.w  265
+	dc.b  8,$C
+	dc.w  265
+	dc.b  12,$0
+
+	dc.w  266
+	dc.b  3,$E
+	dc.w  266
+	dc.b  8,$C
+	dc.w  266
+	dc.b  12,$0
+
+	dc.w  267
+	dc.b  3,$E
+	dc.w  267
+	dc.b  8,$C
+	dc.w  267
+	dc.b  12,$0
+
+	dc.w  268
+	dc.b  3,$E
+	dc.w  268
+	dc.b  8,$C
+	dc.w  268
+	dc.b  12,$0
+
+	dc.w  269
+	dc.b  3,$E
+	dc.w  269
+	dc.b  8,$C
+	dc.w  269
+	dc.b  11,$0
+	dc.w  269
+	dc.b  12,$0
+
+	dc.w  270
+	dc.b  3,$E
+	dc.w  270
+	dc.b  8,$C
+	dc.w  270
+	dc.b  11,$0
+	dc.w  270
+	dc.b  12,$0
+
+	dc.w  271
+	dc.b  3,$E
+	dc.w  271
+	dc.b  8,$C
+	dc.w  271
+	dc.b  11,$0
+	dc.w  271
+	dc.b  12,$0
+
+	dc.w  272
+	dc.b  8,$C
+	dc.w  272
+	dc.b  11,$0
+	dc.w  272
+	dc.b  12,$0
+
+	dc.w  273
+	dc.b  8,$C
+	dc.w  273
+	dc.b  11,$0
+	dc.w  273
+	dc.b  12,$0
+
+	dc.w  274
+	dc.b  8,$C
+	dc.w  274
+	dc.b  11,$0
+	dc.w  274
+	dc.b  12,$0
+
+	dc.w  275
+	dc.b  8,$C
+	dc.w  275
+	dc.b  11,$0
+	dc.w  275
+	dc.b  12,$0
+
+	dc.w  276
+	dc.b  7,$C
+	dc.w  276
+	dc.b  11,$0
+	dc.w  276
+	dc.b  12,$0
+
+	dc.w  277
+	dc.b  7,$C
+	dc.w  277
+	dc.b  11,$0
+	dc.w  277
+	dc.b  12,$0
+
+	dc.w  278
+	dc.b  7,$C
+	dc.w  278
+	dc.b  11,$0
+	dc.w  278
+	dc.b  12,$0
+
+	dc.w  279
+	dc.b  7,$C
+	dc.w  279
+	dc.b  11,$0
+	dc.w  279
+	dc.b  12,$0
+
+	dc.w  280
+	dc.b  12,$0
+
+	dc.w  281
+	dc.b  12,$0
+
+	dc.w  282
+	dc.b  12,$0
+
+	dc.w  283
+	dc.b  12,$0
+
+	dc.w  284
+	dc.b  12,$0
+
+	dc.w  285
+	dc.b  12,$0
+
+	dc.w  286
+	dc.b  12,$0
+
+	dc.w  287
+	dc.b  12,$0
+
+	dc.w  288
+	dc.b  12,$0
+
+	dc.w  289
+	dc.b  12,$0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	dc.w  310
+	dc.b  10,$E
+	dc.w  310
+	dc.b  11,$E
+
+	dc.w  311
+	dc.b  10,$E
+	dc.w  311
+	dc.b  11,$E
+
+	dc.w  312
+	dc.b  10,$E
+	dc.w  312
+	dc.b  11,$E
+
+	dc.w  313
+	dc.b  10,$E
+	dc.w  313
+	dc.b  11,$E
+
+	dc.w  314
+	dc.b  10,$E
+	dc.w  314
+	dc.b  11,$E
+
+	dc.w  315
+	dc.b  10,$E
+	dc.w  315
+	dc.b  11,$E
+
+	dc.w  316
+	dc.b  10,$E
+	dc.w  316
+	dc.b  11,$E
+
+	dc.w  317
+	dc.b  10,$E
+	dc.w  317
+	dc.b  11,$E
+
+	dc.w  318
+	dc.b  8,$E
+	dc.w  318
+	dc.b  9,$E
+	dc.w  318
+	dc.b  10,$E
+	dc.w  318
+	dc.b  11,$E
+
+	dc.w  319
+	dc.b  8,$E
+	dc.w  319
+	dc.b  9,$E
+
+	dc.w  320
+	dc.b  8,$E
+	dc.w  320
+	dc.b  9,$E
+
+	dc.w  321
+	dc.b  8,$E
+	dc.w  321
+	dc.b  9,$E
+
+	dc.w  322
+	dc.b  8,$E
+	dc.w  322
+	dc.b  9,$E
+
+	dc.w  323
+	dc.b  8,$E
+	dc.w  323
+	dc.b  9,$E
+
+	dc.w  324
+	dc.b  8,$E
+	dc.w  324
+	dc.b  9,$E
+
+	dc.w  325
+	dc.b  8,$E
+	dc.w  325
+	dc.b  9,$E
+
+	dc.w  326
+	dc.b  8,$E
+	dc.w  326
+	dc.b  9,$E
+
+	dc.w  327
+	dc.b  6,$E
+	dc.w  327
+	dc.b  7,$E
+
+	dc.w  328
+	dc.b  6,$E
+	dc.w  328
+	dc.b  7,$E
+	dc.w  328
+	dc.b  12,$8
+
+	dc.w  329
+	dc.b  6,$E
+	dc.w  329
+	dc.b  7,$E
+
+	dc.w  330
+	dc.b  6,$E
+	dc.w  330
+	dc.b  7,$E
+
+	dc.w  331
+	dc.b  6,$E
+	dc.w  331
+	dc.b  7,$E
+
+	dc.w  332
+	dc.b  6,$E
+	dc.w  332
+	dc.b  7,$E
+
+	dc.w  333
+	dc.b  6,$E
+	dc.w  333
+	dc.b  7,$E
+
+	dc.w  334
+	dc.b  6,$E
+	dc.w  334
+	dc.b  7,$E
+
+	dc.w  335
+	dc.b  6,$E
+	dc.w  335
+	dc.b  7,$E
+
+	dc.w  336
+	dc.b  5,$E
+	dc.w  336
+	dc.b  6,$E
+
+	dc.w  337
+	dc.b  5,$E
+	dc.w  337
+	dc.b  6,$E
+
+	dc.w  338
+	dc.b  5,$E
+	dc.w  338
+	dc.b  6,$E
+
+	dc.w  339
+	dc.b  5,$E
+	dc.w  339
+	dc.b  6,$E
+	dc.w  339
+	dc.b  12,$8
+
+	dc.w  340
+	dc.b  5,$E
+	dc.w  340
+	dc.b  6,$E
+
+	dc.w  341
+	dc.b  5,$E
+	dc.w  341
+	dc.b  6,$E
+
+	dc.w  342
+	dc.b  5,$E
+	dc.w  342
+	dc.b  6,$E
+
+	dc.w  343
+	dc.b  5,$E
+	dc.w  343
+	dc.b  6,$E
+
+	dc.w  344
+	dc.b  5,$E
+	dc.w  344
+	dc.b  6,$E
+
+	dc.w  345
+	dc.b  3,$E
+	dc.w  345
+	dc.b  4,$E
+
+	dc.w  346
+	dc.b  3,$E
+	dc.w  346
+	dc.b  4,$E
+
+	dc.w  347
+	dc.b  3,$E
+	dc.w  347
+	dc.b  4,$E
+	dc.w  347
+	dc.b  12,$8
+
+	dc.w  348
+	dc.b  3,$E
+	dc.w  348
+	dc.b  4,$E
+
+	dc.w  349
+	dc.b  3,$E
+	dc.w  349
+	dc.b  4,$E
+
+	dc.w  350
+	dc.b  3,$E
+	dc.w  350
+	dc.b  4,$E
+
+	dc.w  351
+	dc.b  3,$E
+	dc.w  351
+	dc.b  4,$E
+
+	dc.w  352
+	dc.b  3,$E
+	dc.w  352
+	dc.b  4,$E
+
+	dc.w  353
+	dc.b  3,$E
+	dc.w  353
+	dc.b  4,$E
+
+
+
+	dc.w  356
+	dc.b  12,$0
+
+	dc.w  357
+	dc.b  12,$0
+
+	dc.w  358
+	dc.b  12,$0
+
+	dc.w  359
+	dc.b  12,$0
+
+	dc.w  360
+	dc.b  12,$0
+
+	dc.w  361
+	dc.b  12,$0
+
+	dc.w  362
+	dc.b  12,$0
+
+	dc.w  363
+	dc.b  12,$0
+
+	dc.w  364
+	dc.b  12,$0
+
+	dc.w  365
+	dc.b  12,$0
+
+	dc.w  366
+	dc.b  12,$0
+
+	dc.w  367
+	dc.b  12,$0
+
+	dc.w  368
+	dc.b  12,$0
+
+	dc.w  369
+	dc.b  12,$0
+
+	dc.w  370
+	dc.b  12,$0
+
+	dc.w  371
+	dc.b  12,$0
+
+	dc.w  372
+	dc.b  12,$0
+
+	dc.w  373
+	dc.b  12,$0
+
+	dc.w  374
+	dc.b  12,$0
+
+	dc.w  375
+	dc.b  12,$0
+
+	dc.w  376
+	dc.b  12,$0
+
+	dc.w  377
+	dc.b  12,$0
+
+	dc.w  378
+	dc.b  12,$0
+
+	dc.w  379
+	dc.b  12,$0
+
+	dc.w  380
+	dc.b  12,$0
+
+	dc.w  381
+	dc.b  12,$0
+
+	dc.w  382
+	dc.b  12,$0
+
+	dc.w  383
+	dc.b  12,$0
+
+	dc.w  384
+	dc.b  12,$0
+
+	dc.w  385
+	dc.b  12,$0
+
+	dc.w  386
+	dc.b  1,$E
+	dc.w  386
+	dc.b  2,$E
+	dc.w  386
+	dc.b  12,$0
+
+	dc.w  387
+	dc.b  1,$E
+	dc.w  387
+	dc.b  2,$E
+	dc.w  387
+	dc.b  12,$0
+
+	dc.w  388
+	dc.b  1,$E
+	dc.w  388
+	dc.b  2,$E
+	dc.w  388
+	dc.b  12,$0
+
+	dc.w  389
+	dc.b  1,$E
+	dc.w  389
+	dc.b  2,$E
+	dc.w  389
+	dc.b  12,$0
+
+	dc.w  390
+	dc.b  1,$E
+	dc.w  390
+	dc.b  2,$E
+	dc.w  390
+	dc.b  12,$0
+
+	dc.w  391
+	dc.b  2,$E
+	dc.w  391
+	dc.b  12,$0
+
+	dc.w  392
+	dc.b  2,$E
+	dc.w  392
+	dc.b  12,$0
+
+	dc.w  393
+	dc.b  2,$E
+	dc.w  393
+	dc.b  12,$0
+
+	dc.w  394
+	dc.b  2,$E
+	dc.w  394
+	dc.b  11,$0
+	dc.w  394
+	dc.b  12,$0
+
+	dc.w  395
+	dc.b  2,$E
+	dc.w  395
+	dc.b  3,$E
+	dc.w  395
+	dc.b  9,$E
+	dc.w  395
+	dc.b  10,$0
+	dc.w  395
+	dc.b  11,$0
+	dc.w  395
+	dc.b  12,$0
+
+	dc.w  396
+	dc.b  2,$E
+	dc.w  396
+	dc.b  3,$E
+	dc.w  396
+	dc.b  10,$0
+	dc.w  396
+	dc.b  11,$0
+	dc.w  396
+	dc.b  12,$0
+
+	dc.w  397
+	dc.b  2,$E
+	dc.w  397
+	dc.b  10,$0
+	dc.w  397
+	dc.b  11,$0
+	dc.w  397
+	dc.b  12,$0
+
+	dc.w  398
+	dc.b  2,$E
+	dc.w  398
+	dc.b  10,$0
+	dc.w  398
+	dc.b  11,$0
+	dc.w  398
+	dc.b  12,$0
+
+	dc.w  399
+	dc.b  10,$0
+	dc.w  399
+	dc.b  11,$0
+	dc.w  399
+	dc.b  12,$0
+
+	dc.w  400
+	dc.b  10,$8
+	dc.w  400
+	dc.b  11,$0
+	dc.w  400
+	dc.b  12,$0
+
+	dc.w  401
+	dc.b  10,$0
+	dc.w  401
+	dc.b  11,$0
+	dc.w  401
+	dc.b  12,$0
+
+	dc.w  402
+	dc.b  10,$0
+	dc.w  402
+	dc.b  11,$0
+	dc.w  402
+	dc.b  12,$0
+
+	dc.w  403
+	dc.b  10,$0
+	dc.w  403
+	dc.b  11,$0
+	dc.w  403
+	dc.b  12,$0
+
+	dc.w  404
+	dc.b  6,$E
+	dc.w  404
+	dc.b  10,$0
+	dc.w  404
+	dc.b  11,$0
+	dc.w  404
+	dc.b  12,$0
+
+	dc.w  405
+	dc.b  6,$E
+	dc.w  405
+	dc.b  10,$0
+	dc.w  405
+	dc.b  11,$0
+	dc.w  405
+	dc.b  12,$0
+
+	dc.w  406
+	dc.b  6,$E
+	dc.w  406
+	dc.b  10,$0
+	dc.w  406
+	dc.b  11,$0
+	dc.w  406
+	dc.b  12,$0
+
+	dc.w  407
+	dc.b  10,$0
+	dc.w  407
+	dc.b  11,$0
+	dc.w  407
+	dc.b  12,$0
+
+	dc.w  408
+	dc.b  10,$0
+	dc.w  408
+	dc.b  11,$0
+	dc.w  408
+	dc.b  12,$0
+
+	dc.w  409
+	dc.b  10,$0
+	dc.w  409
+	dc.b  11,$0
+	dc.w  409
+	dc.b  12,$0
+
+	dc.w  410
+	dc.b  2,$E
+	dc.w  410
+	dc.b  11,$0
+	dc.w  410
+	dc.b  12,$0
+
+	dc.w  411
+	dc.b  2,$E
+	dc.w  411
+	dc.b  11,$0
+	dc.w  411
+	dc.b  12,$0
+
+	dc.w  412
+	dc.b  2,$E
+	dc.w  412
+	dc.b  11,$0
+	dc.w  412
+	dc.b  12,$0
+
+	dc.w  413
+	dc.b  2,$E
+	dc.w  413
+	dc.b  6,$E
+	dc.w  413
+	dc.b  11,$0
+	dc.w  413
+	dc.b  12,$0
+
+	dc.w  414
+	dc.b  2,$E
+	dc.w  414
+	dc.b  6,$E
+	dc.w  414
+	dc.b  11,$0
+	dc.w  414
+	dc.b  12,$0
+
+	dc.w  415
+	dc.b  2,$E
+	dc.w  415
+	dc.b  6,$E
+	dc.w  415
+	dc.b  11,$0
+	dc.w  415
+	dc.b  12,$0
+
+	dc.w  416
+	dc.b  2,$E
+	dc.w  416
+	dc.b  6,$E
+	dc.w  416
+	dc.b  11,$0
+	dc.w  416
+	dc.b  12,$0
+
+	dc.w  417
+	dc.b  2,$E
+	dc.w  417
+	dc.b  6,$E
+	dc.w  417
+	dc.b  11,$0
+	dc.w  417
+	dc.b  12,$0
+
+	dc.w  418
+	dc.b  2,$E
+	dc.w  418
+	dc.b  6,$E
+	dc.w  418
+	dc.b  11,$0
+	dc.w  418
+	dc.b  12,$0
+
+	dc.w  419
+	dc.b  2,$E
+	dc.w  419
+	dc.b  6,$E
+	dc.w  419
+	dc.b  9,$C
+	dc.w  419
+	dc.b  11,$0
+	dc.w  419
+	dc.b  12,$0
+
+	dc.w  420
+	dc.b  6,$E
+	dc.w  420
+	dc.b  9,$C
+	dc.w  420
+	dc.b  11,$0
+	dc.w  420
+	dc.b  12,$0
+
+	dc.w  421
+	dc.b  6,$E
+	dc.w  421
+	dc.b  9,$C
+	dc.w  421
+	dc.b  10,$0
+	dc.w  421
+	dc.b  11,$0
+	dc.w  421
+	dc.b  12,$0
+
+	dc.w  422
+	dc.b  6,$E
+	dc.w  422
+	dc.b  9,$C
+	dc.w  422
+	dc.b  10,$0
+	dc.w  422
+	dc.b  11,$0
+	dc.w  422
+	dc.b  12,$0
+
+	dc.w  423
+	dc.b  9,$C
+	dc.w  423
+	dc.b  10,$0
+	dc.w  423
+	dc.b  11,$0
+	dc.w  423
+	dc.b  12,$0
+
+	dc.w  424
+	dc.b  9,$C
+	dc.w  424
+	dc.b  10,$0
+	dc.w  424
+	dc.b  11,$0
+	dc.w  424
+	dc.b  12,$0
+
+	dc.w  425
+	dc.b  9,$C
+	dc.w  425
+	dc.b  10,$0
+	dc.w  425
+	dc.b  11,$0
+	dc.w  425
+	dc.b  12,$0
+
+	dc.w  426
+	dc.b  9,$C
+	dc.w  426
+	dc.b  10,$0
+	dc.w  426
+	dc.b  11,$0
+	dc.w  426
+	dc.b  12,$0
+
+	dc.w  427
+	dc.b  9,$C
+	dc.w  427
+	dc.b  10,$0
+	dc.w  427
+	dc.b  11,$0
+	dc.w  427
+	dc.b  12,$0
+
+	dc.w  428
+	dc.b  9,$C
+	dc.w  428
+	dc.b  10,$0
+	dc.w  428
+	dc.b  11,$0
+	dc.w  428
+	dc.b  12,$0
+
+	dc.w  429
+	dc.b  9,$C
+	dc.w  429
+	dc.b  10,$0
+	dc.w  429
+	dc.b  11,$0
+	dc.w  429
+	dc.b  12,$0
+
+	dc.w  430
+	dc.b  8,$E
+	dc.w  430
+	dc.b  9,$C
+	dc.w  430
+	dc.b  10,$0
+	dc.w  430
+	dc.b  11,$0
+	dc.w  430
+	dc.b  12,$0
+
+	dc.w  431
+	dc.b  8,$E
+	dc.w  431
+	dc.b  9,$C
+	dc.w  431
+	dc.b  10,$0
+	dc.w  431
+	dc.b  11,$0
+	dc.w  431
+	dc.b  12,$0
+
+	dc.w  432
+	dc.b  8,$E
+	dc.w  432
+	dc.b  10,$0
+	dc.w  432
+	dc.b  11,$0
+	dc.w  432
+	dc.b  12,$0
+
+	dc.w  433
+	dc.b  8,$E
+	dc.w  433
+	dc.b  10,$0
+	dc.w  433
+	dc.b  11,$0
+	dc.w  433
+	dc.b  12,$0
+
+	dc.w  434
+	dc.b  7,$E
+	dc.w  434
+	dc.b  8,$E
+	dc.w  434
+	dc.b  10,$0
+	dc.w  434
+	dc.b  11,$0
+	dc.w  434
+	dc.b  12,$0
+
+	dc.w  435
+	dc.b  7,$E
+	dc.w  435
+	dc.b  8,$E
+	dc.w  435
+	dc.b  10,$0
+	dc.w  435
+	dc.b  11,$0
+	dc.w  435
+	dc.b  12,$0
+
+	dc.w  436
+	dc.b  7,$E
+	dc.w  436
+	dc.b  8,$E
+	dc.w  436
+	dc.b  10,$0
+	dc.w  436
+	dc.b  11,$0
+	dc.w  436
+	dc.b  12,$0
+
+	dc.w  437
+	dc.b  7,$E
+	dc.w  437
+	dc.b  8,$E
+	dc.w  437
+	dc.b  10,$0
+	dc.w  437
+	dc.b  11,$0
+	dc.w  437
+	dc.b  12,$0
+
+	dc.w  438
+	dc.b  7,$E
+	dc.w  438
+	dc.b  8,$E
+	dc.w  438
+	dc.b  9,$C
+	dc.w  438
+	dc.b  10,$0
+	dc.w  438
+	dc.b  11,$0
+	dc.w  438
+	dc.b  12,$0
+
+	dc.w  439
+	dc.b  7,$E
+	dc.w  439
+	dc.b  8,$E
+	dc.w  439
+	dc.b  9,$C
+	dc.w  439
+	dc.b  10,$0
+	dc.w  439
+	dc.b  11,$0
+	dc.w  439
+	dc.b  12,$0
+
+	dc.w  440
+	dc.b  7,$E
+	dc.w  440
+	dc.b  9,$C
+	dc.w  440
+	dc.b  10,$0
+	dc.w  440
+	dc.b  11,$0
+	dc.w  440
+	dc.b  12,$0
+
+	dc.w  441
+	dc.b  7,$E
+	dc.w  441
+	dc.b  9,$C
+	dc.w  441
+	dc.b  10,$0
+	dc.w  441
+	dc.b  11,$0
+	dc.w  441
+	dc.b  12,$0
+
+	dc.w  442
+	dc.b  7,$E
+	dc.w  442
+	dc.b  9,$C
+	dc.w  442
+	dc.b  10,$0
+	dc.w  442
+	dc.b  11,$0
+	dc.w  442
+	dc.b  12,$0
+
+	dc.w  443
+	dc.b  7,$E
+	dc.w  443
+	dc.b  9,$C
+	dc.w  443
+	dc.b  10,$0
+	dc.w  443
+	dc.b  11,$0
+	dc.w  443
+	dc.b  12,$0
+
+	dc.w  444
+	dc.b  9,$C
+	dc.w  444
+	dc.b  10,$0
+	dc.w  444
+	dc.b  11,$0
+	dc.w  444
+	dc.b  12,$0
+
+	dc.w  445
+	dc.b  9,$C
+	dc.w  445
+	dc.b  10,$0
+	dc.w  445
+	dc.b  11,$0
+	dc.w  445
+	dc.b  12,$0
+
+	dc.w  446
+	dc.b  8,$E
+	dc.w  446
+	dc.b  9,$C
+	dc.w  446
+	dc.b  10,$0
+	dc.w  446
+	dc.b  11,$0
+	dc.w  446
+	dc.b  12,$0
+
+	dc.w  447
+	dc.b  8,$E
+	dc.w  447
+	dc.b  9,$C
+	dc.w  447
+	dc.b  10,$0
+	dc.w  447
+	dc.b  11,$0
+	dc.w  447
+	dc.b  12,$0
+
+	dc.w  448
+	dc.b  8,$E
+	dc.w  448
+	dc.b  9,$C
+	dc.w  448
+	dc.b  10,$0
+	dc.w  448
+	dc.b  11,$0
+	dc.w  448
+	dc.b  12,$0
+
+	dc.w  449
+	dc.b  8,$E
+	dc.w  449
+	dc.b  9,$C
+	dc.w  449
+	dc.b  10,$0
+	dc.w  449
+	dc.b  11,$0
+	dc.w  449
+	dc.b  12,$0
+
+	dc.w  450
+	dc.b  7,$E
+	dc.w  450
+	dc.b  8,$E
+	dc.w  450
+	dc.b  10,$0
+	dc.w  450
+	dc.b  11,$0
+	dc.w  450
+	dc.b  12,$0
+
+	dc.w  451
+	dc.b  7,$E
+	dc.w  451
+	dc.b  8,$E
+	dc.w  451
+	dc.b  10,$0
+	dc.w  451
+	dc.b  11,$0
+	dc.w  451
+	dc.b  12,$0
+
+	dc.w  452
+	dc.b  7,$E
+	dc.w  452
+	dc.b  8,$E
+	dc.w  452
+	dc.b  10,$0
+	dc.w  452
+	dc.b  11,$0
+	dc.w  452
+	dc.b  12,$0
+
+	dc.w  453
+	dc.b  7,$E
+	dc.w  453
+	dc.b  8,$E
+	dc.w  453
+	dc.b  10,$0
+	dc.w  453
+	dc.b  11,$0
+	dc.w  453
+	dc.b  12,$0
+
+	dc.w  454
+	dc.b  7,$E
+	dc.w  454
+	dc.b  8,$E
+	dc.w  454
+	dc.b  10,$0
+	dc.w  454
+	dc.b  11,$0
+	dc.w  454
+	dc.b  12,$0
+
+	dc.w  455
+	dc.b  7,$E
+	dc.w  455
+	dc.b  8,$E
+	dc.w  455
+	dc.b  10,$0
+	dc.w  455
+	dc.b  11,$0
+	dc.w  455
+	dc.b  12,$0
+
+	dc.w  456
+	dc.b  7,$E
+	dc.w  456
+	dc.b  10,$0
+	dc.w  456
+	dc.b  11,$0
+	dc.w  456
+	dc.b  12,$0
+
+	dc.w  457
+	dc.b  7,$E
+	dc.w  457
+	dc.b  10,$0
+	dc.w  457
+	dc.b  11,$0
+	dc.w  457
+	dc.b  12,$0
+
+	dc.w  458
+	dc.b  7,$E
+	dc.w  458
+	dc.b  10,$0
+	dc.w  458
+	dc.b  11,$0
+	dc.w  458
+	dc.b  12,$0
+
+	dc.w  459
+	dc.b  7,$E
+	dc.w  459
+	dc.b  10,$0
+	dc.w  459
+	dc.b  11,$0
+	dc.w  459
+	dc.b  12,$0
+
+	dc.w  460
+	dc.b  10,$0
+	dc.w  460
+	dc.b  11,$0
+	dc.w  460
+	dc.b  12,$0
+
+	dc.w  461
+	dc.b  10,$0
+	dc.w  461
+	dc.b  11,$0
+	dc.w  461
+	dc.b  12,$0
+
+	dc.w  462
+	dc.b  10,$0
+	dc.w  462
+	dc.b  11,$0
+	dc.w  462
+	dc.b  12,$0
+
+	dc.w  463
+	dc.b  10,$0
+	dc.w  463
+	dc.b  11,$8
+	dc.w  463
+	dc.b  12,$0
+
+	dc.w  464
+	dc.b  10,$0
+	dc.w  464
+	dc.b  11,$8
+	dc.w  464
+	dc.b  12,$0
+
+	dc.w  465
+	dc.b  10,$0
+	dc.w  465
+	dc.b  11,$8
+	dc.w  465
+	dc.b  12,$0
+
+	dc.w  466
+	dc.b  10,$0
+	dc.w  466
+	dc.b  11,$0
+	dc.w  466
+	dc.b  12,$0
+
+	dc.w  467
+	dc.b  10,$0
+	dc.w  467
+	dc.b  11,$0
+	dc.w  467
+	dc.b  12,$0
+
+	dc.w  468
+	dc.b  10,$0
+	dc.w  468
+	dc.b  11,$0
+	dc.w  468
+	dc.b  12,$0
+
+	dc.w  469
+	dc.b  10,$0
+	dc.w  469
+	dc.b  11,$0
+	dc.w  469
+	dc.b  12,$0
+
+	dc.w  470
+	dc.b  3,$E
+	dc.w  470
+	dc.b  10,$0
+	dc.w  470
+	dc.b  11,$0
+	dc.w  470
+	dc.b  12,$0
+
+	dc.w  471
+	dc.b  3,$E
+	dc.w  471
+	dc.b  10,$0
+	dc.w  471
+	dc.b  11,$0
+	dc.w  471
+	dc.b  12,$0
+
+	dc.w  472
+	dc.b  3,$E
+	dc.w  472
+	dc.b  10,$0
+	dc.w  472
+	dc.b  11,$8
+	dc.w  472
+	dc.b  12,$0
+
+	dc.w  473
+	dc.b  3,$E
+	dc.w  473
+	dc.b  10,$0
+	dc.w  473
+	dc.b  11,$8
+	dc.w  473
+	dc.b  12,$0
+
+	dc.w  474
+	dc.b  3,$E
+	dc.w  474
+	dc.b  4,$E
+	dc.w  474
+	dc.b  10,$0
+	dc.w  474
+	dc.b  11,$8
+	dc.w  474
+	dc.b  12,$0
+
+	dc.w  475
+	dc.b  3,$E
+	dc.w  475
+	dc.b  4,$E
+	dc.w  475
+	dc.b  10,$0
+	dc.w  475
+	dc.b  11,$8
+	dc.w  475
+	dc.b  12,$0
+
+	dc.w  476
+	dc.b  3,$E
+	dc.w  476
+	dc.b  4,$E
+	dc.w  476
+	dc.b  10,$0
+	dc.w  476
+	dc.b  11,$8
+	dc.w  476
+	dc.b  12,$0
+
+	dc.w  477
+	dc.b  3,$E
+	dc.w  477
+	dc.b  4,$E
+	dc.w  477
+	dc.b  10,$0
+	dc.w  477
+	dc.b  11,$0
+	dc.w  477
+	dc.b  12,$0
+
+	dc.w  478
+	dc.b  3,$E
+	dc.w  478
+	dc.b  4,$E
+	dc.w  478
+	dc.b  10,$0
+	dc.w  478
+	dc.b  11,$0
+	dc.w  478
+	dc.b  12,$0
+
+	dc.w  479
+	dc.b  3,$E
+	dc.w  479
+	dc.b  4,$E
+	dc.w  479
+	dc.b  10,$0
+	dc.w  479
+	dc.b  11,$0
+	dc.w  479
+	dc.b  12,$0
+
+	dc.w  480
+	dc.b  4,$E
+	dc.w  480
+	dc.b  10,$0
+	dc.w  480
+	dc.b  11,$0
+	dc.w  480
+	dc.b  12,$0
+
+	dc.w  481
+	dc.b  4,$E
+	dc.w  481
+	dc.b  10,$0
+	dc.w  481
+	dc.b  11,$0
+	dc.w  481
+	dc.b  12,$0
+
+	dc.w  482
+	dc.b  4,$E
+	dc.w  482
+	dc.b  10,$0
+	dc.w  482
+	dc.b  11,$0
+	dc.w  482
+	dc.b  12,$0
+
+	dc.w  483
+	dc.b  4,$E
+	dc.w  483
+	dc.b  10,$0
+	dc.w  483
+	dc.b  11,$0
+	dc.w  483
+	dc.b  12,$0
+
+	dc.w  484
+	dc.b  10,$0
+	dc.w  484
+	dc.b  11,$0
+	dc.w  484
+	dc.b  12,$0
+
+	dc.w  485
+	dc.b  10,$0
+	dc.w  485
+	dc.b  11,$0
+	dc.w  485
+	dc.b  12,$0
+
+	dc.w  486
+	dc.b  10,$0
+	dc.w  486
+	dc.b  11,$0
+	dc.w  486
+	dc.b  12,$0
+
+	dc.w  487
+	dc.b  10,$0
+	dc.w  487
+	dc.b  11,$0
+	dc.w  487
+	dc.b  12,$0
+
+	dc.w  488
+	dc.b  3,$E
+	dc.w  488
+	dc.b  9,$1
+	dc.w  488
+	dc.b  10,$0
+	dc.w  488
+	dc.b  11,$0
+	dc.w  488
+	dc.b  12,$0
+
+	dc.w  489
+	dc.b  3,$E
+	dc.w  489
+	dc.b  10,$0
+	dc.w  489
+	dc.b  11,$0
+	dc.w  489
+	dc.b  12,$0
+
+	dc.w  490
+	dc.b  3,$E
+	dc.w  490
+	dc.b  10,$0
+	dc.w  490
+	dc.b  11,$0
+	dc.w  490
+	dc.b  12,$0
+
+	dc.w  491
+	dc.b  3,$E
+	dc.w  491
+	dc.b  10,$0
+	dc.w  491
+	dc.b  11,$0
+	dc.w  491
+	dc.b  12,$0
+
+	dc.w  492
+	dc.b  3,$E
+	dc.w  492
+	dc.b  10,$0
+	dc.w  492
+	dc.b  11,$0
+	dc.w  492
+	dc.b  12,$0
+
+	dc.w  493
+	dc.b  3,$E
+	dc.w  493
+	dc.b  10,$0
+	dc.w  493
+	dc.b  11,$0
+	dc.w  493
+	dc.b  12,$0
+
+	dc.w  494
+	dc.b  3,$E
+	dc.w  494
+	dc.b  10,$0
+	dc.w  494
+	dc.b  11,$0
+	dc.w  494
+	dc.b  12,$0
+
+	dc.w  495
+	dc.b  3,$E
+	dc.w  495
+	dc.b  10,$0
+	dc.w  495
+	dc.b  11,$1
+	dc.w  495
+	dc.b  12,$0
+
+	dc.w  496
+	dc.b  3,$E
+	dc.w  496
+	dc.b  10,$0
+	dc.w  496
+	dc.b  11,$1
+	dc.w  496
+	dc.b  12,$0
+
+	dc.w  497
+	dc.b  3,$E
+	dc.w  497
+	dc.b  10,$0
+	dc.w  497
+	dc.b  11,$1
+	dc.w  497
+	dc.b  12,$0
+
+	dc.w  498
+	dc.b  9,$1
+	dc.w  498
+	dc.b  10,$0
+	dc.w  498
+	dc.b  11,$1
+	dc.w  498
+	dc.b  12,$0
+
+	dc.w  499
+	dc.b  10,$0
+	dc.w  499
+	dc.b  11,$1
+	dc.w  499
+	dc.b  12,$0
+
+	dc.w  500
+	dc.b  10,$0
+	dc.w  500
+	dc.b  11,$1
+	dc.w  500
+	dc.b  12,$0
+
